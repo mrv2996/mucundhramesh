@@ -34,6 +34,10 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -73,12 +77,26 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-tertiary': 'var(--gradient-tertiary)',
+				'gradient-mixed': 'var(--gradient-mixed)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'medium': 'var(--shadow-medium)',
-				'large': 'var(--shadow-large)'
+				'large': 'var(--shadow-large)',
+				'glow-primary': 'var(--shadow-glow-primary)',
+				'glow-secondary': 'var(--shadow-glow-secondary)',
+				'glow-tertiary': 'var(--shadow-glow-tertiary)'
+			},
+			fontSize: {
+				'xs': 'var(--text-xs)',
+				'sm': 'var(--text-sm)',
+				'base': 'var(--text-base)',
+				'lg': 'var(--text-lg)',
+				'xl': 'var(--text-xl)',
+				'2xl': 'var(--text-2xl)',
+				'3xl': 'var(--text-3xl)',
+				'4xl': 'var(--text-4xl)',
 			},
 			maxWidth: {
 				'content': 'var(--content-max-width)'

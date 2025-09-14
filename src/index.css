@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Elena Verna Personal Profile - Design System
-Modern, clean design with sophisticated color palette and beautiful gradients.
+/* Mucundh Ramesh Portfolio - Design System
+Golden ratio-based spacing and typography with strategic 3-color system.
 All colors MUST be HSL.
 */
 
@@ -18,22 +18,27 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 16% 18%;
 
-    /* Sophisticated purple-blue gradient as primary */
-    --primary: 263 85% 60%;
+    /* Strategic 3-color system inspired by professional branding */
+    /* Primary: Deep Professional Blue - main brand color */
+    --primary: 220 90% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 263 85% 70%;
-    --primary-dark: 263 85% 50%;
+    --primary-light: 220 90% 55%;
+    --primary-dark: 220 90% 35%;
 
-    /* Soft secondary colors */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 16% 18%;
+    /* Secondary: Sophisticated Purple - accent for strategy/analytics */
+    --secondary: 270 60% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Muted tones for subtle elements */
+    /* Tertiary: Warm Orange - highlight for action items/CTA */
+    --tertiary: 25 95% 53%;
+    --tertiary-foreground: 0 0% 100%;
+
+    /* Neutral palette */
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 46%;
 
-    /* Accent color - warm complement */
-    --accent: 320 60% 65%;
+    /* Accent uses secondary for consistency */
+    --accent: 270 60% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,22 +46,48 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 263 85% 60%;
+    --ring: 220 90% 45%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(263 85% 60%), hsl(280 85% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 20% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(320 60% 65%), hsl(340 70% 75%));
+    /* Golden ratio-based design tokens */
+    --golden-ratio: 1.618;
     
-    /* Shadows */
+    /* Typography scale based on golden ratio */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px - base */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.618rem;    /* ~26px - golden ratio */
+    --text-3xl: 2.618rem;    /* ~42px - golden ratio² */
+    --text-4xl: 4.236rem;    /* ~68px - golden ratio³ */
+    
+    /* Spacing scale based on golden ratio */
+    --space-xs: 0.25rem;     /* 4px */
+    --space-sm: 0.5rem;      /* 8px */
+    --space-base: 1rem;      /* 16px - base */
+    --space-md: 1.618rem;    /* ~26px - golden ratio */
+    --space-lg: 2.618rem;    /* ~42px - golden ratio² */
+    --space-xl: 4.236rem;    /* ~68px - golden ratio³ */
+    --space-2xl: 6.854rem;   /* ~110px - golden ratio⁴ */
+
+    /* Strategic gradients using 3-color system */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 45%), hsl(220 90% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 60% 50%), hsl(270 60% 60%));
+    --gradient-tertiary: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 63%));
+    --gradient-mixed: linear-gradient(135deg, hsl(220 90% 45%), hsl(270 60% 50%), hsl(25 95% 53%));
+    
+    /* Sophisticated shadows */
     --shadow-soft: 0 4px 6px -1px hsl(220 16% 18% / 0.05), 0 2px 4px -1px hsl(220 16% 18% / 0.02);
     --shadow-medium: 0 10px 15px -3px hsl(220 16% 18% / 0.08), 0 4px 6px -2px hsl(220 16% 18% / 0.03);
     --shadow-large: 0 25px 50px -12px hsl(220 16% 18% / 0.15);
+    --shadow-glow-primary: 0 0 30px hsl(220 90% 45% / 0.3);
+    --shadow-glow-secondary: 0 0 30px hsl(270 60% 50% / 0.3);
+    --shadow-glow-tertiary: 0 0 30px hsl(25 95% 53% / 0.3);
     
-    /* Spacing */
-    --section-padding: 5rem;
+    /* Content and section sizing */
+    --section-padding: var(--space-2xl);
     --content-max-width: 1200px;
 
     --sidebar-background: 0 0% 98%;
@@ -175,7 +206,7 @@ All colors MUST be HSL.
   .orb-2 {
     width: 150px;
     height: 150px;
-    background: radial-gradient(circle, hsl(var(--accent) / 0.12) 0%, hsl(var(--accent) / 0.04) 50%, transparent 80%);
+    background: radial-gradient(circle, hsl(var(--secondary) / 0.12) 0%, hsl(var(--secondary) / 0.04) 50%, transparent 80%);
     top: 50%;
     right: 15%;
     animation: float-delayed 15s ease-in-out infinite;
@@ -184,7 +215,7 @@ All colors MUST be HSL.
   .orb-3 {
     width: 120px;
     height: 120px;
-    background: radial-gradient(circle, hsl(var(--primary) / 0.1) 0%, hsl(var(--primary) / 0.03) 50%, transparent 80%);
+    background: radial-gradient(circle, hsl(var(--tertiary) / 0.1) 0%, hsl(var(--tertiary) / 0.03) 50%, transparent 80%);
     bottom: 25%;
     left: 50%;
     animation: pulse-glow 6s ease-in-out infinite;
@@ -193,7 +224,7 @@ All colors MUST be HSL.
   .orb-4 {
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, hsl(var(--accent) / 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(var(--secondary) / 0.08) 0%, transparent 70%);
     top: 80%;
     right: 60%;
     animation: float 10s ease-in-out infinite 3s;

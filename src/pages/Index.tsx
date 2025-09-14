@@ -1,10 +1,9 @@
 import HeroSection from "@/components/HeroSection";
-import NextEventSection from "@/components/NextEventSection";
+import SkillsSection from "@/components/SkillsSection";
+import ToolsSection from "@/components/ToolsSection";
 import ExperienceSection from "@/components/ExperienceSection";
-import AdvisedCompaniesSection from "@/components/AdvisedCompaniesSection";
-import CoursesSection from "@/components/CoursesSection";
-import YouTubeSection from "@/components/YouTubeSection";
-import AboutMeSection from "@/components/AboutMeSection";
+import EducationSection from "@/components/EducationSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 const Index = () => {
   return (
@@ -16,12 +15,11 @@ const Index = () => {
       <div className="floating-orb orb-4"></div>
       
       <HeroSection />
-      <NextEventSection />
+      <SkillsSection />
+      <ToolsSection />
+      <ProjectsSection />
       <ExperienceSection />
-      <AdvisedCompaniesSection />
-      <CoursesSection />
-      <YouTubeSection />
-      <AboutMeSection />
+      <EducationSection />
     </div>
   );
 };

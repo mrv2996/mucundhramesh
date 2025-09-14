@@ -1,90 +1,113 @@
-import { Building2, TrendingUp, Users, Zap, Target, Palette } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
-  const experiences = [{
-    role: "CEO",
-    company: "Lovable",
-    description: "building last piece of software and hopefully putting myself out of the job",
-    icon: Building2,
-    current: true,
-    url: "https://lovable.dev"
-  }, {
-    role: "Growth",
-    company: "Dropbox",
-    description: "worked on acquisition, activation, monetization, and retention of the core cloud storage product",
-    icon: TrendingUp,
-    current: false,
-    url: "https://dropbox.com"
-  }, {
-    role: "Interim Head of Growth",
-    company: "Amplitude",
-    description: "introduced self-serve monetization motion",
-    icon: Target,
-    current: false,
-    url: "https://amplitude.com"
-  }, {
-    role: "Interim Head of Growth",
-    company: "Netlify",
-    description: "worked on self-serve product activation and monetization",
-    icon: Zap,
-    current: false,
-    url: "https://netlify.com"
-  }, {
-    role: "Interim Head of Marketing",
-    company: "Miro",
-    description: "helped expand Miro's PMF during covid-era",
-    icon: Palette,
-    current: false,
-    url: "https://miro.com"
-  }, {
-    role: "SVP of Growth",
-    company: "SurveyMonkey",
-    description: "built growth org from scratch, scaled from analyst to SVP",
-    icon: Users,
-    current: false,
-    url: "https://surveymonkey.com"
-  }];
-  return <section className="py-6 px-4 bg-muted/30">
+  const experiences = [
+    {
+      title: "Product Growth Analyst",
+      company: "BIOMETRIO.EARTH",
+      period: "Jan 2024 - Present",
+      location: "",
+      type: "current",
+    },
+    {
+      title: "Strategy Analyst Intern",
+      company: "TRANSDEV",
+      period: "Jan 2023 - July 2023",
+      location: "Paris, FRANCE",
+      type: "past",
+    },
+    {
+      title: "Beauty Tech Intern",
+      company: "L'ORÉAL",
+      period: "July 2022 - Dec 2022",
+      location: "Paris, FRANCE",
+      type: "past",
+    },
+    {
+      title: "Software Engineer",
+      company: "GENERAL ELECTRIC (GE)",
+      period: "July 2018 - June 2021",
+      location: "Bangalore, INDIA",
+      type: "past",
+    },
+    {
+      title: "Agile Product Intern",
+      company: "FIDELITY INVESTMENTS",
+      period: "May 2017 - July 2017",
+      location: "Chennai, India",
+      type: "past",
+    },
+  ];
+
+  return (
+    <section className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background">
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl font-bold text-foreground mb-2">Experience</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Leading growth and/or marketing teams in B2B SaaS</p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-foreground mb-6 animate-fade-in">
+            Experience
+          </h2>
+          <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-2">
-          {experiences.map((exp, index) => {
-          const IconComponent = exp.icon;
-          return <div key={index} className="group">
-                <a 
-                  href={exp.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block bg-card rounded-lg p-3 shadow-soft hover:shadow-medium transition-all duration-300 border border-border/50 cursor-pointer hover:scale-[1.01]"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0">
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-tertiary hidden md:block"></div>
+          
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <div
+                key={`${exp.company}-${exp.period}`}
+                className="relative flex items-start gap-8"
+              >
+                {/* Timeline dot */}
+                <div className="hidden md:flex w-16 h-16 rounded-full bg-gradient-primary items-center justify-center shadow-medium relative z-10">
+                  <div className="w-8 h-8 rounded-full bg-white"></div>
+                </div>
+                
+                {/* Content card */}
+                <div className="flex-1">
+                  <div className={`bg-card/70 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 ${
+                    exp.type === 'current' ? 'ring-2 ring-primary/20 bg-gradient-to-r from-primary/5 to-transparent' : ''
+                  }`}>
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground mb-2">
+                          {exp.title}
+                        </h3>
+                        <h4 className="text-lg font-medium text-primary mb-2">
+                          {exp.company}
+                        </h4>
+                      </div>
                       
+                      {exp.type === 'current' && (
+                        <div className="bg-tertiary text-tertiary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                          Current
+                        </div>
+                      )}
                     </div>
                     
-                    <div className="flex-grow">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-base font-bold text-foreground">
-                          {exp.current ? 'Current: ' : ''}{exp.role === 'CEO' && exp.company === 'Lovable' ? 'Growth at Lovable' : `${exp.role} at ${exp.company}`}
-                        </h3>
-                        {exp.current && <span className="px-2 py-0.5 bg-gradient-primary text-white text-xs font-medium rounded-full">
-                            Current
-                          </span>}
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span className="font-medium">{exp.period}</span>
                       </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {exp.description}
-                      </p>
+                      
+                      {exp.location && (
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          <span>{exp.location}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
-                </a>
-              </div>;
-        })}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ExperienceSection;

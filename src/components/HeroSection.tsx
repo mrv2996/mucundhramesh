@@ -1,60 +1,93 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, MessageCircle } from "lucide-react";
-import headshotImage from "@/assets/elena-headshot-new.jpg";
+import { ExternalLink, Mail, Download } from "lucide-react";
+import headshotImage from "@/assets/mucundh-headshot.png";
+
 const HeroSection = () => {
-  return <section className="min-h-[80vh] flex items-center justify-center px-6 py-12 pb-1">
+  return (
+    <section className="min-h-[85vh] flex items-center justify-center px-6 py-12 pb-1">
       <div className="max-w-content mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left: Content */}
-          <div className="text-center lg:text-left order-1">
-            <h1 className="lg:text-7xl font-bold mb-6 leading-tight text-4xl animate-fade-in bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-2xl [text-shadow:0_0_30px_hsl(var(--primary)/0.5)]">
-              Elena Verna
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <h1 className="text-4xl lg:text-4xl font-bold mb-6 leading-tight animate-fade-in bg-gradient-mixed bg-clip-text text-transparent drop-shadow-2xl">
+              Mucundh Ramesh
             </h1>
-            <p className="lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-base font-normal">From SQL monkey to growth junkie... Nowadays I sit somewhere between data, marketing, and product constantly obsessing about acquisition, activation, monetization, and retention. B2B self-serve is my jam. #PLG4Life.</p>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-8 leading-tight">
+              Connecting technology, data, and people
+            </h2>
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              As an ex-software developer with a Masters in Management Degree, I've built an expertise at crafting innovative solutions at the intersection of technology and business with an analytical and data-driven growth mindset.
+            </p>
             
-            {/* CTAs */}
-            <div className="flex flex-col gap-4 justify-center lg:justify-start mt-8">
-              {/* Top row: LinkedIn and AI Agent */}
+            {/* CTAs - Golden ratio spacing */}
+            <div className="flex flex-col gap-6 justify-center lg:justify-start mt-8">
+              {/* Primary CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button variant="default" size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity font-semibold shadow-medium" asChild>
-                  <a href="https://www.linkedin.com/in/elenaverna" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    Connect on LinkedIn
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold shadow-medium hover:shadow-glow-primary" 
+                  asChild
+                >
+                  <a href="mailto:mucundh.ramesh@edu.escp.eu">
+                    <Mail className="mr-2 h-5 w-5" />
+                    Get in Touch
                   </a>
                 </Button>
                 
-                <Button variant="outline" size="lg" className="border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-colors font-semibold" asChild>
-                  <a href="https://www.superme.ai/elena" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Chat with my AI Agent
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-semibold hover:shadow-glow-primary" 
+                  asChild
+                >
+                  <a href="https://docs.google.com/document/d/1uBDcYVVNXB4sO3H6fGFpGyu-_mTCzQWC/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-5 w-5" />
+                    View CV
                   </a>
                 </Button>
               </div>
               
-              {/* Bottom row: Newsletter centered */}
+              {/* Secondary CTA */}
               <div className="flex justify-center lg:justify-start">
-                <Button variant="outline" size="lg" className="font-semibold bg-card border-2 border-border hover:bg-accent hover:text-accent-foreground" asChild>
-                  <a href="https://www.elenaverna.com" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="font-semibold bg-card border-2 border-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 hover:shadow-glow-secondary" 
+                  asChild
+                >
+                  <a href="https://www.linkedin.com/in/mucundh-ramesh/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-5 w-5" />
-                    Read my newsletter
+                    LinkedIn Profile
                   </a>
                 </Button>
               </div>
             </div>
           </div>
 
-          {/* Right: Headshot */}
-          <div className="hidden lg:flex justify-center lg:justify-start order-2">
+          {/* Right: Headshot with AI-enhanced label */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              <div className="w-64 h-64 lg:w-72 lg:h-72 rounded-3xl overflow-hidden shadow-large bg-gradient-secondary">
-                <img src={headshotImage} alt="Elena Verna - Growth leader and advisor" className="w-full h-full object-cover" />
+              <div className="w-64 h-80 lg:w-80 lg:h-96 rounded-3xl overflow-hidden shadow-large bg-gradient-primary">
+                <img 
+                  src={headshotImage} 
+                  alt="Mucundh Ramesh - Product strategist and data analyst" 
+                  className="w-full h-full object-cover object-center" 
+                />
               </div>
+              
+              {/* AI-enhanced badge */}
+              <div className="absolute top-4 right-4 bg-tertiary text-tertiary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium">
+                *AI-enhanced
+              </div>
+              
               {/* Subtle background accent */}
-              <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-3xl bg-gradient-primary opacity-20"></div>
+              <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default HeroSection;
