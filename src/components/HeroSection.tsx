@@ -72,7 +72,7 @@ const HeroSection = () => {
                 <img 
                   src={headshotImage} 
                   alt="Mucundh Ramesh - Product strategist and data analyst" 
-                  className="w-full h-full object-cover object-center" 
+                  className="w-full h-full object-cover object-top" 
                 />
               </div>
               
