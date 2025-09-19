@@ -91,9 +91,7 @@ const ProjectsSection = () => {
         
         <div className="mt-12 text-center">
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Systems-level approach to problem-solving, designing technical solutions that integrate 
-            seamlessly with business operations while maintaining focus on scalability, efficiency, 
-            and measurable performance improvements.
+            Systems-level approach to problem-solving, designing technical solutions that integrate seamlessly with business operations while maintaining focus on scalability, efficiency, and measurable performance improvements.
           </p>
         </div>
       </div>

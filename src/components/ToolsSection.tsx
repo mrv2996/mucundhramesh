@@ -75,9 +75,7 @@ const ToolsSection = () => {
         
         <div className="mt-12 text-center">
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Revenue operations expertise backed by technical engineering foundation - architecting 
-            scalable systems that drive measurable business growth through data-driven automation, 
-            process optimization, and strategic commercial intelligence.
+            Revenue operations expertise backed by technical engineering foundation - architecting scalable systems that drive measurable business growth through data-driven automation, process optimization, and strategic commercial intelligence.
           </p>
         </div>
       </div>

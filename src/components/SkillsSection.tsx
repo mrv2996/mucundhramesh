@@ -1,7 +1,7 @@
 import { Target, PenTool, TrendingUp, Code } from "lucide-react";
 
 const SkillsSection = () => {
-const skills = [
+  const skills = [
     {
       icon: Target,
       title: "Operational Efficiency & RevOps",
