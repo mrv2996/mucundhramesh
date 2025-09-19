@@ -1,36 +1,45 @@
+import { Database, BarChart3, Settings, Code, Target, TrendingUp } from "lucide-react";
+
 const ToolsSection = () => {
   const tools = [
-    { name: "SQL", category: "data" },
-    { name: "Google Analytics", category: "analytics" },
-    { name: "Python", category: "programming" },
-    { name: "MS Excel", category: "data" },
-    { name: "Salesforce", category: "platform" },
-    { name: "Jira", category: "management" },
-    { name: "Tableau", category: "visualization" },
-    { name: "Notion", category: "productivity" },
-    { name: "Figma", category: "design" },
-    { name: "OKR", category: "strategy" },
-    { name: "HubSpot", category: "platform" },
-    { name: "UX Research", category: "research" },
-    { name: "Go-to-Market", category: "strategy" },
-    { name: "UX/UI Design", category: "design" },
-    { name: "CRM", category: "platform" },
-    { name: "Statistical Analysis", category: "data" },
-    { name: "Web-Analytics", category: "analytics" },
-    { name: "HotJar", category: "analytics" },
+    // Data & Analytics
+    { name: "SQL", category: "data", icon: Database },
+    { name: "Power BI", category: "data", icon: BarChart3 },
+    { name: "Looker", category: "data", icon: BarChart3 },
+    { name: "Python", category: "data", icon: Code },
+    { name: "MS Excel", category: "data", icon: BarChart3 },
+    
+    // RevOps & CRM
+    { name: "Salesforce", category: "platform", icon: Target },
+    { name: "HubSpot", category: "platform", icon: Target },
+    { name: "Appian", category: "platform", icon: Settings },
+    
+    // GTM & Growth
+    { name: "GTM Strategy", category: "strategy", icon: TrendingUp },
+    { name: "Paid Ads", category: "strategy", icon: TrendingUp },
+    { name: "A/B Testing", category: "strategy", icon: TrendingUp },
+    
+    // Technical Tools
+    { name: "JIRA", category: "management", icon: Settings },
+    { name: "Figma", category: "design", icon: Settings },
+    { name: "AWS", category: "platform", icon: Code },
+    { name: "SAP", category: "platform", icon: Database },
+    
+    // AI & Automation
+    { name: "Dust AI", category: "ai", icon: Code },
+    { name: "UX Research", category: "research", icon: Settings },
   ];
 
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "data":
-      case "programming":
         return "bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-primary-foreground";
-      case "analytics":
-      case "visualization":
+      case "platform":
         return "bg-secondary/10 text-secondary border-secondary/20 hover:bg-secondary hover:text-secondary-foreground";
-      case "design":
-      case "research":
+      case "strategy":
         return "bg-tertiary/10 text-tertiary border-tertiary/20 hover:bg-tertiary hover:text-tertiary-foreground";
+      case "ai":
+        return "bg-gradient-mixed/10 text-foreground border-primary/30 hover:bg-gradient-mixed hover:text-white";
       default:
         return "bg-muted/50 text-muted-foreground border-border hover:bg-accent hover:text-accent-foreground";
     }
@@ -47,24 +56,28 @@ const ToolsSection = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          {tools.map((tool, index) => (
-            <div
-              key={tool.name}
-              className={`px-6 py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium ${getCategoryColor(tool.category)}`}
-              style={{
-                animationDelay: `${index * 0.1}s`,
-              }}
-            >
-              {tool.name}
-            </div>
-          ))}
+          {tools.map((tool, index) => {
+            const Icon = tool.icon;
+            return (
+              <div
+                key={tool.name}
+                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium ${getCategoryColor(tool.category)}`}
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                }}
+              >
+                <Icon className="w-4 h-4" />
+                {tool.name}
+              </div>
+            );
+          })}
         </div>
         
         <div className="mt-12 text-center">
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Engineering operational excellence through systematic design thinking, leveraging technical 
-            tools and platforms to architect scalable solutions that optimize business processes 
-            and drive sustainable growth across complex organizational systems.
+            Revenue operations expertise backed by technical engineering foundation - architecting 
+            scalable systems that drive measurable business growth through data-driven automation, 
+            process optimization, and strategic commercial intelligence.
           </p>
         </div>
       </div>
