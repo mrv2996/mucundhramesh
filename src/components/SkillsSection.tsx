@@ -4,7 +4,7 @@ const SkillsSection = () => {
   const skills = [
     {
       icon: TrendingUp,
-      title: "GTM & Sales Intelligence",
+      title: "GTM workflow and sales intelligence",
       description: "CRM Management (Salesforce/HubSpot), Campaign ROI Analysis, Lead Scoring, Sales Analytics, Conversion Optimization",
       color: "tertiary",
     },
