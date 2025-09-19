@@ -3,16 +3,16 @@ import { Target, PenTool, TrendingUp, Code } from "lucide-react";
 const SkillsSection = () => {
   const skills = [
     {
-      icon: Target,
-      title: "Operational Efficiency & RevOps",
-      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
-      color: "primary",
-    },
-    {
       icon: TrendingUp,
       title: "GTM & Sales Intelligence",
       description: "CRM Management (Salesforce/HubSpot), Campaign ROI Analysis, Lead Scoring, Sales Analytics, Conversion Optimization",
       color: "tertiary",
+    },
+    {
+      icon: Target,
+      title: "Operational Efficiency & RevOps",
+      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
+      color: "primary",
     },
     {
       icon: PenTool,
