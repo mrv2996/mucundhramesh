@@ -47,17 +47,17 @@ const SkillsSection = () => {
                 className={`group bg-card/70 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105 hover:shadow-glow-${skill.color}`}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-${skill.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-foreground mb-4">
-                    {skill.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground leading-relaxed">
-                    {skill.description}
-                  </p>
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-${skill.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium`}>
+                  <Icon className="w-8 h-8 text-white drop-shadow-sm" />
+                </div>
+                
+                <h3 className="text-xl font-semibold text-foreground mb-4">
+                  {skill.title}
+                </h3>
+                
+                <p className="text-muted-foreground leading-relaxed font-medium">
+                  {skill.description}
+                </p>
                 </div>
               </div>
             );
