@@ -17,7 +17,7 @@ const EducationSection = () => {
       type: "bachelor",
       researchPaper: {
         title: "SECURE DATA RETRIEVAL IN CLOUD USING MULTIPLE KEYS: A SURVEY",
-        journal: "IJPAM",
+        journal: "International Journal of Pure and Applied Mathematics",
         url: "https://www.researchgate.net/publication/325878411_SECURE_DATA_RETRIEVAL_IN_CLOUD_USING_MULTIPLE_KEYS_A_SURVEY"
       }
     },
