@@ -3,8 +3,8 @@ import { MapPin, Calendar } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Product Growth Analyst",
-      company: "BIOMETRIO.EARTH",
+      title: "Partner Operations Specialist",
+      company: "SWEEP",
       period: "Jan 2024 - Present",
       location: "",
       type: "current",
@@ -28,13 +28,6 @@ const ExperienceSection = () => {
       company: "GENERAL ELECTRIC (GE)",
       period: "July 2018 - June 2021",
       location: "Bangalore, INDIA",
-      type: "past",
-    },
-    {
-      title: "Agile Product Intern",
-      company: "FIDELITY INVESTMENTS",
-      period: "May 2017 - July 2017",
-      location: "Chennai, India",
       type: "past",
     },
   ];
