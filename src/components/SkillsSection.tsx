@@ -17,7 +17,7 @@ const SkillsSection = () => {
     {
       icon: Target,
       title: "Operational Efficiency & RevOps",
-      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
+      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Workflow Automation, Continuous Improvement",
       color: "primary",
     },
     {
