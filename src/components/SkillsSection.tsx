@@ -1,4 +1,4 @@
-import { Target, PenTool, Search, Code } from "lucide-react";
+import { Target, PenTool, TrendingUp, Code } from "lucide-react";
 
 const SkillsSection = () => {
 const skills = [
@@ -15,7 +15,7 @@ const skills = [
       color: "secondary",
     },
     {
-      icon: Search,
+      icon: TrendingUp,
       title: "GTM & Sales Intelligence",
       description: "CRM Management (Salesforce/HubSpot), Campaign ROI Analysis, Lead Scoring, Sales Analytics, Conversion Optimization",
       color: "tertiary",
