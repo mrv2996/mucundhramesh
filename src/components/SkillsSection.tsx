@@ -4,7 +4,7 @@ const SkillsSection = () => {
 const skills = [
     {
       icon: Target,
-      title: "Operational Excellence & RevOps",
+      title: "Operational Efficiency & RevOps",
       description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
       color: "primary",
     },
