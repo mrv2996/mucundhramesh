@@ -4,8 +4,8 @@ const SkillsSection = () => {
 const skills = [
     {
       icon: Target,
-      title: "RevOps & Commercial Operations",
-      description: "Sales Process Optimization, Revenue Forecasting, Pipeline Management, Territory Planning, Commission Analysis",
+      title: "Operational Excellence & RevOps",
+      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
       color: "primary",
     },
     {
