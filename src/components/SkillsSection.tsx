@@ -11,7 +11,7 @@ const SkillsSection = () => {
     {
       icon: PenTool,
       title: "Finance Operations & Analysis",
-      description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting, Budget Planning",
+      description: "Advanced Excel, VBA, Pivot Tables, Performance Reporting, Budget Planning",
       color: "secondary",
     },
     {
