@@ -76,11 +76,6 @@ const HeroSection = () => {
                 />
               </div>
               
-              {/* AI-enhanced badge */}
-              <div className="absolute top-4 right-4 bg-tertiary text-tertiary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium">
-                *AI-enhanced
-              </div>
-              
               {/* Subtle background accent */}
               <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
             </div>
