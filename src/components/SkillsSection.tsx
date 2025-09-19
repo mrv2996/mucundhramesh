@@ -9,16 +9,16 @@ const SkillsSection = () => {
       color: "tertiary",
     },
     {
-      icon: Target,
-      title: "Operational Efficiency & RevOps",
-      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
-      color: "primary",
-    },
-    {
       icon: PenTool,
       title: "Finance Operations & Analysis",
       description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting, Budget Planning",
       color: "secondary",
+    },
+    {
+      icon: Target,
+      title: "Operational Efficiency & RevOps",
+      description: "Lean Operations, Agile Methodologies, Process Optimization, Revenue Forecasting, Pipeline Management, Continuous Improvement",
+      color: "primary",
     },
     {
       icon: Code,
