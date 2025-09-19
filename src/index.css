@@ -18,27 +18,27 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 16% 18%;
 
-    /* Strategic 3-color system inspired by professional branding */
-    /* Primary: Deep Professional Blue - main brand color */
-    --primary: 220 90% 45%;
+    /* Strategic 3-color system inspired by ColorHunt blue palette */
+    /* Primary: Rich Navy Blue - main brand color */
+    --primary: 220 88% 28%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 90% 55%;
-    --primary-dark: 220 90% 35%;
+    --primary-light: 220 88% 38%;
+    --primary-dark: 220 88% 18%;
 
-    /* Secondary: Sophisticated Purple - accent for strategy/analytics */
-    --secondary: 270 60% 50%;
+    /* Secondary: Vibrant Teal - accent for highlights and interactions */
+    --secondary: 186 78% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Tertiary: Warm Orange - highlight for action items/CTA */
-    --tertiary: 25 95% 53%;
-    --tertiary-foreground: 0 0% 100%;
+    /* Tertiary: Bright Cyan - highlight for action items/CTA */
+    --tertiary: 180 100% 50%;
+    --tertiary-foreground: 220 88% 18%;
 
     /* Neutral palette */
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 46%;
 
     /* Accent uses secondary for consistency */
-    --accent: 270 60% 50%;
+    --accent: 186 78% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -46,7 +46,7 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 220 90% 45%;
+    --ring: 220 88% 28%;
 
     --radius: 0.75rem;
 
@@ -73,18 +73,18 @@ All colors MUST be HSL.
     --space-2xl: 6.854rem;   /* ~110px - golden ratio⁴ */
 
     /* Strategic gradients using 3-color system */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 45%), hsl(220 90% 55%));
-    --gradient-secondary: linear-gradient(135deg, hsl(270 60% 50%), hsl(270 60% 60%));
-    --gradient-tertiary: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 63%));
-    --gradient-mixed: linear-gradient(135deg, hsl(220 90% 45%), hsl(270 60% 50%), hsl(25 95% 53%));
+    --gradient-primary: linear-gradient(135deg, hsl(220 88% 28%), hsl(220 88% 38%));
+    --gradient-secondary: linear-gradient(135deg, hsl(186 78% 45%), hsl(186 78% 55%));
+    --gradient-tertiary: linear-gradient(135deg, hsl(180 100% 50%), hsl(180 100% 60%));
+    --gradient-mixed: linear-gradient(135deg, hsl(220 88% 28%), hsl(186 78% 45%), hsl(180 100% 50%));
     
     /* Sophisticated shadows */
     --shadow-soft: 0 4px 6px -1px hsl(220 16% 18% / 0.05), 0 2px 4px -1px hsl(220 16% 18% / 0.02);
     --shadow-medium: 0 10px 15px -3px hsl(220 16% 18% / 0.08), 0 4px 6px -2px hsl(220 16% 18% / 0.03);
     --shadow-large: 0 25px 50px -12px hsl(220 16% 18% / 0.15);
-    --shadow-glow-primary: 0 0 30px hsl(220 90% 45% / 0.3);
-    --shadow-glow-secondary: 0 0 30px hsl(270 60% 50% / 0.3);
-    --shadow-glow-tertiary: 0 0 30px hsl(25 95% 53% / 0.3);
+    --shadow-glow-primary: 0 0 30px hsl(220 88% 28% / 0.3);
+    --shadow-glow-secondary: 0 0 30px hsl(186 78% 45% / 0.3);
+    --shadow-glow-tertiary: 0 0 30px hsl(180 100% 50% / 0.3);
     
     /* Content and section sizing */
     --section-padding: var(--space-2xl);
