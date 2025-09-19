@@ -34,17 +34,17 @@ const EducationSection = () => {
           {education.map((edu, index) => (
             <div
               key={edu.school}
-              className={`bg-card/70 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105 ${
+              className={`bg-card/70 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105 ${
                 edu.type === 'master' 
                   ? 'hover:shadow-glow-primary border-primary/20' 
                   : 'hover:shadow-glow-secondary border-secondary/20'
               }`}
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className={`w-12 h-12 rounded-xl ${
+              <div className="flex items-start gap-4 mb-4">
+                <div className={`w-10 h-10 rounded-xl ${
                   edu.type === 'master' ? 'bg-gradient-primary' : 'bg-gradient-secondary'
                 } flex items-center justify-center shadow-medium`}>
-                  <GraduationCap className="w-6 h-6 text-white" />
+                  <GraduationCap className="w-5 h-5 text-white" />
                 </div>
                 
                 <div className="flex-1">
@@ -59,7 +59,7 @@ const EducationSection = () => {
                 </div>
               </div>
               
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Calendar className="w-4 h-4" />
                   <span className="font-medium">{edu.period}</span>

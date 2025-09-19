@@ -53,13 +53,13 @@ const ExperienceSection = () => {
                 className="relative flex items-start gap-8"
               >
                 {/* Timeline dot */}
-                <div className="hidden md:flex w-16 h-16 rounded-full bg-gradient-primary items-center justify-center shadow-medium relative z-10">
-                  <div className="w-8 h-8 rounded-full bg-white"></div>
+                <div className="hidden md:flex w-12 h-12 rounded-full bg-gradient-primary items-center justify-center shadow-medium relative z-10">
+                  <div className="w-6 h-6 rounded-full bg-white"></div>
                 </div>
                 
                 {/* Content card */}
                 <div className="flex-1">
-                  <div className={`bg-card/70 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 ${
+                  <div className={`bg-card/70 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 ${
                     exp.type === 'current' ? 'ring-2 ring-primary/20 bg-gradient-to-r from-primary/5 to-transparent' : ''
                   }`}>
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
