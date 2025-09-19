@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import { GraduationCap, MapPin, ExternalLink } from "lucide-react";
 
 const EducationSection = () => {
   const education = [
@@ -17,6 +17,10 @@ const EducationSection = () => {
       location: "Chennai, INDIA",
       specializations: [],
       type: "bachelor",
+      researchPaper: {
+        title: "SECURE DATA RETRIEVAL IN CLOUD USING MULTIPLE KEYS: A SURVEY",
+        url: "https://www.researchgate.net/publication/325878411_SECURE_DATA_RETRIEVAL_IN_CLOUD_USING_MULTIPLE_KEYS_A_SURVEY"
+      }
     },
   ];
 
@@ -61,15 +65,26 @@ const EducationSection = () => {
               
               <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2 text-muted-foreground">
-                  <Calendar className="w-4 h-4" />
-                  <span className="font-medium">{edu.period}</span>
-                </div>
-                
-                <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
                   <span>{edu.location}</span>
                 </div>
               </div>
+              
+              {edu.researchPaper && (
+                <div className="mb-4">
+                  <a
+                    href={edu.researchPaper.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 p-3 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 group"
+                  >
+                    <ExternalLink className="w-4 h-4 text-secondary group-hover:scale-110 transition-transform" />
+                    <span className="text-sm font-medium text-secondary group-hover:text-secondary/80">
+                      {edu.researchPaper.title}
+                    </span>
+                  </a>
+                </div>
+              )}
               
               {edu.specializations.length > 0 && (
                 <div>
