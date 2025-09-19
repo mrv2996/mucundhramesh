@@ -1,29 +1,29 @@
 import { Target, PenTool, Search, Code } from "lucide-react";
 
 const SkillsSection = () => {
-  const skills = [
+const skills = [
     {
       icon: Target,
-      title: "Product Strategy",
-      description: "Roadmapping, A/B Tests, Project Management",
+      title: "Operations & Process Optimization",
+      description: "Lean Operations, Agile Methodologies, Process Mapping, SOP Development",
       color: "primary",
     },
     {
       icon: PenTool,
-      title: "Product Design",
-      description: "User Stories, User Flows, Wireframes, Persona Creation",
+      title: "Finance Operations & Analysis",
+      description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting",
       color: "secondary",
     },
     {
       icon: Search,
-      title: "Market & User Research",
-      description: "Market Analysis, Experiment Design, Usability Testing",
+      title: "Market Intelligence & GTM",
+      description: "CRM Management, Campaign Metrics, Paid Marketing (Amazon), Data Storytelling",
       color: "tertiary",
     },
     {
       icon: Code,
-      title: "Data Analytics & Programming",
-      description: "Software Development and Management",
+      title: "Data Engineering & Analytics",
+      description: "SQL, SAP ABAP, Workflow Automation, Data Hygiene, Business Intelligence",
       color: "primary",
     },
   ];
