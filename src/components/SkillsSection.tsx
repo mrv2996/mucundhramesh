@@ -4,26 +4,26 @@ const SkillsSection = () => {
 const skills = [
     {
       icon: Target,
-      title: "Operations & Process Optimization",
-      description: "Lean Operations, Agile Methodologies, Process Mapping, SOP Development",
+      title: "RevOps & Commercial Operations",
+      description: "Sales Process Optimization, Revenue Forecasting, Pipeline Management, Territory Planning, Commission Analysis",
       color: "primary",
     },
     {
       icon: PenTool,
       title: "Finance Operations & Analysis",
-      description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting",
+      description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting, Budget Planning",
       color: "secondary",
     },
     {
       icon: Search,
-      title: "Market Intelligence & GTM",
-      description: "CRM Management, Campaign Metrics, Paid Marketing (Amazon), Data Storytelling",
+      title: "GTM & Sales Intelligence",
+      description: "CRM Management (Salesforce/HubSpot), Campaign ROI Analysis, Lead Scoring, Sales Analytics, Conversion Optimization",
       color: "tertiary",
     },
     {
       icon: Code,
-      title: "Data Engineering & Analytics",
-      description: "SQL, SAP ABAP, Workflow Automation, Data Hygiene, Business Intelligence",
+      title: "Data Engineering & API Integration",
+      description: "SQL, SAP ABAP, API/Webhooks, Workflow Automation, Data Hygiene, Sales Tech Stack Integration",
       color: "primary",
     },
   ];
