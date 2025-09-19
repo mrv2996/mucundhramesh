@@ -9,16 +9,16 @@ const skills = [
       color: "primary",
     },
     {
-      icon: PenTool,
-      title: "Finance Operations & Analysis",
-      description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting, Budget Planning",
-      color: "secondary",
-    },
-    {
       icon: TrendingUp,
       title: "GTM & Sales Intelligence",
       description: "CRM Management (Salesforce/HubSpot), Campaign ROI Analysis, Lead Scoring, Sales Analytics, Conversion Optimization",
       color: "tertiary",
+    },
+    {
+      icon: PenTool,
+      title: "Finance Operations & Analysis",
+      description: "Advanced Excel, VBA, Pivot Tables, Financial Modeling, Performance Reporting, Budget Planning",
+      color: "secondary",
     },
     {
       icon: Code,
