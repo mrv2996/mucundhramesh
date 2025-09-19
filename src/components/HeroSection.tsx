@@ -13,10 +13,10 @@ const HeroSection = () => {
               Mucundh Ramesh
             </h1>
             <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-8 leading-tight">
-              Connecting technology, data, and people
+              Technical Systems & Operations Strategist
             </h2>
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              As an ex-software developer with a Masters in Management Degree, I've built an expertise at crafting innovative solutions at the intersection of technology and business with an analytical and data-driven growth mindset.
+              Systems-thinking engineer turned operations expert, specializing in designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.
             </p>
             
             {/* CTAs - Golden ratio spacing */}

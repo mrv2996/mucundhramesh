@@ -62,9 +62,9 @@ const ToolsSection = () => {
         
         <div className="mt-12 text-center">
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Leveraging a diverse toolkit to bridge the gap between technical implementation 
-            and strategic business outcomes, with expertise spanning data analysis, 
-            product design, and growth optimization.
+            Engineering operational excellence through systematic design thinking, leveraging technical 
+            tools and platforms to architect scalable solutions that optimize business processes 
+            and drive sustainable growth across complex organizational systems.
           </p>
         </div>
       </div>
