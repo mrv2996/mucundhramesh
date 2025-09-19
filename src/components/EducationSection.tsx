@@ -5,7 +5,6 @@ const EducationSection = () => {
     {
       degree: "Master in Management - Grande École",
       school: "ESCP BUSINESS SCHOOL",
-      period: "2021 - 2024",
       location: "Paris & London",
       specializations: ["Consumer Behaviour", "Sustainability", "Scale-up Strategy"],
       type: "master",
@@ -13,12 +12,12 @@ const EducationSection = () => {
     {
       degree: "Bachelor of Technology, Computer Science and Engineering",
       school: "SRM INSTITUTE OF SCIENCE AND TECHNOLOGY",
-      period: "2014 - 2018",
       location: "Chennai, INDIA",
       specializations: [],
       type: "bachelor",
       researchPaper: {
         title: "SECURE DATA RETRIEVAL IN CLOUD USING MULTIPLE KEYS: A SURVEY",
+        journal: "IEEE",
         url: "https://www.researchgate.net/publication/325878411_SECURE_DATA_RETRIEVAL_IN_CLOUD_USING_MULTIPLE_KEYS_A_SURVEY"
       }
     },
@@ -79,9 +78,14 @@ const EducationSection = () => {
                     className="flex items-center gap-2 p-3 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 group"
                   >
                     <ExternalLink className="w-4 h-4 text-secondary group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-medium text-secondary group-hover:text-secondary/80">
-                      {edu.researchPaper.title}
-                    </span>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium text-secondary group-hover:text-secondary/80">
+                        {edu.researchPaper.title}
+                      </span>
+                      <span className="text-xs text-muted-foreground mt-1">
+                        Published in {edu.researchPaper.journal}
+                      </span>
+                    </div>
                   </a>
                 </div>
               )}
