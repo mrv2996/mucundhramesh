@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Mail, Download } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
 
 const HeroSection = () => {
@@ -24,13 +24,6 @@ const HeroSection = () => {
                   <a href="mailto:mucundh.ramesh@edu.escp.eu">
                     <Mail className="mr-2 h-5 w-5" />
                     Get in Touch
-                  </a>
-                </Button>
-                
-                <Button variant="outline" size="lg" className="border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-semibold hover:shadow-glow-primary" asChild>
-                  <a href="https://docs.google.com/document/d/1uBDcYVVNXB4sO3H6fGFpGyu-_mTCzQWC/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-                    <Download className="mr-2 h-5 w-5" />
-                    View CV
                   </a>
                 </Button>
               </div>
