@@ -53,6 +53,7 @@ const HeroSection = () => {
                   src={headshotImage} 
                   alt="Mucundh Ramesh - Systems operations analyst and technical strategist" 
                   className="w-full h-full object-cover object-top" 
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
