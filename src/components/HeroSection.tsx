@@ -16,7 +16,7 @@ const HeroSection = () => {
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
               Connecting technology, data, and people
             </h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 text-justify">
               Systems-thinking engineer turned operations analyst, specializing in designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.
             </p>
             

@@ -38,7 +38,7 @@ const RecommendationsSection = () => {
             Recommendations
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
-          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-[var(--space-md)]">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-[var(--space-md)] text-justify">
             What colleagues and partners say about working with me
           </p>
         </div>
@@ -76,7 +76,7 @@ const RecommendationsSection = () => {
                       {rec.relationship}
                     </p>
                     
-                    <blockquote className="text-sm text-foreground leading-relaxed flex-1">
+                    <blockquote className="text-sm text-foreground leading-relaxed flex-1 text-justify">
                       "{rec.text}"
                     </blockquote>
                   </CardContent>
