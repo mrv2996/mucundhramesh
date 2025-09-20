@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
 import ToolsSection from "@/components/ToolsSection";
@@ -17,13 +18,17 @@ const Index = () => {
       <div className="floating-orb orb-3"></div>
       <div className="floating-orb orb-4"></div>
       
-      <HeroSection />
-      <SkillsSection />
-      <ToolsSection />
-      <ProjectsSection />
-      <ExperienceSection />
-      <EducationSection />
-      <RecommendationsSection />
+      <main className="pt-16">
+        <HeroSection />
+        <SkillsSection />
+        <ToolsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <RecommendationsSection />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
