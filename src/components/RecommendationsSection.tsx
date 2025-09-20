@@ -1,4 +1,4 @@
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
