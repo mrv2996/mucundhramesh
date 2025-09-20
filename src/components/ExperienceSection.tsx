@@ -79,7 +79,7 @@ const JourneySection = () => {
                 
                 {/* Content card with enhanced styling */}
                 <div className="flex-1">
-                  <div className={`bg-card/80 backdrop-blur-sm rounded-lg p-[var(--space-sm)] shadow-soft border transition-all duration-300 hover:scale-[1.02] hover:shadow-glow ${item.color === 'primary' ? 'border-primary/30 hover:border-primary/50 hover:shadow-glow-primary' : item.color === 'secondary' ? 'border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary' : item.color === 'tertiary' ? 'border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary' : 'border-accent/30 hover:border-accent/50 hover:shadow-glow-accent'}`}>
+                  <div className={`bg-card/80 backdrop-blur-sm rounded-lg p-[var(--space-md)] shadow-soft border transition-all duration-300 hover:scale-[1.02] hover:shadow-glow ${item.color === 'primary' ? 'border-primary/30 hover:border-primary/50 hover:shadow-glow-primary' : item.color === 'secondary' ? 'border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary' : item.color === 'tertiary' ? 'border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary' : 'border-accent/30 hover:border-accent/50 hover:shadow-glow-accent'}`}>
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -93,16 +93,10 @@ const JourneySection = () => {
                           {item.company}
                         </h4>
                         
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-muted-foreground mb-2">
-                          <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4" />
-                            <span className="text-xs">{item.period}</span>
-                          </div>
-                          {item.location && <div className="flex items-center gap-2">
-                              <MapPin className="w-4 h-4" />
-                              <span className="text-xs">{item.location}</span>
-                            </div>}
-                        </div>
+                        {item.location && <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                            <MapPin className="w-4 h-4" />
+                            <span className="text-xs">{item.location}</span>
+                          </div>}
                         
                         {/* Research paper for education */}
                         {item.researchPaper && <div className="mb-2">
