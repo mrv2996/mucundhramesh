@@ -8,48 +8,30 @@ const RecommendationsSection = () => {
   const recommendations = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      title: "Senior Sales Director",
-      company: "TechCorp Solutions",
-      relationship: "Worked directly with Mucundh",
-      text: "Mucundh's ability to bridge the gap between technical complexity and business outcomes is exceptional. His data-driven approach to sales operations transformed our lead qualification process, resulting in a 40% increase in conversion rates.",
-      linkedinUrl: "#"
+      name: "Victor Falières",
+      title: "Partnerships at Sweep",
+      company: "Sustainability data platform",
+      relationship: "Victor managed Mucundh directly",
+      text: "Mucundh is a proactive and eager-to-learn professional. I had the opportunity to have him on my team during his time as a Partnerships Operations specialist. He demonstrated a strong ability to learn quickly, adapt to new situations, and contribute with impact. He also took initiative by proposing and implementing actions that helped improve our processes.",
+      linkedinUrl: "https://www.linkedin.com/in/victor-falieres/"
     },
     {
       id: 2,
-      name: "David Chen",
-      title: "VP of Operations",
-      company: "DataFlow Inc",
-      relationship: "Managed Mucundh directly",
-      text: "Working with Mucundh was a game-changer for our operations team. His systematic approach to process optimization and automation freed up 20+ hours per week for our team to focus on strategic initiatives.",
-      linkedinUrl: "#"
+      name: "Marcia Dantas de Lima",
+      title: "Carbon Market Strategist",
+      company: "Social and Biodiversity Impact | Business Development | Executive MBA",
+      relationship: "Marcia was Mucundh's client",
+      text: "Mucundh was conducting a study case for the company that I work for, a deep-tech startup focused on biodiversity assessment, the scope of the project was to assess the scalability of our business. I can recommend especially, his ability to use data to increase conversion and retention, and unlock product decisions (pricing, competitive benchmarking) by identifying ideal user personas, mapping customer journeys and eventually increasing revenues. It was a pleasure working with him and I can definitely recommend him to any agile tech start-up environments that needs support to use data to drive product and business decision making.",
+      linkedinUrl: "https://www.linkedin.com/in/marcia-dantas-de-lima/"
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      title: "Chief Technology Officer",
-      company: "InnovateTech",
-      relationship: "Collaborated closely with Mucundh",
-      text: "Mucundh's technical expertise in API integrations and data engineering is outstanding. He seamlessly connected our disparate systems, creating a unified view of our customer journey that improved our decision-making capabilities.",
-      linkedinUrl: "#"
-    },
-    {
-      id: 4,
-      name: "Michael Thompson",
-      title: "Head of Revenue Operations",
-      company: "ScaleUp Ventures",
-      relationship: "Worked with Mucundh on multiple projects",
-      text: "Mucundh combines deep technical knowledge with business acumen in a way that's rare to find. His work on our RevOps infrastructure directly contributed to a 30% improvement in sales cycle efficiency.",
-      linkedinUrl: "#"
-    },
-    {
-      id: 5,
-      name: "Lisa Park",
-      title: "Finance Director",
-      company: "Growth Partners",
-      relationship: "Collaborated with Mucundh on analytics projects",
-      text: "Mucundh's financial modeling and reporting capabilities are exceptional. He transformed our monthly reporting process from a 2-week ordeal to an automated 2-day turnaround, while improving accuracy and insights.",
-      linkedinUrl: "#"
+      name: "Jean-Philippe Kervadec",
+      title: "Group Business Controller",
+      company: "Forvis Mazars Group",
+      relationship: "Jean-Philippe was Mucundh's mentor",
+      text: "Between February & April 2022, I worked with Mucundh in the framework of a student project. A partnership between ESCP Business School and my company, Mazars. With other ESCP students, he helped us on one of key project for the near future: our Global IT platform programme. They worked on many topics such as the IT cost accounting, the charge-back model, the transfer pricing issue and much more. Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE. I strongly recommend him for an internship in your company. He has precious soft & hard skills so do not hesitate.",
+      linkedinUrl: "https://www.linkedin.com/in/jean-philippe-kervadec/"
     }
   ];
 
