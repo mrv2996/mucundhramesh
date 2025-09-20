@@ -1,7 +1,8 @@
-import { Quote, ExternalLink } from "lucide-react";
+import { Quote, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useState } from "react";
 
 const RecommendationsSection = () => {
   const recommendations = [
@@ -59,59 +60,66 @@ const RecommendationsSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-mixed bg-clip-text text-transparent">
             Recommendations
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-6">
             What colleagues and partners say about working with me
           </p>
         </div>
 
-        <ScrollArea className="w-full whitespace-nowrap rounded-md">
-          <div className="flex w-max space-x-6 p-4">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
             {recommendations.map((rec) => (
-              <Card
-                key={rec.id}
-                className="w-[400px] flex-none bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                      <Quote className="w-5 h-5 text-white" />
+              <CarouselItem key={rec.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
+                  <CardContent className="p-6 h-full flex flex-col">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                        <Quote className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-foreground truncate">
+                          {rec.name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground truncate">
+                          {rec.title}
+                        </p>
+                        <p className="text-sm text-primary font-medium truncate">
+                          {rec.company}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-foreground truncate">
-                        {rec.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground truncate">
-                        {rec.title}
-                      </p>
-                      <p className="text-sm text-primary font-medium truncate">
-                        {rec.company}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-xs text-muted-foreground mb-3 italic">
-                    {rec.relationship}
-                  </p>
-                  
-                  <blockquote className="text-sm text-foreground leading-relaxed mb-4 whitespace-normal">
-                    "{rec.text}"
-                  </blockquote>
-                  
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full text-xs"
-                    onClick={() => window.open(rec.linkedinUrl, '_blank')}
-                  >
-                    <ExternalLink className="w-3 h-3 mr-1" />
-                    View on LinkedIn
-                  </Button>
-                </CardContent>
-              </Card>
+                    
+                    <p className="text-xs text-muted-foreground mb-3 italic">
+                      {rec.relationship}
+                    </p>
+                    
+                    <blockquote className="text-sm text-foreground leading-relaxed mb-4 flex-1">
+                      "{rec.text}"
+                    </blockquote>
+                    
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full text-xs mt-auto"
+                      onClick={() => window.open(rec.linkedinUrl, '_blank')}
+                    >
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      View on LinkedIn
+                    </Button>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
             ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
       </div>
     </section>
   );
