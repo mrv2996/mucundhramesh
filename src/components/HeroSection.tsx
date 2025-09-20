@@ -4,21 +4,24 @@ import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[85vh] flex items-center justify-center px-6 py-12 pb-1">
+    <section className="min-h-[85vh] flex items-center justify-center px-6 py-section">
       <div className="max-w-content mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-4xl lg:text-4xl font-bold mb-6 leading-tight bg-gradient-mixed bg-clip-text text-transparent">
+        {/* Golden ratio grid: 62% content, 38% image */}
+        <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-xl)] lg:gap-[var(--space-2xl)] items-center">
+          <div className="text-center lg:text-left order-2 lg:order-1 space-y-[var(--space-lg)]">
+            {/* Typography hierarchy using golden ratio scale */}
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
               Mucundh Ramesh
             </h1>
-            <h2 className="text-2xl lg:text-3xl font-semibold text-primary mb-8 leading-tight">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-primary leading-tight">
               Connecting technology, data, and people
             </h2>
-            <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Systems-thinking engineer turned operations analyst, specializing in designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+            {/* CTAs with golden ratio spacing */}
+            <div className="flex flex-col sm:flex-row gap-[var(--space-md)] justify-center lg:justify-start pt-[var(--space-md)]">
               <Button variant="default" size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold shadow-medium hover:shadow-glow-primary" asChild>
                 <a href="mailto:mucundh.ramesh@edu.escp.eu">
                   <Mail className="mr-2 h-5 w-5" />
@@ -37,7 +40,8 @@ const HeroSection = () => {
 
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              <div className="w-64 h-80 lg:w-80 lg:h-96 rounded-3xl overflow-hidden shadow-large bg-gradient-primary">
+              {/* Image dimensions following golden ratio: width 1, height 1.618 */}
+              <div className="w-64 h-[25.8rem] lg:w-80 lg:h-[32.3rem] rounded-3xl overflow-hidden shadow-large bg-gradient-primary">
                 <img 
                   src={headshotImage} 
                   alt="Mucundh Ramesh - Systems operations analyst and technical strategist" 
@@ -45,7 +49,8 @@ const HeroSection = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
+              {/* Shadow offset using golden ratio spacing */}
+              <div className="absolute -z-10 top-[var(--space-md)] left-[var(--space-md)] w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
             </div>
           </div>
         </div>
