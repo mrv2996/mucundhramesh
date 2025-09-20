@@ -18,24 +18,20 @@ const HeroSection = () => {
               Systems-thinking engineer turned operations analyst, specializing in designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.
             </p>
             
-            <div className="flex flex-col gap-6 justify-center lg:justify-start mt-8">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button variant="default" size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold shadow-medium hover:shadow-glow-primary" asChild>
-                  <a href="mailto:mucundh.ramesh@edu.escp.eu">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Get in Touch
-                  </a>
-                </Button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+              <Button variant="default" size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold shadow-medium hover:shadow-glow-primary" asChild>
+                <a href="mailto:mucundh.ramesh@edu.escp.eu">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Get in Touch
+                </a>
+              </Button>
               
-              <div className="flex justify-center lg:justify-start">
-                <Button variant="outline" size="lg" className="font-semibold bg-card border-2 border-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 hover:shadow-glow-secondary" asChild>
-                  <a href="https://www.linkedin.com/in/mucundh-ramesh/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    LinkedIn Profile
-                  </a>
-                </Button>
-              </div>
+              <Button variant="outline" size="lg" className="font-semibold bg-card border-2 border-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 hover:shadow-glow-secondary" asChild>
+                <a href="https://www.linkedin.com/in/mucundh-ramesh/" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-5 w-5" />
+                  LinkedIn Profile
+                </a>
+              </Button>
             </div>
           </div>
 
