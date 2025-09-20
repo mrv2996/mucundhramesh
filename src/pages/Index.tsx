@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
 import ToolsSection from "@/components/ToolsSection";
@@ -9,6 +10,7 @@ import RecommendationsSection from "@/components/RecommendationsSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background animated-background">
+      <Navigation />
       {/* Floating background orbs */}
       <div className="floating-orb orb-1"></div>
       <div className="floating-orb orb-2"></div>
