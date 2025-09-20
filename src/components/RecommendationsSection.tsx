@@ -57,7 +57,7 @@ const RecommendationsSection = () => {
       <div className="max-w-content mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-mixed bg-clip-text text-transparent">
-            LinkedIn Recommendations
+            Recommendations
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             What colleagues and partners say about working with me
