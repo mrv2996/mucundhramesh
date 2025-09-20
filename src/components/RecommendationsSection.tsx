@@ -9,8 +9,8 @@ const RecommendationsSection = () => {
     {
       id: 1,
       name: "Victor Falières",
-      title: "Partnerships at Sweep",
-      company: "Sustainability data platform",
+      title: "Partnerships Manager",
+      company: "SWEEP",
       relationship: "Victor managed Mucundh directly",
       text: "Mucundh is a proactive and eager-to-learn professional. I had the opportunity to have him on my team during his time as a Partnerships Operations specialist. He demonstrated a strong ability to learn quickly, adapt to new situations, and contribute with impact. He also took initiative by proposing and implementing actions that helped improve our processes.",
       linkedinUrl: "https://www.linkedin.com/in/victor-falieres/"
@@ -18,8 +18,8 @@ const RecommendationsSection = () => {
     {
       id: 2,
       name: "Marcia Dantas de Lima",
-      title: "Carbon Market Strategist",
-      company: "Social and Biodiversity Impact | Business Development | Executive MBA",
+      title: "Head of Business Development",
+      company: "biometrio.earth",
       relationship: "Marcia was Mucundh's client",
       text: "Mucundh was conducting a study case for the company that I work for, a deep-tech startup focused on biodiversity assessment, the scope of the project was to assess the scalability of our business. I can recommend especially, his ability to use data to increase conversion and retention, and unlock product decisions (pricing, competitive benchmarking) by identifying ideal user personas, mapping customer journeys and eventually increasing revenues. It was a pleasure working with him and I can definitely recommend him to any agile tech start-up environments that needs support to use data to drive product and business decision making.",
       linkedinUrl: "https://www.linkedin.com/in/marcia-dantas-de-lima/"
