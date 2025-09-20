@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, TrendingUp, Zap, Bot } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -57,10 +58,13 @@ const CaseStudies = () => {
         <section className="container pb-24">
           <div className="max-w-4xl mx-auto space-y-12">
             {caseStudies.map((study, index) => (
-              <Card 
+              <Link 
                 key={study.id} 
-                className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-primary/20 hover:border-l-primary"
+                to={study.id === 1 ? "/case-studies/partner-activation-automation" : "#"}
               >
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-primary/20 hover:border-l-primary"
+                >
                 <CardHeader className="space-y-4">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-4">
@@ -124,15 +128,16 @@ const CaseStudies = () => {
                   <div className="pt-4 border-t">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
-                        Coming soon - Full case study with implementation details
+                        {study.id === 1 ? "Click to read the full implementation details" : "Coming soon - Full case study with implementation details"}
                       </span>
                       <div className="text-primary font-medium text-sm group-hover:underline">
-                        Read more →
+                        {study.id === 1 ? "Read full case study →" : "Read more →"}
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             ))}
           </div>
 
