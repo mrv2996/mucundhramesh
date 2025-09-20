@@ -4,7 +4,7 @@ const JourneySection = () => {
     title: "Partner Operations Specialist",
     company: "SWEEP",
     period: "Jan 2024 - Present",
-    location: "London",
+    location: "London, United Kingdom",
     type: "work",
     status: "current",
     color: "primary"
