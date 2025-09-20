@@ -53,11 +53,11 @@ const RecommendationsSection = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full max-w-5xl mx-auto"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-4">
             {recommendations.map((rec) => (
-              <CarouselItem key={rec.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={rec.id} className="pl-4 basis-[85%] md:basis-[75%]">
                 <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
                   <CardContent className="p-6 h-full flex flex-col">
                     <div className="flex items-start gap-4 mb-4">
