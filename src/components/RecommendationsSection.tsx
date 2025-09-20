@@ -31,14 +31,14 @@ const RecommendationsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/30">
+    <section className="py-section px-6 bg-muted/30">
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-mixed bg-clip-text text-transparent">
+        <div className="text-center mb-[var(--space-2xl)]">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-[var(--space-lg)] bg-gradient-mixed bg-clip-text text-transparent">
             Recommendations
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-6">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-[var(--space-md)]">
             What colleagues and partners say about working with me
           </p>
         </div>
@@ -50,12 +50,12 @@ const RecommendationsSection = () => {
           }}
           className="w-full max-w-5xl mx-auto"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-[var(--space-md)]">
             {recommendations.map((rec) => (
-              <CarouselItem key={rec.id} className="pl-4 basis-[85%] md:basis-[75%]">
+              <CarouselItem key={rec.id} className="pl-[var(--space-md)] basis-[85%] md:basis-[75%]">
                 <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
-                  <CardContent className="p-6 h-full flex flex-col">
-                    <div className="flex items-start gap-4 mb-4">
+                  <CardContent className="p-[var(--space-lg)] h-full flex flex-col">
+                    <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
                       <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
                         <Quote className="w-5 h-5 text-white" />
                       </div>

@@ -26,24 +26,25 @@ const EducationSection = () => {
   return (
     <section className="py-section px-6 bg-gradient-to-br from-muted/20 via-background to-muted/30">
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6 animate-fade-in">
+        <div className="text-center mb-[var(--space-2xl)]">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Education
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Golden ratio grid: 2 columns with proper spacing */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--space-lg)] lg:gap-[var(--space-xl)]">
           {education.map((edu, index) => (
             <div
               key={edu.school}
-              className={`bg-card/70 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105 ${
+              className={`bg-card/70 backdrop-blur-sm rounded-2xl p-[var(--space-lg)] shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105 ${
                 edu.type === 'master' 
                   ? 'hover:shadow-glow-primary border-primary/20' 
                   : 'hover:shadow-glow-secondary border-secondary/20'
               }`}
             >
-              <div className="flex items-start gap-4 mb-4">
+              <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
                 <div className={`w-10 h-10 rounded-xl ${
                   edu.type === 'master' ? 'bg-gradient-primary' : 'bg-gradient-secondary'
                 } flex items-center justify-center shadow-medium`}>
@@ -51,7 +52,7 @@ const EducationSection = () => {
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight">
+                  <h3 className="text-lg lg:text-xl font-semibold text-foreground mb-2 leading-tight">
                     {edu.degree}
                   </h3>
                   <h4 className={`text-base font-medium mb-3 ${
@@ -62,7 +63,7 @@ const EducationSection = () => {
                 </div>
               </div>
               
-              <div className="space-y-3 mb-4">
+              <div className="space-y-3 mb-[var(--space-md)]">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
                   <span>{edu.location}</span>
@@ -70,7 +71,7 @@ const EducationSection = () => {
               </div>
               
               {edu.researchPaper && (
-                <div className="mb-4">
+                <div className="mb-[var(--space-md)]">
                   <a
                     href={edu.researchPaper.url}
                     target="_blank"

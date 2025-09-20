@@ -48,20 +48,21 @@ const ToolsSection = () => {
   return (
     <section className="py-section px-6">
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6 animate-fade-in">
+        <div className="text-center mb-[var(--space-2xl)]">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Tools & Technologies
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        {/* Tools arranged with golden ratio spacing */}
+        <div className="flex flex-wrap gap-[var(--space-md)] justify-center">
           {tools.map((tool, index) => {
             const Icon = tool.icon;
             return (
               <div
                 key={tool.name}
-                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium ${getCategoryColor(tool.category)}`}
+                className={`flex items-center gap-3 px-[var(--space-md)] py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium ${getCategoryColor(tool.category)}`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
                 }}
@@ -73,8 +74,8 @@ const ToolsSection = () => {
           })}
         </div>
         
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <div className="mt-[var(--space-xl)] text-center">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Revenue operations expertise backed by technical engineering foundation - architecting scalable systems that drive measurable business growth through data-driven automation, process optimization, and strategic commercial intelligence.
           </p>
         </div>
