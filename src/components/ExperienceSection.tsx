@@ -70,8 +70,8 @@ const JourneySection = () => {
             <div className="w-full h-full bg-gradient-to-b from-primary via-secondary via-tertiary via-accent to-primary rounded-full shadow-glow"></div>
           </div>
           
-          <div className="space-y-[var(--space-lg)]">
-            {journeyItems.map((item, index) => <div key={`${item.company}-${item.title}`} className="relative flex items-start gap-[var(--space-lg)]">
+          <div className="space-y-[var(--space-sm)]">
+            {journeyItems.map((item, index) => <div key={`${item.company}-${item.title}`} className="relative flex items-start gap-[var(--space-md)]">
                 {/* Timeline dot with dynamic colors */}
                 <div className={`hidden md:flex w-12 h-12 rounded-full items-center justify-center shadow-glow relative z-10 ${item.color === 'primary' ? 'bg-gradient-primary' : item.color === 'secondary' ? 'bg-gradient-secondary' : item.color === 'tertiary' ? 'bg-gradient-tertiary' : 'bg-gradient-accent'}`}>
                   {item.type === 'education' ? <GraduationCap className="w-6 h-6 text-white" /> : <Briefcase className="w-6 h-6 text-white" />}
@@ -79,21 +79,21 @@ const JourneySection = () => {
                 
                 {/* Content card with enhanced styling */}
                 <div className="flex-1">
-                  <div className={`bg-card/80 backdrop-blur-sm rounded-xl p-[var(--space-md)] lg:p-[var(--space-lg)] shadow-soft border transition-all duration-300 hover:scale-105 hover:shadow-glow ${item.color === 'primary' ? 'border-primary/30 hover:border-primary/50 hover:shadow-glow-primary' : item.color === 'secondary' ? 'border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary' : item.color === 'tertiary' ? 'border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary' : 'border-accent/30 hover:border-accent/50 hover:shadow-glow-accent'}`}>
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
+                  <div className={`bg-card/80 backdrop-blur-sm rounded-lg p-[var(--space-sm)] shadow-soft border transition-all duration-300 hover:scale-[1.02] hover:shadow-glow ${item.color === 'primary' ? 'border-primary/30 hover:border-primary/50 hover:shadow-glow-primary' : item.color === 'secondary' ? 'border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary' : item.color === 'tertiary' ? 'border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary' : 'border-accent/30 hover:border-accent/50 hover:shadow-glow-accent'}`}>
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                       <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
+                        <div className="flex items-center gap-2 mb-1">
                           <h3 className={`text-sm lg:text-base font-semibold ${item.color === 'primary' ? 'text-primary' : item.color === 'secondary' ? 'text-secondary' : item.color === 'tertiary' ? 'text-tertiary' : 'text-accent'}`}>
                             {item.title}
                           </h3>
                           {item.status === 'current'}
                         </div>
                         
-                        <h4 className="text-sm font-medium text-foreground mb-3">
+                        <h4 className="text-sm font-medium text-foreground mb-2">
                           {item.company}
                         </h4>
                         
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-muted-foreground mb-3">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-muted-foreground mb-2">
                           <div className="flex items-center gap-2">
                             <Calendar className="w-4 h-4" />
                             <span className="text-xs">{item.period}</span>
@@ -105,7 +105,7 @@ const JourneySection = () => {
                         </div>
                         
                         {/* Research paper for education */}
-                        {item.researchPaper && <div className="mb-3">
+                        {item.researchPaper && <div className="mb-2">
                             <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 group">
                               <ExternalLink className="w-3 h-3 text-secondary group-hover:scale-110 transition-transform" />
                               <div className="flex flex-col">
