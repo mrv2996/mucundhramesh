@@ -71,7 +71,7 @@ const ProjectsSection = () => {
                 </div>
               </div>
               
-              <p className="text-muted-foreground leading-relaxed mb-[var(--space-md)] text-justify">
+              <p className="text-muted-foreground leading-relaxed mb-[var(--space-md)]">
                 {project.description}
               </p>
               
@@ -91,7 +91,7 @@ const ProjectsSection = () => {
         </div>
         
         <div className="mt-[var(--space-xl)] text-center">
-          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed text-justify">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Systems-level approach to problem-solving, designing technical solutions that integrate seamlessly with business operations while maintaining focus on scalability, efficiency, and measurable performance improvements.
           </p>
         </div>

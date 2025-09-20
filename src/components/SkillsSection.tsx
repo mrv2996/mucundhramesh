@@ -60,7 +60,7 @@ const SkillsSection = () => {
                     {skill.title}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed font-medium text-justify">
+                  <p className="text-muted-foreground leading-relaxed font-medium">
                     {skill.description}
                   </p>
                 </div>
