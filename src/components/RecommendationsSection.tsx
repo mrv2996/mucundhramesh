@@ -1,8 +1,6 @@
-import { Quote, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useState } from "react";
 
 const RecommendationsSection = () => {
   const recommendations = [
@@ -12,8 +10,7 @@ const RecommendationsSection = () => {
       title: "Partnerships Manager",
       company: "SWEEP",
       relationship: "Victor managed Mucundh directly",
-      text: "Mucundh is a proactive and eager-to-learn professional. I had the opportunity to have him on my team during his time as a Partnerships Operations specialist. He demonstrated a strong ability to learn quickly, adapt to new situations, and contribute with impact. He also took initiative by proposing and implementing actions that helped improve our processes.",
-      linkedinUrl: "https://www.linkedin.com/in/victor-falieres/"
+      text: "Mucundh is a proactive and eager-to-learn professional. I had the opportunity to have him on my team during his time as a Partnerships Operations specialist. He demonstrated a strong ability to learn quickly, adapt to new situations, and contribute with impact. He also took initiative by proposing and implementing actions that helped improve our processes."
     },
     {
       id: 2,
@@ -21,8 +18,7 @@ const RecommendationsSection = () => {
       title: "Head of Business Development",
       company: "biometrio.earth",
       relationship: "Marcia was Mucundh's client",
-      text: "Mucundh was conducting a study case for the company that I work for, a deep-tech startup focused on biodiversity assessment, the scope of the project was to assess the scalability of our business. I can recommend especially, his ability to use data to increase conversion and retention, and unlock product decisions (pricing, competitive benchmarking) by identifying ideal user personas, mapping customer journeys and eventually increasing revenues. It was a pleasure working with him and I can definitely recommend him to any agile tech start-up environments that needs support to use data to drive product and business decision making.",
-      linkedinUrl: "https://www.linkedin.com/in/marcia-dantas-de-lima/"
+      text: "Mucundh was conducting a study case for the company that I work for, a deep-tech startup focused on biodiversity assessment, the scope of the project was to assess the scalability of our business. I can recommend especially, his ability to use data to increase conversion and retention, and unlock product decisions (pricing, competitive benchmarking) by identifying ideal user personas, mapping customer journeys and eventually increasing revenues. It was a pleasure working with him and I can definitely recommend him to any agile tech start-up environments that needs support to use data to drive product and business decision making."
     },
     {
       id: 3,
@@ -30,8 +26,7 @@ const RecommendationsSection = () => {
       title: "Group Business Controller",
       company: "Forvis Mazars Group",
       relationship: "Jean-Philippe was Mucundh's mentor",
-      text: "Between February & April 2022, I worked with Mucundh in the framework of a student project. A partnership between ESCP Business School and my company, Mazars. With other ESCP students, he helped us on one of key project for the near future: our Global IT platform programme. They worked on many topics such as the IT cost accounting, the charge-back model, the transfer pricing issue and much more. Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE. I strongly recommend him for an internship in your company. He has precious soft & hard skills so do not hesitate.",
-      linkedinUrl: "https://www.linkedin.com/in/jean-philippe-kervadec/"
+      text: "Between February & April 2022, I worked with Mucundh in the framework of a student project. A partnership between ESCP Business School and my company, Mazars. With other ESCP students, he helped us on one of key project for the near future: our Global IT platform programme. They worked on many topics such as the IT cost accounting, the charge-back model, the transfer pricing issue and much more. Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE. I strongly recommend him for an internship in your company. He has precious soft & hard skills so do not hesitate."
     }
   ];
 
@@ -81,19 +76,9 @@ const RecommendationsSection = () => {
                       {rec.relationship}
                     </p>
                     
-                    <blockquote className="text-sm text-foreground leading-relaxed mb-4 flex-1">
+                    <blockquote className="text-sm text-foreground leading-relaxed flex-1">
                       "{rec.text}"
                     </blockquote>
-                    
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full text-xs mt-auto"
-                      onClick={() => window.open(rec.linkedinUrl, '_blank')}
-                    >
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      View on LinkedIn
-                    </Button>
                   </CardContent>
                 </Card>
               </CarouselItem>
