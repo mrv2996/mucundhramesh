@@ -43,7 +43,7 @@ const ProjectsSection = () => {
     <section className="py-section px-6 bg-gradient-to-br from-muted/20 via-background to-muted/30">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
                   <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium border mb-3 ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </div>
-                  <h3 className="text-lg lg:text-xl font-semibold text-foreground leading-tight">
+                  <h3 className="text-base lg:text-lg font-semibold text-foreground leading-tight">
                     {project.title}
                   </h3>
                 </div>
@@ -91,7 +91,7 @@ const ProjectsSection = () => {
         </div>
         
         <div className="mt-[var(--space-xl)] text-center">
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Systems-level approach to problem-solving, designing technical solutions that integrate seamlessly with business operations while maintaining focus on scalability, efficiency, and measurable performance improvements.
           </p>
         </div>

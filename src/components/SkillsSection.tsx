@@ -32,7 +32,7 @@ const SkillsSection = () => {
     <section className="py-section px-6 bg-gradient-to-br from-muted/30 via-background to-muted/20">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Skills
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
@@ -56,7 +56,7 @@ const SkillsSection = () => {
                     <Icon className="w-8 h-8 text-white drop-shadow-sm" />
                   </div>
                   
-                  <h3 className="text-xl lg:text-2xl font-semibold text-foreground">
+                  <h3 className="text-lg lg:text-xl font-semibold text-foreground">
                     {skill.title}
                   </h3>
                   

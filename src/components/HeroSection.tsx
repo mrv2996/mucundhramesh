@@ -10,13 +10,13 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-xl)] lg:gap-[var(--space-2xl)] items-center">
           <div className="text-center lg:text-left order-2 lg:order-1 space-y-[var(--space-lg)]">
             {/* Typography hierarchy using golden ratio scale */}
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
+            <h1 className="text-3xl lg:text-4xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
               Mucundh Ramesh
             </h1>
-            <h2 className="text-2xl lg:text-3xl font-semibold text-primary leading-tight">
+            <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
               Connecting technology, data, and people
             </h2>
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Systems-thinking engineer turned operations analyst, specializing in designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.
             </p>
             

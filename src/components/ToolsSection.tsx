@@ -49,7 +49,7 @@ const ToolsSection = () => {
     <section className="py-section px-6">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Tools & Technologies
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
@@ -75,7 +75,7 @@ const ToolsSection = () => {
         </div>
         
         <div className="mt-[var(--space-xl)] text-center">
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Revenue operations expertise backed by technical engineering foundation - architecting scalable systems that drive measurable business growth through data-driven automation, process optimization, and strategic commercial intelligence.
           </p>
         </div>

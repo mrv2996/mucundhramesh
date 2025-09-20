@@ -27,7 +27,7 @@ const EducationSection = () => {
     <section className="py-section px-6 bg-gradient-to-br from-muted/20 via-background to-muted/30">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Education
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
@@ -52,7 +52,7 @@ const EducationSection = () => {
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="text-lg lg:text-xl font-semibold text-foreground mb-2 leading-tight">
+                  <h3 className="text-base lg:text-lg font-semibold text-foreground mb-2 leading-tight">
                     {edu.degree}
                   </h3>
                   <h4 className={`text-base font-medium mb-3 ${

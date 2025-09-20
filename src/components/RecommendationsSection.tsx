@@ -34,11 +34,11 @@ const RecommendationsSection = () => {
     <section className="py-section px-6 bg-muted/30">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-[var(--space-lg)] bg-gradient-mixed bg-clip-text text-transparent">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-[var(--space-lg)] bg-gradient-mixed bg-clip-text text-transparent">
             Recommendations
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-[var(--space-md)]">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-[var(--space-md)]">
             What colleagues and partners say about working with me
           </p>
         </div>

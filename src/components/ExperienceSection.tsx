@@ -36,7 +36,7 @@ const ExperienceSection = () => {
     <section className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Experience
           </h2>
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-lg lg:text-xl font-semibold text-foreground">
+                          <h3 className="text-base lg:text-lg font-semibold text-foreground">
                             {exp.title} at {exp.company}
                           </h3>
                           {exp.type === 'current' && (
