@@ -43,50 +43,52 @@ const RecommendationsSection = () => {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          className="w-full max-w-4xl mx-auto"
-        >
-          <CarouselContent className="flex items-center">
-            {recommendations.map((rec) => (
-              <CarouselItem key={rec.id} className="basis-full">
-                <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
-                  <CardContent className="p-[var(--space-lg)] h-full flex flex-col">
-                    <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
-                      <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                        <Quote className="w-5 h-5 text-white" />
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            className="w-full max-w-4xl mx-auto"
+          >
+            <CarouselContent className="flex items-center">
+              {recommendations.map((rec) => (
+                <CarouselItem key={rec.id} className="basis-full">
+                  <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
+                    <CardContent className="p-[var(--space-lg)] h-full flex flex-col">
+                      <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
+                        <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                          <Quote className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold text-foreground truncate">
+                            {rec.name}
+                          </h3>
+                          <p className="text-sm text-muted-foreground truncate">
+                            {rec.title}
+                          </p>
+                          <p className="text-sm text-primary font-medium truncate">
+                            {rec.company}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-foreground truncate">
-                          {rec.name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground truncate">
-                          {rec.title}
-                        </p>
-                        <p className="text-sm text-primary font-medium truncate">
-                          {rec.company}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <p className="text-xs text-muted-foreground mb-3 italic">
-                      {rec.relationship}
-                    </p>
-                    
-                    <blockquote className="text-sm text-foreground leading-relaxed flex-1">
-                      "{rec.text}"
-                    </blockquote>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-2" />
-          <CarouselNext className="right-2" />
-        </Carousel>
+                      
+                      <p className="text-xs text-muted-foreground mb-3 italic">
+                        {rec.relationship}
+                      </p>
+                      
+                      <blockquote className="text-sm text-foreground leading-relaxed flex-1">
+                        "{rec.text}"
+                      </blockquote>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <CarouselPrevious className="-left-12" />
+          <CarouselNext className="-right-12" />
+        </div>
       </div>
     </section>
   );
