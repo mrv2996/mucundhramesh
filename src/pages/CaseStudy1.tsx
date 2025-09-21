@@ -114,7 +114,7 @@ ORDER BY
                   <div className="space-y-2">
                     <h4 className="font-semibold text-foreground">Pain Points:</h4>
                     <ul className="space-y-1 text-sm text-muted-foreground">
-                      <li>• Manual Excel file uploads to Outlook</li>
+                      <li>• Manual salesforce update process</li>
                       <li>• Disconnected partner tracking systems</li>
                       <li>• No automated ETL process for CRM data</li>
                       <li>• Delayed partner readiness reporting</li>
