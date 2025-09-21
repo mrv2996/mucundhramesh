@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle, Settings, Play } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import salesforceHierarchy from "@/assets/salesforce-hierarchy-blurred.png";
+import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 
 const CaseStudy1 = () => {
   const [webhookUrl, setWebhookUrl] = useState("");
