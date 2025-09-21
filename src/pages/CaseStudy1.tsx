@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle, Settings, Play } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import capgeminiHierarchy from "@/assets/capgemini-hierarchy.png";
 
 const CaseStudy1 = () => {
   const [webhookUrl, setWebhookUrl] = useState("");
@@ -250,48 +251,13 @@ ORDER BY
                 </div>
                 
                 <div className="relative">
-                  {/* Parent Account Level */}
-                  <div className="text-center mb-8">
-                    <div className="inline-block bg-primary text-primary-foreground px-6 py-4 rounded-lg shadow-lg">
-                      <div className="font-bold text-lg">Global Partner Corp</div>
-                      <div className="text-sm opacity-90">Parent Account | Enterprise</div>
-                      <div className="text-xs mt-1">Region: Global</div>
-                    </div>
-                  </div>
-                  
-                  {/* Connection Lines */}
-                  <div className="flex justify-center mb-6">
-                    <div className="w-px h-8 bg-border"></div>
-                  </div>
-                  
-                  {/* Child Accounts Level */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="text-center">
-                      <div className="bg-secondary text-secondary-foreground px-4 py-3 rounded-lg shadow">
-                        <div className="font-semibold">Partner EMEA</div>
-                        <div className="text-sm opacity-90">Child Account</div>
-                        <div className="text-xs mt-1">Status: Active</div>
-                        <div className="text-xs">Region: Europe</div>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="bg-secondary text-secondary-foreground px-4 py-3 rounded-lg shadow">
-                        <div className="font-semibold">Partner Americas</div>
-                        <div className="text-sm opacity-90">Child Account</div>
-                        <div className="text-xs mt-1">Status: Pending</div>
-                        <div className="text-xs">Region: Americas</div>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="bg-secondary text-secondary-foreground px-4 py-3 rounded-lg shadow">
-                        <div className="font-semibold">Partner APAC</div>
-                        <div className="text-sm opacity-90">Child Account</div>
-                        <div className="text-xs mt-1">Status: In Progress</div>
-                        <div className="text-xs">Region: Asia Pacific</div>
-                      </div>
-                    </div>
+                  {/* Salesforce UI Screenshot */}
+                  <div className="mb-8">
+                    <img 
+                      src={capgeminiHierarchy} 
+                      alt="Salesforce Account Hierarchy showing Capgemini parent account with regional subsidiaries including Capgemini APAC, EMEA, and Americas"
+                      className="w-full rounded-lg shadow-lg border border-muted"
+                    />
                   </div>
                   
                   <div className="mt-8 p-4 bg-muted/50 rounded-lg">
