@@ -31,8 +31,8 @@ const RecommendationsSection = () => {
   ];
 
   return (
-    <section className="py-section px-6 bg-muted/30">
-      <div className="max-w-content mx-auto">
+    <section className="py-section bg-muted/30 overflow-hidden">
+      <div className="max-w-content mx-auto px-6">
         <div className="text-center mb-[var(--space-2xl)]">
           <h2 className="text-2xl lg:text-3xl font-bold mb-[var(--space-lg)] bg-gradient-mixed bg-clip-text text-transparent">
             Recommendations
@@ -42,17 +42,19 @@ const RecommendationsSection = () => {
             What colleagues and partners say about working with me
           </p>
         </div>
+      </div>
 
+      <div className="relative">
         <Carousel
           opts={{
-            align: "center",
+            align: "start",
             loop: true,
           }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full"
         >
-          <CarouselContent className="flex items-center">
+          <CarouselContent className="ml-6">
             {recommendations.map((rec) => (
-              <CarouselItem key={rec.id} className="basis-full">
+              <CarouselItem key={rec.id} className="basis-[280px] md:basis-[350px] lg:basis-[400px]">
                 <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
                   <CardContent className="p-[var(--space-lg)] h-full flex flex-col">
                     <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
@@ -84,8 +86,8 @@ const RecommendationsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-2" />
-          <CarouselNext className="right-2" />
+          <CarouselPrevious className="left-6" />
+          <CarouselNext className="right-6" />
         </Carousel>
       </div>
     </section>
