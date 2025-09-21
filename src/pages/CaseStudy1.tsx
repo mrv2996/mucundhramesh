@@ -268,6 +268,19 @@ ORDER BY
                   </div>
                   
                   <div className="mt-8 p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-semibold mb-4">SQL Solution Logic:</h4>
+                    <div className="bg-background p-4 rounded-md border">
+                      <pre className="text-sm font-mono text-foreground">
+                        <code>{`SELECT Name, Id FROM Account WHERE Name LIKE '%Parent'`}</code>
+                      </pre>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-3">
+                      This SOQL command ensures we pull all accounts that contain the "Parent" keyword, 
+                      enabling efficient data extraction for our lookup sheets and partner tracking reports.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-semibold mb-2">Automation Benefits:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                       <ul className="space-y-1">
