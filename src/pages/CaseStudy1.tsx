@@ -141,12 +141,12 @@ ORDER BY
             <h2 className="text-3xl font-bold text-center mb-8">3-Step Process Optimization</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <Card className="text-center">
+                <Card className="text-center">
                 <CardContent className="pt-6">
                   <Database className="h-8 w-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">1. CRM Hygiene</h3>
                   <p className="text-sm text-muted-foreground text-justify">
-                    Standardized partner account structure with proper parent-child relationships and nomenclature for seamless data extraction.
+                    Establish parent account hierarchy structure to organize partner relationships and enable efficient data extraction through standardized nomenclature.
                   </p>
                 </CardContent>
               </Card>
