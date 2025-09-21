@@ -299,54 +299,6 @@ ORDER BY
           </div>
         </section>
 
-        {/* SQL Code Implementation */}
-        <section className="container pb-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">SQL Implementation</h2>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Database className="h-5 w-5" />
-                  Partner Hierarchy Query
-                </CardTitle>
-                <p className="text-muted-foreground text-justify">
-                  This SQL query extracts parent-child account relationships for automated partner activation tracking, 
-                  focusing on accounts containing "parent" keywords and their associated regional partners.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-slate-900 text-slate-100 p-6 rounded-lg overflow-x-auto">
-                  <pre className="text-sm">
-                    <code>{sqlCode}</code>
-                  </pre>
-                </div>
-                
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">Query Features:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Parent account identification using CONTAINS</li>
-                      <li>• Partner status filtering for active tracking</li>
-                      <li>• Regional grouping for reporting</li>
-                      <li>• Activation date sorting for prioritization</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Automation Integration:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Feeds data into Zapier workflows</li>
-                      <li>• Updates bi-weekly tracking sheets</li>
-                      <li>• Triggers partner readiness alerts</li>
-                      <li>• Generates KPI dashboard metrics</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         {/* Zapier Integration */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
