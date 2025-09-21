@@ -2,63 +2,13 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle, Settings, Play } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle } from "lucide-react";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 import zapierWorkflow from "@/assets/zapier-workflow.png";
 
 const CaseStudy1 = () => {
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
 
-  const handleZapierTrigger = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!webhookUrl) {
-      toast({
-        title: "Error",
-        description: "Please enter your Zapier webhook URL",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsLoading(true);
-
-    try {
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-          timestamp: new Date().toISOString(),
-          triggered_from: window.location.origin,
-          automation_type: "bi-weekly_partner_activation_cadence",
-          case_study: "partner_activation_automation"
-        }),
-      });
-
-      toast({
-        title: "Automation Triggered",
-        description: "Your bi-weekly partner activation cadence has been initiated. Check your Zap history to confirm execution.",
-      });
-    } catch (error) {
-      console.error("Error triggering webhook:", error);
-      toast({
-        title: "Error",
-        description: "Failed to trigger the automation. Please check your webhook URL and try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const sqlCode = `-- Partner Account Hierarchy Query
 -- Extract parent-child relationships for partner activation tracking
@@ -215,7 +165,7 @@ ORDER BY
               
               <Card className="text-center">
                 <CardContent className="pt-6">
-                  <Settings className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <Database className="h-8 w-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">3. Data Processing</h3>
                   <p className="text-sm text-muted-foreground text-justify">
                     Automated formatting and detail extraction from local files into standardized partner tracking sheets.
@@ -352,42 +302,6 @@ ORDER BY
                     </ul>
                   </div>
                 </div>
-                
-                <Separator />
-                
-                <form onSubmit={handleZapierTrigger} className="space-y-4">
-                  <div>
-                    <label htmlFor="webhook" className="block text-sm font-medium mb-2">
-                      Your Zapier Webhook URL
-                    </label>
-                    <input
-                      id="webhook"
-                      type="url"
-                      value={webhookUrl}
-                      onChange={(e) => setWebhookUrl(e.target.value)}
-                      placeholder="https://hooks.zapier.com/hooks/catch/..."
-                      className="w-full px-4 py-2 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
-                      required
-                    />
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Paste your Zapier webhook URL to test the bi-weekly automation trigger
-                    </p>
-                  </div>
-                  
-                  <Button type="submit" disabled={isLoading} className="w-full">
-                    {isLoading ? (
-                      <>
-                        <Settings className="mr-2 h-4 w-4 animate-spin" />
-                        Triggering Automation...
-                      </>
-                    ) : (
-                      <>
-                        <Play className="mr-2 h-4 w-4" />
-                        Test Bi-Weekly Automation
-                      </>
-                    )}
-                  </Button>
-                </form>
               </CardContent>
             </Card>
           </div>
