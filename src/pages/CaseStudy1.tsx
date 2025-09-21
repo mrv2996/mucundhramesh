@@ -3,13 +3,11 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle } from "lucide-react";
+import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle, Cog } from "lucide-react";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 import zapierWorkflow from "@/assets/zapier-workflow.png";
 
 const CaseStudy1 = () => {
-
-
   const sqlCode = `-- Partner Account Hierarchy Query
 -- Extract parent-child relationships for partner activation tracking
 
@@ -165,7 +163,7 @@ ORDER BY
               
               <Card className="text-center">
                 <CardContent className="pt-6">
-                  <Database className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <Cog className="h-8 w-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold mb-2">3. Data Processing</h3>
                   <p className="text-sm text-muted-foreground text-justify">
                     Automated formatting and detail extraction from local files into standardized partner tracking sheets.
