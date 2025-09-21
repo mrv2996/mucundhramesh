@@ -12,11 +12,11 @@ const CaseStudies = () => {
       title: "How a Simple Automation Saved Manual Hours in Partner Activation",
       subtitle: "Using Excel, Salesforce, SQL and Zapier to streamline operations",
       readTime: "8 min read",
-      tags: ["Automation", "Zapier", "Salesforce", "SQL"],
+      tags: ["Automation", "Zapier", "Salesforce", "SQL", "ETL"],
       icon: <Zap className="h-8 w-8 text-primary" />,
-      summary: "Discover how we eliminated 15+ hours of weekly manual work by creating an intelligent automation pipeline that connects Excel data processing, Salesforce CRM updates, and SQL database operations through Zapier workflows.",
+      summary: "Discover how we eliminated 7-8 hours of weekly manual work by creating an intelligent automation pipeline that connects Excel data processing, Salesforce CRM updates, and SQL database operations through Zapier workflows.",
       keyMetrics: [
-        { label: "Time Saved", value: "15+ hrs/week", icon: <Clock className="h-4 w-4" /> },
+        { label: "Time Saved", value: "7-8 hrs/week", icon: <Clock className="h-4 w-4" /> },
         { label: "Process Efficiency", value: "85% faster", icon: <TrendingUp className="h-4 w-4" /> },
         { label: "Team Impact", value: "3 departments", icon: <Users className="h-4 w-4" /> }
       ]
@@ -141,23 +141,6 @@ const CaseStudies = () => {
             ))}
           </div>
 
-          {/* Newsletter Signup */}
-          <div className="max-w-2xl mx-auto mt-16 text-center space-y-6 p-8 rounded-lg bg-muted/30 border">
-            <h3 className="text-2xl font-semibold">Stay Updated</h3>
-            <p className="text-muted-foreground">
-              Get notified when new case studies are published. Learn from real operational improvements and automation wins.
-            </p>
-            <div className="flex gap-3 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 px-4 py-2 rounded-md border bg-background"
-              />
-              <button className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </section>
       </main>
       
