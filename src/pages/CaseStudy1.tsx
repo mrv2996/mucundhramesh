@@ -52,7 +52,7 @@ ORDER BY
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-                How a Simple Automation Saved 15+ Hours Weekly in Partner Activation
+                How a Simple Automation Saved 7-8 Hours Weekly in Partner Activation
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
@@ -73,7 +73,7 @@ ORDER BY
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl font-bold text-foreground">15+ hrs</div>
+                  <div className="text-3xl font-bold text-foreground">7-8 hrs</div>
                   <div className="text-sm text-muted-foreground">Saved per week</div>
                 </CardContent>
               </Card>
@@ -107,7 +107,7 @@ ORDER BY
               <CardContent className="space-y-4 text-justify">
                 <p className="text-muted-foreground leading-relaxed">
                   The partner activation process was a weekly nightmare of manual Excel file updates, 
-                  Salesforce data entry, and tracking spreadsheets. Teams were spending 15+ hours 
+                  Salesforce data entry, and tracking spreadsheets. Teams were spending 7-8 hours 
                   weekly on repetitive data processing tasks that were prone to human error.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -138,25 +138,15 @@ ORDER BY
         {/* Solution Overview */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">The Automated Solution</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">3-Step Process Optimization</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-              <Card className="text-center">
-                <CardContent className="pt-6">
-                  <FileSpreadsheet className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold mb-2">1. Upload Automation</h3>
-                  <p className="text-sm text-muted-foreground text-justify">
-                    Automated nomenclature uploads for partner and regional account tracking with bi-weekly deal controls.
-                  </p>
-                </CardContent>
-              </Card>
-              
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Database className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold mb-2">2. SQL Lookup</h3>
+                  <h3 className="font-semibold mb-2">1. CRM Hygiene</h3>
                   <p className="text-sm text-muted-foreground text-justify">
-                    Dynamic lookup sheets using SQL queries to pull real-time CRM data and parent-child account hierarchies.
+                    Standardized partner account structure with proper parent-child relationships and nomenclature for seamless data extraction.
                   </p>
                 </CardContent>
               </Card>
@@ -164,9 +154,9 @@ ORDER BY
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Cog className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold mb-2">3. Data Processing</h3>
+                  <h3 className="font-semibold mb-2">2. SQL Logic</h3>
                   <p className="text-sm text-muted-foreground text-justify">
-                    Automated formatting and detail extraction from local files into standardized partner tracking sheets.
+                    Dynamic lookup sheets using SQL queries to pull real-time CRM data and partner activation status from hierarchical accounts.
                   </p>
                 </CardContent>
               </Card>
@@ -174,9 +164,9 @@ ORDER BY
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Zap className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold mb-2">4. Zapier Integration</h3>
+                  <h3 className="font-semibold mb-2">3. Zapier Workflow</h3>
                   <p className="text-sm text-muted-foreground text-justify">
-                    Bi-weekly Salesforce connector automation ensuring consistent partner activation cadence and reporting.
+                    Automated Excel to Salesforce integration eliminating manual data entry and ensuring consistent partner tracking.
                   </p>
                 </CardContent>
               </Card>
@@ -187,7 +177,7 @@ ORDER BY
         {/* Salesforce Account Hierarchy Illustration */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Salesforce Account Hierarchy</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Step 2: SQL Solution Logic</h2>
             
             <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
               <CardContent className="p-8">
@@ -216,8 +206,8 @@ ORDER BY
                     />
                   </div>
                   
-                  <div className="mt-8 p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-4">SQL Solution Logic:</h4>
+                  <div className="mt-8 p-4 bg-muted/50 rounded-lg text-center">
+                    <h4 className="font-semibold mb-4">SQL Solution Logic</h4>
                     <div className="bg-background p-4 rounded-md border">
                       <pre className="text-sm font-mono text-foreground">
                         <code>{`SELECT Name, Id FROM Account WHERE Name LIKE '%Parent'`}</code>
@@ -251,7 +241,7 @@ ORDER BY
         {/* Zapier Integration */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Zapier Workflow</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Step 3: Zapier Workflow</h2>
             
             <Card className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20">
               <CardHeader>
@@ -320,7 +310,7 @@ ORDER BY
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <span className="text-muted-foreground">Weekly Time Savings:</span>
-                        <span className="font-bold text-lg">15+ hours</span>
+                        <span className="font-bold text-lg">7-8 hours</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-muted-foreground">Process Efficiency:</span>
@@ -349,7 +339,7 @@ ORDER BY
                         <strong>Enhanced Efficiency:</strong> Eliminated manual delays in deal leadership processes, enabling faster partner activation and improved project delivery timelines.
                       </p>
                       <p className="text-muted-foreground">
-                        <strong>Resource Optimization:</strong> Freed up 5-8 hours per week per team member, allowing focus on strategic partner relationship building rather than administrative tasks.
+                        <strong>Resource Optimization:</strong> Freed up 7-8 hours per week for the partner enablement manager, allowing focus on strategic training tasks and partner relationship building rather than administrative data processing.
                       </p>
                     </div>
                   </div>
