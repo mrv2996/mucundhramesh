@@ -259,11 +259,11 @@ ORDER BY
                 
                 <div className="relative">
                   {/* Salesforce UI Screenshot */}
-                  <div className="mb-8">
+                  <div className="mb-8 flex justify-center">
                     <img 
                       src={salesforceHierarchy} 
                       alt="Salesforce Account Hierarchy showing parent account with regional subsidiaries including Asia, Europe, and US child accounts"
-                      className="w-full rounded-lg shadow-lg border border-muted"
+                      className="max-w-2xl w-full rounded-lg shadow-lg border border-muted"
                     />
                   </div>
                   
