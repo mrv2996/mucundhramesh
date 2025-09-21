@@ -8,6 +8,7 @@ import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, C
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
+import zapierWorkflow from "@/assets/zapier-workflow.png";
 
 const CaseStudy1 = () => {
   const [webhookUrl, setWebhookUrl] = useState("");
@@ -302,56 +303,52 @@ ORDER BY
         {/* Zapier Integration */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Set Up Your Bi-Weekly Automation</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Zapier Workflow</h2>
             
             <Card className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Zap className="h-5 w-5" />
-                  Zapier Bi-Weekly Cadence Setup
+                  Automated Excel to Salesforce Integration
                 </CardTitle>
                 <p className="text-muted-foreground text-justify">
-                  Implement the same automation used in this case study. Connect your Zapier webhook to trigger 
-                  bi-weekly partner activation processes, ensuring consistent cadence and improved partner readiness tracking.
+                  This two-step Zapier workflow automatically processes new Excel data and creates corresponding 
+                  Salesforce records, eliminating manual data entry and ensuring consistent partner activation tracking.
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
+                <div className="flex justify-center">
+                  <img 
+                    src={zapierWorkflow} 
+                    alt="Zapier workflow showing Excel trigger followed by Salesforce record creation"
+                    className="max-w-md w-full rounded-lg shadow-lg border border-muted"
+                  />
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold mb-3">Setup Steps:</h4>
+                    <h4 className="font-semibold mb-3">Workflow Steps:</h4>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span>Create a new Zap in Zapier</span>
+                        <span>Microsoft Excel - New Row in Table</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span>Add a Webhook trigger</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span>Connect to Salesforce actions</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span>Set bi-weekly schedule trigger</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span>Copy your webhook URL below</span>
+                        <span>Salesforce Essentials - Create Record</span>
                       </div>
                     </div>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold mb-3">Automation Benefits:</h4>
+                    <h4 className="font-semibold mb-3">Key Benefits:</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Automated partner status updates</li>
-                      <li>• Consistent bi-weekly reporting cadence</li>
-                      <li>• Real-time KPI tracking alerts</li>
-                      <li>• Reduced manual intervention by 85%</li>
-                      <li>• Improved partner satisfaction scores</li>
-                      <li>• Enhanced deal leadership visibility</li>
+                      <li>• Real-time data synchronization</li>
+                      <li>• Eliminates manual data entry</li>
+                      <li>• Reduces human error by 95%</li>
+                      <li>• Instant Salesforce record creation</li>
+                      <li>• Maintains data consistency</li>
+                      <li>• Scales with business growth</li>
                     </ul>
                   </div>
                 </div>
