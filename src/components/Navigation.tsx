@@ -7,7 +7,7 @@ export const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
   
   return (
-    <nav className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
           <span className="text-lg font-semibold">Mucundh Ramesh</span>

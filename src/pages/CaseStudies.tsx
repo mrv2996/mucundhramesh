@@ -41,7 +41,7 @@ const CaseStudies = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-16">
+      <main>
         {/* Hero Section */}
         <section className="container py-12 md:py-24">
           <div className="max-w-3xl mx-auto text-center space-y-6">

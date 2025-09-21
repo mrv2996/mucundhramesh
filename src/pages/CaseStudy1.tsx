@@ -87,7 +87,7 @@ ORDER BY
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-16">
+      <main>
         {/* Hero Section */}
         <section className="container py-12 md:py-24">
           <div className="max-w-4xl mx-auto">
