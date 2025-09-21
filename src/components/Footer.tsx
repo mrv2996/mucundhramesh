@@ -54,7 +54,7 @@ export const Footer = () => {
             © 2025 Mucundh Ramesh. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1">
-            Made with <span className="text-red-500">♥</span> in London UK
+            Made with <span className="text-red-500">♥</span> in London, United Kingdom
           </p>
         </div>
       </div>
