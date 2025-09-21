@@ -245,8 +245,15 @@ ORDER BY
                 <div className="text-center mb-8">
                   <h3 className="text-xl font-semibold mb-4">Parent-Child Account Structure</h3>
                   <p className="text-muted-foreground text-justify">
-                    The automation leverages Salesforce's hierarchical account structure to map parent organizations 
-                    with their regional partner subsidiaries, enabling comprehensive partner activation tracking.
+                    The automation leverages Salesforce's hierarchical account structure using a specific naming convention: 
+                    "&#123;Consulting Partner&#125;-Parent" for parent accounts with region-based child accounts. This approach ensures 
+                    all contacts are saved under the parent account, avoiding duplicates in our system and preventing 
+                    double counting in performance tracking for partner readiness and consultants onboarded/trained.
+                  </p>
+                  <p className="text-muted-foreground text-justify mt-4">
+                    This structure enables us to pull account details and generate lookup sheets in Excel by using the 
+                    "contains parent" keyword in our SQL statements, creating a seamless data extraction process for 
+                    comprehensive partner activation tracking.
                   </p>
                 </div>
                 
