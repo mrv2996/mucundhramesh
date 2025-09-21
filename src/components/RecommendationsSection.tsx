@@ -45,14 +45,14 @@ const RecommendationsSection = () => {
 
         <Carousel
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
           }}
-          className="w-full max-w-5xl mx-auto"
+          className="w-full max-w-4xl mx-auto"
         >
-          <CarouselContent className="-ml-[var(--space-md)]">
+          <CarouselContent className="flex items-center">
             {recommendations.map((rec) => (
-              <CarouselItem key={rec.id} className="pl-[var(--space-md)] basis-[85%] md:basis-[75%]">
+              <CarouselItem key={rec.id} className="basis-full">
                 <Card className="h-full bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105">
                   <CardContent className="p-[var(--space-lg)] h-full flex flex-col">
                     <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
