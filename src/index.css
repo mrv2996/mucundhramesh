@@ -247,3 +247,13 @@ All colors MUST be HSL.
   0%, 100% { opacity: 0.3; transform: scale(1); }
   50% { opacity: 0.5; transform: scale(1.05); }
 }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Company logos scroll animation */
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
