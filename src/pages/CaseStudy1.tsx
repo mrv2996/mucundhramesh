@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle, Settings, Play } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import capgeminiHierarchy from "@/assets/capgemini-hierarchy.png";
+import salesforceHierarchy from "@/assets/salesforce-hierarchy-blurred.png";
 
 const CaseStudy1 = () => {
   const [webhookUrl, setWebhookUrl] = useState("");
@@ -254,8 +254,8 @@ ORDER BY
                   {/* Salesforce UI Screenshot */}
                   <div className="mb-8">
                     <img 
-                      src={capgeminiHierarchy} 
-                      alt="Salesforce Account Hierarchy showing Capgemini parent account with regional subsidiaries including Capgemini APAC, EMEA, and Americas"
+                      src={salesforceHierarchy} 
+                      alt="Salesforce Account Hierarchy showing parent account with regional subsidiaries including Asia, Europe, and US child accounts"
                       className="w-full rounded-lg shadow-lg border border-muted"
                     />
                   </div>
