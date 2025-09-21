@@ -174,6 +174,58 @@ ORDER BY
           </div>
         </section>
 
+        {/* Step 1: CRM Hygiene */}
+        <section className="container pb-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">Step 1: CRM Hygiene</h2>
+            
+            <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Database className="h-5 w-5" />
+                  Parent Account Hierarchy Structure
+                </CardTitle>
+                <p className="text-muted-foreground text-justify">
+                  The foundation of this automation relies on establishing a clean, standardized parent account hierarchy 
+                  within Salesforce to organize partner relationships and enable efficient data extraction.
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-3">Hierarchy Structure:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• <strong>Parent Account:</strong> "{`{Consulting Partner}`}-Parent"</li>
+                      <li>• <strong>Child Accounts:</strong> Regional subsidiaries (Asia, Europe, US)</li>
+                      <li>• <strong>Contact Management:</strong> All contacts saved under parent account</li>
+                      <li>• <strong>Data Integrity:</strong> Prevents duplicates and double counting</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold mb-3">Benefits:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• Standardized nomenclature across all partner accounts</li>
+                      <li>• Clear parent-child relationship mapping</li>
+                      <li>• Simplified data extraction using "contains parent" logic</li>
+                      <li>• Consistent performance tracking framework</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+                  <h4 className="font-semibold mb-2">Implementation Impact:</h4>
+                  <p className="text-sm text-muted-foreground text-justify">
+                    This structured approach ensures that when we query accounts using the "parent" keyword, 
+                    we capture all relevant partner data while maintaining data integrity. This forms the 
+                    foundation for the automated SQL extraction and Zapier integration that follows.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Salesforce Account Hierarchy Illustration */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
