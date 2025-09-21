@@ -180,64 +180,12 @@ ORDER BY
             <h2 className="text-3xl font-bold text-center mb-8">Step 1: CRM Hygiene</h2>
             
             <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Database className="h-5 w-5" />
-                  Parent Account Hierarchy Structure
-                </CardTitle>
-                <p className="text-muted-foreground text-justify">
-                  The foundation of this automation relies on establishing a clean, standardized parent account hierarchy 
-                  within Salesforce to organize partner relationships and enable efficient data extraction.
-                </p>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3">Hierarchy Structure:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• <strong>Parent Account:</strong> "{`{Consulting Partner}`}-Parent"</li>
-                      <li>• <strong>Child Accounts:</strong> Regional subsidiaries (Asia, Europe, US)</li>
-                      <li>• <strong>Contact Management:</strong> All contacts saved under parent account</li>
-                      <li>• <strong>Data Integrity:</strong> Prevents duplicates and double counting</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold mb-3">Benefits:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• Standardized nomenclature across all partner accounts</li>
-                      <li>• Clear parent-child relationship mapping</li>
-                      <li>• Simplified data extraction using "contains parent" logic</li>
-                      <li>• Consistent performance tracking framework</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-                  <h4 className="font-semibold mb-2">Implementation Impact:</h4>
-                  <p className="text-sm text-muted-foreground text-justify">
-                    This structured approach ensures that when we query accounts using the "parent" keyword, 
-                    we capture all relevant partner data while maintaining data integrity. This forms the 
-                    foundation for the automated SQL extraction and Zapier integration that follows.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Salesforce Account Hierarchy Illustration */}
-        <section className="container pb-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Step 2: SQL Solution Logic</h2>
-            
-            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-xl font-semibold mb-4">Parent-Child Account Structure</h3>
                   <p className="text-muted-foreground text-justify">
                     The automation leverages Salesforce's hierarchical account structure using a specific naming convention: 
-                    "&#123;Consulting Partner&#125;-Parent" for parent accounts with region-based child accounts. This approach ensures 
+                    "{`{Consulting Partner}`}-Parent" for parent accounts with region-based child accounts. This approach ensures 
                     all contacts are saved under the parent account, avoiding duplicates in our system and preventing 
                     double counting in performance tracking for partner readiness and consultants onboarded/trained.
                   </p>
@@ -258,32 +206,102 @@ ORDER BY
                     />
                   </div>
                   
-                  <div className="mt-8 p-4 bg-muted/50 rounded-lg text-center">
-                    <h4 className="font-semibold mb-4">SQL Solution Logic</h4>
-                    <div className="bg-background p-4 rounded-md border">
-                      <pre className="text-sm font-mono text-foreground">
-                        <code>{`SELECT Name, Id FROM Account WHERE Name LIKE '%Parent'`}</code>
-                      </pre>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div>
+                      <h4 className="font-semibold mb-3">Hierarchy Benefits:</h4>
+                      <ul className="text-sm text-muted-foreground space-y-2">
+                        <li>• Standardized nomenclature across all partner accounts</li>
+                        <li>• Clear parent-child relationship mapping</li>
+                        <li>• Prevents duplicates and double counting</li>
+                        <li>• Simplified data extraction using "contains parent" logic</li>
+                      </ul>
                     </div>
-                    <p className="text-sm text-muted-foreground mt-3">
-                      This SOQL command ensures we pull all accounts that contain the "Parent" keyword, 
-                      enabling efficient data extraction for our lookup sheets and partner tracking reports.
-                    </p>
+                    
+                    <div>
+                      <h4 className="font-semibold mb-3">Structure Components:</h4>
+                      <ul className="text-sm text-muted-foreground space-y-2">
+                        <li>• <strong>Parent Account:</strong> "{`{Consulting Partner}`}-Parent"</li>
+                        <li>• <strong>Child Accounts:</strong> Regional subsidiaries</li>
+                        <li>• <strong>Contact Management:</strong> Centralized under parent</li>
+                        <li>• <strong>Performance Tracking:</strong> Unified reporting framework</li>
+                      </ul>
+                    </div>
                   </div>
                   
                   <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Automation Benefits:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                      <ul className="space-y-1">
-                        <li>• Automatic parent-child relationship mapping</li>
-                        <li>• Regional partner status tracking</li>
-                      </ul>
-                      <ul className="space-y-1">
-                        <li>• Bi-weekly activation cadence monitoring</li>
-                        <li>• Centralized partner readiness reporting</li>
-                      </ul>
-                    </div>
+                    <h4 className="font-semibold mb-2">Implementation Foundation:</h4>
+                    <p className="text-sm text-muted-foreground text-justify">
+                      This structured CRM hygiene approach forms the foundation for the automated SQL extraction and 
+                      Zapier integration processes. By maintaining consistent naming conventions and hierarchical 
+                      relationships, we ensure reliable data extraction and seamless partner activation tracking.
+                    </p>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Step 2: SQL Logic Implementation */}
+        <section className="container pb-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">Step 2: SQL Solution Logic</h2>
+            
+            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Cog className="h-5 w-5" />
+                  Dynamic Lookup Sheet Generation
+                </CardTitle>
+                <p className="text-muted-foreground text-justify">
+                  Using SQL queries to extract real-time CRM data and partner activation status from the established 
+                  hierarchical account structure, creating automated lookup sheets for partner tracking.
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="text-center">
+                  <h4 className="font-semibold mb-4">Core SQL Query Logic</h4>
+                  <div className="bg-background p-6 rounded-md border">
+                    <pre className="text-sm font-mono text-foreground whitespace-pre-wrap">
+                      <code>{sqlCode}</code>
+                    </pre>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-4 text-justify">
+                    This SOQL query leverages the "contains parent" keyword strategy established in Step 1, 
+                    extracting comprehensive partner data including hierarchy relationships, activation status, 
+                    and regional information for automated reporting.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-3">Query Benefits:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• Real-time CRM data extraction</li>
+                      <li>• Automated lookup sheet generation</li>
+                      <li>• Parent-child relationship mapping</li>
+                      <li>• Regional partner status tracking</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold mb-3">Data Output:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• Partner activation status by region</li>
+                      <li>• Hierarchical account relationships</li>
+                      <li>• Bi-weekly activation cadence data</li>
+                      <li>• Centralized partner readiness metrics</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-muted/50 rounded-lg">
+                  <h4 className="font-semibold mb-2">Integration Ready:</h4>
+                  <p className="text-sm text-muted-foreground text-justify">
+                    The extracted data from this SQL logic seamlessly feeds into the Zapier workflow, 
+                    creating an end-to-end automated process from CRM hygiene through data extraction 
+                    to final Excel integration.
+                  </p>
                 </div>
               </CardContent>
             </Card>
