@@ -1,10 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 export const Navigation = () => {
   const location = useLocation();
   
   const isActive = (path: string) => location.pathname === path;
+  
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   
   return (
     <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
