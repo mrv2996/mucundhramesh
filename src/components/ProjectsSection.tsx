@@ -6,14 +6,14 @@ const ProjectsSection = () => {
     {
       title: "Case Study Analysis",
       description: "Strategic analysis and recommendations for business challenges",
-      link: "https://drive.google.com/file/d/1X8G0VeMJSenVYqLVGrRXxp6azstdoINm/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1fVrTx7p09SS59jYrnWgxHZnzD9klxaHN/view?usp=sharing",
       type: "case-study",
       category: "Strategy"
     },
     {
       title: "Data Analytics Project",
       description: "Comprehensive data analysis and insights extraction",
-      link: "https://docs.google.com/spreadsheets/d/1n108oRXqJUgCWPZJEuFLCwbcBpcjpIrC/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true",
+      link: "https://docs.google.com/spreadsheets/d/1K_9GWb0-JDUaYN9VBhi5mFJundZaV20s/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true",
       type: "analytics",
       category: "Analytics"
     },
