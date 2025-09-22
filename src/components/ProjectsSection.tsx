@@ -5,14 +5,14 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Case Study Analysis",
-      description: "Strategic analysis and recommendations for business challenges",
+      description: "Revenue growth and scaling strategy for biometrio.earth, a German green tech startup focused on sustainable technology solutions",
       link: "https://drive.google.com/file/d/1fVrTx7p09SS59jYrnWgxHZnzD9klxaHN/view?usp=sharing",
       type: "case-study",
       category: "Strategy"
     },
     {
       title: "Data Analytics Project",
-      description: "Comprehensive data analysis and insights extraction",
+      description: "UI test scenario development and analysis for feature development of an online trading application platform",
       link: "https://docs.google.com/spreadsheets/d/1K_9GWb0-JDUaYN9VBhi5mFJundZaV20s/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true",
       type: "analytics",
       category: "Analytics"
