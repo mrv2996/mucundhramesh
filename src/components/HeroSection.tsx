@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Mail } from "lucide-react";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
-
 const HeroSection = () => {
-  return (
-    <section className="min-h-[85vh] flex items-center justify-center px-6 py-section">
+  return <section className="min-h-[85vh] flex items-center justify-center px-6 py-section">
       <div className="max-w-content mx-auto">
         {/* Golden ratio grid: 62% content, 38% image */}
         <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-xl)] lg:gap-[var(--space-2xl)] items-center">
@@ -16,9 +14,7 @@ const HeroSection = () => {
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
               Connecting technology, data, and people
             </h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Systems-thinking engineer turned operations analyst, specializing in designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.
-            </p>
+            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">Software systems engineer turned go-to-market strategy and operations specialist, designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.</p>
             
             {/* CTAs with golden ratio spacing */}
             <div className="flex flex-col sm:flex-row gap-[var(--space-md)] justify-center lg:justify-start pt-[var(--space-md)]">
@@ -42,12 +38,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Image dimensions following golden ratio: width 1, height 1.618 */}
               <div className="w-64 h-[25.8rem] lg:w-80 lg:h-[32.3rem] rounded-3xl overflow-hidden shadow-large bg-gradient-primary">
-                <img 
-                  src={headshotImage} 
-                  alt="Mucundh Ramesh - Systems operations analyst and technical strategist" 
-                  className="w-full h-full object-cover object-top" 
-                  loading="lazy"
-                />
+                <img src={headshotImage} alt="Mucundh Ramesh - Systems operations analyst and technical strategist" className="w-full h-full object-cover object-top" loading="lazy" />
               </div>
               {/* Shadow offset using golden ratio spacing */}
               <div className="absolute -z-10 top-[var(--space-md)] left-[var(--space-md)] w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
@@ -55,7 +46,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default HeroSection;
