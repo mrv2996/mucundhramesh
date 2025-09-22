@@ -11,7 +11,7 @@ import RecommendationsSection from "@/components/RecommendationsSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background animated-background">
+    <div className="min-h-screen bg-background animated-background pt-16">
       <Navigation />
       {/* Floating background orbs */}
       <div className="floating-orb orb-1"></div>

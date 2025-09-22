@@ -1,11 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const Navigation = () => {
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
   
   const isActive = (path: string) => location.pathname === path;
+  
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   // Scroll to top when route changes
   useEffect(() => {
@@ -13,7 +24,12 @@ export const Navigation = () => {
   }, [location.pathname]);
   
   return (
-    <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className={cn(
+      "fixed top-0 w-full z-50 border-b transition-all duration-300",
+      isScrolled 
+        ? "bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 shadow-sm" 
+        : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+    )}>
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="text-lg font-semibold hover:text-primary transition-colors">
