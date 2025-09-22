@@ -9,12 +9,12 @@ const CompaniesSection = () => {
           <img 
             src={companyLogos} 
             alt="Company logos including L'ORÉAL, Fidelity, GE, transdev, biometrio.earth, and mazars" 
-            className="h-16 w-auto grayscale opacity-60"
+            className="h-16 w-auto grayscale opacity-80 hover:opacity-100 transition-opacity duration-300"
           />
           <img 
             src={sweepLogo} 
             alt="Sweep logo" 
-            className="h-12 w-auto grayscale opacity-60"
+            className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-opacity duration-300"
           />
         </div>
       </div>
