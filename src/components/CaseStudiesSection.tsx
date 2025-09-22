@@ -7,30 +7,30 @@ const CaseStudiesSection = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "How a Simple Rule-Based Automation Saved Manual Hours in Partner Activation",
-      subtitle: "Using Excel, Salesforce, SQL and Zapier to streamline operations",
+      title: "Partner Activation Automation",
+      subtitle: "Excel + Salesforce + SQL + Zapier pipeline",
       readTime: "8 min read",
-      tags: ["Automation", "Zapier", "Salesforce", "SQL", "ETL"],
-      icon: <Zap className="h-8 w-8 text-primary" />,
-      summary: "Discover how we eliminated 7-8 hours of weekly manual work by creating an intelligent automation pipeline that connects Excel data processing, Salesforce CRM updates, and SQL database operations through Zapier workflows.",
+      tags: ["Automation", "Zapier", "Salesforce", "SQL"],
+      icon: <Zap className="h-6 w-6 text-primary" />,
+      summary: "Eliminated 7-8 hours of weekly manual work with an intelligent automation pipeline connecting Excel, Salesforce CRM, and SQL operations.",
       keyMetrics: [
         { label: "Time Saved", value: "7-8 hrs/week", icon: <Clock className="h-4 w-4" /> },
-        { label: "Process Efficiency", value: "85% faster", icon: <TrendingUp className="h-4 w-4" /> },
-        { label: "Team Impact", value: "3 departments", icon: <Users className="h-4 w-4" /> }
+        { label: "Efficiency", value: "85% faster", icon: <TrendingUp className="h-4 w-4" /> },
+        { label: "Teams", value: "3 depts", icon: <Users className="h-4 w-4" /> }
       ]
     },
     {
       id: 2,
-      title: "From $14K Crossbeam Licenses to AI-Powered Partner Intelligence",
-      subtitle: "Building a GenAI agent that replaced expensive partner mapping software",
+      title: "AI-Powered Partner Intelligence",
+      subtitle: "GenAI agent replaced $14K Crossbeam licenses",
       readTime: "6 min read", 
-      tags: ["GenAI", "Partner Intelligence", "Cost Optimization", "Dust", "Drive API"],
-      icon: <Bot className="h-8 w-8 text-primary" />,
-      summary: "Learn how we replaced expensive Crossbeam licenses with a custom GenAI agent that processes structured partner data from Drive and Notion, delivering similar intelligence outcomes at a fraction of the cost.",
+      tags: ["GenAI", "Cost Optimization", "Partner Intelligence"],
+      icon: <Bot className="h-6 w-6 text-primary" />,
+      summary: "Built a custom GenAI agent processing Drive and Notion data to deliver partner intelligence at a fraction of Crossbeam's cost.",
       keyMetrics: [
-        { label: "Annual Savings", value: "$14K", icon: <TrendingUp className="h-4 w-4" /> },
-        { label: "Usage Adaptation", value: "Low → High", icon: <Zap className="h-4 w-4" /> },
-        { label: "Solution Fit", value: "Custom built", icon: <Clock className="h-4 w-4" /> }
+        { label: "Savings", value: "$14K/year", icon: <TrendingUp className="h-4 w-4" /> },
+        { label: "Adoption", value: "Low → High", icon: <Zap className="h-4 w-4" /> },
+        { label: "Solution", value: "Custom", icon: <Clock className="h-4 w-4" /> }
       ]
     }
   ];
@@ -46,39 +46,37 @@ const CaseStudiesSection = () => {
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto space-y-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {caseStudies.map((study, index) => (
           <Link 
             key={study.id} 
             to={study.id === 1 ? "/case-studies/partner-activation-automation" : "/case-studies/crossbeam-ai-agent"}
           >
             <Card 
-              className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-primary/20 hover:border-l-primary"
+              className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-primary/20 hover:border-l-primary h-full"
             >
-            <CardHeader className="space-y-4">
-              <div className="flex items-start justify-between">
-                <div className="flex items-center gap-4">
+            <CardHeader className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-primary/10">
                     {study.icon}
                   </div>
-                  <div className="space-y-1">
-                    <Badge variant="outline" className="text-xs">
-                      {study.readTime}
-                    </Badge>
-                  </div>
+                  <Badge variant="outline" className="text-xs">
+                    {study.readTime}
+                  </Badge>
                 </div>
               </div>
               
-              <div className="space-y-3">
-                <CardTitle className="text-2xl md:text-3xl leading-tight group-hover:text-primary transition-colors">
+              <div className="space-y-2">
+                <CardTitle className="text-xl leading-tight group-hover:text-primary transition-colors">
                   {study.title}
                 </CardTitle>
-                <p className="text-lg text-muted-foreground font-medium">
+                <p className="text-sm text-muted-foreground font-medium">
                   {study.subtitle}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1">
                 {study.tags.map((tag) => (
                   <Badge key={tag} variant="secondary" className="text-xs">
                     {tag}
@@ -87,42 +85,35 @@ const CaseStudiesSection = () => {
               </div>
             </CardHeader>
 
-            <CardContent className="space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {study.summary}
               </p>
 
               {/* Key Metrics */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2">
                 {study.keyMetrics.map((metric, metricIndex) => (
                   <div 
                     key={metricIndex}
-                    className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border"
+                    className="flex flex-col items-center gap-1 p-3 rounded-lg bg-muted/50 border text-center"
                   >
                     <div className="text-primary">
                       {metric.icon}
                     </div>
-                    <div>
-                      <div className="font-semibold text-sm text-foreground">
-                        {metric.value}
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        {metric.label}
-                      </div>
+                    <div className="font-semibold text-xs text-foreground">
+                      {metric.value}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {metric.label}
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Read More CTA */}
-              <div className="pt-4 border-t">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">
-                    {study.id === 1 ? "Click to read the full implementation details" : "Click to read the full case study details"}
-                  </span>
-                  <div className="text-primary font-medium text-sm group-hover:underline">
-                    {study.id === 1 ? "Read full case study →" : "Read case study →"}
-                  </div>
+              <div className="pt-3 border-t">
+                <div className="text-primary font-medium text-sm group-hover:underline text-center">
+                  Read full case study →
                 </div>
               </div>
             </CardContent>
