@@ -4,8 +4,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, TrendingUp, Zap, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const CaseStudies = () => {
+  useEffect(() => {
+    // Update meta tags for Case Studies page
+    document.title = "Case Studies - Mucundh Ramesh | Technical Systems and Operations Analyst";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Real-world case studies showcasing operational improvements, automation wins, and strategic implementations by Mucundh Ramesh, Technical Systems and Operations Analyst.');
+    }
+    
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Case Studies - Mucundh Ramesh | Technical Systems and Operations Analyst');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Real-world case studies showcasing operational improvements, automation wins, and strategic implementations by Mucundh Ramesh, Technical Systems and Operations Analyst.');
+    }
+  }, []);
   const caseStudies = [
     {
       id: 1,

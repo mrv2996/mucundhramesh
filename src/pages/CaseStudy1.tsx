@@ -9,9 +9,27 @@ import zapierWorkflow from "@/assets/zapier-workflow.png";
 import { useEffect } from "react";
 
 const CaseStudy1 = () => {
-  // Scroll to top when component mounts
+  // Scroll to top when component mounts and update meta tags
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Update meta tags for Partner Activation Automation case study
+    document.title = "Partner Activation Automation - Case Study | Mucundh Ramesh";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'How Mucundh Ramesh automated partner activation processes using Excel, Salesforce, SQL and Zapier to save 7-8 hours weekly and improve operational efficiency by 85%.');
+    }
+    
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Partner Activation Automation - Case Study | Mucundh Ramesh');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'How Mucundh Ramesh automated partner activation processes using Excel, Salesforce, SQL and Zapier to save 7-8 hours weekly and improve operational efficiency by 85%.');
+    }
   }, []);
 
   const sqlCode = `-- Partner Account Hierarchy Query
