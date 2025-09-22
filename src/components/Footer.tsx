@@ -20,20 +20,28 @@ export const Footer = () => {
                 to="/" 
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                About
+                Home
               </Link>
-              <Link 
-                to="/" 
+              <a 
+                href="#skills" 
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Skills
-              </Link>
-              <Link 
-                to="/case-studies" 
+              </a>
+              <a 
+                href="#case-studies" 
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Case Studies
-              </Link>
+              </a>
               <a 
                 href="https://linkedin.com/in/mucundh"
                 target="_blank"
