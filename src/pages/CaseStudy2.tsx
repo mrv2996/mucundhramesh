@@ -233,8 +233,8 @@ const CaseStudy2 = () => {
                 <Separator />
                 
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Agent Implementation Guide</h3>
-                  <div className="space-y-6">
+                  <h3 className="text-xl font-semibold mb-6 text-center">Agent Implementation & Output</h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-medium mb-3">Agent Instructions</h4>
                       <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-lg border font-mono text-sm overflow-x-auto">
@@ -269,39 +269,40 @@ Return ONLY the formatted output above
                         </pre>
                       </div>
                     </div>
+                    
+                    <div>
+                      <h4 className="font-medium mb-3">Structured Output</h4>
+                      <div className="flex justify-center">
+                        <img 
+                          src={agentOutputExample} 
+                          alt="AI agent structured output showing partner overlaps with scores and concise reasoning"
+                          className="max-w-full w-full rounded-lg border border-muted shadow-sm"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <Separator />
                 
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 text-center">Structured Agent Output</h3>
-                  <div className="flex justify-center">
-                    <img 
-                      src={agentOutputExample} 
-                      alt="AI agent structured output showing partner overlaps with scores and concise reasoning"
-                      className="max-w-md w-full rounded-lg border border-muted shadow-sm"
-                    />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <h4 className="font-medium">Agent Features:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Customer name-based queries</li>
+                      <li>• 1-5 scoring system (1=highest overlap)</li>
+                      <li>• Concise 5-7 word reasoning</li>
+                      <li>• Web-enhanced partner intelligence</li>
+                    </ul>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                    <div className="space-y-2">
-                      <h4 className="font-medium">Agent Features:</h4>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Customer name-based queries</li>
-                        <li>• 1-5 scoring system (1=highest overlap)</li>
-                        <li>• Concise 5-7 word reasoning</li>
-                        <li>• Web-enhanced partner intelligence</li>
-                      </ul>
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="font-medium">Cost & Adoption:</h4>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Significant annual savings vs. Crossbeam</li>
-                        <li>• Tailored to actual usage patterns</li>
-                        <li>• Higher adoption due to simplicity</li>
-                        <li>• Leverages existing data infrastructure</li>
-                      </ul>
-                    </div>
+                  <div className="space-y-2">
+                    <h4 className="font-medium">Cost & Adoption:</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Significant annual savings vs. Crossbeam</li>
+                      <li>• Tailored to actual usage patterns</li>
+                      <li>• Higher adoption due to simplicity</li>
+                      <li>• Leverages existing data infrastructure</li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>
