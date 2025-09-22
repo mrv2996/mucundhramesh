@@ -43,16 +43,16 @@ const CaseStudies = () => {
     },
     {
       id: 2,
-      title: "How a Custom AI Agent Replaced Software Licenses",
-      subtitle: "Building a Dust agent that outperformed Crossbeam for partner alignment",
-      readTime: "12 min read", 
-      tags: ["AI", "Dust", "Partner Management", "Cost Optimization"],
+      title: "From $14K Crossbeam Licenses to AI-Powered Partner Intelligence",
+      subtitle: "Building a GenAI agent that replaced expensive partner mapping software",
+      readTime: "6 min read", 
+      tags: ["GenAI", "Partner Intelligence", "Cost Optimization", "Dust", "Drive API"],
       icon: <Bot className="h-8 w-8 text-primary" />,
-      summary: "Learn how we developed a custom AI agent using Dust that not only replaced expensive Crossbeam licenses but also provided superior partner mapping and alignment capabilities, resulting in better insights and significant cost savings.",
+      summary: "Learn how we replaced expensive Crossbeam licenses with a custom GenAI agent that processes structured partner data from Drive and Notion, delivering similar intelligence outcomes at a fraction of the cost.",
       keyMetrics: [
-        { label: "Cost Reduction", value: "70% savings", icon: <TrendingUp className="h-4 w-4" /> },
-        { label: "Accuracy Improvement", value: "40% better", icon: <Zap className="h-4 w-4" /> },
-        { label: "Processing Speed", value: "5x faster", icon: <Clock className="h-4 w-4" /> }
+        { label: "Annual Savings", value: "$14K", icon: <TrendingUp className="h-4 w-4" /> },
+        { label: "Usage Adaptation", value: "Low → High", icon: <Zap className="h-4 w-4" /> },
+        { label: "Solution Fit", value: "Custom built", icon: <Clock className="h-4 w-4" /> }
       ]
     }
   ];
@@ -80,7 +80,7 @@ const CaseStudies = () => {
             {caseStudies.map((study, index) => (
               <Link 
                 key={study.id} 
-                to={study.id === 1 ? "/case-studies/partner-activation-automation" : "#"}
+                to={study.id === 1 ? "/case-studies/partner-activation-automation" : "/case-studies/crossbeam-ai-agent"}
               >
                 <Card 
                   className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-primary/20 hover:border-l-primary"
@@ -148,10 +148,10 @@ const CaseStudies = () => {
                   <div className="pt-4 border-t">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
-                        {study.id === 1 ? "Click to read the full implementation details" : "Coming soon - Full case study with implementation details"}
+                        {study.id === 1 ? "Click to read the full implementation details" : "Click to read the full case study details"}
                       </span>
                       <div className="text-primary font-medium text-sm group-hover:underline">
-                        {study.id === 1 ? "Read full case study →" : "Read more →"}
+                        {study.id === 1 ? "Read full case study →" : "Read case study →"}
                       </div>
                     </div>
                   </div>

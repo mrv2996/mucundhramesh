@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudy1 from "./pages/CaseStudy1";
+import CaseStudy2 from "./pages/CaseStudy2";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/partner-activation-automation" element={<CaseStudy1 />} />
+          <Route path="/case-studies/crossbeam-ai-agent" element={<CaseStudy2 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
