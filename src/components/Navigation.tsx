@@ -11,7 +11,7 @@ export const Navigation = () => {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -25,10 +25,10 @@ export const Navigation = () => {
   
   return (
     <nav className={cn(
-      "fixed top-0 w-full z-50 border-b transition-all duration-300",
+      "fixed top-0 w-full z-50 transition-all duration-500 ease-in-out",
       isScrolled 
-        ? "bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 shadow-sm" 
-        : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        ? "bg-background/70 backdrop-blur-xl border-b shadow-lg" 
+        : "bg-background/95 backdrop-blur-sm border-b border-transparent"
     )}>
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
