@@ -6,8 +6,14 @@ import { Separator } from "@/components/ui/separator";
 import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, CheckCircle, Cog } from "lucide-react";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 import zapierWorkflow from "@/assets/zapier-workflow.png";
+import { useEffect } from "react";
 
 const CaseStudy1 = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const sqlCode = `-- Partner Account Hierarchy Query
 -- Extract parent-child relationships for partner activation tracking
 
