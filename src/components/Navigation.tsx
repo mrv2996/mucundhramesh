@@ -30,15 +30,21 @@ export const Navigation = () => {
           >
             Home
           </Link>
-          <Link 
-            to="/case-studies" 
+          <a 
+            href="/#case-studies" 
             className={cn(
               "text-sm font-medium transition-colors hover:text-primary",
-              isActive("/case-studies") ? "text-primary" : "text-muted-foreground"
+              location.pathname === "/" && location.hash === "#case-studies" ? "text-primary" : "text-muted-foreground"
             )}
+            onClick={(e) => {
+              if (location.pathname === "/") {
+                e.preventDefault();
+                document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Case Studies
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
