@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Clock, Users, TrendingUp, DollarSign, Bot, Database, FileText, ArrowRight, CheckCircle, Zap } from "lucide-react";
 import crossbeamInterface from "@/assets/crossbeam-interface.png";
+import agentQueryExample from "@/assets/agent-query-example.png";
+import agentOutputExample from "@/assets/agent-output-example.png";
 import { useEffect } from "react";
 
 const CaseStudy2 = () => {
@@ -365,11 +367,115 @@ const CaseStudy2 = () => {
                   </div>
                 </div>
 
-                <div className="mt-8 p-4 bg-muted/50 rounded-lg">
-                  <p className="text-sm text-muted-foreground text-center italic">
-                    "Ready to dive deeper into the AI agent's prompt engineering and implementation details? 
-                    More technical specifics coming soon..."
-                  </p>
+                <div className="mt-8 space-y-8">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                      <Bot className="h-6 w-6 text-blue-600" />
+                      AI Agent Implementation Guide
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="font-semibold mb-3">Agent Instructions</h4>
+                        <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-lg border font-mono text-sm overflow-x-auto">
+                          <pre className="whitespace-pre-wrap text-slate-800 dark:text-slate-200">
+{`Agent Instructions
+<Role> Partner overlap identifier for customer accounts
+<Input> Customer name only (e.g., "coca-cola")
+<Do>
+Search Google Drive partner data files for customer mentions
+Check Notion partner priority matrix
+Use web search for additional partner intelligence
+Rank partners 1-5 (1=highest overlap)
+</Do>
+Output Format (STRICT - NO OTHER TEXT):
+\`\`\`
+Customer: [customer_name]
+
+Partner Overlaps:
+1. [Partner Name] (Score: X) - [5-7 word reason]
+2. [Partner Name] (Score: X) - [5-7 word reason] 
+3. [Partner Name] (Score: X) - [5-7 word reason]
+
+\`\`\`
+<Rules>
+Maximum 3 partners listed
+Score must be 1-5 integer
+Reason must be exactly 5-7 words
+NO explanatory text before or after
+NO "Let me search" or process descriptions
+Return ONLY the formatted output above
+</Rules>
+Example Output:
+\`\`\`
+Customer: Coca-Cola
+
+Partner Overlaps:
+1. Accenture (Score: 1) - Leading digital transformation, strong Salesforce
+2. Deloitte (Score: 2) - Extensive beverage industry consulting experience  
+3. IBM (Score: 3) - Long-standing technology partnership history
+\`\`\``}
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold mb-3">Example Usage</h4>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                          <div>
+                            <p className="text-sm text-muted-foreground mb-2">Agent Query:</p>
+                            <img 
+                              src={agentQueryExample} 
+                              alt="AI agent query example showing customer input"
+                              className="w-full rounded-lg border border-muted shadow-sm"
+                            />
+                          </div>
+                          <div>
+                            <p className="text-sm text-muted-foreground mb-2">Structured Output:</p>
+                            <img 
+                              src={agentOutputExample} 
+                              alt="AI agent structured output showing partner overlaps with scores"
+                              className="w-full rounded-lg border border-muted shadow-sm"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold mb-3">Key Features</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="space-y-3">
+                            <div className="flex items-start gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">Web-enhanced partner intelligence</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">Structured, consistent output format</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">Multi-source data integration</span>
+                            </div>
+                          </div>
+                          <div className="space-y-3">
+                            <div className="flex items-start gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">Intelligent scoring system (1-5)</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">Concise reasoning (5-7 words)</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">No verbose explanations</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
