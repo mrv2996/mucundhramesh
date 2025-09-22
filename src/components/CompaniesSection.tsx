@@ -3,8 +3,8 @@ import sweepLogo from "@/assets/company-logos-with-sweep.png";
 
 const CompaniesSection = () => {
   return (
-    <section className="py-8 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-8 bg-background w-full">
+      <div className="w-full px-6">
         <div className="flex justify-center items-center gap-8 flex-wrap">
           <img 
             src={companyLogos} 
