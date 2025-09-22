@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const NextEventSection = () => {
   return <section className="pt-1 pb-16 px-6">
       <div className="max-w-content mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-12 text-foreground">My Next Speaking Gigs</h2>
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-[var(--space-lg)] text-foreground">My Next Speaking Gigs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* First Event */}
           <div className="bg-gradient-accent p-1 rounded-lg shadow-medium">

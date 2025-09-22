@@ -3,9 +3,9 @@ import sweepLogo from "@/assets/company-logos-with-sweep.png";
 
 const CompaniesSection = () => {
   return (
-    <section className="py-8 bg-background w-full">
-      <div className="w-full px-6">
-        <div className="flex justify-center items-center gap-8 flex-wrap">
+    <section className="py-[var(--space-lg)] bg-background w-full">
+      <div className="w-full">
+        <div className="flex justify-center items-center gap-8 flex-wrap px-6">
           <img 
             src={companyLogos} 
             alt="Company logos including L'ORÉAL, Fidelity, GE, transdev, biometrio.earth, and mazars" 

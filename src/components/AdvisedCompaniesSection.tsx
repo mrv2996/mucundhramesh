@@ -67,8 +67,8 @@ const AdvisedCompaniesSection = () => {
   return <section className="py-4 px-6">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Advised Companies</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)]">Advised Companies</h2>
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Helped lots of companies with their growth efforts
           </p>
         </div>

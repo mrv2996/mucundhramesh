@@ -47,9 +47,9 @@ const PodcastSection = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Mic className="h-8 w-8 text-primary" />
-            <h2 className="text-4xl font-bold text-foreground">Podcast Episodes</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Podcast Episodes</h2>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Featured conversations on leading growth and product podcasts
           </p>
         </div>

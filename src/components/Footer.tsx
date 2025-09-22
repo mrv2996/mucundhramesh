@@ -22,34 +22,40 @@ export const Footer = () => {
               >
                 Home
               </Link>
-              <a 
-                href="#skills" 
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              <button 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
                 onClick={(e) => {
                   e.preventDefault();
-                  const element = document.getElementById('skills');
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80; // Account for fixed navbar
-                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                  if (window.location.pathname !== "/") {
+                    window.location.href = "/#skills";
+                  } else {
+                    const element = document.getElementById('skills');
+                    if (element) {
+                      const offsetTop = element.offsetTop - 80;
+                      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
                   }
                 }}
               >
                 Skills
-              </a>
-              <a 
-                href="#case-studies" 
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              </button>
+              <button 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
                 onClick={(e) => {
                   e.preventDefault();
-                  const element = document.getElementById('case-studies');
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80; // Account for fixed navbar
-                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                  if (window.location.pathname !== "/") {
+                    window.location.href = "/#case-studies";
+                  } else {
+                    const element = document.getElementById('case-studies');
+                    if (element) {
+                      const offsetTop = element.offsetTop - 80;
+                      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
                   }
                 }}
               >
                 Case Studies
-              </a>
+              </button>
               <a 
                 href="https://linkedin.com/in/mucundh"
                 target="_blank"

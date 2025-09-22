@@ -35,9 +35,9 @@ const YouTubeSection = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Youtube className="h-8 w-8 text-red-500" />
-            <h2 className="text-2xl font-bold text-foreground">YouTube Videos</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">YouTube Videos</h2>
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Deep dives into growth, product-led strategies, and leadership insights
           </p>
         </div>

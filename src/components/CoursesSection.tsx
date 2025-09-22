@@ -25,8 +25,8 @@ const CoursesSection = () => {
   return <section className="py-4 px-6 bg-muted/30">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-2">Courses</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Learn from my experience through my courses on Reforge</p>
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)]">Courses</h2>
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">Learn from my experience through my courses on Reforge</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
