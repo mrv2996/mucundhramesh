@@ -4,22 +4,22 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Case Study Analysis",
+      title: "Biometrio.earth Growth Strategy",
       description: "Revenue growth and scaling strategy for biometrio.earth, a German green tech startup focused on sustainable technology solutions",
       link: "https://drive.google.com/file/d/1fVrTx7p09SS59jYrnWgxHZnzD9klxaHN/view?usp=sharing",
       type: "case-study",
       category: "Strategy"
     },
     {
-      title: "Data Analytics Project",
+      title: "Trading Platform UI Testing",
       description: "UI test scenario development and analysis for feature development of an online trading application platform",
       link: "https://docs.google.com/spreadsheets/d/1K_9GWb0-JDUaYN9VBhi5mFJundZaV20s/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true",
       type: "analytics",
       category: "Analytics"
     },
     {
-      title: "WordPress Development",
-      description: "Custom website development and content management",
+      title: "Superplan Startup Landing",
+      description: "Custom WordPress landing page development for Superplan, a concept startup showcasing modern web design and user experience",
       link: "https://xinyili4.wordpress.com/",
       type: "development",
       category: "Development"
