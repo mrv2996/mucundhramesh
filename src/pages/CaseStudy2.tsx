@@ -156,6 +156,10 @@ const CaseStudy2 = () => {
                   />
                 </div>
                 
+                <p className="text-xs text-muted-foreground text-center mt-2">
+                  * Image for reference purposes only. Source: Crossbeam
+                </p>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold mb-3">Crossbeam Capabilities:</h4>
