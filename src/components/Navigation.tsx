@@ -16,7 +16,9 @@ export const Navigation = () => {
     <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
-          <span className="text-lg font-semibold">Mucundh Ramesh</span>
+          <Link to="/" className="text-lg font-semibold hover:text-primary transition-colors">
+            Mucundh Ramesh
+          </Link>
         </div>
         <div className="flex gap-6 md:gap-8">
           <Link 
