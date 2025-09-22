@@ -9,9 +9,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Mucundh Ramesh</h3>
             <p className="text-muted-foreground max-w-md">
-              Thank you for visiting my personal space. I believe in
-              authentic connections and meaningful conversations – I
-              look forward to hearing from you.
+              Building and scaling GTM with a people, process and technology-first approach.
             </p>
           </div>
           
