@@ -29,7 +29,7 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "How a Simple Automation Saved Manual Hours in Partner Activation",
+      title: "How a Simple Rule-Based Automation Saved Manual Hours in Partner Activation",
       subtitle: "Using Excel, Salesforce, SQL and Zapier to streamline operations",
       readTime: "8 min read",
       tags: ["Automation", "Zapier", "Salesforce", "SQL", "ETL"],
