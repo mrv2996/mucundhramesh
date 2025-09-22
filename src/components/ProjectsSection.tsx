@@ -17,13 +17,6 @@ const ProjectsSection = () => {
       type: "analytics",
       category: "Analytics"
     },
-    {
-      title: "Superplan Startup Landing",
-      description: "Custom WordPress landing page development for Superplan, a concept startup showcasing modern web design and user experience",
-      link: "https://xinyili4.wordpress.com/",
-      type: "development",
-      category: "Development"
-    },
   ];
 
   const getCategoryColor = (category: string) => {
