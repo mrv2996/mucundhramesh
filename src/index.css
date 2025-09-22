@@ -10,43 +10,43 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 16% 18%;
+    --foreground: 213 16% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 16% 18%;
+    --card-foreground: 213 16% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 16% 18%;
+    --popover-foreground: 213 16% 15%;
 
-    /* Beautiful teal to cream palette for elegant contrast */
-    /* Primary: Deep Teal - main brand color for dark elements */
-    --primary: 191 85% 18%;
-    --primary-foreground: 35 15% 90%;
-    --primary-light: 191 85% 28%;
-    --primary-dark: 191 85% 12%;
+    /* Professional color palette - Prussian Blue, Sky Blue, Gold Leaf */
+    /* Primary: Prussian Blue - main brand color for headers, navigation, key CTAs */
+    --primary: 203 90% 19%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 203 90% 29%;
+    --primary-dark: 203 90% 12%;
 
-    /* Secondary: Medium Teal - accent for interactive elements */
-    --secondary: 184 55% 35%;
-    --secondary-foreground: 35 15% 90%;
+    /* Secondary: Sky Blue - interactive elements, links, hover states */
+    --secondary: 201 59% 47%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Tertiary: Light Cream - highlight for backgrounds and contrast */
-    --tertiary: 35 15% 90%;
-    --tertiary-foreground: 191 85% 18%;
+    /* Tertiary: Gold Leaf - achievements, certifications, key metrics (use sparingly) */
+    --tertiary: 49 84% 46%;
+    --tertiary-foreground: 213 16% 15%;
 
     /* Neutral palette */
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 46%;
 
     /* Accent uses secondary for consistency */
-    --accent: 184 55% 35%;
-    --accent-foreground: 35 15% 90%;
+    --accent: 201 59% 47%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 191 85% 18%;
+    --ring: 203 90% 19%;
 
     --radius: 0.75rem;
 
@@ -72,19 +72,19 @@ All colors MUST be HSL.
     --space-xl: 4.236rem;    /* ~68px - golden ratio³ */
     --space-2xl: 6.854rem;   /* ~110px - golden ratio⁴ */
 
-    /* Strategic gradients using teal to cream palette */
-    --gradient-primary: linear-gradient(135deg, hsl(191 85% 18%), hsl(191 85% 28%));
-    --gradient-secondary: linear-gradient(135deg, hsl(184 55% 35%), hsl(184 55% 45%));
-    --gradient-tertiary: linear-gradient(135deg, hsl(35 15% 90%), hsl(35 25% 85%));
-    --gradient-mixed: linear-gradient(135deg, hsl(191 85% 18%), hsl(184 55% 35%), hsl(35 15% 90%));
+    /* Strategic gradients using professional color palette */
+    --gradient-primary: linear-gradient(135deg, hsl(203 90% 19%), hsl(203 90% 29%));
+    --gradient-secondary: linear-gradient(135deg, hsl(201 59% 47%), hsl(201 59% 57%));
+    --gradient-tertiary: linear-gradient(135deg, hsl(49 84% 46%), hsl(49 84% 56%));
+    --gradient-mixed: linear-gradient(135deg, hsl(203 90% 19%), hsl(201 59% 47%), hsl(49 84% 46%));
     
     /* Sophisticated shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(220 16% 18% / 0.05), 0 2px 4px -1px hsl(220 16% 18% / 0.02);
-    --shadow-medium: 0 10px 15px -3px hsl(220 16% 18% / 0.08), 0 4px 6px -2px hsl(220 16% 18% / 0.03);
-    --shadow-large: 0 25px 50px -12px hsl(220 16% 18% / 0.15);
-    --shadow-glow-primary: 0 0 30px hsl(191 85% 18% / 0.3);
-    --shadow-glow-secondary: 0 0 30px hsl(184 55% 35% / 0.3);
-    --shadow-glow-tertiary: 0 0 30px hsl(35 15% 90% / 0.3);
+    --shadow-soft: 0 4px 6px -1px hsl(213 16% 15% / 0.05), 0 2px 4px -1px hsl(213 16% 15% / 0.02);
+    --shadow-medium: 0 10px 15px -3px hsl(213 16% 15% / 0.08), 0 4px 6px -2px hsl(213 16% 15% / 0.03);
+    --shadow-large: 0 25px 50px -12px hsl(213 16% 15% / 0.15);
+    --shadow-glow-primary: 0 0 30px hsl(203 90% 19% / 0.3);
+    --shadow-glow-secondary: 0 0 30px hsl(201 59% 47% / 0.3);
+    --shadow-glow-tertiary: 0 0 30px hsl(49 84% 46% / 0.3);
     
     /* Content and section sizing */
     --section-padding: var(--space-2xl);
@@ -215,7 +215,7 @@ All colors MUST be HSL.
   .orb-3 {
     width: 120px;
     height: 120px;
-    background: radial-gradient(circle, hsl(var(--tertiary) / 0.1) 0%, hsl(var(--tertiary) / 0.03) 50%, transparent 80%);
+    background: radial-gradient(circle, hsl(var(--tertiary) / 0.08) 0%, hsl(var(--tertiary) / 0.02) 50%, transparent 80%);
     bottom: 25%;
     left: 50%;
     animation: pulse-glow 6s ease-in-out infinite;
