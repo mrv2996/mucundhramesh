@@ -46,21 +46,28 @@ export const Navigation = () => {
           >
             Home
           </Link>
-          <a 
-            href="/#case-studies" 
+          <button 
             className={cn(
               "text-sm font-medium transition-colors hover:text-primary",
-              location.pathname === "/" && location.hash === "#case-studies" ? "text-primary" : "text-muted-foreground"
+              "text-muted-foreground"
             )}
             onClick={(e) => {
-              if (location.pathname === "/") {
-                e.preventDefault();
-                document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" });
+              e.preventDefault();
+              if (location.pathname !== "/") {
+                // Navigate to home first, then scroll
+                window.location.href = "/#case-studies";
+              } else {
+                // Already on home page, just scroll with offset for fixed navbar
+                const element = document.getElementById("case-studies");
+                if (element) {
+                  const offsetTop = element.offsetTop - 80; // Account for fixed navbar height
+                  window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                }
               }
             }}
           >
             Case Studies
-          </a>
+          </button>
         </div>
       </div>
     </nav>

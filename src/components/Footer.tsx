@@ -27,7 +27,11 @@ export const Footer = () => {
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.getElementById('skills');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                  }
                 }}
               >
                 Skills
@@ -37,7 +41,11 @@ export const Footer = () => {
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.getElementById('case-studies');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                  }
                 }}
               >
                 Case Studies
