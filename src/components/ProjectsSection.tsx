@@ -42,8 +42,8 @@ const ProjectsSection = () => {
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        {/* Golden ratio grid: 3 columns maximum, responsive */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[var(--space-lg)] lg:gap-[var(--space-xl)]">
+        {/* Golden ratio grid: 2 columns maximum for better alignment */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--space-lg)] lg:gap-[var(--space-xl)] max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.title}
