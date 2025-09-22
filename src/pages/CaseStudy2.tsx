@@ -233,6 +233,48 @@ const CaseStudy2 = () => {
                 <Separator />
                 
                 <div>
+                  <h3 className="text-xl font-semibold mb-4">Agent Implementation Guide</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-medium mb-3">Agent Instructions</h4>
+                      <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-lg border font-mono text-sm overflow-x-auto">
+                        <pre className="whitespace-pre-wrap text-slate-800 dark:text-slate-200">
+{`Agent Instructions
+<Role> Partner overlap identifier for customer accounts
+<Input> Customer name only (e.g., "coca-cola")
+<Do>
+Search Google Drive partner data files for customer mentions
+Check Notion partner priority matrix
+Use web search for additional partner intelligence
+Rank partners 1-5 (1=highest overlap)
+</Do>
+Output Format (STRICT - NO OTHER TEXT):
+\`\`\`
+Customer: [customer_name]
+
+Partner Overlaps:
+1. [Partner Name] (Score: X) - [5-7 word reason]
+2. [Partner Name] (Score: X) - [5-7 word reason] 
+3. [Partner Name] (Score: X) - [5-7 word reason]
+
+\`\`\`
+<Rules>
+Maximum 3 partners listed
+Score must be 1-5 integer
+Reason must be exactly 5-7 words
+NO explanatory text before or after
+NO "Let me search" or process descriptions
+Return ONLY the formatted output above
+</Rules>`}
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <Separator />
+                
+                <div>
                   <h3 className="text-xl font-semibold mb-4 text-center">Structured Agent Output</h3>
                   <div className="flex justify-center">
                     <img 
