@@ -76,7 +76,7 @@ ORDER BY
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-                How a Simple Automation Saved 7-8 Hours Weekly in Partner Activation
+                How a Simple Rule-Based Automation Saved 7-8 Hours Weekly in Partner Activation
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
