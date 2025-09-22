@@ -7,12 +7,13 @@ const ToolsSection = () => {
     { name: "Power BI", category: "data", icon: BarChart3 },
     { name: "Looker", category: "data", icon: BarChart3 },
     { name: "Python", category: "data", icon: Code },
-    { name: "MS Excel", category: "data", icon: BarChart3 },
+    { name: "MS Excel Advanced", category: "data", icon: BarChart3 },
     
     // RevOps & CRM
     { name: "Salesforce", category: "platform", icon: Target },
     { name: "HubSpot", category: "platform", icon: Target },
-    { name: "Appian", category: "platform", icon: Settings },
+    { name: "Apollo", category: "platform", icon: Settings },
+    //{ name: "Appian", category: "platform", icon: Settings },
     
     // GTM & Growth
     { name: "GTM Strategy", category: "strategy", icon: TrendingUp },
