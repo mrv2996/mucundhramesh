@@ -250,7 +250,7 @@ All colors MUST be HSL.
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-16.666%); }
 }
 
 /* Company logos scroll animation */

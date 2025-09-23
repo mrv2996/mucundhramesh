@@ -56,20 +56,20 @@ const ToolsSection = () => {
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        {/* Full width seamless infinite scroll */}
-        <div className="w-full overflow-hidden relative">
-          <div className="flex animate-[scroll_30s_linear_infinite] whitespace-nowrap">
-            {/* Multiple sets for seamless loop */}
-            {[...Array(4)].map((_, setIndex) => 
+        {/* Truly seamless infinite scroll */}
+        <div className="w-full overflow-hidden">
+          <div className="flex animate-[scroll_20s_linear_infinite] gap-4">
+            {/* Create enough copies to ensure seamless loop */}
+            {[...Array(6)].map((_, setIndex) => 
               tools.map((tool, index) => {
                 const Icon = tool.icon;
                 return (
                   <div
-                    key={`set-${setIndex}-${tool.name}`}
-                    className={`flex items-center gap-3 px-[var(--space-md)] py-3 mx-[var(--space-sm)] rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 ${getCategoryColor(tool.category)}`}
+                    key={`set-${setIndex}-${tool.name}-${index}`}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 whitespace-nowrap ${getCategoryColor(tool.category)}`}
                   >
-                    <Icon className="w-4 h-4" />
-                    {tool.name}
+                    <Icon className="w-4 h-4 flex-shrink-0" />
+                    <span>{tool.name}</span>
                   </div>
                 );
               })
