@@ -32,7 +32,7 @@ const JourneySection = () => {
     location: "Paris, FRANCE",
     type: "work",
     status: "completed",
-    color: "accent"
+    color: "secondary"
   }, {
     title: "Software Engineer",
     company: "GENERAL ELECTRIC (GE)",
