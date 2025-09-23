@@ -57,7 +57,7 @@ export const Footer = () => {
                 Case Studies
               </button>
               <a 
-                href="https://linkedin.com/in/mucundh"
+                href="https://www.linkedin.com/in/mucundh-ramesh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
