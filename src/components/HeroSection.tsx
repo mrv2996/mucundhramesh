@@ -12,7 +12,7 @@ const HeroSection = () => {
               Mucundh Ramesh
             </h1>
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">Building and Scaling GTM with a people, process and technology-first approach</h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">Software Systems engineer turned go-to-market strategy and operations specialist, designing and optimizing technical infrastructures that drive measurable business outcomes through data-driven operational excellence.</p>
+            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">Software Systems engineer turned go-to-market strategy and operations specialist, passionate about designing and optimizing scalable infrastructures that drive measurable business outcomes through data-driven operational excellence.</p>
             
             {/* CTAs with golden ratio spacing */}
             <div className="flex flex-col sm:flex-row gap-[var(--space-md)] justify-center lg:justify-start pt-[var(--space-md)]">
