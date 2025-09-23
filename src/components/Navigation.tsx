@@ -65,11 +65,13 @@ export const Navigation = () => {
                   }
                 }, 100);
               } else {
-                const element = document.getElementById("case-studies");
-                if (element) {
-                  const offsetTop = element.offsetTop - 80;
-                  window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                }
+                setTimeout(() => {
+                  const element = document.getElementById("case-studies");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 50);
               }
             }}
           >
@@ -92,11 +94,13 @@ export const Navigation = () => {
                   }
                 }, 100);
               } else {
-                const element = document.getElementById("projects");
-                if (element) {
-                  const offsetTop = element.offsetTop - 80;
-                  window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                }
+                setTimeout(() => {
+                  const element = document.getElementById("projects");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 50);
               }
             }}
           >
@@ -119,11 +123,13 @@ export const Navigation = () => {
                   }
                 }, 100);
               } else {
-                const element = document.getElementById("journey");
-                if (element) {
-                  const offsetTop = element.offsetTop - 80;
-                  window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                }
+                setTimeout(() => {
+                  const element = document.getElementById("journey");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 50);
               }
             }}
           >
