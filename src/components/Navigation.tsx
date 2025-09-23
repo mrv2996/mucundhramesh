@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { ExternalLink } from "lucide-react";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -55,21 +56,18 @@ export const Navigation = () => {
             onClick={(e) => {
               e.preventDefault();
               if (location.pathname !== "/") {
-                // Navigate to home first, then scroll after navigation
                 navigate("/");
-                // Use setTimeout to ensure navigation completes before scrolling
                 setTimeout(() => {
                   const element = document.getElementById("case-studies");
                   if (element) {
-                    const offsetTop = element.offsetTop - 80; // Account for fixed navbar height
+                    const offsetTop = element.offsetTop - 80;
                     window.scrollTo({ top: offsetTop, behavior: "smooth" });
                   }
                 }, 100);
               } else {
-                // Already on home page, just scroll with offset for fixed navbar
                 const element = document.getElementById("case-studies");
                 if (element) {
-                  const offsetTop = element.offsetTop - 80; // Account for fixed navbar height
+                  const offsetTop = element.offsetTop - 80;
                   window.scrollTo({ top: offsetTop, behavior: "smooth" });
                 }
               }
@@ -77,13 +75,68 @@ export const Navigation = () => {
           >
             Case Studies
           </button>
+          <button 
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              "text-muted-foreground"
+            )}
+            onClick={(e) => {
+              e.preventDefault();
+              if (location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  const element = document.getElementById("projects");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 100);
+              } else {
+                const element = document.getElementById("projects");
+                if (element) {
+                  const offsetTop = element.offsetTop - 80;
+                  window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                }
+              }
+            }}
+          >
+            Projects
+          </button>
+          <button 
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              "text-muted-foreground"
+            )}
+            onClick={(e) => {
+              e.preventDefault();
+              if (location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  const element = document.getElementById("journey");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 100);
+              } else {
+                const element = document.getElementById("journey");
+                if (element) {
+                  const offsetTop = element.offsetTop - 80;
+                  window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                }
+              }
+            }}
+          >
+            Journey
+          </button>
           <a 
             href="https://www.linkedin.com/in/mucundh-ramesh/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+            className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1"
           >
             LinkedIn
+            <ExternalLink className="h-3 w-3" />
           </a>
         </div>
       </div>

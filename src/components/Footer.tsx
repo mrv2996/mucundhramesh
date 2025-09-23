@@ -56,6 +56,40 @@ export const Footer = () => {
               >
                 Case Studies
               </button>
+              <button 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (window.location.pathname !== "/") {
+                    window.location.href = "/#projects";
+                  } else {
+                    const element = document.getElementById('projects');
+                    if (element) {
+                      const offsetTop = element.offsetTop - 80;
+                      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
+                  }
+                }}
+              >
+                Projects
+              </button>
+              <button 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (window.location.pathname !== "/") {
+                    window.location.href = "/#journey";
+                  } else {
+                    const element = document.getElementById('journey');
+                    if (element) {
+                      const offsetTop = element.offsetTop - 80;
+                      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
+                  }
+                }}
+              >
+                Journey
+              </button>
               <a 
                 href="https://www.linkedin.com/in/mucundh-ramesh/"
                 target="_blank"
