@@ -11,14 +11,14 @@ const JourneySection = () => {
   }, {
     title: "Master in Management - Grande École",
     company: "ESCP BUSINESS SCHOOL",
-    period: "2022 - 2024",
+    period: "2021 - 2024",
     location: "Paris & London",
     type: "education",
     status: "completed",
     color: "secondary",
     specializations: ["Consumer Behaviour", "Sustainability", "Scale-up Strategy"]
   }, {
-    title: "Strategy Analyst Intern",
+    title: "Strategy Analyst Intern, Commercial Strategy and Partnerships",
     company: "TRANSDEV",
     period: "Jan 2023 - July 2023",
     location: "Paris, FRANCE",
@@ -26,7 +26,7 @@ const JourneySection = () => {
     status: "completed",
     color: "tertiary"
   }, {
-    title: "Financial Analyst Intern",
+    title: "Financial Analyst Intern, Beauty Tech",
     company: "L'ORÉAL",
     period: "July 2022 - Dec 2022",
     location: "Paris, FRANCE",
