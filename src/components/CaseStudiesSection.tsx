@@ -26,7 +26,7 @@ const CaseStudiesSection = () => {
       readTime: "6 min read", 
       tags: ["GenAI", "Cost Optimization", "Partner Intelligence"],
       icon: <Bot className="h-6 w-6 text-primary" />,
-      summary: "Built a custom GenAI agent processing Drive and Notion data to deliver partner intelligence at a fraction of Crossbeam's cost.",
+      summary: "Built a custom GenAI copilot processing Drive and Notion data to deliver partner intelligence at a fractional cost.",
       keyMetrics: [
         { label: "Savings", value: "$14K/year", icon: <TrendingUp className="h-4 w-4" /> },
         { label: "Adoption", value: "Low → High", icon: <Zap className="h-4 w-4" /> },
