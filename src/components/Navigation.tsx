@@ -1,9 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 export const Navigation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   
   const isActive = (path: string) => location.pathname === path;
@@ -54,8 +55,16 @@ export const Navigation = () => {
             onClick={(e) => {
               e.preventDefault();
               if (location.pathname !== "/") {
-                // Navigate to home first, then scroll
-                window.location.href = "/#case-studies";
+                // Navigate to home first, then scroll after navigation
+                navigate("/");
+                // Use setTimeout to ensure navigation completes before scrolling
+                setTimeout(() => {
+                  const element = document.getElementById("case-studies");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80; // Account for fixed navbar height
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 100);
               } else {
                 // Already on home page, just scroll with offset for fixed navbar
                 const element = document.getElementById("case-studies");
