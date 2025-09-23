@@ -1,5 +1,4 @@
 import { Database, BarChart3, Settings, Code, Target, TrendingUp } from "lucide-react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const ToolsSection = () => {
   const tools = [
@@ -57,8 +56,8 @@ const ToolsSection = () => {
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        {/* Horizontal infinite scroll for tools */}
-        <ScrollArea className="w-full whitespace-nowrap">
+        {/* Seamless horizontal infinite scroll */}
+        <div className="w-full overflow-hidden">
           <div className="flex gap-[var(--space-md)] animate-scroll">
             {/* First set of tools */}
             {tools.map((tool, index) => {
@@ -76,7 +75,7 @@ const ToolsSection = () => {
                 </div>
               );
             })}
-            {/* Duplicate set for infinite effect */}
+            {/* Seamless duplicate set */}
             {tools.map((tool, index) => {
               const Icon = tool.icon;
               return (
@@ -93,8 +92,7 @@ const ToolsSection = () => {
               );
             })}
           </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+        </div>
         
         <div className="mt-[var(--space-xl)] text-center">
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
