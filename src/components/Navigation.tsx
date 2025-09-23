@@ -2,11 +2,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Navigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
   
   const isActive = (path: string) => location.pathname === path;
   
@@ -39,15 +41,17 @@ export const Navigation = () => {
           </Link>
         </div>
         <div className="flex gap-6 md:gap-8">
-          <Link 
-            to="/" 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              isActive("/") ? "text-primary" : "text-muted-foreground"
-            )}
-          >
-            Home
-          </Link>
+          {!isMobile && (
+            <Link 
+              to="/" 
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                isActive("/") ? "text-primary" : "text-muted-foreground"
+              )}
+            >
+              Home
+            </Link>
+          )}
           <button 
             className={cn(
               "text-sm font-medium transition-colors hover:text-primary",
@@ -77,64 +81,68 @@ export const Navigation = () => {
           >
             Case Studies
           </button>
-          <button 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              "text-muted-foreground"
-            )}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== "/") {
-                navigate("/");
-                setTimeout(() => {
-                  const element = document.getElementById("projects");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+          {!isMobile && (
+            <>
+              <button 
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-muted-foreground"
+                )}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      const element = document.getElementById("projects");
+                      if (element) {
+                        const offsetTop = element.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                      }
+                    }, 100);
+                  } else {
+                    setTimeout(() => {
+                      const element = document.getElementById("projects");
+                      if (element) {
+                        const offsetTop = element.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                      }
+                    }, 50);
                   }
-                }, 100);
-              } else {
-                setTimeout(() => {
-                  const element = document.getElementById("projects");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                }}
+              >
+                Projects
+              </button>
+              <button 
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-muted-foreground"
+                )}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      const element = document.getElementById("journey");
+                      if (element) {
+                        const offsetTop = element.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                      }
+                    }, 100);
+                  } else {
+                    setTimeout(() => {
+                      const element = document.getElementById("journey");
+                      if (element) {
+                        const offsetTop = element.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                      }
+                    }, 50);
                   }
-                }, 50);
-              }
-            }}
-          >
-            Projects
-          </button>
-          <button 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              "text-muted-foreground"
-            )}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== "/") {
-                navigate("/");
-                setTimeout(() => {
-                  const element = document.getElementById("journey");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                  }
-                }, 100);
-              } else {
-                setTimeout(() => {
-                  const element = document.getElementById("journey");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                  }
-                }, 50);
-              }
-            }}
-          >
-            Journey
-          </button>
+                }}
+              >
+                Journey
+              </button>
+            </>
+          )}
           <a 
             href="https://www.linkedin.com/in/mucundh-ramesh/"
             target="_blank"
