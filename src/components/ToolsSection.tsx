@@ -1,4 +1,5 @@
 import { Database, BarChart3, Settings, Code, Target, TrendingUp } from "lucide-react";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const ToolsSection = () => {
   const tools = [
@@ -56,24 +57,44 @@ const ToolsSection = () => {
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        {/* Tools arranged with golden ratio spacing */}
-        <div className="flex flex-wrap gap-[var(--space-md)] justify-center">
-          {tools.map((tool, index) => {
-            const Icon = tool.icon;
-            return (
-              <div
-                key={tool.name}
-                className={`flex items-center gap-3 px-[var(--space-md)] py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium ${getCategoryColor(tool.category)}`}
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
-              >
-                <Icon className="w-4 h-4" />
-                {tool.name}
-              </div>
-            );
-          })}
-        </div>
+        {/* Horizontal infinite scroll for tools */}
+        <ScrollArea className="w-full whitespace-nowrap">
+          <div className="flex gap-[var(--space-md)] animate-scroll">
+            {/* First set of tools */}
+            {tools.map((tool, index) => {
+              const Icon = tool.icon;
+              return (
+                <div
+                  key={`first-${tool.name}`}
+                  className={`flex items-center gap-3 px-[var(--space-md)] py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 ${getCategoryColor(tool.category)}`}
+                  style={{
+                    animationDelay: `${index * 0.1}s`,
+                  }}
+                >
+                  <Icon className="w-4 h-4" />
+                  {tool.name}
+                </div>
+              );
+            })}
+            {/* Duplicate set for infinite effect */}
+            {tools.map((tool, index) => {
+              const Icon = tool.icon;
+              return (
+                <div
+                  key={`second-${tool.name}`}
+                  className={`flex items-center gap-3 px-[var(--space-md)] py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 ${getCategoryColor(tool.category)}`}
+                  style={{
+                    animationDelay: `${(index + tools.length) * 0.1}s`,
+                  }}
+                >
+                  <Icon className="w-4 h-4" />
+                  {tool.name}
+                </div>
+              );
+            })}
+          </div>
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
         
         <div className="mt-[var(--space-xl)] text-center">
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
