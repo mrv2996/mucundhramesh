@@ -16,7 +16,7 @@ const JourneySection = () => {
     type: "education",
     status: "completed",
     color: "secondary",
-    specializations: ["Consumer Behaviour", "Sustainability", "Scale-up Strategy"]
+    specializations: ["Scale-up Strategy", "Consumer Behaviour", "Finance", "Sustainability"]
   }, {
     title: "Strategy Analyst Intern, Commercial Strategy and Partnerships",
     company: "TRANSDEV",
