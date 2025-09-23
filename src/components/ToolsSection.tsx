@@ -47,8 +47,8 @@ const ToolsSection = () => {
   };
 
   return (
-    <section className="py-section px-6">
-      <div className="max-w-content mx-auto">
+    <section className="py-section">
+      <div className="w-full overflow-hidden">
         <div className="text-center mb-[var(--space-2xl)]">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Tools & Technologies
@@ -56,45 +56,28 @@ const ToolsSection = () => {
           <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
         </div>
 
-        {/* Seamless horizontal infinite scroll */}
-        <div className="w-full overflow-hidden">
-          <div className="flex gap-[var(--space-md)] animate-scroll">
-            {/* First set of tools */}
-            {tools.map((tool, index) => {
-              const Icon = tool.icon;
-              return (
-                <div
-                  key={`first-${tool.name}`}
-                  className={`flex items-center gap-3 px-[var(--space-md)] py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 ${getCategoryColor(tool.category)}`}
-                  style={{
-                    animationDelay: `${index * 0.1}s`,
-                  }}
-                >
-                  <Icon className="w-4 h-4" />
-                  {tool.name}
-                </div>
-              );
-            })}
-            {/* Seamless duplicate set */}
-            {tools.map((tool, index) => {
-              const Icon = tool.icon;
-              return (
-                <div
-                  key={`second-${tool.name}`}
-                  className={`flex items-center gap-3 px-[var(--space-md)] py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 ${getCategoryColor(tool.category)}`}
-                  style={{
-                    animationDelay: `${(index + tools.length) * 0.1}s`,
-                  }}
-                >
-                  <Icon className="w-4 h-4" />
-                  {tool.name}
-                </div>
-              );
-            })}
+        {/* Full width seamless infinite scroll */}
+        <div className="w-full overflow-hidden relative">
+          <div className="flex animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+            {/* Multiple sets for seamless loop */}
+            {[...Array(4)].map((_, setIndex) => 
+              tools.map((tool, index) => {
+                const Icon = tool.icon;
+                return (
+                  <div
+                    key={`set-${setIndex}-${tool.name}`}
+                    className={`flex items-center gap-3 px-[var(--space-md)] py-3 mx-[var(--space-sm)] rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 ${getCategoryColor(tool.category)}`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {tool.name}
+                  </div>
+                );
+              })
+            )}
           </div>
         </div>
         
-        <div className="mt-[var(--space-xl)] text-center">
+        <div className="mt-[var(--space-xl)] text-center px-6">
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Revenue operations expertise backed by technical engineering foundation - architecting scalable systems that drive measurable business growth through data-driven automation, process optimization, and strategic commercial intelligence.
           </p>
