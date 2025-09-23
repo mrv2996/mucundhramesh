@@ -33,7 +33,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-section px-6 bg-gradient-to-br from-muted/20 via-background to-muted/30">
+    <section id="projects" className="py-section px-6 bg-gradient-to-br from-muted/20 via-background to-muted/30">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">

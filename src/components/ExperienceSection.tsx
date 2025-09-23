@@ -55,7 +55,7 @@ const JourneySection = () => {
       url: "https://www.researchgate.net/publication/325878411_SECURE_DATA_RETRIEVAL_IN_CLOUD_USING_MULTIPLE_KEYS_A_SURVEY"
     }
   }];
-  return <section className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
+  return <section id="journey" className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
           <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
