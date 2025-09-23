@@ -77,6 +77,14 @@ export const Navigation = () => {
           >
             Case Studies
           </button>
+          <a 
+            href="https://www.linkedin.com/in/mucundh-ramesh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
     </nav>
