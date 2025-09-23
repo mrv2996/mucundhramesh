@@ -58,7 +58,7 @@ const ToolsSection = () => {
 
         {/* Truly seamless infinite scroll */}
         <div className="w-full overflow-hidden">
-          <div className="flex animate-[scroll_20s_linear_infinite] gap-4">
+          <div className="flex animate-[scroll_10s_linear_infinite] gap-4">
             {/* Create enough copies to ensure seamless loop */}
             {[...Array(6)].map((_, setIndex) => 
               tools.map((tool, index) => {
