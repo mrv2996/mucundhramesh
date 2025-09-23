@@ -7,33 +7,27 @@ import { Clock, Users, TrendingUp, DollarSign, Bot, Database, FileText, ArrowRig
 import crossbeamInterface from "@/assets/crossbeam-interface.png";
 import agentOutputExample from "@/assets/agent-output-example.png";
 import { useEffect } from "react";
-
 const CaseStudy2 = () => {
   // Scroll to top when component mounts and update meta tags
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     // Update meta tags for Crossbeam AI Agent case study
     document.title = "AI-Powered Partner Intelligence Agent - Case Study | Mucundh Ramesh";
-    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'How Mucundh Ramesh replaced expensive Crossbeam licenses with a GenAI agent that processes partner data from Drive and Notion, reducing costs while maintaining partner intelligence capabilities.');
     }
-    
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
       ogTitle.setAttribute('content', 'AI-Powered Partner Intelligence Agent - Case Study | Mucundh Ramesh');
     }
-    
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
       ogDescription.setAttribute('content', 'How Mucundh Ramesh replaced expensive Crossbeam licenses with a GenAI agent that processes partner data from Drive and Notion, reducing costs while maintaining partner intelligence capabilities.');
     }
   }, []);
-
-  return (
-    <div className="min-h-screen bg-background pt-16">
+  return <div className="min-h-screen bg-background pt-16">
       <Navigation />
       
       <main>
@@ -51,20 +45,16 @@ const CaseStudy2 = () => {
                 </Badge>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-                From $14K Crossbeam Licenses to AI-Powered Partner Intelligence
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 How we replaced expensive partner mapping software with a GenAI agent that processes structured partner data from Drive and Notion to deliver similar intelligence at a fraction of the cost.
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
-                {["GenAI", "Partner Intelligence", "Cost Optimization", "Dust", "Drive API", "Notion", "Partner Mapping"].map((tag) => (
-                  <Badge key={tag} variant="secondary" className="text-sm">
+                {["GenAI", "Partner Intelligence", "Cost Optimization", "Dust", "Drive API", "Notion", "Partner Mapping"].map(tag => <Badge key={tag} variant="secondary" className="text-sm">
                     {tag}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
             </div>
 
@@ -150,11 +140,7 @@ const CaseStudy2 = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex justify-center">
-                  <img 
-                    src={crossbeamInterface} 
-                    alt="Crossbeam Copilot interface showing co-selling opportunities with Bozer Enterprises, account highlights, and recommended next steps"
-                    className="max-w-full w-full rounded-lg shadow-lg border border-muted"
-                  />
+                  <img src={crossbeamInterface} alt="Crossbeam Copilot interface showing co-selling opportunities with Bozer Enterprises, account highlights, and recommended next steps" className="max-w-full w-full rounded-lg shadow-lg border border-muted" />
                 </div>
                 
                 <p className="text-xs text-muted-foreground text-center mt-2">
@@ -239,7 +225,7 @@ const CaseStudy2 = () => {
                       <h4 className="font-medium mb-3">Agent Instructions</h4>
                       <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-lg border font-mono text-sm overflow-x-auto">
                         <pre className="whitespace-pre-wrap text-slate-800 dark:text-slate-200">
-{`Agent Instructions
+                        {`Agent Instructions
 <Role> Partner overlap identifier for customer accounts
 <Input> Customer name only (e.g., "coca-cola")
 <Do>
@@ -273,11 +259,7 @@ Return ONLY the formatted output above
                     <div>
                       <h4 className="font-medium mb-3">Structured Output</h4>
                       <div className="flex justify-center">
-                        <img 
-                          src={agentOutputExample} 
-                          alt="AI agent structured output showing partner overlaps with scores and concise reasoning"
-                          className="max-w-full w-full rounded-lg border border-muted shadow-sm"
-                        />
+                        <img src={agentOutputExample} alt="AI agent structured output showing partner overlaps with scores and concise reasoning" className="max-w-full w-full rounded-lg border border-muted shadow-sm" />
                       </div>
                     </div>
                   </div>
@@ -312,8 +294,6 @@ Return ONLY the formatted output above
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default CaseStudy2;
