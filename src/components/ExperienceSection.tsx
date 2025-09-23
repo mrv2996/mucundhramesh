@@ -66,7 +66,7 @@ const JourneySection = () => {
 
         <div className="relative">
           {/* Animated timeline line with gradient sections */}
-          <div className="absolute left-8 top-0 bottom-16 w-1 hidden md:block">
+          <div className="absolute left-8 top-2 bottom-16 w-1 hidden md:block">
             <div className="w-full h-full bg-gradient-to-b from-primary via-secondary via-tertiary via-accent to-transparent rounded-full shadow-glow"></div>
           </div>
           
