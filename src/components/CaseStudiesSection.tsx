@@ -22,7 +22,7 @@ const CaseStudiesSection = () => {
     {
       id: 2,
       title: "AI-Powered Partner Intelligence",
-      subtitle: "GenAI agent replaced $14K Crossbeam licenses",
+      subtitle: "GenAI agent replaced $14K Software licenses",
       readTime: "6 min read", 
       tags: ["GenAI", "Cost Optimization", "Partner Intelligence"],
       icon: <Bot className="h-6 w-6 text-primary" />,
