@@ -73,7 +73,7 @@ const JourneySection = () => {
           <div className="space-y-[var(--space-sm)]">
             {journeyItems.map((item, index) => <div key={`${item.company}-${item.title}`} className="relative flex items-start gap-[var(--space-md)]">
                 {/* Timeline dot with dynamic colors */}
-                <div className={`hidden md:flex w-12 h-12 rounded-full items-center justify-center shadow-glow relative z-10 ${item.color === 'primary' ? 'bg-gradient-primary' : item.color === 'secondary' ? 'bg-gradient-secondary' : item.color === 'tertiary' ? 'bg-gradient-tertiary' : 'bg-gradient-accent'}`}>
+                <div className={`hidden md:flex w-12 h-12 rounded-full items-center justify-center shadow-glow relative z-10 bg-muted/5 ${item.color === 'primary' ? 'bg-gradient-primary' : item.color === 'secondary' ? 'bg-gradient-secondary' : item.color === 'tertiary' ? 'bg-gradient-tertiary' : 'bg-gradient-accent'}`}>
                   {item.type === 'education' ? <GraduationCap className="w-6 h-6 text-white" /> : <Briefcase className="w-6 h-6 text-white" />}
                 </div>
                 
