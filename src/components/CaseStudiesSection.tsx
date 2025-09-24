@@ -68,7 +68,7 @@ const CaseStudiesSection = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-gradient-to-r from-[#1FAADB] to-[#0F7AA7] text-white px-3 py-1.5 rounded-full text-xs font-medium shadow-sm">
                   <img 
-                    src={sweepLogo} 
+                    //src={sweepLogo} 
                     alt="Sweep" 
                     className="h-4 w-4 object-contain filter brightness-0 invert"
                   />
