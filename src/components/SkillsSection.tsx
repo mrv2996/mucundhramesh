@@ -10,8 +10,8 @@ const SkillsSection = () => {
     },
     {
       icon: PenTool,
-      title: "Partner Operations & Financial Analysis",
-      description: "Advanced Excel, VBA, Pivot Tables, Performance Reporting, Budget Planning",
+      title: "Partnership & Stakeholder Management",
+      description: "Cross-functional Collaboration, Partner Enablement, Relationship Building, Stakeholder Alignment, Executive Communication, Channel Management",
       color: "secondary",
     },
     {
