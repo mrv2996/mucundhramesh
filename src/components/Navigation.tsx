@@ -1,14 +1,8 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
-import { ExternalLink, ChevronDown } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -58,59 +52,35 @@ export const Navigation = () => {
               Home
             </Link>
           )}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button 
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary flex items-center gap-1",
-                  "text-muted-foreground"
-                )}
-              >
-                Case Studies
-                <ChevronDown className="h-3 w-3" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="w-56">
-              <DropdownMenuItem asChild>
-                <button
-                  className="w-full text-left"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (location.pathname !== "/") {
-                      navigate("/");
-                      setTimeout(() => {
-                        const element = document.getElementById("case-studies");
-                        if (element) {
-                          const offsetTop = element.offsetTop - 80;
-                          window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                        }
-                      }, 100);
-                    } else {
-                      setTimeout(() => {
-                        const element = document.getElementById("case-studies");
-                        if (element) {
-                          const offsetTop = element.offsetTop - 80;
-                          window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                        }
-                      }, 50);
-                    }
-                  }}
-                >
-                  All Case Studies
-                </button>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/case-study-1" className="w-full">
-                  Partner Activation Automation
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/case-study-2" className="w-full">
-                  AI Partner Intelligence Agent
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <button 
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              "text-muted-foreground"
+            )}
+            onClick={(e) => {
+              e.preventDefault();
+              if (location.pathname !== "/") {
+                navigate("/");
+                setTimeout(() => {
+                  const element = document.getElementById("case-studies");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 100);
+              } else {
+                setTimeout(() => {
+                  const element = document.getElementById("case-studies");
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                  }
+                }, 50);
+              }
+            }}
+          >
+            Case Studies
+          </button>
           {!isMobile && (
             <>
               <button 
