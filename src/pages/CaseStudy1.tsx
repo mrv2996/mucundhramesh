@@ -7,7 +7,6 @@ import { Clock, Users, TrendingUp, Zap, Database, FileSpreadsheet, ArrowRight, C
 import { Link } from "react-router-dom";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 import zapierWorkflow from "@/assets/zapier-workflow.png";
-import sweepLogo from "@/assets/sweep-logo.png";
 import { useEffect } from "react";
 
 const CaseStudy1 = () => {
@@ -75,14 +74,6 @@ ORDER BY
                 <Badge variant="secondary">
                   Case Study #1
                 </Badge>
-                <div className="flex items-center gap-2 bg-gradient-to-r from-[#1FAADB] to-[#0F7AA7] text-white px-3 py-1.5 rounded-full text-xs font-medium shadow-sm">
-                  <img 
-                    src={sweepLogo} 
-                    alt="Sweep" 
-                    className="h-4 w-4 object-contain filter brightness-0 invert"
-                  />
-                  <span>Client: Sweep</span>
-                </div>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">

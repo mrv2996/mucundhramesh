@@ -7,7 +7,6 @@ import { Clock, Users, TrendingUp, DollarSign, Bot, Database, FileText, ArrowRig
 import { Link } from "react-router-dom";
 import crossbeamInterface from "@/assets/crossbeam-interface.png";
 import agentOutputExample from "@/assets/agent-output-example.png";
-import sweepLogo from "@/assets/sweep-logo.png";
 import { useEffect } from "react";
 const CaseStudy2 = () => {
   // Scroll to top when component mounts and update meta tags
@@ -45,14 +44,6 @@ const CaseStudy2 = () => {
                 <Badge variant="secondary">
                   Case Study #2
                 </Badge>
-                <div className="flex items-center gap-2 bg-gradient-to-r from-[#1FAADB] to-[#0F7AA7] text-white px-3 py-1.5 rounded-full text-xs font-medium shadow-sm">
-                  <img 
-                    src={sweepLogo} 
-                    alt="Sweep" 
-                    className="h-4 w-4 object-contain filter brightness-0 invert"
-                  />
-                  <span>Client: Sweep</span>
-                </div>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
