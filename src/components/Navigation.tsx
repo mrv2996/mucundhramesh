@@ -29,9 +29,9 @@ export const Navigation = () => {
   
   return (
     <nav className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-500 ease-in-out",
+      "fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-500 ease-in-out",
       isScrolled 
-        ? "bg-background/70 backdrop-blur-xl border-b shadow-lg" 
+        ? "bg-background/90 backdrop-blur-xl border-b shadow-lg" 
         : "bg-background/95 backdrop-blur-sm border-b border-transparent"
     )}>
       <div className="container flex h-16 items-center justify-between">

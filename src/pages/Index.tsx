@@ -19,7 +19,7 @@ const Index = () => {
       <div className="floating-orb orb-3"></div>
       <div className="floating-orb orb-4"></div>
       
-      <main>
+      <main className="pt-16">
         <HeroSection />
         <CompaniesSection />
         <SkillsSection />
