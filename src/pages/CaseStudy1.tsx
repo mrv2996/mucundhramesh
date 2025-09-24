@@ -8,31 +8,26 @@ import { Link } from "react-router-dom";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 import zapierWorkflow from "@/assets/zapier-workflow.png";
 import { useEffect } from "react";
-
 const CaseStudy1 = () => {
   // Scroll to top when component mounts and update meta tags
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     // Update meta tags for Partner Activation Automation case study
     document.title = "Partner Activation Automation - Case Study | Mucundh Ramesh";
-    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'How Mucundh Ramesh automated partner activation processes using Excel, Salesforce, SQL and Zapier to save 7-8 hours weekly and improve operational efficiency by 85%.');
     }
-    
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
       ogTitle.setAttribute('content', 'Partner Activation Automation - Case Study | Mucundh Ramesh');
     }
-    
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
       ogDescription.setAttribute('content', 'How Mucundh Ramesh automated partner activation processes using Excel, Salesforce, SQL and Zapier to save 7-8 hours weekly and improve operational efficiency by 85%.');
     }
   }, []);
-
   const sqlCode = `-- Partner Account Hierarchy Query
 -- Extract parent-child relationships for partner activation tracking
 
@@ -56,9 +51,7 @@ ORDER BY
     parent.Region__c,
     parent.Name,
     child.Activation_Date__c DESC;`;
-
-  return (
-    <div className="min-h-screen bg-background pt-16">
+  return <div className="min-h-screen bg-background pt-16">
       <Navigation />
       
       <main>
@@ -85,11 +78,9 @@ ORDER BY
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
-                {["Automation", "Zapier", "Salesforce", "SQL", "Excel", "ETL"].map((tag) => (
-                  <Badge key={tag} variant="secondary" className="text-sm">
+                {["Automation", "Zapier", "Salesforce", "SQL", "Excel", "ETL"].map(tag => <Badge key={tag} variant="secondary" className="text-sm">
                     {tag}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
             </div>
 
@@ -130,11 +121,7 @@ ORDER BY
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-justify">
-                <p className="text-muted-foreground leading-relaxed">
-                  The partner activation process was a weekly nightmare of manual Excel file updates, 
-                  Salesforce data entry, and tracking spreadsheets. Teams were spending 7-8 hours 
-                  weekly on repetitive data processing tasks that were prone to human error.
-                </p>
+                <p className="text-muted-foreground leading-relaxed">The partner activation process was a weekly nightmare of manual Excel file updates, Salesforce data entry, and tracking spreadsheets. Spent 7-8 hours weekly on repetitive data processing tasks that were prone to human error.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div className="space-y-2">
                     <h4 className="font-semibold text-foreground">Pain Points:</h4>
@@ -224,11 +211,7 @@ ORDER BY
                 <div className="relative">
                   {/* Salesforce UI Screenshot */}
                   <div className="mb-8 flex justify-center">
-                    <img 
-                      src={salesforceHierarchy} 
-                      alt="Salesforce Account Hierarchy showing parent account with regional subsidiaries including Asia, Europe, and US child accounts"
-                      className="max-w-2xl w-full rounded-lg shadow-lg border border-muted"
-                    />
+                    <img src={salesforceHierarchy} alt="Salesforce Account Hierarchy showing parent account with regional subsidiaries including Asia, Europe, and US child accounts" className="max-w-2xl w-full rounded-lg shadow-lg border border-muted" />
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -323,11 +306,7 @@ ORDER BY
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex justify-center">
-                  <img 
-                    src={zapierWorkflow} 
-                    alt="Zapier workflow showing Excel trigger followed by Salesforce record creation"
-                    className="max-w-md w-full rounded-lg shadow-lg border border-muted"
-                  />
+                  <img src={zapierWorkflow} alt="Zapier workflow showing Excel trigger followed by Salesforce record creation" className="max-w-md w-full rounded-lg shadow-lg border border-muted" />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -447,11 +426,9 @@ ORDER BY
                       </p>
                       
                       <div className="flex flex-wrap gap-1 mb-3">
-                        {["GenAI", "Cost Optimization", "Partner Intelligence"].map(tag => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
+                        {["GenAI", "Cost Optimization", "Partner Intelligence"].map(tag => <Badge key={tag} variant="secondary" className="text-xs">
                             {tag}
-                          </Badge>
-                        ))}
+                          </Badge>)}
                       </div>
                     </div>
                     
@@ -468,8 +445,6 @@ ORDER BY
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default CaseStudy1;
