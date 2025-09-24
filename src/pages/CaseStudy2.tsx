@@ -48,9 +48,7 @@ const CaseStudy2 = () => {
               
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
               
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                How we replaced expensive partner mapping software with a GenAI agent that processes structured partner data from Drive and Notion to deliver similar intelligence at a fraction of the cost.
-              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">How a partner mapping software could be replaced with a GenAI agent that processes structured partner data from Drive and Notion to deliver similar intelligence at a fraction of the cost.</p>
 
               <div className="flex flex-wrap justify-center gap-2">
                 {["GenAI", "Partner Intelligence", "Cost Optimization", "Dust", "Drive API", "Notion", "Partner Mapping"].map(tag => <Badge key={tag} variant="secondary" className="text-sm">
@@ -324,11 +322,9 @@ Return ONLY the formatted output above
                       </p>
                       
                       <div className="flex flex-wrap gap-1 mb-3">
-                        {["Automation", "Zapier", "Salesforce", "SQL"].map(tag => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
+                        {["Automation", "Zapier", "Salesforce", "SQL"].map(tag => <Badge key={tag} variant="secondary" className="text-xs">
                             {tag}
-                          </Badge>
-                        ))}
+                          </Badge>)}
                       </div>
                     </div>
                     
