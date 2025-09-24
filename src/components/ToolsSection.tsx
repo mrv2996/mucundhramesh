@@ -1,36 +1,86 @@
 import { Database, BarChart3, Settings, Code, Target, TrendingUp } from "lucide-react";
-
 const ToolsSection = () => {
   const tools = [
-    // Data & Analytics
-    { name: "SQL", category: "data", icon: Database },
-    { name: "Power BI", category: "data", icon: BarChart3 },
-    { name: "Looker", category: "data", icon: BarChart3 },
-    { name: "Python", category: "data", icon: Code },
-    { name: "MS Excel Advanced", category: "data", icon: BarChart3 },
-    
-    // RevOps & CRM
-    { name: "Salesforce", category: "platform", icon: Target },
-    { name: "HubSpot", category: "platform", icon: Target },
-    { name: "Apollo", category: "platform", icon: Settings },
-    //{ name: "Appian", category: "platform", icon: Settings },
-    
-    // GTM & Growth
-    { name: "GTM Strategy", category: "strategy", icon: TrendingUp },
-    { name: "Paid Ads", category: "strategy", icon: TrendingUp },
-    { name: "A/B Testing", category: "strategy", icon: TrendingUp },
-    
-    // Technical Tools
-    { name: "JIRA", category: "management", icon: Settings },
-    { name: "Figma", category: "design", icon: Settings },
-    { name: "AWS", category: "platform", icon: Code },
-    { name: "SAP", category: "platform", icon: Database },
-    
-    // AI & Automation
-    { name: "Dust AI", category: "ai", icon: Code },
-    { name: "UX Research", category: "research", icon: Settings },
-  ];
+  // Data & Analytics
+  {
+    name: "SQL",
+    category: "data",
+    icon: Database
+  }, {
+    name: "Power BI",
+    category: "data",
+    icon: BarChart3
+  }, {
+    name: "Looker",
+    category: "data",
+    icon: BarChart3
+  }, {
+    name: "Python",
+    category: "data",
+    icon: Code
+  }, {
+    name: "MS Excel Advanced",
+    category: "data",
+    icon: BarChart3
+  },
+  // RevOps & CRM
+  {
+    name: "Salesforce",
+    category: "platform",
+    icon: Target
+  }, {
+    name: "HubSpot",
+    category: "platform",
+    icon: Target
+  }, {
+    name: "Apollo",
+    category: "platform",
+    icon: Settings
+  },
+  //{ name: "Appian", category: "platform", icon: Settings },
 
+  // GTM & Growth
+  {
+    name: "GTM Strategy",
+    category: "strategy",
+    icon: TrendingUp
+  }, {
+    name: "Paid Ads",
+    category: "strategy",
+    icon: TrendingUp
+  }, {
+    name: "A/B Testing",
+    category: "strategy",
+    icon: TrendingUp
+  },
+  // Technical Tools
+  {
+    name: "JIRA",
+    category: "management",
+    icon: Settings
+  }, {
+    name: "Figma",
+    category: "design",
+    icon: Settings
+  }, {
+    name: "AWS",
+    category: "platform",
+    icon: Code
+  }, {
+    name: "SAP",
+    category: "platform",
+    icon: Database
+  },
+  // AI & Automation
+  {
+    name: "Dust AI",
+    category: "ai",
+    icon: Code
+  }, {
+    name: "UX Research",
+    category: "research",
+    icon: Settings
+  }];
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "data":
@@ -45,9 +95,7 @@ const ToolsSection = () => {
         return "bg-muted/50 text-muted-foreground border-border hover:bg-accent hover:text-accent-foreground";
     }
   };
-
-  return (
-    <section className="py-section">
+  return <section className="py-section">
       <div className="w-full overflow-hidden">
         <div className="text-center mb-[var(--space-2xl)]">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
@@ -60,31 +108,20 @@ const ToolsSection = () => {
         <div className="w-full overflow-hidden">
           <div className="flex animate-[scroll_10s_linear_infinite] gap-4">
             {/* Create enough copies to ensure seamless loop */}
-            {[...Array(6)].map((_, setIndex) => 
-              tools.map((tool, index) => {
-                const Icon = tool.icon;
-                return (
-                  <div
-                    key={`set-${setIndex}-${tool.name}-${index}`}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 whitespace-nowrap ${getCategoryColor(tool.category)}`}
-                  >
+            {[...Array(6)].map((_, setIndex) => tools.map((tool, index) => {
+            const Icon = tool.icon;
+            return <div key={`set-${setIndex}-${tool.name}-${index}`} className={`flex items-center gap-3 px-4 py-3 rounded-full border-2 transition-all duration-300 font-medium hover:scale-105 hover:shadow-medium flex-shrink-0 whitespace-nowrap ${getCategoryColor(tool.category)}`}>
                     <Icon className="w-4 h-4 flex-shrink-0" />
                     <span>{tool.name}</span>
-                  </div>
-                );
-              })
-            )}
+                  </div>;
+          }))}
           </div>
         </div>
         
         <div className="mt-[var(--space-xl)] text-center px-6">
-          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Revenue operations expertise backed by technical engineering foundation - architecting scalable systems that drive measurable business growth through data-driven automation, process optimization, and strategic commercial intelligence.
-          </p>
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">Operational experience backed by technical engineering foundation - architecting scalable systems that drive measurable business growth through data-driven automation, process optimization, and strategic commercial intelligence.</p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ToolsSection;
