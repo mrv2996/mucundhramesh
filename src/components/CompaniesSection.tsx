@@ -14,12 +14,12 @@ const CompaniesSection = () => {
         <img
           src={companiesRow1}
           alt="L'ORÉAL, Fidelity, GE, transdev logos"
-          className="h-15 w-auto opacity-100 hover:opacity-120 transition-opacity duration-300"
+          className="h-15 w-auto opacity-100 hover:opacity-150 transition-opacity duration-300"
         />
         <img
           src={companiesRow2}
           alt="Mazars logo"
-          className="h-15 w-auto opacity-100 hover:opacity-120 transition-opacity duration-300"
+          className="h-15 w-auto opacity-100 hover:opacity-150 transition-opacity duration-300"
         />
       </div>
     </section>
