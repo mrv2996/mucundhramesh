@@ -17,7 +17,8 @@ const CaseStudiesSection = () => {
         { label: "Time Saved", value: "7-8 hrs/week", icon: <Clock className="h-4 w-4" /> },
         { label: "Efficiency", value: "85% faster", icon: <TrendingUp className="h-4 w-4" /> },
         { label: "Teams", value: "3 depts", icon: <Users className="h-4 w-4" /> }
-      ]
+      ],
+      hasPage: true,
     },
     {
       id: 2,
@@ -31,7 +32,23 @@ const CaseStudiesSection = () => {
         { label: "Savings", value: "$14K/year", icon: <TrendingUp className="h-4 w-4" /> },
         { label: "Adoption", value: "Low → High", icon: <Zap className="h-4 w-4" /> },
         { label: "Solution", value: "Custom", icon: <Clock className="h-4 w-4" /> }
-      ]
+      ],
+      hasPage: true,
+    },
+    {
+      id: 3,
+      title: "Web Scraping Agent for Accounts Payable",
+      subtitle: "AI agent to automate AP data procurement",
+      readTime: "Coming Soon",
+      tags: ["Web Scraping", "AI Agent", "Accounts Payable", "Automation"],
+      icon: <Bot className="h-6 w-6 text-secondary" />,
+      summary: "Building an intelligent web scraping agent to automate the procurement of accounts payable details, reducing manual data entry and improving accuracy across financial workflows.",
+      keyMetrics: [
+        { label: "Status", value: "In Progress", icon: <Clock className="h-4 w-4" /> },
+        { label: "Focus", value: "AP Data", icon: <TrendingUp className="h-4 w-4" /> },
+        { label: "Type", value: "AI Agent", icon: <Zap className="h-4 w-4" /> }
+      ],
+      hasPage: false,
     }
   ];
 
@@ -46,29 +63,32 @@ const CaseStudiesSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {caseStudies.map((study, index) => (
-          <Link 
-            key={study.id} 
-            to={study.id === 1 ? "/case-studies/partner-activation-automation" : "/case-studies/crossbeam-ai-agent"}
-          >
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        {caseStudies.map((study) => {
+          const cardContent = (
             <Card 
-              className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-primary/20 hover:border-l-primary h-full"
+              className={`group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 h-full ${
+                study.hasPage 
+                  ? "border-l-primary/20 hover:border-l-primary" 
+                  : "border-l-secondary/20 hover:border-l-secondary"
+              }`}
             >
             <CardHeader className="space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-primary/10">
+                  <div className={`p-2 rounded-lg ${study.hasPage ? 'bg-primary/10' : 'bg-secondary/10'}`}>
                     {study.icon}
                   </div>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant={study.hasPage ? "outline" : "secondary"} className="text-xs">
                     {study.readTime}
                   </Badge>
                 </div>
               </div>
               
               <div className="space-y-2">
-                <CardTitle className="text-xl leading-tight group-hover:text-primary transition-colors">
+                <CardTitle className={`text-xl leading-tight transition-colors ${
+                  study.hasPage ? 'group-hover:text-primary' : 'group-hover:text-secondary'
+                }`}>
                   {study.title}
                 </CardTitle>
                 <p className="text-sm text-muted-foreground font-medium">
@@ -90,14 +110,13 @@ const CaseStudiesSection = () => {
                 {study.summary}
               </p>
 
-              {/* Key Metrics */}
               <div className="grid grid-cols-3 gap-2">
                 {study.keyMetrics.map((metric, metricIndex) => (
                   <div 
                     key={metricIndex}
                     className="flex flex-col items-center gap-1 p-3 rounded-lg bg-muted/50 border text-center"
                   >
-                    <div className="text-primary">
+                    <div className={study.hasPage ? "text-primary" : "text-secondary"}>
                       {metric.icon}
                     </div>
                     <div className="font-semibold text-xs text-foreground">
@@ -110,16 +129,30 @@ const CaseStudiesSection = () => {
                 ))}
               </div>
 
-              {/* Read More CTA */}
               <div className="pt-3 border-t">
-                <div className="text-primary font-medium text-sm group-hover:underline text-center">
-                  Read full case study →
+                <div className={`font-medium text-sm text-center ${
+                  study.hasPage ? 'text-primary group-hover:underline' : 'text-muted-foreground'
+                }`}>
+                  {study.hasPage ? 'Read full case study →' : 'Case study coming soon'}
                 </div>
               </div>
             </CardContent>
           </Card>
-          </Link>
-        ))}
+          );
+
+          if (study.hasPage) {
+            return (
+              <Link 
+                key={study.id} 
+                to={study.id === 1 ? "/case-studies/partner-activation-automation" : "/case-studies/crossbeam-ai-agent"}
+              >
+                {cardContent}
+              </Link>
+            );
+          }
+
+          return <div key={study.id}>{cardContent}</div>;
+        })}
       </div>
     </section>
   );
