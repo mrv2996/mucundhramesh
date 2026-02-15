@@ -9,7 +9,7 @@ const CompaniesSection = () => {
         <img
           src={proxymityLogo}
           alt="Proxymity logo"
-          className="h-10 w-auto grayscale opacity-50 hover:opacity-100 transition-opacity duration-300"
+          className="h-10 w-auto grayscale opacity-30 hover:opacity-80 transition-opacity duration-300"
         />
         <img
           src={companiesRow1}
