@@ -13,7 +13,7 @@ const JourneySection = () => {
       color: "primary",
     },
     {
-      title: "Operations Analyst",
+      title: "Partner Operations Specialist",
       company: "SWEEP",
       companyDetail: "Venture-Backed B2B SaaS | Partnerships",
       period: "Jan 2025 - Aug 2025",
@@ -79,7 +79,10 @@ const JourneySection = () => {
   ];
 
   return (
-    <section id="journey" className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
+    <section
+      id="journey"
+      className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden"
+    >
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--space-2xl)]">
           <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
@@ -96,24 +99,44 @@ const JourneySection = () => {
           <div className="space-y-[var(--space-sm)]">
             {journeyItems.map((item) => (
               <div key={`${item.company}-${item.title}`} className="relative flex items-start gap-[var(--space-md)]">
-                <div className={`hidden md:flex w-12 h-12 rounded-full items-center justify-center shadow-glow relative z-10 bg-muted/5 ${
-                  item.color === "primary" ? "bg-gradient-primary" : item.color === "secondary" ? "bg-gradient-secondary" : "bg-gradient-tertiary"
-                }`}>
-                  {item.type === "education" ? <GraduationCap className="w-6 h-6 text-white" /> : <Briefcase className="w-6 h-6 text-white" />}
+                <div
+                  className={`hidden md:flex w-12 h-12 rounded-full items-center justify-center shadow-glow relative z-10 bg-muted/5 ${
+                    item.color === "primary"
+                      ? "bg-gradient-primary"
+                      : item.color === "secondary"
+                        ? "bg-gradient-secondary"
+                        : "bg-gradient-tertiary"
+                  }`}
+                >
+                  {item.type === "education" ? (
+                    <GraduationCap className="w-6 h-6 text-white" />
+                  ) : (
+                    <Briefcase className="w-6 h-6 text-white" />
+                  )}
                 </div>
 
                 <div className="flex-1">
-                  <div className={`bg-card/80 backdrop-blur-sm rounded-lg p-[var(--space-md)] shadow-soft border transition-all duration-300 hover:scale-[1.02] hover:shadow-glow ${
-                    item.color === "primary" ? "border-primary/30 hover:border-primary/50 hover:shadow-glow-primary" :
-                    item.color === "secondary" ? "border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary" :
-                    "border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary"
-                  }`}>
+                  <div
+                    className={`bg-card/80 backdrop-blur-sm rounded-lg p-[var(--space-md)] shadow-soft border transition-all duration-300 hover:scale-[1.02] hover:shadow-glow ${
+                      item.color === "primary"
+                        ? "border-primary/30 hover:border-primary/50 hover:shadow-glow-primary"
+                        : item.color === "secondary"
+                          ? "border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary"
+                          : "border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary"
+                    }`}
+                  >
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <h3 className={`text-sm lg:text-base font-semibold ${
-                            item.color === "primary" ? "text-primary" : item.color === "secondary" ? "text-secondary" : "text-tertiary"
-                          }`}>
+                          <h3
+                            className={`text-sm lg:text-base font-semibold ${
+                              item.color === "primary"
+                                ? "text-primary"
+                                : item.color === "secondary"
+                                  ? "text-secondary"
+                                  : "text-tertiary"
+                            }`}
+                          >
                             {item.title}
                           </h3>
                           {item.status === "current" && (
@@ -123,9 +146,7 @@ const JourneySection = () => {
                           )}
                         </div>
 
-                        <h4 className="text-sm font-medium text-foreground mb-1">
-                          {item.company}
-                        </h4>
+                        <h4 className="text-sm font-medium text-foreground mb-1">{item.company}</h4>
                         {(item as any).companyDetail && (
                           <p className="text-xs text-muted-foreground mb-2 italic">{(item as any).companyDetail}</p>
                         )}
@@ -139,7 +160,12 @@ const JourneySection = () => {
 
                         {item.researchPaper && (
                           <div className="mb-2">
-                            <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 group">
+                            <a
+                              href={item.researchPaper.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 p-2 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 group"
+                            >
                               <ExternalLink className="w-3 h-3 text-secondary group-hover:scale-110 transition-transform" />
                               <div className="flex flex-col">
                                 <span className="text-xs font-medium text-secondary group-hover:text-secondary/80">
@@ -158,9 +184,14 @@ const JourneySection = () => {
                             <h5 className="text-xs font-semibold text-foreground mb-2">Specializations:</h5>
                             <div className="flex flex-wrap gap-1">
                               {item.specializations.map((spec) => (
-                                <span key={spec} className={`px-2 py-1 rounded-full text-xs font-medium border ${
-                                  item.color === "secondary" ? "bg-secondary/10 text-secondary border-secondary/20" : "bg-primary/10 text-primary border-primary/20"
-                                }`}>
+                                <span
+                                  key={spec}
+                                  className={`px-2 py-1 rounded-full text-xs font-medium border ${
+                                    item.color === "secondary"
+                                      ? "bg-secondary/10 text-secondary border-secondary/20"
+                                      : "bg-primary/10 text-primary border-primary/20"
+                                  }`}
+                                >
                                   {spec}
                                 </span>
                               ))}
