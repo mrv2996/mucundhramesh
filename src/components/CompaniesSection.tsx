@@ -1,5 +1,6 @@
 import companyLogos from "@/assets/company-logos.png";
 import sweepLogo from "@/assets/sweep-logo.png";
+import proxymityLogo from "@/assets/proxymity-logo.svg";
 
 const CompaniesSection = () => {
   return (
@@ -9,10 +10,11 @@ const CompaniesSection = () => {
           Companies I've worked with
         </p>
         <div className="flex justify-center items-center gap-10 flex-wrap px-6">
-          {/* Proxymity - text logo matching their brand */}
-          <span className="text-2xl font-bold tracking-tight text-foreground/70 hover:text-foreground transition-opacity duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
-            Pro<span className="text-secondary">x</span>ymity
-          </span>
+          <img 
+            src={proxymityLogo} 
+            alt="Proxymity logo" 
+            className="h-8 w-auto grayscale opacity-70 hover:opacity-100 transition-opacity duration-300"
+          />
           <img 
             src={sweepLogo} 
             alt="Sweep logo" 
