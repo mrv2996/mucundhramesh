@@ -9,17 +9,17 @@ const CompaniesSection = () => {
         <img
           src={proxymityLogo}
           alt="Proxymity logo"
-          className="h-7 w-auto grayscale opacity-70 hover:opacity-100 transition-opacity duration-300"
+          className="h-10 w-auto grayscale opacity-70 hover:opacity-100 transition-opacity duration-300"
         />
         <img
           src={companiesRow1}
           alt="L'ORÉAL, Fidelity, GE, transdev logos"
-          className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+          className="h-15 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
         />
         <img
           src={companiesRow2}
           alt="Mazars logo"
-          className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+          className="h-15 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
     </section>
