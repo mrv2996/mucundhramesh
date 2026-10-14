@@ -20,7 +20,7 @@ export const Navigation = () => {
       <Link to="/" className="font-playfair font-semibold text-base md:text-lg text-primary shrink-0 py-3">Mucundh Ramesh</Link>
       <div className="flex items-center gap-0 md:gap-2">
         <Button asChild variant="link" className="hidden md:inline-flex min-h-11"><Link to="/">Home</Link></Button>
-        <NavigationMenu delayDuration={100}>
+        <NavigationMenu delayDuration={100} className="[&>div:last-child]:left-auto [&>div:last-child]:right-0">
           <NavigationMenuList><NavigationMenuItem>
             <NavigationMenuTrigger className="px-2 md:px-3 min-h-11 text-xs sm:text-base bg-transparent text-primary">Case Studies</NavigationMenuTrigger>
             <NavigationMenuContent>
