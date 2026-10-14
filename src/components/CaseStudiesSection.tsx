@@ -6,6 +6,21 @@ import { Link } from "react-router-dom";
 const CaseStudiesSection = () => {
   const caseStudies = [
     {
+      id: 4,
+      title: "Scaling SEC Filings Onboarding",
+      subtitle: "Python workflows + edge-case validation",
+      readTime: "3 min read",
+      tags: ["Python", "Data Quality", "Codex"],
+      icon: <Zap className="h-6 w-6 text-primary" />,
+      summary: "Mapped an end-to-end filings workflow, built a team-accessible Python interface and addressed ambiguous ticker matches for repeatable customer onboarding.",
+      keyMetrics: [
+        { label: "Workflow", value: "End-to-end", icon: <Zap className="h-4 w-4" /> },
+        { label: "Execution", value: "Python", icon: <Clock className="h-4 w-4" /> },
+        { label: "Focus", value: "Validation", icon: <TrendingUp className="h-4 w-4" /> },
+      ],
+      hasPage: true,
+    },
+    {
       id: 1,
       title: "Partner Activation Automation",
       subtitle: "Excel + Salesforce + SQL + Zapier pipeline",
@@ -65,7 +80,7 @@ const CaseStudiesSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         {caseStudies.map((study) => {
           const cardContent = (
             <Card
@@ -140,7 +155,7 @@ const CaseStudiesSection = () => {
             return (
               <Link
                 key={study.id}
-                to={study.id === 1 ? "/case-studies/partner-activation-automation" : "/case-studies/crossbeam-ai-agent"}
+                to={study.id === 4 ? "/case-studies/sec-filings-onboarding" : study.id === 1 ? "/case-studies/partner-activation-automation" : "/case-studies/crossbeam-ai-agent"}
               >
                 {cardContent}
               </Link>
