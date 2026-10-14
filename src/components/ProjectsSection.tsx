@@ -1,8 +1,16 @@
 import { ExternalLink, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const ProjectsSection = () => {
   const projects = [
+    {
+      title: "Market Compass — Brazil Market Entry",
+      description: "Model Brazil launch economics with editable cost, revenue and tax assumptions, profit and payback forecasts, and public USD/BRL exchange-rate data.",
+      link: "/projects/market-compass",
+      type: "dashboard",
+      category: "Strategy"
+    },
     {
       title: "Biometrio.earth Growth Strategy",
       description: "Revenue growth and scaling strategy for biometrio.earth, a German green tech startup focused on sustainable technology solutions",
@@ -43,11 +51,11 @@ const ProjectsSection = () => {
         </div>
 
         {/* Golden ratio grid: 2 columns maximum for better alignment */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--space-lg)] lg:gap-[var(--space-xl)] max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[var(--space-lg)] lg:gap-[var(--space-xl)] max-w-content mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-card/70 backdrop-blur-sm rounded-2xl p-[var(--space-lg)] shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-105 group"
+              className="bg-card/70 backdrop-blur-sm rounded-2xl p-[var(--space-lg)] shadow-soft border border-border/30 hover:shadow-medium transition-all duration-300 hover:scale-[1.02] group flex flex-col"
             >
               <div className="flex items-start gap-[var(--space-md)] mb-[var(--space-md)]">
                 <div className="w-12 h-12 rounded-xl bg-gradient-mixed flex items-center justify-center shadow-medium">
@@ -74,10 +82,7 @@ const ProjectsSection = () => {
                 className="w-full border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group-hover:shadow-glow-primary"
                 asChild
               >
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  View Project
-                </a>
+                {project.link.startsWith("/") ? <Link to={project.link}><ExternalLink className="mr-2 h-4 w-4" />View Project</Link> : <a href={project.link} target="_blank" rel="noopener noreferrer"><ExternalLink className="mr-2 h-4 w-4" />View Project</a>}
               </Button>
             </div>
           ))}

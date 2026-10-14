@@ -1,159 +1,38 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { Button } from "@/components/ui/button";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { publishedStudies } from "@/lib/case-studies";
 
 export const Navigation = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
-  const isMobile = useIsMobile();
-  
-  const isActive = (path: string) => location.pathname === path;
-  
-  // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
-  // Scroll to top when route changes
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-  
-  return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-500 ease-in-out",
-      isScrolled 
-        ? "bg-background/90 backdrop-blur-xl border-b shadow-lg" 
-        : "bg-background/95 backdrop-blur-sm border-b border-transparent"
-    )}>
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center">
-          <Link to="/" className="text-lg font-semibold hover:text-primary transition-colors">
-            Mucundh Ramesh
-          </Link>
-        </div>
-        <div className="flex gap-6 md:gap-8">
-          {!isMobile && (
-            <Link 
-              to="/" 
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                isActive("/") ? "text-primary" : "text-muted-foreground"
-              )}
-            >
-              Home
-            </Link>
-          )}
-          <button 
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              "text-muted-foreground"
-            )}
-            onClick={(e) => {
-              e.preventDefault();
-              if (location.pathname !== "/") {
-                navigate("/");
-                setTimeout(() => {
-                  const element = document.getElementById("case-studies");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                  }
-                }, 100);
-              } else {
-                setTimeout(() => {
-                  const element = document.getElementById("case-studies");
-                  if (element) {
-                    const offsetTop = element.offsetTop - 80;
-                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                  }
-                }, 50);
-              }
-            }}
-          >
-            Case Studies
-          </button>
-          {!isMobile && (
-            <>
-              <button 
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  "text-muted-foreground"
-                )}
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (location.pathname !== "/") {
-                    navigate("/");
-                    setTimeout(() => {
-                      const element = document.getElementById("projects");
-                      if (element) {
-                        const offsetTop = element.offsetTop - 80;
-                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                      }
-                    }, 100);
-                  } else {
-                    setTimeout(() => {
-                      const element = document.getElementById("projects");
-                      if (element) {
-                        const offsetTop = element.offsetTop - 80;
-                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                      }
-                    }, 50);
-                  }
-                }}
-              >
-                Projects
-              </button>
-              <button 
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  "text-muted-foreground"
-                )}
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (location.pathname !== "/") {
-                    navigate("/");
-                    setTimeout(() => {
-                      const element = document.getElementById("journey");
-                      if (element) {
-                        const offsetTop = element.offsetTop - 80;
-                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                      }
-                    }, 100);
-                  } else {
-                    setTimeout(() => {
-                      const element = document.getElementById("journey");
-                      if (element) {
-                        const offsetTop = element.offsetTop - 80;
-                        window.scrollTo({ top: offsetTop, behavior: "smooth" });
-                      }
-                    }, 50);
-                  }
-                }}
-              >
-                Journey
-              </button>
-            </>
-          )}
-          <a 
-            href="https://www.linkedin.com/in/mucundh-ramesh/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1"
-          >
-            LinkedIn
-            <ExternalLink className="h-3 w-3" />
-          </a>
-        </div>
+  return <nav aria-label="Main navigation" className={cn("fixed top-0 inset-x-0 z-[100] border-b transition-colors duration-300 font-inter", isScrolled ? "bg-background/90 backdrop-blur-xl shadow-soft" : "bg-background/95 backdrop-blur-sm border-transparent")}>
+    <div className="mx-auto max-w-content px-3 md:px-8 flex h-16 items-center justify-between gap-1">
+      <Link to="/" className="font-playfair font-semibold text-base md:text-lg text-primary shrink-0 py-3">Mucundh Ramesh</Link>
+      <div className="flex items-center gap-0 md:gap-2">
+        <Button asChild variant="link" className="hidden md:inline-flex min-h-11"><Link to="/">Home</Link></Button>
+        <NavigationMenu delayDuration={100}>
+          <NavigationMenuList><NavigationMenuItem>
+            <NavigationMenuTrigger className="px-2 md:px-3 min-h-11 text-xs sm:text-base bg-transparent text-primary">Case Studies</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="w-[min(280px,calc(100vw-24px))] p-2 space-y-1">
+                {[{ path: "/#case-studies", title: "All Case Studies" }, ...publishedStudies].map(study => <li key={study.path}><NavigationMenuLink asChild active={location.pathname === study.path}><Link to={study.path} className="block rounded-md px-3 py-3 text-base leading-snug text-foreground hover:bg-muted focus:bg-muted focus:outline-none">{study.title}</Link></NavigationMenuLink></li>)}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem></NavigationMenuList>
+        </NavigationMenu>
+        {[["Projects", "/#projects"], ["Journey", "/#journey"]].map(([label,to]) => <Button key={to} asChild variant="link" className="hidden md:inline-flex min-h-11"><Link to={to}>{label}</Link></Button>)}
+        <Button asChild variant="link" className="min-h-11 px-1 md:px-3 text-xs sm:text-base"><a href="https://www.linkedin.com/in/mucundh-ramesh/" target="_blank" rel="noopener noreferrer">LinkedIn<ExternalLink className="h-3 w-3" /></a></Button>
       </div>
-    </nav>
-  );
+    </div>
+  </nav>;
 };

@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import CaseStudy1 from "./pages/CaseStudy1";
 import CaseStudy2 from "./pages/CaseStudy2";
 import NotFound from "./pages/NotFound";
+import MarketCompass from "./pages/MarketCompass";
+import SecFilingsCaseStudy from "./pages/SecFilingsCaseStudy";
+import { RouteScroll } from "./components/RouteScroll";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +24,10 @@ const App = () => (
           v7_relativeSplatPath: true,
         }}
       >
+        <RouteScroll />
         <Routes>
+          <Route path="/projects/market-compass" element={<MarketCompass />} />
+          <Route path="/case-studies/sec-filings-onboarding" element={<SecFilingsCaseStudy />} />
           <Route path="/" element={<Index />} />
           <Route path="/case-studies/partner-activation-automation" element={<CaseStudy1 />} />
           <Route path="/case-studies/crossbeam-ai-agent" element={<CaseStudy2 />} />

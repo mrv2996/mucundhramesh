@@ -1,3 +1,4 @@
+import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -396,53 +397,7 @@ ORDER BY
         </section>
       </main>
 
-      {/* Case Study Navigation */}
-      <section className="container pb-16">
-        <div className="max-w-4xl mx-auto">
-          <Separator className="mb-8" />
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold mb-2">More Case Studies</h3>
-            <p className="text-muted-foreground">Explore additional real-world implementations and solutions</p>
-          </div>
-          
-          <div className="grid grid-cols-1 gap-6">
-            <Link to="/case-studies/crossbeam-ai-agent">
-              <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-l-4 border-l-secondary/20 hover:border-l-secondary bg-gradient-to-r from-background to-secondary/5 hover:to-secondary/10">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 rounded-lg bg-secondary/10">
-                          <Bot className="h-5 w-5 text-secondary" />
-                        </div>
-                        <Badge variant="outline" className="text-xs">Case Study #2</Badge>
-                      </div>
-                      
-                      <h4 className="text-lg font-semibold mb-2 group-hover:text-secondary transition-colors">
-                        AI-Powered Partner Intelligence Agent
-                      </h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        Replaced $14K Crossbeam licenses with a GenAI agent processing Drive and Notion data
-                      </p>
-                      
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {["GenAI", "Cost Optimization", "Partner Intelligence"].map(tag => <Badge key={tag} variant="secondary" className="text-xs">
-                            {tag}
-                          </Badge>)}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-2 text-secondary group-hover:translate-x-1 transition-transform">
-                      <span className="text-sm font-medium">Read Case Study</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <RelatedCaseStudies currentPath="/case-studies/partner-activation-automation" />
 
       <Footer />
     </div>;
