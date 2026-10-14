@@ -3,3 +3,4 @@
 - Keep published case-study links in src/lib/case-studies.ts and reuse RelatedCaseStudies for backlinks, so menus and related reading use the same valid routes.
 - Display the external Market Compass dashboard through its public URL rather than copying its server-dependent app; provide a direct link for small screens and embed restrictions.
 - New portfolio pages use usePageMeta for scoped title and description updates, so returning home restores the original metadata.
+- Set navigation bar link type scale explicitly on every item (small size below the md breakpoint, one step larger above) instead of relying on Button or NavigationMenu defaults, so no single item renders larger than its neighbours.
