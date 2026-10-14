@@ -1,7 +1,7 @@
 # Market Compass project and SEC filings case study
 
 ## 1. Add Market Compass to Projects
-- Keep the two existing projects unchanged and add **Market Compass — Brazil Market Entry**.
+- Keep the two existing projects unchanged and add **Market Compass — Brazil Market Entry** as the first, leftmost project, before the remaining projects. On mobile, show it first in the stacked list.
 - Describe its editable launch-cost, revenue, operating-cost and tax assumptions, profit/payback modelling, and public Banco Central USD/BRL data.
 - Link the project tile to a dedicated portfolio page displaying the public dashboard at **https://brazil-fx.lovable.app/**.
 - Include an **Open dashboard** link in a separate tab and a **Back to projects** link. If embedding is blocked or impractical on a small screen, provide direct access instead.
@@ -16,7 +16,7 @@ Use the Loom walkthrough as the source for a concise case study titled **Scaling
 - **Refinement:** describe the Codex-assisted skill file used to handle matching edge cases.
 - **Outcome:** present repeatable onboarding and stronger validation as the intended operational benefits; do not invent savings, success rates or compliance guarantees.
 - Include the Loom recording for the visual walkthrough, with a direct watch link as a fallback. Avoid republishing internal screenshots without reviewing their contents.
-- Add a compact homepage case-study tile while preserving the accounts-payable placeholder and existing case studies.
+- Add a compact homepage case-study tile as the first, leftmost case study, before the existing studies and accounts-payable placeholder. Preserve those entries; on mobile, show the new study first in the stacked list.
 
 ## 3. Navigation and backlinks
 - Keep the shared fixed navigation and footer on both new pages.
