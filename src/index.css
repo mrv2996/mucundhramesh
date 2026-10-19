@@ -87,7 +87,8 @@ All colors MUST be HSL.
     --shadow-glow-tertiary: 0 0 30px hsl(49 84% 46% / 0.3);
     
     /* Content and section sizing */
-    --section-padding: var(--space-2xl);
+    --section-padding: 2.5rem;
+    --section-heading-gap: var(--space-lg);
     --content-max-width: 1200px;
 
     --sidebar-background: 0 0% 98%;
@@ -146,6 +147,10 @@ All colors MUST be HSL.
   }
 }
 
+@media (min-width: 1024px) {
+  :root { --section-padding: 4rem; }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -166,3 +171,7 @@ All colors MUST be HSL.
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+/* Hero impact ticker (mobile marquee) */
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.animate-ticker { animation: ticker 20s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-ticker { animation: none; } }

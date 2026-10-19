@@ -63,7 +63,7 @@ const CaseStudies = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="container py-12 md:py-24">
+        <section className="container py-section">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Case Studies

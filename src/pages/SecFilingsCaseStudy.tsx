@@ -12,7 +12,7 @@ const SecFilingsCaseStudy = () => {
   return <div className="min-h-screen bg-background pt-16 font-source">
     <Navigation />
     <main>
-      <section className="container max-w-content py-8 md:py-16">
+      <section className="container max-w-content py-section">
         <Button asChild variant="link" className="px-0 min-h-11 text-base"><Link to="/#case-studies"><ArrowLeft />Back to case studies</Link></Button>
         <div className="max-w-4xl mt-6">
           <div className="flex flex-wrap gap-2">{["Python", "Workflow Design", "Data Quality", "Codex"].map(tag => <Badge key={tag} variant="outline" className="text-base">{tag}</Badge>)}</div>
@@ -24,12 +24,12 @@ const SecFilingsCaseStudy = () => {
         </div>
       </section>
       <section className="bg-muted/30 border-y">
-        <div className="container max-w-content py-8 md:py-16 grid md:grid-cols-2 gap-8">
+        <div className="container max-w-content py-section grid md:grid-cols-2 gap-8">
           <div><h2 className="font-inter text-2xl font-semibold text-primary">The challenge</h2><p className="mt-4 text-base text-muted-foreground leading-relaxed">Daily SEC filings must be associated with the right securities and investors. Incorrect matches or delayed delivery introduce compliance risk, and the same requirement recurs as new banking clients are onboarded.</p></div>
           <div><h2 className="font-inter text-2xl font-semibold text-primary">The approach</h2><ul className="mt-4 space-y-3 text-base leading-relaxed text-muted-foreground list-disc pl-5"><li>Map the full journey from fetching a filing to checking its intended recipients.</li><li>Implement field matching and data-quality checks in a Python script.</li><li>Provide a simple interface colleagues can use to run the workflow.</li></ul></div>
         </div>
       </section>
-      <section className="container max-w-content py-8 md:py-16">
+      <section className="container max-w-content py-section">
         <div className="max-w-4xl"><h2 className="font-inter text-2xl font-semibold text-primary">Where matching can go wrong</h2><p className="mt-4 text-base text-muted-foreground leading-relaxed">The walkthrough highlights TCW Strategic Fund, whose ticker is <strong className="text-foreground">TSI</strong>. A name-based match can mistakenly treat <strong className="text-foreground">TCW</strong> as the ticker, creating a false positive and potentially selecting the wrong filing.</p><p className="mt-4 text-base text-muted-foreground leading-relaxed">I used Codex to help develop a skill file that addresses these matching edge cases. This adds explicit validation to the workflow rather than relying on the first apparent text match.</p></div>
         <div className="mt-10 border-l-4 border-primary pl-6 max-w-4xl"><h2 className="font-inter text-2xl font-semibold text-primary">Built for repeatable onboarding</h2><p className="mt-4 text-base leading-relaxed text-muted-foreground">The goal is to reuse the same mapped process and validation checks for each new banking client. The demo demonstrates the workflow and its handling of matching ambiguity; it does not establish quantified savings or guarantee regulatory compliance.</p></div>
       </section>

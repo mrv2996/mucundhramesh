@@ -1,12 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Mail } from "lucide-react";
+import { ArrowDown, ExternalLink, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
+
+const metrics = [
+  { value: "7-8 hrs/week", label: "manual work removed" },
+  { value: "85% faster", label: "partner activation" },
+  { value: "95% fewer", label: "data errors" },
+  { value: "4", label: "case studies & projects" },
+];
+
 const HeroSection = () => {
   return (
-    <section className="min-h-[85vh] flex items-center justify-center px-6 py-section">
+    <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-8">
       <div className="max-w-content mx-auto">
         {/* Golden ratio grid: 62% content, 38% image */}
-        <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-xl)] lg:gap-[var(--space-2xl)] items-center">
+        <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-md)] lg:gap-[var(--space-lg)] items-center">
           <div className="text-center lg:text-left order-2 lg:order-1 space-y-[var(--space-lg)]">
             {/* Typography hierarchy using golden ratio scale */}
             <h1 className="text-3xl lg:text-4xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
@@ -51,19 +60,49 @@ const HeroSection = () => {
 
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              {/* Image dimensions following golden ratio: width 1, height 1.618 */}
-              <div className="w-64 h-[25.8rem] lg:w-80 lg:h-[32.3rem] rounded-3xl overflow-hidden shadow-large bg-gradient-primary">
+              <div className="w-48 h-[15.5rem] sm:w-56 sm:h-[18rem] lg:w-64 lg:h-[20.7rem] rounded-3xl overflow-hidden shadow-large bg-gradient-primary">
                 <img
                   src={headshotImage}
                   alt="Mucundh Ramesh - Strategic operations professional in high-growth tech scale-ups"
                   className="w-full h-full object-cover object-top"
-                  loading="lazy"
                 />
               </div>
-              {/* Shadow offset using golden ratio spacing */}
-              <div className="absolute -z-10 top-[var(--space-md)] left-[var(--space-md)] w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
+              <div className="absolute -z-10 top-[var(--space-base)] left-[var(--space-base)] w-full h-full rounded-3xl bg-gradient-secondary opacity-30"></div>
             </div>
           </div>
+        </div>
+
+        {/* Impact metric ticker */}
+        <div aria-label="Impact highlights" className="mt-[var(--space-lg)] rounded-2xl bg-primary text-primary-foreground shadow-medium overflow-hidden">
+          <ul className="hidden md:grid grid-cols-4 divide-x divide-primary-foreground/20">
+            {metrics.map((m) => (
+              <li key={m.label} className="px-4 py-4 text-center">
+                <div className="text-xl lg:text-2xl font-bold text-tertiary font-inter">{m.value}</div>
+                <div className="text-sm text-primary-foreground/85 mt-1">{m.label}</div>
+              </li>
+            ))}
+          </ul>
+          <div className="md:hidden flex w-max animate-ticker" aria-hidden="false">
+            {[...metrics, ...metrics].map((m, i) => (
+              <div key={i} aria-hidden={i >= metrics.length} className="flex items-baseline gap-2 px-6 py-3 whitespace-nowrap">
+                <span className="text-lg font-bold text-tertiary font-inter">{m.value}</span>
+                <span className="text-base text-primary-foreground/85">{m.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Explore divider */}
+        <div className="mt-[var(--space-md)] flex items-center gap-4">
+          <div className="h-px flex-1 bg-border" />
+          <Link
+            to="/#case-studies"
+            className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-secondary px-5 text-sm font-semibold font-inter text-primary hover:bg-secondary hover:text-secondary-foreground transition-colors duration-300"
+          >
+            Explore my work
+            <ArrowDown className="h-4 w-4 motion-safe:animate-bounce" />
+          </Link>
+          <div className="h-px flex-1 bg-border" />
         </div>
       </div>
     </section>
