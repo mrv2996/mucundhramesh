@@ -26,7 +26,7 @@ const RecommendationsSection = () => {
   }];
   return <section className="py-section px-6 bg-muted/30">
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-[var(--space-2xl)]">
+        <div className="text-center mb-[var(--section-heading-gap)]">
           <h2 className="text-2xl lg:text-3xl font-bold mb-[var(--space-lg)] bg-gradient-mixed bg-clip-text text-transparent">
             Recommendations
           </h2>

@@ -97,7 +97,7 @@ const ToolsSection = () => {
   };
   return <section className="py-section">
       <div className="w-full overflow-hidden">
-        <div className="text-center mb-[var(--space-2xl)]">
+        <div className="text-center mb-[var(--section-heading-gap)]">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             Tools & Technologies
           </h2>

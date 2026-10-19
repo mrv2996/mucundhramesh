@@ -71,8 +71,8 @@ const CaseStudiesSection = () => {
   ];
 
   return (
-    <section id="case-studies" className="container py-16 md:py-24">
-      <div className="text-center space-y-4 mb-12">
+    <section id="case-studies" className="container py-section">
+      <div className="text-center space-y-4 mb-[var(--section-heading-gap)]">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Case Studies</h2>
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
           Real-world stories of operational improvements, automation wins, and strategic implementations that drive

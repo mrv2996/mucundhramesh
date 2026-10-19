@@ -84,7 +84,7 @@ const JourneySection = () => {
       className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden"
     >
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-[var(--space-2xl)]">
+        <div className="text-center mb-[var(--section-heading-gap)]">
           <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
             My Journey
           </h2>

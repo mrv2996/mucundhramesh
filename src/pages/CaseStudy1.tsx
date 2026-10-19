@@ -57,7 +57,7 @@ ORDER BY
       
       <main>
         {/* Hero Section */}
-        <section className="container py-12 md:py-24">
+        <section className="container py-section">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6 text-center mb-12">
               <div className="flex items-center justify-center gap-2 mb-4">
