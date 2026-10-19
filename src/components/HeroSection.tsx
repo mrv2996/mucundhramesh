@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="max-w-content mx-auto">
         {/* Golden ratio grid: 62% content, 38% image */}
         <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-md)] lg:gap-[var(--space-lg)] items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1 space-y-[var(--space-lg)]">
+          <div className="text-center lg:text-left order-2 lg:order-1 space-y-[var(--space-base)] lg:space-y-[var(--space-md)]">
             {/* Typography hierarchy using golden ratio scale */}
             <h1 className="text-3xl lg:text-4xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
               Mucundh Ramesh
