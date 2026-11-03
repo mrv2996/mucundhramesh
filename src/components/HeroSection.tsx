@@ -37,14 +37,32 @@ const CountUp = ({ value }: { value: string }) => {
 };
 
 const HeroSection = () => {
+  const badge = (
+<a
+              href={HACKATHON_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-primary px-3 text-sm font-semibold font-inter text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              <Trophy className="h-4 w-4 text-tertiary" />
+              Hackathon winner
+            </a>
+  );
   return (
     <section className="px-6 pt-[14px] pb-[10px]">
       <div className="max-w-content mx-auto">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
-          <div className="space-y-3 min-w-0 col-span-2 sm:col-span-1">
-            <h1 className="text-3xl lg:text-[3rem] font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
-              Mucundh Ramesh
-            </h1>
+        <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
+          <div className="space-y-3 min-w-0">
+            <div className="flex items-center gap-4">
+              <img src={headshotImage} alt="" aria-hidden className="sm:hidden w-20 h-24 rounded-xl object-cover object-top shadow-medium shrink-0" />
+              <div className="space-y-2 min-w-0">
+                <h1 className="text-3xl lg:text-[3rem] font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
+                  Mucundh Ramesh
+                </h1>
+                <div className="sm:hidden">{badge}</div>
+              </div>
+            </div>
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
               Building and Scaling GTM with a people, process and technology-first approach
             </h2>
@@ -72,7 +90,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="row-start-1 col-start-2 sm:row-auto flex flex-col items-center gap-2 lg:justify-self-end">
+          <div className="hidden sm:flex flex-col items-center gap-2 lg:justify-self-end">
             <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-56 lg:h-[18rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
               <img
                 src={headshotImage}
@@ -80,16 +98,7 @@ const HeroSection = () => {
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <a
-              href={HACKATHON_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
-              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-primary px-3 text-sm font-semibold font-inter text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              <Trophy className="h-4 w-4 text-tertiary" />
-              Hackathon winner
-            </a>
+            {badge}
           </div>
         </div>
 
