@@ -1,7 +1,7 @@
 import { MapPin, Briefcase, GraduationCap, ExternalLink } from "lucide-react";
 
 const JourneySection = () => {
-  const journeyItems = [
+  const journeyItems: any[] = [
     {
       title: "Operations Associate",
       company: "PROXYMITY",
