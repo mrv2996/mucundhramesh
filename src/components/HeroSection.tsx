@@ -48,7 +48,7 @@ const HeroSection = () => {
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
               Building and Scaling GTM with a people, process and technology-first approach
             </h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl">
               Passionate about designing scalable infrastructures with technical precision to build relationships that
               drive measurable business outcomes. Software Systems Engineer turned go-to-market strategy and operations
               specialist with proven commercial experience.
