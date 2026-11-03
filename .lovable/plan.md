@@ -1,50 +1,41 @@
-# Audit priorities + hackathon callout
+# Round 1: fix what hurts first, show work sooner
 
-## 1. Hackathon win in the hero (new)
-- A small badge above your name: trophy icon, "Winner — Company Brain Buildathon, Finance & Ops track (judged by Round Treasury)", linking to the FinanceFlow app (opens in a new tab).
-- Gold Leaf accent on Prussian Blue so it reads as an achievement without competing with your name.
+Both audits agree on three things: phones break on two case studies, your role isn't clear at first glance, and your work sits too far down. Round 1 covers those plus the hackathon callout. Everything else waits.
 
-## 2. P0 — Make impact claims trustworthy
-- Replace "4 case studies & projects" in the hero number strip with the hackathon win.
-- Under each remaining number (7-8 hrs/week, 85% faster, 95% fewer errors) add a short note: what was measured and whether it is measured or estimated. Make the wording match the case-study page exactly (e.g. "85% faster partner data processing" if that is the real scope).
-- Partner intelligence: change "$14K/year savings" and "Low → High adoption" to match the true status (prototype vs deployed). Same wording on the card and its page.
-- Rename "SQL logic" headings to "SOQL" where the query is Salesforce.
-- SEC card: relabel the End-to-end / Python / Validation panel as "What it does", not results.
+## 1. Hackathon callout (new)
+- Small badge above your name: trophy icon, "Winner — Company Brain Buildathon, Finance & Ops (judged by Round Treasury)", linking to the FinanceFlow app in a new tab.
 
-## 3. P1 — Positioning (hero wording)
+## 2. Fix phone reading (P0 in UX audit)
+- Partner activation and Partner intelligence: page titles shrink to a normal phone size (about 32-36px), matching the calmer SEC page layout.
+- Stop pages sliding sideways on phones: the query box scrolls inside itself; fix the small side-scroll on the home page.
+- Check at 360, 390, 430 and 768px wide.
+
+## 3. Clear role in the hero (P1 in both)
 - Headline: "Operations, partnerships and commercial analysis".
 - Supporting line: "I improve workflows, support partners and turn data into business decisions."
-- Buttons: "View selected work" (scrolls down) and "View CV". Email and LinkedIn stay in navigation and the closing block.
-- Browser title and link-preview text updated to match.
-- Note: this overrides your earlier "no messaging changes" — please confirm.
+- Browser title and link preview updated to match.
+- This replaces your earlier "no wording changes" rule — approving the plan confirms it.
 
-## 4. P1 — Work before skills
-- New home order: Hero → Companies → Selected work → Experience → Capabilities → Recommendations → Contact.
-- "Selected work" merges Case Studies and Projects: Partner activation, Market Compass, SEC onboarding as the three lead tiles; Partner intelligence after; AP scraping agent in a small "In progress" row.
-- Skills + scrolling tool list become one compact "Capabilities" block (Operations, Partnerships, Commercial analysis, Technical delivery), each pointing to the work that proves it.
-- Navigation renamed: Selected work, Experience (was Journey).
+## 4. Work before skills (P1 in both)
+- Home order: Hero → Companies → Case Studies → Projects → Skills → Tools → Journey → Recommendations.
+- "Explore my work" button already points to Case Studies, so it lands sooner.
 
-## 5. P1 — Ownership in each case study
-- A short "At a glance" box at the top of each case study: context, dates, status (live / pilot / demo), my role, key decision, how it was validated, one limitation.
-- Partner activation summary rewritten in plain first-person wording; remove dramatic phrases.
+## 5. Honest number strip (P0 in content audit, light version)
+- Replace "4 case studies & projects" with the hackathon win.
+- Keep the other three numbers; the explanation notes under them come in Round 2 once you tell me how each was measured.
 
-## 6. P1 — CV and closing call to action
-- "Discuss a role" block at the end of the home page and every case-study / Market Compass page: one sentence on the roles you want, "View CV" and "Email Mucundh", LinkedIn secondary.
+## Round 2 (later)
+- Under each number: measured or estimated, and what it measured.
+- "At a glance" box on each case study: context, dates, status, your role, key decision, how it was checked.
+- Partner intelligence: $14K and adoption wording matched to prototype or deployed status; "SQL" headings renamed "SOQL".
+- CV button and "Discuss a role" email block at the end of every page.
+- Merge Skills + Tools into one Capabilities block; Journey gets dates and one result per role; shorter footer.
+- On-site summaries for Market Compass and Biometrio before visitors leave for the dashboard or deck.
 
-## 7. P2 (later round unless you want it now)
-- Market Compass: written decision / assumptions / recommendation section beside the dashboard, plus a static screenshot in case the embed fails.
-- Experience: dates and one contribution per role; tag logos as employer / internship / client project.
-- Fix the phone side-scroll at 320-375px and low-contrast text.
-
-## What I need from you
-- Your CV as a PDF (for "View CV").
-- For each metric: measured or estimated, and what it measured.
-- Partner intelligence: prototype or deployed?
-- For each case study: dates, status and what you personally owned. Anything missing I will leave as a clearly marked placeholder for you to confirm — I will not invent it.
+## Outside this project
+- The Market Compass dashboard itself clipping on phones lives in the Market Compass project, so it has to be fixed there separately.
 
 ## Technical details
-- Hackathon badge and number strip in `HeroSection.tsx`; metadata via `index.html`.
-- New `SelectedWorkSection` built from one list (extending `src/lib/case-studies.ts`); `CaseStudiesSection`/`ProjectsSection` replaced on home; `/#case-studies` anchor kept working as an alias.
-- Shared `CaseStudyGlance` and `ContactCta` components reused on all four detail pages.
-- CV hosted as a Lovable asset.
-- Verify at 1280px and 375px, including no horizontal overflow.
+- Badge and number strip in `HeroSection.tsx`; title/description in `index.html`.
+- Section order in `src/pages/Index.tsx`.
+- Mobile H1 sizes in `CaseStudy1.tsx` / `CaseStudy2.tsx` (text-3xl base, larger from md up); code block `overflow-x-auto` with `min-w-0` parents; find home overflow source with Playwright `scrollWidth` checks.
