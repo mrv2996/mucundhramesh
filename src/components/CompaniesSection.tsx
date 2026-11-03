@@ -4,22 +4,22 @@ import proxymityLogo from "@/assets/proxymity-logo.svg";
 
 const CompaniesSection = () => {
   return (
-    <section className="py-[var(--space-lg)] bg-background w-full">
+    <section className="pt-[6px] pb-[8px] bg-background w-full">
       <div className="flex justify-center items-center gap-5 flex-wrap px-6">
         <img
           src={proxymityLogo}
           alt="Proxymity logo"
-          className="h-10 w-auto grayscale opacity-20 hover:opacity-70 transition-opacity duration-300"
+          className="h-8 w-auto grayscale opacity-20 hover:opacity-70 transition-opacity duration-300"
         />
         <img
           src={companiesRow1}
           alt="L'ORÉAL, Fidelity, GE, transdev logos"
-          className="h-15 w-auto grayscale opacity-50 hover:opacity-100 transition-opacity duration-300"
+          className="h-12 w-auto grayscale opacity-50 hover:opacity-100 transition-opacity duration-300"
         />
         <img
           src={companiesRow2}
           alt="Mazars logo"
-          className="h-15 w-auto grayscale opacity-50 hover:opacity-100 transition-opacity duration-300"
+          className="h-12 w-auto grayscale opacity-50 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
     </section>

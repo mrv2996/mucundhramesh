@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-import { Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CV_URL, EMAIL, LINKEDIN } from "@/lib/site";
 
-export const Footer = () => <footer className="border-t bg-background/50 font-source">
-  <div className="container py-12">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div className="space-y-4"><h3 className="text-lg font-semibold font-playfair">Mucundh Ramesh</h3><p className="text-muted-foreground max-w-md text-base">Connecting technology, data, and people.</p></div>
-      <div><h4 className="text-base font-medium font-inter mb-3">Quick Links</h4><div className="flex flex-col items-start">
-        {[["Home", "/"], ["Skills", "/#skills"], ["Case Studies", "/#case-studies"], ["Projects", "/#projects"], ["Journey", "/#journey"]].map(([label,to]) => <Button key={to} asChild variant="link" className="text-base min-h-11 px-0 text-muted-foreground"><Link to={to}>{label}</Link></Button>)}
-        <Button asChild variant="link" className="text-base min-h-11 px-0 text-muted-foreground"><a href="https://www.linkedin.com/in/mucundh-ramesh/" target="_blank" rel="noopener noreferrer"><Linkedin />LinkedIn</a></Button>
-      </div></div>
+export const Footer = () => (
+  <footer className="border-t font-source">
+    <div className="max-w-content mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-base text-muted-foreground">
+      <p>© {new Date().getFullYear()} Mucundh Ramesh / London, United Kingdom</p>
+      <div className="flex items-center gap-4">
+        <a href={EMAIL} className="inline-flex min-h-11 items-center hover:text-secondary">Email</a>
+        <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center hover:text-secondary">LinkedIn</a>
+        {CV_URL && <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center hover:text-secondary">CV</a>}
+      </div>
     </div>
-    <div className="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-base text-muted-foreground"><p>© {new Date().getFullYear()} Mucundh Ramesh. All rights reserved.</p><p>Made with ♥ in London, United Kingdom</p></div>
-  </div>
-</footer>;
+  </footer>
+);

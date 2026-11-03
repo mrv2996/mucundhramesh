@@ -13,7 +13,7 @@ const SecFilingsCaseStudy = () => {
     <Navigation />
     <main>
       <section className="container max-w-content py-section">
-        <Button asChild variant="link" className="px-0 min-h-11 text-base"><Link to="/#case-studies"><ArrowLeft />Back to case studies</Link></Button>
+        <Button asChild variant="link" className="px-0 min-h-11 text-base"><Link to="/work"><ArrowLeft />Back to case studies</Link></Button>
         <div className="max-w-4xl mt-6">
           <div className="flex flex-wrap gap-2">{["Python", "Workflow Design", "Data Quality", "Codex"].map(tag => <Badge key={tag} variant="outline" className="text-base">{tag}</Badge>)}</div>
           <h1 className="mt-6 font-inter text-3xl font-semibold leading-tight text-primary">Scaling Customer Onboarding for SEC Filings</h1>

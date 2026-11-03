@@ -1,8 +1,7 @@
 import { Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-const RecommendationsSection = () => {
-  const recommendations = [{
+export const recommendations = [{
     id: 1,
     name: "Victor Falières",
     title: "Partnerships Manager",
@@ -24,6 +23,8 @@ const RecommendationsSection = () => {
     relationship: "Jean-Philippe was Mucundh's mentor",
     text: "Between February & April 2022, I worked with Mucundh in the framework of a student project. A partnership between ESCP Business School and my company, Mazars. With other ESCP students, he helped us on one of key project for the near future: our Global IT platform programme. They worked on many topics such as the IT cost accounting, the charge-back model, the transfer pricing issue and much more. Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE. I strongly recommend him for an internship in your company. He has precious soft & hard skills so do not hesitate."
   }];
+const RecommendationsSection = () => {
+
   return <section className="py-section px-6 bg-muted/30">
       <div className="max-w-content mx-auto">
         <div className="text-center mb-[var(--section-heading-gap)]">

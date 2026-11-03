@@ -13,7 +13,7 @@ const MarketCompass = () => {
     <Navigation />
     <main>
       <section className="container max-w-content py-section">
-        <Button asChild variant="link" className="px-0 min-h-11 text-base"><Link to="/#projects"><ArrowLeft />Back to projects</Link></Button>
+        <Button asChild variant="link" className="px-0 min-h-11 text-base"><Link to="/work"><ArrowLeft />Back to projects</Link></Button>
         <div className="mt-6 flex flex-wrap items-start justify-between gap-6">
           <div className="max-w-2xl">
             <Badge variant="outline" className="text-base">Market-entry strategy</Badge>

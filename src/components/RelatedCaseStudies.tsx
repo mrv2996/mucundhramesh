@@ -8,7 +8,7 @@ export const RelatedCaseStudies = ({ currentPath }: { currentPath: string }) => 
     <div className="border-t pt-8">
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
         <h2 className="font-inter text-2xl font-semibold text-primary">More Case Studies</h2>
-        <Button asChild variant="link" className="min-h-11 text-base"><Link to="/#case-studies"><ArrowLeft />All case studies</Link></Button>
+        <Button asChild variant="link" className="min-h-11 text-base"><Link to="/work"><ArrowLeft />All case studies</Link></Button>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {publishedStudies.filter(study => study.path !== currentPath).map(study => (
