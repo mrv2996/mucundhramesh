@@ -32,7 +32,7 @@ const selected = [
 const SelectedWorkSection = () => (
   <section id="work" className="px-6 pt-4 pb-section">
     <div className="max-w-content mx-auto">
-      <div className="flex items-baseline justify-between gap-4 mb-4">
+      <div className="flex items-baseline justify-between gap-4 mb-2">
         <h2 className="font-inter text-2xl font-semibold text-primary">Selected work</h2>
         <Link to="/work" className="inline-flex min-h-11 items-center gap-1 text-base font-medium text-secondary hover:underline">All work <ArrowUpRight className="h-4 w-4" /></Link>
       </div>

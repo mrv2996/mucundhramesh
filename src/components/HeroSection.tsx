@@ -42,7 +42,7 @@ const HeroSection = () => {
       <div className="max-w-content mx-auto">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
           <div className="space-y-3 min-w-0 col-span-2 sm:col-span-1">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
+            <h1 className="text-3xl lg:text-[3rem] font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
               Mucundh Ramesh
             </h1>
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
@@ -54,19 +54,19 @@ const HeroSection = () => {
               specialist with proven commercial experience.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-1">
-              <Button size="lg" className="font-semibold" asChild>
+            <div className="flex flex-wrap gap-3 pt-0">
+              <Button className="font-semibold" asChild>
                 <Link to="/#work">Explore my work<ArrowDown className="ml-1 h-4 w-4" /></Link>
               </Button>
               {CV_URL && (
-                <Button size="lg" variant="outline" className="font-semibold" asChild>
+                <Button variant="outline" className="font-semibold" asChild>
                   <a href={CV_URL} target="_blank" rel="noopener noreferrer">View CV</a>
                 </Button>
               )}
-              <Button size="lg" variant="outline" className="font-semibold border-secondary text-primary hover:bg-secondary hover:text-secondary-foreground" asChild>
+              <Button variant="outline" className="font-semibold border-secondary text-primary hover:bg-secondary hover:text-secondary-foreground" asChild>
                 <a href={EMAIL}><Mail className="mr-1 h-4 w-4" />Get in Touch</a>
               </Button>
-              <Button size="lg" variant="ghost" className="font-semibold text-primary" asChild>
+              <Button variant="ghost" className="font-semibold text-primary" asChild>
                 <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><ExternalLink className="mr-1 h-4 w-4" />LinkedIn Profile</a>
               </Button>
             </div>
