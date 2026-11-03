@@ -1,210 +1,67 @@
-import { MapPin, Briefcase, GraduationCap, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { journeyItems } from "@/lib/journey";
+import { CV_URL } from "@/lib/site";
 
 const JourneySection = () => {
-  const journeyItems: any[] = [
-    {
-      title: "Operations Associate",
-      company: "PROXYMITY",
-      companyDetail: "Fintech | Assets & Securities Servicing",
-      period: "Oct 2025 - Present",
-      location: "London, United Kingdom",
-      type: "work",
-      status: "current",
-      color: "primary",
-    },
-    {
-      title: "Partner Operations Specialist",
-      company: "SWEEP",
-      companyDetail: "Venture-Backed B2B SaaS | Partnerships",
-      period: "Jan 2025 - Aug 2025",
-      location: "London, United Kingdom",
-      type: "work",
-      status: "completed",
-      color: "secondary",
-    },
-    {
-      title: "Master in Management - Grande École",
-      company: "ESCP BUSINESS SCHOOL",
-      period: "2021 - 2024",
-      location: "Paris & London",
-      type: "education",
-      status: "completed",
-      color: "tertiary",
-      specializations: ["Scale-up Strategy", "Finance", "Sustainability"],
-    },
-    {
-      title: "Strategy Analyst Intern",
-      company: "TRANSDEV",
-      companyDetail: "Commercial Strategy & Mobility Advisory",
-      period: "Jan 2023 - Jul 2023",
-      location: "Paris, France",
-      type: "work",
-      status: "completed",
-      color: "secondary",
-    },
-    {
-      title: "Financial Analyst Intern",
-      company: "L'ORÉAL",
-      companyDetail: "Worldwide Beauty Tech",
-      period: "Jul 2022 - Dec 2022",
-      location: "Paris, France",
-      type: "work",
-      status: "completed",
-      color: "tertiary",
-    },
-    {
-      title: "Software Engineer",
-      company: "GENERAL ELECTRIC (GE)",
-      companyDetail: "Gas Power Energy Generation",
-      period: "Jul 2018 - Jun 2021",
-      location: "Bengaluru, India",
-      type: "work",
-      status: "completed",
-      color: "primary",
-    },
-    {
-      title: "Bachelor of Technology, Computer Science and Engineering",
-      company: "SRM INSTITUTE OF SCIENCE AND TECHNOLOGY",
-      period: "2014 - 2018",
-      location: "Chennai, India",
-      type: "education",
-      status: "completed",
-      color: "secondary",
-      researchPaper: {
-        title: "SECURE DATA RETRIEVAL IN CLOUD USING MULTIPLE KEYS: A SURVEY",
-        journal: "International Journal of Pure and Applied Mathematics",
-        url: "https://www.researchgate.net/publication/325878411_SECURE_DATA_RETRIEVAL_IN_CLOUD_USING_MULTIPLE_KEYS_A_SURVEY",
-      },
-    },
-  ];
+  const work = journeyItems.filter((i) => i.type === "work");
+  const education = journeyItems.filter((i) => i.type === "education");
 
   return (
-    <section
-      id="journey"
-      className="py-section px-6 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden"
-    >
+    <section id="journey" className="px-6 py-section border-t">
       <div className="max-w-content mx-auto">
-        <div className="text-center mb-[var(--section-heading-gap)]">
-          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-[var(--space-lg)] animate-fade-in">
-            My Journey
-          </h2>
-          <div className="w-24 h-1 bg-gradient-mixed mx-auto rounded-full"></div>
+        <div className="flex items-baseline justify-between gap-4 mb-6">
+          <h2 className="font-inter text-2xl font-semibold text-primary">Journey</h2>
+          {CV_URL && (
+            <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1 text-base font-medium text-secondary hover:underline">
+              View CV <ExternalLink className="h-4 w-4" />
+            </a>
+          )}
         </div>
 
-        <div className="relative">
-          <div className="absolute left-6 top-2 bottom-16 w-1 hidden md:block">
-            <div className="w-full h-full bg-gradient-to-b from-primary via-secondary via-tertiary via-accent to-transparent rounded-full shadow-glow"></div>
+        <div className="grid gap-9 min-[651px]:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] items-start">
+          <div className="min-w-0">
+            <h3 className="font-inter text-lg font-semibold text-foreground mb-2">Experience</h3>
+            <Accordion type="single" collapsible>
+              {work.map((item) => (
+                <AccordionItem key={item.company} value={item.company}>
+                  <AccordionTrigger className="gap-4 py-4 text-left hover:no-underline [&>svg]:hidden group">
+                    <div className="flex-1 min-w-0">
+                      <div className="font-inter text-base lg:text-lg font-semibold text-foreground">{item.title}</div>
+                      <div className="text-sm text-muted-foreground mt-1">{item.company} / {item.location}</div>
+                    </div>
+                    <span className="text-sm text-muted-foreground whitespace-nowrap">{item.period}</span>
+                    <span aria-hidden className="w-5 text-center text-xl leading-none text-primary group-data-[state=open]:hidden">+</span>
+                    <span aria-hidden className="w-5 text-center text-xl leading-none text-primary hidden group-data-[state=open]:inline">−</span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    {item.companyDetail && <p className="text-base text-muted-foreground">{item.companyDetail}</p>}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
-          <div className="space-y-[var(--space-sm)]">
-            {journeyItems.map((item) => (
-              <div key={`${item.company}-${item.title}`} className="relative flex items-start gap-[var(--space-md)]">
-                <div
-                  className={`hidden md:flex w-12 h-12 rounded-full items-center justify-center shadow-glow relative z-10 bg-muted/5 ${
-                    item.color === "primary"
-                      ? "bg-gradient-primary"
-                      : item.color === "secondary"
-                        ? "bg-gradient-secondary"
-                        : "bg-gradient-tertiary"
-                  }`}
-                >
-                  {item.type === "education" ? (
-                    <GraduationCap className="w-6 h-6 text-white" />
-                  ) : (
-                    <Briefcase className="w-6 h-6 text-white" />
+          <aside className="rounded-xl bg-muted/40 border p-6 min-w-0">
+            <h3 className="font-inter text-lg font-semibold text-foreground mb-4">Education</h3>
+            <div className="divide-y">
+              {education.map((item) => (
+                <div key={item.company} className="py-4 first:pt-0 last:pb-0 space-y-1">
+                  <div className="text-sm text-muted-foreground">{item.period}</div>
+                  <div className="font-inter text-base font-semibold text-foreground">{item.company}</div>
+                  <div className="text-base text-foreground">{item.title}</div>
+                  <div className="text-sm text-muted-foreground">{item.location}</div>
+                  {item.specializations && <div className="text-sm text-muted-foreground">{item.specializations.join(", ")}</div>}
+                  {item.researchPaper && (
+                    <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline pt-1">
+                      <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
+                      <span className="break-words">{item.researchPaper.title} — {item.researchPaper.journal}</span>
+                    </a>
                   )}
                 </div>
-
-                <div className="flex-1">
-                  <div
-                    className={`bg-card/80 backdrop-blur-sm rounded-lg p-[var(--space-md)] shadow-soft border transition-all duration-300 hover:scale-[1.02] hover:shadow-glow ${
-                      item.color === "primary"
-                        ? "border-primary/30 hover:border-primary/50 hover:shadow-glow-primary"
-                        : item.color === "secondary"
-                          ? "border-secondary/30 hover:border-secondary/50 hover:shadow-glow-secondary"
-                          : "border-tertiary/30 hover:border-tertiary/50 hover:shadow-glow-tertiary"
-                    }`}
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <h3
-                            className={`text-sm lg:text-base font-semibold ${
-                              item.color === "primary"
-                                ? "text-primary"
-                                : item.color === "secondary"
-                                  ? "text-secondary"
-                                  : "text-tertiary"
-                            }`}
-                          >
-                            {item.title}
-                          </h3>
-                          {item.status === "current" && (
-                            <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 animate-pulse">
-                              Current
-                            </span>
-                          )}
-                        </div>
-
-                        <h4 className="text-sm font-medium text-foreground mb-1">{item.company}</h4>
-                        {(item as any).companyDetail && (
-                          <p className="text-xs text-muted-foreground mb-2 italic">{(item as any).companyDetail}</p>
-                        )}
-
-                        {item.location && (
-                          <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                            <MapPin className="w-4 h-4" />
-                            <span className="text-xs">{item.location}</span>
-                          </div>
-                        )}
-
-                        {item.researchPaper && (
-                          <div className="mb-2">
-                            <a
-                              href={item.researchPaper.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 p-2 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all duration-300 group"
-                            >
-                              <ExternalLink className="w-3 h-3 text-secondary group-hover:scale-110 transition-transform" />
-                              <div className="flex flex-col">
-                                <span className="text-xs font-medium text-secondary group-hover:text-secondary/80">
-                                  {item.researchPaper.title}
-                                </span>
-                                <span className="text-xs text-muted-foreground mt-1">
-                                  Published in {item.researchPaper.journal}
-                                </span>
-                              </div>
-                            </a>
-                          </div>
-                        )}
-
-                        {item.specializations && item.specializations.length > 0 && (
-                          <div>
-                            <h5 className="text-xs font-semibold text-foreground mb-2">Specializations:</h5>
-                            <div className="flex flex-wrap gap-1">
-                              {item.specializations.map((spec) => (
-                                <span
-                                  key={spec}
-                                  className={`px-2 py-1 rounded-full text-xs font-medium border ${
-                                    item.color === "secondary"
-                                      ? "bg-secondary/10 text-secondary border-secondary/20"
-                                      : "bg-primary/10 text-primary border-primary/20"
-                                  }`}
-                                >
-                                  {spec}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </div>
     </section>
