@@ -1,9 +1,17 @@
 import { useLayoutEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
+// Old homepage anchors now live on /work.
+const MOVED_TO_WORK = new Set(["#case-studies", "#projects", "#skills"]);
 
 export const RouteScroll = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   useLayoutEffect(() => {
+    if (location.pathname === "/" && MOVED_TO_WORK.has(location.hash)) {
+      navigate({ pathname: "/work", hash: location.hash === "#skills" ? "" : location.hash }, { replace: true });
+      return;
+    }
     const frame = requestAnimationFrame(() => {
       const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
       if (target) {
@@ -13,6 +21,6 @@ export const RouteScroll = () => {
       }
     });
     return () => cancelAnimationFrame(frame);
-  }, [location.key, location.pathname, location.hash]);
+  }, [location.key, location.pathname, location.hash, navigate]);
   return null;
 };
