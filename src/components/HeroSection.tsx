@@ -9,7 +9,6 @@ const metrics = [
   { value: "7-8 hrs/week", label: "manual work removed" },
   { value: "85% faster", label: "partner activation" },
   { value: "95% fewer", label: "data errors" },
-  { value: "4", label: "case studies & projects" },
 ];
 
 /** Counts the leading number up once; the full value is always in the DOM text for readers. */
@@ -50,7 +49,7 @@ const HeroSection = () => {
             </a>
   );
   return (
-    <section className="px-6 pt-[14px] pb-[10px]">
+    <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
           <div className="space-y-3 min-w-0">
@@ -103,9 +102,9 @@ const HeroSection = () => {
         </div>
 
         {/* Impact metrics */}
-        <ul aria-label="Impact highlights" className="mt-3 grid grid-cols-2 md:grid-cols-4 border-y divide-border md:divide-x">
+        <ul aria-label="Impact highlights" className="mt-6 lg:mt-8 grid grid-cols-3 border-y divide-x divide-border">
           {metrics.map((m) => (
-            <li key={m.label} className="py-2 md:px-4 first:md:pl-0">
+            <li key={m.label} className="py-3 px-3 md:px-4 first:pl-0">
               <div className="text-xl lg:text-2xl font-bold text-primary font-inter"><CountUp value={m.value} /></div>
               <div className="text-sm text-muted-foreground">{m.label}</div>
             </li>

@@ -4,8 +4,8 @@ import proxymityLogo from "@/assets/proxymity-logo.svg";
 
 const CompaniesSection = () => {
   return (
-    <section className="pt-[6px] pb-[8px] bg-background w-full">
-      <div className="flex justify-center items-center gap-5 flex-wrap px-6">
+    <section className="py-8 lg:py-12 bg-background w-full">
+      <div className="flex justify-center items-center gap-8 flex-wrap px-6">
         <img
           src={proxymityLogo}
           alt="Proxymity logo"
