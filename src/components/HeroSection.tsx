@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ExternalLink, Mail } from "lucide-react";
+import { ArrowDown, ExternalLink, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
 
@@ -7,7 +7,7 @@ const metrics = [
   { value: "7-8 hrs/week", label: "manual work removed" },
   { value: "85% faster", label: "partner activation" },
   { value: "95% fewer", label: "data errors" },
-  { value: "4", label: "case studies & projects" },
+  { value: "Winner", label: "Company Brain Buildathon" },
 ];
 
 const HeroSection = () => {
@@ -18,16 +18,24 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-[1.618fr_1fr] gap-[var(--space-md)] lg:gap-[var(--space-lg)] items-center">
           <div className="text-center lg:text-left order-2 lg:order-1 space-y-[var(--space-base)] lg:space-y-[var(--space-md)]">
             {/* Typography hierarchy using golden ratio scale */}
+            <a
+              href="https://share.lightfern.com/e2cfbe69-036f-45d1-b011-6126013e6cf7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold font-inter text-primary-foreground shadow-medium hover:opacity-90 transition-opacity"
+            >
+              <Trophy className="h-4 w-4 text-tertiary" aria-hidden="true" />
+              <span>Winner · Company Brain Buildathon, Finance &amp; Ops track (judged by Round Treasury)</span>
+              <ExternalLink className="h-3 w-3" aria-hidden="true" />
+            </a>
             <h1 className="text-3xl lg:text-4xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
               Mucundh Ramesh
             </h1>
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
-              Building and Scaling GTM with a people, process and technology-first approach
+              Operations, partnerships and commercial analysis
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Passionate about designing scalable infrastructures with technical precision to build relationships that
-              drive measurable business outcomes. Software Systems Engineer turned go-to-market strategy and operations
-              specialist with proven commercial experience.
+              I improve workflows, support partners and turn data into business decisions.
             </p>
 
             {/* CTAs with golden ratio spacing */}
@@ -38,10 +46,10 @@ const HeroSection = () => {
                 className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold shadow-medium hover:shadow-glow-primary"
                 asChild
               >
-                <a href="mailto:mucundh.ramesh@edu.escp.eu">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Get in Touch
-                </a>
+                <Link to="/#case-studies">
+                  View selected work
+                  <ArrowDown className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
 
               <Button

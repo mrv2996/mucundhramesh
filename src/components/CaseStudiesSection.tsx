@@ -14,7 +14,7 @@ const CaseStudiesSection = () => {
       icon: <Zap className="h-6 w-6 text-primary" />,
       summary: "Mapped an end-to-end filings workflow, built a team-accessible Python interface and addressed ambiguous ticker matches for repeatable customer onboarding.",
       keyMetrics: [
-        { label: "Workflow", value: "End-to-end", icon: <Zap className="h-4 w-4" /> },
+        { label: "Does", value: "End-to-end", icon: <Zap className="h-4 w-4" /> },
         { label: "Execution", value: "Python", icon: <Clock className="h-4 w-4" /> },
         { label: "Focus", value: "Validation", icon: <TrendingUp className="h-4 w-4" /> },
       ],
@@ -39,15 +39,15 @@ const CaseStudiesSection = () => {
     {
       id: 2,
       title: "AI-Powered Partner Intelligence",
-      subtitle: "GenAI agent replaced $14K Software licenses",
+      subtitle: "GenAI agent as an alternative to a $14K licence",
       readTime: "6 min read",
       tags: ["GenAI", "Cost Optimization", "Partner Intelligence"],
       icon: <Bot className="h-6 w-6 text-primary" />,
       summary:
         "Built a custom GenAI copilot processing Drive and Notion data to deliver partner intelligence at a fractional cost.",
       keyMetrics: [
-        { label: "Savings", value: "$14K/year", icon: <TrendingUp className="h-4 w-4" /> },
-        { label: "Adoption", value: "Low → High", icon: <Zap className="h-4 w-4" /> },
+        { label: "Licence cost", value: "$14K/year", icon: <TrendingUp className="h-4 w-4" /> },
+        { label: "Focus", value: "Build vs buy", icon: <Zap className="h-4 w-4" /> },
         { label: "Solution", value: "Custom", icon: <Clock className="h-4 w-4" /> },
       ],
       hasPage: true,
