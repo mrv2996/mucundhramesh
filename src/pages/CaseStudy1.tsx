@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -59,6 +60,7 @@ ORDER BY
         {/* Hero Section */}
         <section className="container py-section">
           <div className="max-w-4xl mx-auto">
+            <Link to="/work" className="inline-flex min-h-11 items-center gap-2 text-base font-medium text-primary hover:underline mb-4"><ArrowLeft className="h-4 w-4" />Back to case studies</Link>
             <div className="space-y-6 text-center mb-12">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Badge variant="outline" className="text-sm">
@@ -70,7 +72,7 @@ ORDER BY
                 </Badge>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-6xl font-bold tracking-tight leading-tight break-words">
                 How a Simple Rule-Based Automation Saved 7-8 Hours Weekly in Partner Activation
               </h1>
               
@@ -261,7 +263,7 @@ ORDER BY
                 <div className="text-center">
                   <h4 className="font-semibold mb-4">SQL Solution Logic</h4>
                   <div className="bg-background p-4 rounded-md border">
-                    <pre className="text-sm font-mono text-foreground">
+                    <pre className="text-sm font-mono text-foreground overflow-x-auto">
                       <code>{`SELECT Name, Id FROM Account WHERE Name LIKE '%Parent'`}</code>
                     </pre>
                   </div>

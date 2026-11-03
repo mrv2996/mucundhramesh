@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -36,6 +37,7 @@ const CaseStudy2 = () => {
         {/* Hero Section */}
         <section className="container py-section">
           <div className="max-w-4xl mx-auto">
+            <Link to="/work" className="inline-flex min-h-11 items-center gap-2 text-base font-medium text-primary hover:underline mb-4"><ArrowLeft className="h-4 w-4" />Back to case studies</Link>
             <div className="space-y-6 text-center mb-12">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Badge variant="outline" className="text-sm">
@@ -47,7 +49,7 @@ const CaseStudy2 = () => {
                 </Badge>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
+              <h1 className="text-3xl md:text-6xl font-bold tracking-tight leading-tight break-words">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">How a partner mapping software could be replaced with a GenAI agent that processes structured partner data from Drive and Notion to deliver similar intelligence at a fraction of the cost.</p>
 
