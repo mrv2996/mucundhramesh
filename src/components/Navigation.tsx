@@ -30,7 +30,7 @@ export const Navigation = () => {
             </NavigationMenuContent>
           </NavigationMenuItem></NavigationMenuList>
         </NavigationMenu>
-        {[["Projects", "/#projects"], ["Experience", "/#journey"]].map(([label,to]) => <Button key={to} asChild variant="link" className="hidden md:inline-flex min-h-11 text-sm md:text-base"><Link to={to}>{label}</Link></Button>)}
+        {[["Projects", "/#projects"], ["Journey", "/#journey"]].map(([label,to]) => <Button key={to} asChild variant="link" className="hidden md:inline-flex min-h-11 text-sm md:text-base"><Link to={to}>{label}</Link></Button>)}
         <Button asChild variant="link" className="min-h-11 px-1 md:px-3 text-sm md:text-base"><a href="https://www.linkedin.com/in/mucundh-ramesh/" target="_blank" rel="noopener noreferrer">LinkedIn<ExternalLink className="h-3 w-3" /></a></Button>
       </div>
     </div>

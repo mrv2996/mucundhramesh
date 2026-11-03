@@ -17,11 +17,11 @@ const Index = () => {
       <main className="pt-16">
         <HeroSection />
         <CompaniesSection />
+        <SkillsSection />
+        <ToolsSection />
         <CaseStudiesSection />
         <ProjectsSection />
         <JourneySection />
-        <SkillsSection />
-        <ToolsSection />
         <RecommendationsSection />
       </main>
       

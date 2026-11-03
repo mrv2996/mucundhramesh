@@ -47,7 +47,7 @@ const CaseStudy2 = () => {
                 </Badge>
               </div>
               
-              <h1 className="text-3xl md:text-6xl break-words font-bold tracking-tight leading-tight">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">From $14K Software Licenses to AI-Powered Partner Intelligence</h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">How a partner mapping software could be replaced with a GenAI agent that processes structured partner data from Drive and Notion to deliver similar intelligence at a fraction of the cost.</p>
 
@@ -64,7 +64,7 @@ const CaseStudy2 = () => {
                 <CardContent className="pt-6">
                   <DollarSign className="h-8 w-8 text-primary mx-auto mb-3" />
                   <div className="text-3xl font-bold text-foreground">$14K</div>
-                  <div className="text-sm text-muted-foreground">Annual licence cost of the existing tool</div>
+                  <div className="text-sm text-muted-foreground">Annual license savings</div>
                 </CardContent>
               </Card>
               <Card className="text-center">

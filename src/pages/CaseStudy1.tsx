@@ -70,7 +70,7 @@ ORDER BY
                 </Badge>
               </div>
               
-              <h1 className="text-3xl md:text-6xl break-words font-bold tracking-tight leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
                 How a Simple Rule-Based Automation Saved 7-8 Hours Weekly in Partner Activation
               </h1>
               
@@ -122,7 +122,7 @@ ORDER BY
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-justify">
-                <p className="text-muted-foreground leading-relaxed">Partner activation relied on manual Excel updates, Salesforce data entry and tracking spreadsheets. I spent 7-8 hours each week on repetitive data processing that was prone to human error.</p>
+                <p className="text-muted-foreground leading-relaxed">The partner activation process was a weekly nightmare of manual Excel file updates, Salesforce data entry, and tracking spreadsheets. Spent 7-8 hours weekly on repetitive data processing tasks that were prone to human error.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div className="space-y-2">
                     <h4 className="font-semibold text-foreground">Pain Points:</h4>
@@ -167,7 +167,7 @@ ORDER BY
               <Card className="text-center">
                 <CardContent className="pt-6">
                   <Cog className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold mb-2">2. SOQL Logic</h3>
+                  <h3 className="font-semibold mb-2">2. SQL Logic</h3>
                   <p className="text-sm text-muted-foreground text-justify">
                     Dynamic lookup sheets using SQL queries to pull real-time CRM data and partner activation status from hierarchical accounts.
                   </p>
@@ -251,15 +251,15 @@ ORDER BY
           </div>
         </section>
 
-        {/* Step 2: SOQL Solution Logic */}
+        {/* Step 2: SQL Solution Logic */}
         <section className="container pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Step 2: SOQL Solution Logic</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Step 2: SQL Solution Logic</h2>
             
             <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
               <CardContent className="p-8">
                 <div className="text-center">
-                  <h4 className="font-semibold mb-4">SOQL Solution Logic</h4>
+                  <h4 className="font-semibold mb-4">SQL Solution Logic</h4>
                   <div className="bg-background p-4 rounded-md border">
                     <pre className="text-sm font-mono text-foreground">
                       <code>{`SELECT Name, Id FROM Account WHERE Name LIKE '%Parent'`}</code>
