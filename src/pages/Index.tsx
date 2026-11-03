@@ -2,29 +2,21 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import CompaniesSection from "@/components/CompaniesSection";
-import SkillsSection from "@/components/SkillsSection";
-import ToolsSection from "@/components/ToolsSection";
+import SelectedWorkSection from "@/components/SelectedWorkSection";
 import JourneySection from "@/components/ExperienceSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
-import RecommendationsSection from "@/components/RecommendationsSection";
+import HomeRecommendation from "@/components/HomeRecommendation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-clip">
       <Navigation />
-      
       <main className="pt-16">
         <HeroSection />
         <CompaniesSection />
-        <SkillsSection />
-        <ToolsSection />
-        <CaseStudiesSection />
-        <ProjectsSection />
+        <SelectedWorkSection />
         <JourneySection />
-        <RecommendationsSection />
+        <HomeRecommendation />
       </main>
-      
       <Footer />
     </div>
   );
