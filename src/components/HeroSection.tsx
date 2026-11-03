@@ -41,7 +41,7 @@ const HeroSection = () => {
     <section className="px-6 pt-[14px] pb-[10px]">
       <div className="max-w-content mx-auto">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
-          <div className="space-y-3 lg:space-y-4 min-w-0 col-span-2 sm:col-span-1">
+          <div className="space-y-3 min-w-0 col-span-2 sm:col-span-1">
             <h1 className="text-3xl lg:text-4xl font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
               Mucundh Ramesh
             </h1>
@@ -94,9 +94,9 @@ const HeroSection = () => {
         </div>
 
         {/* Impact metrics */}
-        <ul aria-label="Impact highlights" className="mt-4 grid grid-cols-2 md:grid-cols-4 border-y divide-border md:divide-x">
+        <ul aria-label="Impact highlights" className="mt-3 grid grid-cols-2 md:grid-cols-4 border-y divide-border md:divide-x">
           {metrics.map((m) => (
-            <li key={m.label} className="py-3 md:px-4 first:md:pl-0">
+            <li key={m.label} className="py-2 md:px-4 first:md:pl-0">
               <div className="text-xl lg:text-2xl font-bold text-primary font-inter"><CountUp value={m.value} /></div>
               <div className="text-sm text-muted-foreground">{m.label}</div>
             </li>
