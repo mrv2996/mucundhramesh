@@ -9,7 +9,7 @@ const selected = [
     description: "Eliminated 7-8 hours of weekly manual work with an intelligent automation pipeline connecting Excel, Salesforce CRM, and SQL operations.",
     to: "/case-studies/partner-activation-automation",
     action: "Read full case study",
-    visual: <div><span className="font-playfair text-3xl text-primary">7-8</span> <span className="text-base text-foreground">hrs/week</span><div className="text-sm text-muted-foreground mt-1">Time Saved</div></div>,
+    visual: <div className="flex items-baseline gap-2"><span className="font-playfair text-3xl text-primary">7-8</span><span className="text-base text-foreground">hrs/week</span><span className="text-sm text-muted-foreground">Time Saved</span></div>,
   },
   {
     context: "Proxymity",
@@ -40,7 +40,7 @@ const SelectedWorkSection = () => (
         {selected.map((item) => {
           const inner = (
             <>
-              <div className="bg-muted/40 px-5 py-3 min-h-[72px] flex items-center">{item.visual}</div>
+              <div className="bg-muted/40 px-5 py-3 h-[64px] flex items-center">{item.visual}</div>
               <div className="px-5 pt-3 pb-5 flex flex-col flex-1 gap-1.5">
                 <div className="text-sm text-muted-foreground">{item.context}</div>
                 <h3 className="font-inter text-lg font-semibold text-foreground">{item.title}</h3>
