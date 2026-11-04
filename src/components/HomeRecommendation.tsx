@@ -29,6 +29,13 @@ const highlights = [
     relationship: "Jean-Philippe was Mucundh's mentor",
     line: "Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE.",
   },
+  {
+    id: 4,
+    name: "Mey Raksmeythida Oum",
+    title: "Project Lead",
+    relationship: "Mey worked with Mucundh on the same team",
+    line: "This automation would not have been a success without his dedication and market knowledge.",
+  },
 ];
 
 const HomeRecommendation = () => {
