@@ -35,7 +35,9 @@ All colors MUST be HSL.
 
     /* Impact metric green - hero impact blocks only */
     --metric: 161 94% 30%;
-    --metric-border: 152 76% 80%;
+    --metric-border: 144 63% 88%;
+    --metric-bg: 146 70% 96%;
+    --metric-label: 152 45% 38%;
 
     /* Neutral palette */
     --muted: 220 14% 96%;
@@ -168,12 +170,13 @@ All colors MUST be HSL.
 /* Hero impact metric blocks - green tone from the reference template */
 @layer components {
   .metric-card {
-    @apply rounded-lg border bg-card;
-    border-color: hsl(var(--metric-border) / 0.5);
+    @apply rounded-lg border;
+    background-color: hsl(var(--metric-bg));
+    border-color: hsl(var(--metric-border));
   }
   .metric-value { color: hsl(var(--metric)); }
   .metric-arrow { color: hsl(var(--metric) / 0.6); }
-  .metric-label { color: hsl(var(--metric) / 0.7); }
+  .metric-label { color: hsl(var(--metric-label)); }
 }
 
 /* Optimized scroll animation only */
