@@ -3,6 +3,7 @@ import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { BIOMETRIO_URL } from "@/lib/site";
 
 // Unified work collection — titles/descriptions reused verbatim from the
 // existing case-study and project cards. Market Compass removed; the AP
@@ -36,7 +37,7 @@ const work = [
     context: "ESCP · biometrio.earth",
     title: "Biometrio.earth Growth Strategy",
     description: "Revenue growth and scaling strategy for biometrio.earth, a German green tech startup focused on sustainable technology solutions",
-    href: "https://drive.google.com/file/d/1fVrTx7p09SS59jYrnWgxHZnzD9klxaHN/view?usp=sharing",
+    href: BIOMETRIO_URL,
     action: "View Project",
     visual: <div className="font-playfair text-2xl text-primary leading-tight">Strategy</div>,
   },
