@@ -13,5 +13,5 @@
 - [x] /work page with full collection; old anchors redirect
 - [x] Hackathon winner badge
 - [x] Mobile overflow/title fixes + back links on long case studies
-- [ ] CV buttons — waiting on your CV PDF
+- [x] CV buttons — Google Drive CV linked
 - [ ] Round 2 content changes (positioning, claims, ownership boxes) — deferred by you

@@ -53,14 +53,10 @@ const HeroSection = () => {
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
           <div className="space-y-3 min-w-0">
-            <div className="flex items-center gap-4">
-              <img src={headshotImage} alt="" aria-hidden className="sm:hidden w-20 h-24 rounded-xl object-cover object-top shadow-medium shrink-0" />
-              <div className="space-y-2 min-w-0">
-                <h1 className="text-3xl lg:text-[3rem] font-bold leading-tight bg-gradient-mixed bg-clip-text text-transparent">
-                  Mucundh Ramesh
-                </h1>
-                <div className="sm:hidden">{badge}</div>
-              </div>
+            <h1 className="sr-only">Mucundh Ramesh</h1>
+            <div className="sm:hidden flex items-center gap-3">
+              <img src={headshotImage} alt="" aria-hidden className="w-11 h-11 rounded-full object-cover object-top shadow-medium shrink-0" />
+              {badge}
             </div>
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
               Building and Scaling GTM with a people, process and technology-first approach
