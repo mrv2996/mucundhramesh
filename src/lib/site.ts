@@ -4,3 +4,6 @@ export const CV_URL: string | null =
 export const EMAIL = "mailto:mucundhramesh@gmail.com";
 export const LINKEDIN = "https://www.linkedin.com/in/mucundh-ramesh";
 export const HACKATHON_URL = "https://share.lightfern.com/e2cfbe69-036f-45d1-b011-6126013e6cf7";
+// Biometrio.earth growth strategy deck (Google Drive).
+export const BIOMETRIO_URL =
+  "https://drive.google.com/file/d/1fVrTx7p09SS59jYrnWgxHZnzD9klxaHN/view?usp=sharing";
