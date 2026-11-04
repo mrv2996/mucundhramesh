@@ -4,7 +4,16 @@ import { LINKEDIN } from "@/lib/site";
 
 // One impactful line per recommendation, quoted verbatim from the full text
 // in RecommendationsSection.tsx. LinkedIn profile is the source of proof.
-const highlights = [
+type Highlight = {
+  id: number;
+  name: string;
+  title: string;
+  company?: string;
+  relationship: string;
+  line: string;
+};
+
+const highlights: Highlight[] = [
   {
     id: 1,
     name: "Victor Falières",
@@ -28,6 +37,13 @@ const highlights = [
     company: "Forvis Mazars Group",
     relationship: "Jean-Philippe was Mucundh's mentor",
     line: "Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE.",
+  },
+  {
+    id: 4,
+    name: "Mey Raksmeythida Oum",
+    title: "Project Lead",
+    relationship: "Mey worked with Mucundh on the same team",
+    line: "This automation would not have been a success without his dedication and market knowledge.",
   },
 ];
 
@@ -92,7 +108,7 @@ const HomeRecommendation = () => {
               <figcaption className="mt-4 text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">{rec.name}</span>
                 <br />
-                {rec.title}, {rec.company}
+                {rec.company ? `${rec.title}, ${rec.company}` : rec.title}
                 <div className="text-xs italic mt-1">{rec.relationship}</div>
               </figcaption>
             </figure>
