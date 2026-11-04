@@ -71,7 +71,7 @@ const work = [
     visual: <div className="font-playfair text-2xl text-primary leading-tight">Analytics</div>,
   },
   {
-    context: "Personal build",
+    context: "Proxymity",
     title: "Web Scraping Agent for Accounts Payable",
     description:
       "Building an intelligent web scraping agent to automate the procurement of accounts payable details, reducing manual data entry and improving accuracy across financial workflows.",
