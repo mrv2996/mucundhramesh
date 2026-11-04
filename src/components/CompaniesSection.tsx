@@ -33,7 +33,7 @@ const companies: Company[] = [
   { name: "Forvis Mazars", domain: "mazars.com", wide: true },
 ];
 
-const logoUrl = ({ domain, theme }: Company) =>
+const logoUrl = ({ domain, theme }: Pick<Company, "domain" | "theme">) =>
   `https://img.logo.dev/${domain}?token=${token}&size=128&format=png&greyscale=true&retina=true${
     theme ? `&theme=${theme}` : ""
   }`;
