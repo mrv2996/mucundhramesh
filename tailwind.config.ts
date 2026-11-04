@@ -47,6 +47,13 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				metric: {
+					DEFAULT: 'hsl(var(--metric))',
+					foreground: 'hsl(var(--metric-foreground))',
+					bg: 'hsl(var(--metric-bg))',
+					border: 'hsl(var(--metric-border))',
+					label: 'hsl(var(--metric-label))'
+				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
