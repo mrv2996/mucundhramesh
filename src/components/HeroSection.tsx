@@ -95,7 +95,7 @@ const HeroSection = () => {
         </div>
 
         {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 grid w-fit grid-cols-3 gap-2 lg:gap-3">
+        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 grid w-4/5 grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
             <li key={m.label} className="metric-card px-3 py-2.5 md:px-3.5 md:py-3">
               <div className="metric-value flex items-baseline gap-1 text-lg md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
