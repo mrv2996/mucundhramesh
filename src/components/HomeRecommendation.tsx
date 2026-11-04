@@ -108,7 +108,7 @@ const HomeRecommendation = () => {
               <figcaption className="mt-4 text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">{rec.name}</span>
                 <br />
-                {rec.title}, {rec.company}
+                {rec.company ? `${rec.title}, ${rec.company}` : rec.title}
                 <div className="text-xs italic mt-1">{rec.relationship}</div>
               </figcaption>
             </figure>
