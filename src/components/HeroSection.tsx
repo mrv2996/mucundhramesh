@@ -41,7 +41,7 @@ const HeroSection = () => {
       role="status"
       tabIndex={0}
       aria-label="Open to opportunities"
-      className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-metric-border bg-metric-bg px-2.5 py-1 text-xs font-medium font-inter text-metric-label animate-status-fade focus-within:animate-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metric focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className="inline-flex min-h-7 items-center gap-1.5 rounded-full px-1 text-xs font-medium font-inter text-foreground animate-status-fade focus-within:animate-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metric focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-metric opacity-50 motion-reduce:animate-none" />
@@ -52,8 +52,7 @@ const HeroSection = () => {
     </span>
   );
   const focus = (
-    <span className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary">
-      <span className="h-2 w-2 shrink-0 rounded-full bg-secondary" aria-hidden />
+    <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wider font-inter text-secondary">
       Strategy & Business Operations · Generalist
     </span>
   );
@@ -63,17 +62,17 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
-              className="inline-flex min-h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
+              className="inline-flex min-h-9 items-center gap-1.5 rounded-md px-2 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
             >
               <Trophy className="h-4 w-4 text-tertiary" />
               Hackathon winner
             </a>
   );
   return (
-    <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
+    <section className="px-6 pt-6 pb-4 lg:pt-8 lg:pb-6">
       <div className="max-w-content mx-auto">
-        <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
-          <div className="flex min-w-0 flex-col gap-5 py-1 lg:gap-6">
+        <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto] gap-4 lg:gap-16 items-center">
+          <div className="flex min-w-0 flex-col gap-5 lg:gap-6">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -110,9 +109,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="hidden sm:flex flex-col items-center justify-center gap-2 lg:justify-self-end">
+          <div className="hidden sm:flex flex-col items-center justify-center gap-2 ">
             {status}
-            <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-56 lg:h-[18rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
+            <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-48 lg:h-[15.5rem] rounded-xl overflow-hidden shadow-medium bg-gradient-primary">
               <img
                 src={headshotImage}
                 alt="Mucundh Ramesh - Strategic operations professional in high-growth tech scale-ups"
@@ -123,15 +122,15 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:w-4/5 lg:gap-4">
+        {/* Impact row */}
+        <ul aria-label="Impact highlights" className="mt-6 lg:mt-8 grid grid-cols-3 divide-x divide-primary-foreground/20 rounded-lg bg-primary text-primary-foreground">
           {metrics.map((m) => (
-            <li key={m.label} className="metric-card px-3 py-2.5 md:px-3.5 md:py-3">
-              <div className="metric-value flex items-baseline gap-1 text-lg md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
+            <li key={m.label} className="px-3 py-3 md:px-6 md:py-3.5">
+              <div className="flex items-baseline gap-1 text-base md:text-xl font-bold font-inter tracking-tight leading-tight">
                 <CountUp value={m.value} />
-                <ArrowUp aria-hidden className="metric-arrow h-3 w-3 md:h-3.5 md:w-3.5 shrink-0" />
+                <ArrowUp aria-hidden className="h-3 w-3 shrink-0 text-tertiary" />
               </div>
-              <div className="metric-label mt-0.5 text-xs md:text-[0.8125rem] leading-snug">{m.label}</div>
+              <div className="mt-0.5 text-xs md:text-sm leading-snug text-primary-foreground/80">{m.label}</div>
             </li>
           ))}
         </ul>      </div>
