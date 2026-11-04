@@ -9,6 +9,12 @@ type Company = {
    * the same row height as the square icons.
    */
   wide?: boolean;
+  /**
+   * Logo.dev's `theme` swap. "dark" returns the dark-lettering-on-light-tile
+   * artwork, which sits on this page's off-white background instead of the
+   * default black tile (L'Oréal).
+   */
+  theme?: "light" | "dark";
 };
 
 const companies: Company[] = [
@@ -16,10 +22,15 @@ const companies: Company[] = [
   { name: "Sweep", domain: "sweep.net" },
   { name: "GE", domain: "ge.com" },
   { name: "Fidelity", domain: "fidelity.com" },
-  { name: "L'Oréal", domain: "loreal.com" },
-  { name: "Transdev", domain: "transdev.com" },
+  { name: "L'Oréal", domain: "loreal.com", theme: "dark" },
+  { name: "Transdev", domain: "transdev.de" },
   { name: "Forvis Mazars", domain: "mazars.com", wide: true },
 ];
+
+const logoUrl = ({ domain, theme }: Company) =>
+  `https://img.logo.dev/${domain}?token=${token}&size=128&format=png&greyscale=true&retina=true${
+    theme ? `&theme=${theme}` : ""
+  }`;
 
 const CompaniesSection = () => (
   <section className="py-8 lg:py-12 bg-background w-full" aria-label="Companies I've worked with">
@@ -27,7 +38,7 @@ const CompaniesSection = () => (
       {companies.map(({ name, domain, wide }) => (
         <li key={domain} className="flex items-center justify-center">
           <img
-            src={`https://img.logo.dev/${domain}?token=${token}&size=128&format=png&greyscale=true&retina=true`}
+            src={logoUrl({ domain, theme: companies.find((c) => c.domain === domain)?.theme })}
             alt={`${name} logo`}
             title={name}
             width={wide ? 92 : 48}
