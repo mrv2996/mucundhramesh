@@ -35,10 +35,10 @@ const logoUrl = ({ domain, theme }: Company) =>
 const CompaniesSection = () => (
   <section className="py-8 lg:py-12 bg-background w-full" aria-label="Companies I've worked with">
     <ul className="flex justify-center items-center gap-6 md:gap-10 flex-wrap px-6">
-      {companies.map(({ name, domain, wide }) => (
+      {companies.map(({ name, domain, wide, theme }) => (
         <li key={domain} className="flex items-center justify-center">
           <img
-            src={logoUrl({ domain, theme: companies.find((c) => c.domain === domain)?.theme })}
+            src={logoUrl({ domain, theme })}
             alt={`${name} logo`}
             title={name}
             width={wide ? 92 : 48}
