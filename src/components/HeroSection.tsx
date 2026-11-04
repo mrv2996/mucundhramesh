@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowUp, Mail, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
+import CompaniesSection from "@/components/CompaniesSection";
 import { CV_URL, EMAIL, HACKATHON_URL } from "@/lib/site";
 
 const metrics = [
@@ -69,7 +70,7 @@ const HeroSection = () => {
             </a>
   );
   return (
-    <section className="px-6 pt-6 pb-4 lg:pt-8 lg:pb-6">
+    <section className="px-6 pt-6 lg:pt-8">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto] gap-4 lg:gap-16 items-center">
           <div className="flex min-w-0 flex-col gap-5 lg:gap-6">
@@ -107,11 +108,22 @@ const HeroSection = () => {
                 <a href={EMAIL}><Mail className="mr-1 h-4 w-4" />Get in Touch</a>
               </Button>
             </div>
+            <ul aria-label="Impact highlights" className="grid grid-cols-3 gap-4 border-t border-border pt-4 lg:pt-5">
+              {metrics.map((m) => (
+                <li key={m.label}>
+                  <div className="flex items-baseline gap-1 text-base md:text-xl font-bold font-inter tracking-tight leading-tight text-primary">
+                    <CountUp value={m.value} />
+                    <ArrowUp aria-hidden className="h-3 w-3 shrink-0 text-secondary" />
+                  </div>
+                  <div className="mt-0.5 text-xs md:text-sm leading-snug text-muted-foreground">{m.label}</div>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-2 ">
             {status}
-            <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-48 lg:h-[15.5rem] rounded-xl overflow-hidden shadow-medium bg-gradient-primary">
+            <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-48 lg:h-[15.5rem] rounded-xl overflow-hidden bg-gradient-primary">
               <img
                 src={headshotImage}
                 alt="Mucundh Ramesh - Strategic operations professional in high-growth tech scale-ups"
@@ -122,18 +134,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Impact row */}
-        <ul aria-label="Impact highlights" className="mt-6 lg:mt-8 grid grid-cols-3 divide-x divide-primary-foreground/20 rounded-lg bg-primary text-primary-foreground">
-          {metrics.map((m) => (
-            <li key={m.label} className="px-3 py-3 md:px-6 md:py-3.5">
-              <div className="flex items-baseline gap-1 text-base md:text-xl font-bold font-inter tracking-tight leading-tight">
-                <CountUp value={m.value} />
-                <ArrowUp aria-hidden className="h-3 w-3 shrink-0 text-tertiary" />
-              </div>
-              <div className="mt-0.5 text-xs md:text-sm leading-snug text-primary-foreground/80">{m.label}</div>
-            </li>
-          ))}
-        </ul>      </div>
+        <CompaniesSection />      </div>
     </section>
   );
 };

@@ -30,7 +30,7 @@ const selected = [
 ];
 
 const SelectedWorkSection = () => (
-  <section id="work" className="px-6 pt-4 lg:pt-6 pb-section">
+  <section id="work" className="px-6 pt-6 lg:pt-8 pb-section">
     <div className="max-w-content mx-auto">
       <div className="flex items-baseline justify-between gap-4 mb-2">
         <h2 className="font-inter text-2xl font-semibold text-primary">Selected work</h2>
