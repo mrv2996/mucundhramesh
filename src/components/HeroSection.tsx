@@ -95,14 +95,14 @@ const HeroSection = () => {
         </div>
 
         {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="mt-6 lg:mt-8 grid grid-cols-3 gap-3 lg:gap-[var(--space-lg)]">
+        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 grid grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
-            <li key={m.label} className="rounded-xl border bg-card p-3 md:p-5 shadow-soft">
-              <div className="flex items-center gap-1 text-xl lg:text-3xl font-bold text-primary font-inter">
+            <li key={m.label} className="metric-card px-3 py-2.5 md:px-4 md:py-3">
+              <div className="metric-value flex items-baseline gap-1 text-lg md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
                 <CountUp value={m.value} />
-                <ArrowUp aria-hidden className="h-4 w-4 lg:h-5 lg:w-5 text-secondary shrink-0" />
+                <ArrowUp aria-hidden className="metric-arrow h-3 w-3 md:h-3.5 md:w-3.5 shrink-0" />
               </div>
-              <div className="mt-1 text-sm text-muted-foreground">{m.label}</div>
+              <div className="metric-label mt-0.5 text-xs md:text-[0.8125rem] leading-snug">{m.label}</div>
             </li>
           ))}
         </ul>      </div>
