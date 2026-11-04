@@ -1,4 +1,5 @@
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { journeyItems } from "@/lib/journey";
 import { CV_URL } from "@/lib/site";
@@ -29,23 +30,28 @@ const JourneySection = () => {
         <div className="grid gap-9 min-[651px]:grid-cols-[minmax(0,65fr)_minmax(0,35fr)] items-start">
           <div className="min-w-0">
             <h3 className="font-inter text-lg font-semibold text-foreground mb-2">Experience</h3>
-            <Accordion type="single" collapsible>
+            <ul className="divide-y">
               {work.map((item) => (
-                <AccordionItem key={item.company} value={item.company}>
-                  <AccordionTrigger className="gap-4 py-4 text-left hover:no-underline [&>svg]:hidden group">
-                    <div className="flex-1 min-w-0">
-                      <div className="font-inter text-base lg:text-lg font-semibold text-foreground">{item.title}</div>
-                      <div className="text-sm text-muted-foreground mt-1">{item.company} / {item.location}</div>
-                    </div>
+                <li key={item.company} className="py-4">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h4 className="font-inter text-base lg:text-lg font-semibold text-primary">{item.company}</h4>
                     <span className="text-sm text-muted-foreground whitespace-nowrap">{item.period}</span>
-                    <PlusMinus />
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    {item.companyDetail && <p className="text-base text-muted-foreground">{item.companyDetail}</p>}
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                  <div className="font-inter text-base text-foreground mt-0.5">{item.title}</div>
+                  {(item.summary || item.companyDetail) && (
+                    <p className="text-sm text-muted-foreground mt-1">{item.summary ?? item.companyDetail}</p>
+                  )}
+                  {item.caseStudy && (
+                    <Link
+                      to={item.caseStudy.url}
+                      className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-secondary hover:underline"
+                    >
+                      {item.caseStudy.label} <ArrowUpRight className="h-3.5 w-3.5 shrink-0" />
+                    </Link>
+                  )}
+                </li>
               ))}
-            </Accordion>
+            </ul>
           </div>
 
           <aside className="rounded-xl bg-muted/40 border p-6 min-w-0">
