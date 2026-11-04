@@ -51,6 +51,12 @@ const HeroSection = () => {
       <span className="sr-only">Available for new roles.</span>
     </span>
   );
+  const focus = (
+    <span className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary">
+      <span className="h-2 w-2 shrink-0 rounded-full bg-secondary" aria-hidden />
+      Strategy & Business Operations · Generalist
+    </span>
+  );
   const badge = (
 <a
               href={HACKATHON_URL}
