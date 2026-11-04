@@ -55,7 +55,7 @@ const HeroSection = () => {
           <div className="space-y-3 min-w-0">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden flex items-center gap-3">
-              <img src={headshotImage} alt="" aria-hidden className="w-16 h-20 rounded-xl object-cover object-top shadow-medium shrink-0" />
+              <img src={headshotImage} alt="" aria-hidden className="w-11 h-11 rounded-full object-cover object-top shadow-medium shrink-0" />
               {badge}
             </div>
             <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
