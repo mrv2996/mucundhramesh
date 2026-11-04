@@ -1,6 +1,5 @@
-import { ArrowLeft, ArrowRight, Linkedin } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { LINKEDIN } from "@/lib/site";
 
 // One impactful line per recommendation, quoted verbatim from the full text
 // in RecommendationsSection.tsx. LinkedIn profile is the source of proof.
@@ -16,6 +15,14 @@ type Highlight = {
 const highlights: Highlight[] = [
   {
     id: 1,
+    name: "Mey Raksmeythida Oum",
+    title: "Project Lead",
+    company: "Proxymity",
+    relationship: "Mey worked with Mucundh on the same team",
+    line: "This automation would not have been a success without his dedication and market knowledge.",
+  },
+  {
+    id: 2,
     name: "Victor Falières",
     title: "Partnerships Manager",
     company: "SWEEP",
@@ -23,7 +30,7 @@ const highlights: Highlight[] = [
     line: "He also took initiative by proposing and implementing actions that helped improve our processes.",
   },
   {
-    id: 2,
+    id: 3,
     name: "Marcia Dantas de Lima",
     title: "Head of Business Development",
     company: "biometrio.earth",
@@ -31,19 +38,12 @@ const highlights: Highlight[] = [
     line: "I can recommend especially, his ability to use data to increase conversion and retention, and unlock product decisions.",
   },
   {
-    id: 3,
+    id: 4,
     name: "Jean-Philippe Kervadec",
     title: "Group Business Controller",
     company: "Forvis Mazars Group",
     relationship: "Jean-Philippe was Mucundh's mentor",
     line: "Mucundh was one of the most involved in that project and he brought his IT vision thanks to his previous experience at GE.",
-  },
-  {
-    id: 4,
-    name: "Mey Raksmeythida Oum",
-    title: "Project Lead",
-    relationship: "Mey worked with Mucundh on the same team",
-    line: "This automation would not have been a success without his dedication and market knowledge.",
   },
 ];
 
@@ -62,15 +62,6 @@ const HomeRecommendation = () => {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="font-inter text-2xl font-semibold text-primary">Working with me</h2>
-            <a
-              href={LINKEDIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-1.5 text-sm text-secondary hover:text-primary transition-colors"
-            >
-              <Linkedin className="h-4 w-4" aria-hidden="true" />
-              Verified on LinkedIn
-            </a>
           </div>
           <div className="flex gap-2">
             <Button
@@ -94,7 +85,7 @@ const HomeRecommendation = () => {
 
         <div
           id="working-with-me-track"
-          className="mt-6 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 [scrollbar-width:thin]"
+          className="mt-6 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {highlights.map((rec) => (
             <figure
