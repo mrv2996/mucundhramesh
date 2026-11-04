@@ -40,14 +40,15 @@ const HeroSection = () => {
     <span
       role="status"
       tabIndex={0}
+      aria-label="Open to opportunities"
       className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-metric-border bg-metric-bg px-2.5 py-1 text-xs font-medium font-inter text-metric-label animate-status-fade focus-within:animate-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metric focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-metric opacity-50 motion-reduce:animate-none" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-metric" />
       </span>
-      <span aria-hidden>Open to opportunities</span>
-      <span className="sr-only">Open to opportunities - available for new roles.</span>
+      Open to opportunities
+      <span className="sr-only">Available for new roles.</span>
     </span>
   );
   const badge = (
