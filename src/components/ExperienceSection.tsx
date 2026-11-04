@@ -50,9 +50,9 @@ const JourneySection = () => {
 
           <aside className="rounded-xl bg-muted/40 border p-6 min-w-0">
             <h3 className="font-inter text-lg font-semibold text-foreground mb-2">Education</h3>
-            <Accordion type="single" collapsible className="education-accordion">
+            <Accordion type="single" collapsible>
               {education.map((item) => (
-                <AccordionItem key={item.company} value={item.company} className="border-b-0 last:border-b-0">
+                <AccordionItem key={item.company} value={item.company} className="last:border-b-0">
                   <AccordionTrigger className="gap-3 py-4 text-left hover:no-underline [&>svg]:hidden group">
                     <div className="flex-1 min-w-0">
                       <div className="font-inter text-base font-semibold text-foreground">{item.company}</div>
