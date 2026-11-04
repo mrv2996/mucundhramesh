@@ -111,7 +111,8 @@ export default {
 				'4xl': 'var(--text-4xl)',
 			},
 			maxWidth: {
-				'content': 'var(--content-max-width)'
+				'content': 'var(--content-max-width)',
+				'chrome': 'var(--chrome-max-width)'
 			},
 			spacing: {
 				'section': 'var(--section-padding)'
