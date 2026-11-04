@@ -63,7 +63,7 @@ const CaseStudies = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="container py-section">
+        <section className="container max-w-content py-section">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Case Studies
@@ -75,7 +75,7 @@ const CaseStudies = () => {
         </section>
 
         {/* Case Studies Grid */}
-        <section className="container pb-24">
+        <section className="container max-w-content pb-24">
           <div className="max-w-4xl mx-auto space-y-12">
             {caseStudies.map((study, index) => (
               <Link 

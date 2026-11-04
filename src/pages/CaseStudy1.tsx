@@ -58,7 +58,7 @@ ORDER BY
       
       <main>
         {/* Hero Section */}
-        <section className="container py-section">
+        <section className="container max-w-content py-section">
           <div className="max-w-4xl mx-auto">
             <Link to="/work" className="inline-flex min-h-11 items-center gap-2 text-base font-medium text-primary hover:underline mb-4"><ArrowLeft className="h-4 w-4" />Back to case studies</Link>
             <div className="space-y-6 text-center mb-12">
@@ -115,7 +115,7 @@ ORDER BY
         </section>
 
         {/* Problem Statement */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
               <CardHeader>
@@ -151,7 +151,7 @@ ORDER BY
         </section>
 
         {/* Solution Overview */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">3-Step Process Optimization</h2>
             
@@ -190,7 +190,7 @@ ORDER BY
         </section>
 
         {/* Step 1: CRM Hygiene */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Step 1: CRM Hygiene</h2>
             
@@ -254,7 +254,7 @@ ORDER BY
         </section>
 
         {/* Step 2: SQL Solution Logic */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Step 2: SQL Solution Logic</h2>
             
@@ -292,7 +292,7 @@ ORDER BY
         </section>
 
         {/* Zapier Integration */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Step 3: Zapier Workflow</h2>
             
@@ -345,7 +345,7 @@ ORDER BY
         </section>
 
         {/* Results */}
-        <section className="container pb-24">
+        <section className="container max-w-content pb-24">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Measurable Results</h2>
             

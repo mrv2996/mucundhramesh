@@ -35,7 +35,7 @@ const CaseStudy2 = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="container py-section">
+        <section className="container max-w-content py-section">
           <div className="max-w-4xl mx-auto">
             <Link to="/work" className="inline-flex min-h-11 items-center gap-2 text-base font-medium text-primary hover:underline mb-4"><ArrowLeft className="h-4 w-4" />Back to case studies</Link>
             <div className="space-y-6 text-center mb-12">
@@ -88,7 +88,7 @@ const CaseStudy2 = () => {
         </section>
 
         {/* Problem Statement */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
               <CardHeader>
@@ -128,7 +128,7 @@ const CaseStudy2 = () => {
         </section>
 
         {/* Crossbeam Interface */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
               <CardHeader>
@@ -178,7 +178,7 @@ const CaseStudy2 = () => {
         </section>
 
         {/* AI Agent Solution */}
-        <section className="container pb-16">
+        <section className="container max-w-content pb-16">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20">
               <CardHeader>

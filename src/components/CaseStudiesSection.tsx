@@ -71,7 +71,7 @@ const CaseStudiesSection = () => {
   ];
 
   return (
-    <section id="case-studies" className="container py-section">
+    <section id="case-studies" className="container max-w-content py-section">
       <div className="text-center space-y-4 mb-[var(--section-heading-gap)]">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Case Studies</h2>
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
