@@ -1,27 +1,42 @@
 const token = import.meta.env.VITE_LOVABLE_CONNECTOR_LOGO_DEV_API_KEY;
 
-const companies = [
-  ["Proxymity", "proxymity.io"],
-  ["Sweep", "sweep.io"],
-  ["GE", "ge.com"],
-  ["Fidelity", "fidelity.com"],
-  ["L'Oréal", "loreal.com"],
-  ["Transdev", "transdev.com"],
-] as const;
+type Company = {
+  name: string;
+  domain: string;
+  /**
+   * Wordmarks (e.g. Forvis Mazars) sit inside a wide box that crops the
+   * square canvas Logo.dev returns, so the lettering stays readable at
+   * the same row height as the square icons.
+   */
+  wide?: boolean;
+};
+
+const companies: Company[] = [
+  { name: "Proxymity", domain: "proxymity.io" },
+  { name: "Sweep", domain: "sweep.net" },
+  { name: "GE", domain: "ge.com" },
+  { name: "Fidelity", domain: "fidelity.com" },
+  { name: "L'Oréal", domain: "loreal.com" },
+  { name: "Transdev", domain: "transdev.com" },
+  { name: "Forvis Mazars", domain: "mazars.com", wide: true },
+];
 
 const CompaniesSection = () => (
   <section className="py-8 lg:py-12 bg-background w-full" aria-label="Companies I've worked with">
     <ul className="flex justify-center items-center gap-6 md:gap-10 flex-wrap px-6">
-      {companies.map(([name, domain]) => (
-        <li key={domain}>
+      {companies.map(({ name, domain, wide }) => (
+        <li key={domain} className="flex items-center justify-center">
           <img
             src={`https://img.logo.dev/${domain}?token=${token}&size=128&format=png&greyscale=true&retina=true`}
             alt={`${name} logo`}
             title={name}
-            width={48}
+            width={wide ? 92 : 48}
             height={48}
             loading="lazy"
-            className="h-10 w-10 md:h-12 md:w-12 rounded-lg object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className={[
+              "h-10 md:h-12 rounded-lg grayscale opacity-60 hover:opacity-100 transition-opacity duration-300",
+              wide ? "w-[76px] md:w-[92px] object-cover" : "w-10 md:w-12 object-contain",
+            ].join(" ")}
           />
         </li>
       ))}
