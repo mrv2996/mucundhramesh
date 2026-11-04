@@ -24,7 +24,7 @@ const highlights: Highlight[] = [
   {
     id: 2,
     name: "Victor Falières",
-    title: "Partnerships Manager",
+    title: "Partnerships Director",
     company: "SWEEP",
     relationship: "Victor managed Mucundh directly",
     line: "He also took initiative by proposing and implementing actions that helped improve our processes.",
@@ -64,20 +64,10 @@ const HomeRecommendation = () => {
             <h2 className="font-inter text-2xl font-semibold text-primary">Working with me</h2>
           </div>
           <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="icon"
-              aria-label="Previous recommendation"
-              onClick={() => scrollBy(-1)}
-            >
+            <Button variant="outline" size="icon" aria-label="Previous recommendation" onClick={() => scrollBy(-1)}>
               <ArrowLeft className="h-4 w-4" />
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              aria-label="Next recommendation"
-              onClick={() => scrollBy(1)}
-            >
+            <Button variant="outline" size="icon" aria-label="Next recommendation" onClick={() => scrollBy(1)}>
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
@@ -93,9 +83,7 @@ const HomeRecommendation = () => {
               data-card
               className="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%-2rem)/3)] rounded-lg border bg-card p-[var(--space-md)] flex flex-col"
             >
-              <blockquote className="text-base leading-relaxed text-foreground flex-1">
-                “{rec.line}”
-              </blockquote>
+              <blockquote className="text-base leading-relaxed text-foreground flex-1">“{rec.line}”</blockquote>
               <figcaption className="mt-4 text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">{rec.name}</span>
                 <br />
