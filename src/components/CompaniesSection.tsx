@@ -41,7 +41,7 @@ const logoUrl = ({ domain, theme }: Company) =>
 const CompaniesSection = () => (
   <section className="py-8 lg:py-12 bg-background w-full" aria-label="Companies I've worked with">
     <ul className="flex justify-center items-center gap-6 md:gap-10 flex-wrap px-6">
-      {companies.map(({ name, domain, wide, theme }) => (
+      {companies.map(({ name, domain, wide, theme, liftTile }) => (
         <li key={domain} className="flex items-center justify-center">
           <img
             src={logoUrl({ domain, theme })}
@@ -53,6 +53,7 @@ const CompaniesSection = () => (
             className={[
               "h-10 md:h-12 rounded-lg grayscale opacity-60 hover:opacity-100 transition-opacity duration-300",
               wide ? "w-[76px] md:w-[92px] object-cover" : "w-10 md:w-12 object-contain",
+              liftTile ? "brightness-[1.12]" : "",
             ].join(" ")}
           />
         </li>
