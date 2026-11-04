@@ -42,20 +42,20 @@ const logoUrl = ({ domain, theme }: Pick<Company, "domain" | "theme">) =>
   }`;
 
 const CompaniesSection = () => (
-  <section className="py-10 lg:py-14 bg-background w-full" aria-label="Companies I've worked with">
-    <ul className="flex justify-center items-center gap-8 md:gap-14 flex-wrap px-6">
+  <section className="py-9 lg:py-13 bg-background w-full" aria-label="Companies I've worked with">
+    <ul className="flex justify-center items-center gap-7 md:gap-12 flex-wrap px-6">
       {companies.map(({ name, domain, wide, theme, liftTile }) => (
         <li key={domain} className="flex items-center justify-center">
           <img
             src={logoUrl({ domain, theme })}
             alt={`${name} logo`}
             title={name}
-            width={wide ? 120 : 64}
-            height={64}
+            width={wide ? 106 : 56}
+            height={56}
             loading="lazy"
             className={[
-              "h-14 md:h-16 rounded-lg grayscale opacity-60 hover:opacity-100 transition-opacity duration-300",
-              wide ? "w-[100px] md:w-[120px] object-cover" : "w-14 md:w-16 object-contain",
+              "h-12 md:h-14 rounded-lg grayscale opacity-60 hover:opacity-100 transition-opacity duration-300",
+              wide ? "w-[88px] md:w-[106px] object-cover" : "w-12 md:w-14 object-contain",
               liftTile ? "brightness-[1.12]" : "",
             ].join(" ")}
           />
