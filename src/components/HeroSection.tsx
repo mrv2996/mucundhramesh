@@ -32,7 +32,14 @@ const CountUp = ({ value }: { value: string }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!match) return <span>{value}</span>;
-  return <span ref={ref} aria-label={value}><span aria-hidden>{n}{match[2]}</span></span>;
+  return (
+    <span ref={ref} aria-label={value}>
+      <span aria-hidden>
+        {n}
+        {match[2]}
+      </span>
+    </span>
+  );
 };
 
 const HeroSection = () => {
@@ -58,16 +65,16 @@ const HeroSection = () => {
     </span>
   );
   const badge = (
-<a
-              href={HACKATHON_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
-              className="inline-flex min-h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
-            >
-              <Trophy className="h-4 w-4 text-tertiary" />
-              Hackathon winner
-            </a>
+    <a
+      href={HACKATHON_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
+      className="inline-flex min-h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
+    >
+      <Trophy className="h-4 w-4 text-tertiary" />
+      Hackathon winner
+    </a>
   );
   return (
     <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
@@ -78,7 +85,12 @@ const HeroSection = () => {
             <div className="sm:hidden space-y-2">
               {status}
               <div className="flex items-center gap-3">
-                <img src={headshotImage} alt="" aria-hidden className="w-11 h-11 rounded-full object-cover object-top shadow-medium shrink-0" />
+                <img
+                  src={headshotImage}
+                  alt=""
+                  aria-hidden
+                  className="w-11 h-11 rounded-full object-cover object-top shadow-medium shrink-0"
+                />
                 {badge}
               </div>
             </div>
@@ -90,22 +102,34 @@ const HeroSection = () => {
                 Business impact.
               </h2>
               <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                Experience across operations, partnerships and commercial analysis. An engineering background that
-                connects the work.
+                Experience across operations, partnerships and enablement in high-growth Tech Scaleups. An engineering
+                background that connects the work.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-3 pt-0">
               <Button className="font-semibold" asChild>
-                <Link to="/#work">Explore my work<ArrowDown className="ml-1 h-4 w-4" /></Link>
+                <Link to="/#work">
+                  Explore my work
+                  <ArrowDown className="ml-1 h-4 w-4" />
+                </Link>
               </Button>
               {CV_URL && (
                 <Button variant="outline" className="font-semibold" asChild>
-                  <a href={CV_URL} target="_blank" rel="noopener noreferrer">View CV</a>
+                  <a href={CV_URL} target="_blank" rel="noopener noreferrer">
+                    View CV
+                  </a>
                 </Button>
               )}
-              <Button variant="outline" className="font-semibold border-secondary text-primary hover:bg-secondary hover:text-secondary-foreground" asChild>
-                <a href={EMAIL}><Mail className="mr-1 h-4 w-4" />Get in Touch</a>
+              <Button
+                variant="outline"
+                className="font-semibold border-secondary text-primary hover:bg-secondary hover:text-secondary-foreground"
+                asChild
+              >
+                <a href={EMAIL}>
+                  <Mail className="mr-1 h-4 w-4" />
+                  Get in Touch
+                </a>
               </Button>
             </div>
           </div>
@@ -122,7 +146,6 @@ const HeroSection = () => {
             {badge}
           </div>
         </div>
-
         {/* Impact blocks */}
         <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
@@ -134,7 +157,8 @@ const HeroSection = () => {
               <div className="metric-label mt-0.5 text-xs md:text-[0.8125rem] leading-snug">{m.label}</div>
             </li>
           ))}
-        </ul>      </div>
+        </ul>{" "}
+      </div>
     </section>
   );
 };
