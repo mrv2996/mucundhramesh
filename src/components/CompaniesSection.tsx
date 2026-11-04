@@ -42,8 +42,8 @@ const logoUrl = ({ domain, theme }: Pick<Company, "domain" | "theme">) =>
   }`;
 
 const CompaniesSection = () => (
-  <section className="py-9 lg:py-13 companies-band w-full px-6 lg:px-10" aria-label="Companies I've worked with">
-    <ul className="flex w-full justify-center items-center gap-7 md:gap-12 flex-wrap lg:flex-nowrap lg:justify-between">
+  <section className="py-9 lg:py-13 w-full px-6 lg:px-10 bg-background" aria-label="Companies I've worked with">
+    <ul className="mx-auto flex w-full max-w-content justify-center items-center gap-7 md:gap-12 flex-wrap lg:flex-nowrap lg:justify-between">
       {companies.map(({ name, domain, wide, theme, liftTile }) => (
         <li key={domain} className="flex items-center justify-center">
           <img
