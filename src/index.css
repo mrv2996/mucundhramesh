@@ -35,6 +35,7 @@ All colors MUST be HSL.
 
     /* Impact metric green - hero impact blocks only */
     --metric: 161 94% 30%;
+    --metric-foreground: 0 0% 100%;
     --metric-border: 144 63% 88%;
     --metric-bg: 146 70% 96%;
     --metric-label: 152 45% 38%;

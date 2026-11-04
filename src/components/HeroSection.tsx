@@ -36,6 +36,15 @@ const CountUp = ({ value }: { value: string }) => {
 };
 
 const HeroSection = () => {
+  const status = (
+    <span className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-metric-border bg-metric-bg px-2.5 py-1 text-xs font-medium font-inter text-metric-label">
+      <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-metric opacity-50 motion-reduce:animate-none" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-metric" />
+      </span>
+      Open to opportunities
+    </span>
+  );
   const badge = (
 <a
               href={HACKATHON_URL}
