@@ -42,7 +42,12 @@ const JourneySection = () => {
                     <PlusMinus />
                   </AccordionTrigger>
                   <AccordionContent>
-                    {item.companyDetail && <p className="text-base text-muted-foreground">{item.companyDetail}</p>}
+                    {item.summary && <p className="text-base text-muted-foreground">{item.summary}</p>}
+                    {item.relatedCaseStudy && (
+                      <Link to={item.relatedCaseStudy.url} className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-secondary hover:underline">
+                        {item.relatedCaseStudy.label} <ExternalLink className="h-3.5 w-3.5" />
+                      </Link>
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               ))}
