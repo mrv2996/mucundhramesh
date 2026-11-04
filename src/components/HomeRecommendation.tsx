@@ -4,7 +4,16 @@ import { LINKEDIN } from "@/lib/site";
 
 // One impactful line per recommendation, quoted verbatim from the full text
 // in RecommendationsSection.tsx. LinkedIn profile is the source of proof.
-const highlights = [
+type Highlight = {
+  id: number;
+  name: string;
+  title: string;
+  company?: string;
+  relationship: string;
+  line: string;
+};
+
+const highlights: Highlight[] = [
   {
     id: 1,
     name: "Victor Falières",
