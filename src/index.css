@@ -99,7 +99,7 @@ All colors MUST be HSL.
     --content-max-width: 960px;
 
     /* Header/footer chrome width - slightly wider than the reading column */
-    --chrome-max-width: 1024px;
+    --chrome-max-width: 1080px;
 
     --sidebar-background: 0 0% 98%;
 
