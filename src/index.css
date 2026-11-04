@@ -194,3 +194,11 @@ All colors MUST be HSL.
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .animate-ticker { animation: ticker 20s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .animate-ticker { animation: none; } }
+
+/* "Open to opportunities" pill - slow fade so the eye catches it */
+@keyframes status-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.animate-status-fade { animation: status-fade 2.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-status-fade { animation: none; } }
