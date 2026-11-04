@@ -9,7 +9,7 @@ const selected = [
     description: "Eliminated 7-8 hours of weekly manual work with an intelligent automation pipeline connecting Excel, Salesforce CRM, and SQL operations.",
     to: "/case-studies/partner-activation-automation",
     action: "Read full case study",
-    visual: <div className="flex items-baseline gap-2"><span className="font-playfair text-3xl text-primary">7-8</span><span className="text-base text-foreground">hrs/week</span><span className="text-sm text-muted-foreground">Time Saved</span></div>,
+    visual: <div className="flex items-baseline gap-2"><span className="font-inter text-3xl text-primary">7-8</span><span className="text-base text-foreground">hrs/week</span><span className="text-sm text-muted-foreground">Time Saved</span></div>,
   },
   {
     context: "Proxymity",
@@ -25,7 +25,7 @@ const selected = [
     description: "Revenue growth and scaling strategy for biometrio.earth, a German green tech startup focused on sustainable technology solutions",
     href: "https://drive.google.com/file/d/1fVrTx7p09SS59jYrnWgxHZnzD9klxaHN/view?usp=sharing",
     action: "View Project",
-    visual: <div className="font-playfair text-2xl text-primary leading-tight">Strategy</div>,
+    visual: <div className="font-inter text-2xl text-primary leading-tight">Strategy</div>,
   },
 ];
 

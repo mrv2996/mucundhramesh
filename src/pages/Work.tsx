@@ -18,7 +18,7 @@ const work = [
     action: "Read full case study",
     visual: (
       <div className="flex items-baseline gap-2">
-        <span className="font-playfair text-3xl text-primary">7-8</span>
+        <span className="font-inter text-3xl text-primary">7-8</span>
         <span className="text-base text-foreground">hrs/week</span>
         <span className="text-sm text-muted-foreground">Time Saved</span>
       </div>
@@ -46,7 +46,7 @@ const work = [
     action: "Read full case study",
     visual: (
       <div className="flex items-baseline gap-2">
-        <span className="font-playfair text-3xl text-primary">$14K</span>
+        <span className="font-inter text-3xl text-primary">$14K</span>
         <span className="text-base text-foreground">/year</span>
         <span className="text-sm text-muted-foreground">Licenses Replaced</span>
       </div>
@@ -59,7 +59,7 @@ const work = [
       "Revenue growth and scaling strategy for biometrio.earth, a German green tech startup focused on sustainable technology solutions",
     href: BIOMETRIO_URL,
     action: "View Project",
-    visual: <div className="font-playfair text-2xl text-primary leading-tight">Strategy</div>,
+    visual: <div className="font-inter text-2xl text-primary leading-tight">Strategy</div>,
   },
   {
     context: "SRM · Fidelity Investments ",
@@ -68,7 +68,7 @@ const work = [
       "UI test scenario development and analysis for feature development of an online trading application platform",
     href: "https://docs.google.com/spreadsheets/d/1K_9GWb0-JDUaYN9VBhi5mFJundZaV20s/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true",
     action: "View Project",
-    visual: <div className="font-playfair text-2xl text-primary leading-tight">Analytics</div>,
+    visual: <div className="font-inter text-2xl text-primary leading-tight">Analytics</div>,
   },
   {
     context: "Proxymity",
@@ -78,7 +78,7 @@ const work = [
     action: "Case study coming soon",
     visual: (
       <div className="flex items-baseline gap-2">
-        <span className="font-playfair text-2xl text-secondary leading-tight">In Progress</span>
+        <span className="font-inter text-2xl text-secondary leading-tight">In Progress</span>
       </div>
     ),
   },

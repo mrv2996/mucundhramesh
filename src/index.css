@@ -178,6 +178,17 @@ All colors MUST be HSL.
   .metric-value { color: hsl(var(--metric)); }
   .metric-arrow { color: hsl(var(--metric) / 0.6); }
   .metric-label { color: hsl(var(--metric-label)); }
+
+  /* Companies band - white fades into the grey strip and back out again */
+  .companies-band {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(var(--background)) 0%,
+      hsl(var(--muted)) 32%,
+      hsl(var(--muted)) 68%,
+      hsl(var(--background)) 100%
+    );
+  }
 }
 
 /* Optimized scroll animation only */
