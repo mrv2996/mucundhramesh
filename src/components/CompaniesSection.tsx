@@ -15,6 +15,12 @@ type Company = {
    * default black tile (L'Oréal).
    */
   theme?: "light" | "dark";
+  /**
+   * Logo.dev PNGs are opaque, so a logo can arrive on its own near-white
+   * tile that reads as a faint box on this page. Brightness lifts that
+   * tile to the page colour while leaving the lettering dark (L'Oréal).
+   */
+  liftTile?: boolean;
 };
 
 const companies: Company[] = [
@@ -22,7 +28,7 @@ const companies: Company[] = [
   { name: "Sweep", domain: "sweep.net" },
   { name: "GE", domain: "ge.com" },
   { name: "Fidelity", domain: "fidelity.com" },
-  { name: "L'Oréal", domain: "loreal.com", theme: "dark" },
+  { name: "L'Oréal", domain: "loreal.com", theme: "dark", liftTile: true },
   { name: "Transdev", domain: "transdev.de" },
   { name: "Forvis Mazars", domain: "mazars.com", wide: true },
 ];
