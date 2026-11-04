@@ -5,7 +5,8 @@ export const journeyItems: any[] = [
     {
       title: "Operations Associate",
       company: "PROXYMITY",
-      companyDetail: "Fintech | Assets & Securities Servicing",
+      summary: "Fintech operations and customer-onboarding workflows.",
+      relatedCaseStudy: { label: "Related case study", url: "/case-studies/sec-filings-onboarding" },
       period: "Oct 2025 - Present",
       location: "London, United Kingdom",
       type: "work",
@@ -15,7 +16,8 @@ export const journeyItems: any[] = [
     {
       title: "Partner Operations Specialist",
       company: "SWEEP",
-      companyDetail: "Venture-Backed B2B SaaS | Partnerships",
+      summary: "Partner enablement, CRM workflows and operational delivery.",
+      relatedCaseStudy: { label: "Related case study", url: "/case-studies/partner-activation-automation" },
       period: "Jan 2025 - Aug 2025",
       location: "London, United Kingdom",
       type: "work",
@@ -36,7 +38,7 @@ export const journeyItems: any[] = [
     {
       title: "Strategy Analyst Intern",
       company: "TRANSDEV",
-      companyDetail: "Commercial Strategy & Mobility Advisory",
+      summary: "Commercial strategy and mobility advisory, Paris.",
       period: "Jan 2023 - Jul 2023",
       location: "Paris, France",
       type: "work",
@@ -46,7 +48,7 @@ export const journeyItems: any[] = [
     {
       title: "Financial Analyst Intern",
       company: "L'ORÉAL",
-      companyDetail: "Worldwide Beauty Tech",
+      summary: "Financial analysis in a global beauty business, Paris.",
       period: "Jul 2022 - Dec 2022",
       location: "Paris, France",
       type: "work",
@@ -56,7 +58,7 @@ export const journeyItems: any[] = [
     {
       title: "Software Engineer",
       company: "GENERAL ELECTRIC (GE)",
-      companyDetail: "Gas Power Energy Generation",
+      summary: "An engineering foundation I now apply to business analysis, enablement and solution design.",
       period: "Jul 2018 - Jun 2021",
       location: "Bengaluru, India",
       type: "work",
