@@ -73,7 +73,7 @@ const HeroSection = () => {
     <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
-          <div className="flex min-w-0 flex-col gap-5 py-1 lg:gap-6">
+          <div className="flex min-w-0 flex-col justify-center gap-5 py-1 lg:gap-6">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -112,7 +112,7 @@ const HeroSection = () => {
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-2 lg:justify-self-end">
             {status}
-            <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-56 lg:h-[18rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
+            <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-48 lg:h-[15rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
               <img
                 src={headshotImage}
                 alt="Mucundh Ramesh - Strategic operations professional in high-growth tech scale-ups"
@@ -124,7 +124,7 @@ const HeroSection = () => {
         </div>
 
         {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:w-4/5 lg:gap-4">
+        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
             <li key={m.label} className="metric-card px-3 py-2.5 md:px-3.5 md:py-3">
               <div className="metric-value flex items-baseline gap-1 text-lg md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
