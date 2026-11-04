@@ -73,7 +73,7 @@ const HeroSection = () => {
     <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
-          <div className="flex min-w-0 flex-col justify-between gap-6 py-1 lg:gap-8">
+          <div className="flex min-w-0 flex-col gap-5 py-1 lg:gap-6">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -84,7 +84,7 @@ const HeroSection = () => {
             </div>
             <div className="space-y-3 lg:space-y-4">
               {focus}
-              <h2 className="font-playfair text-2xl lg:text-3xl font-semibold text-primary leading-[1.2]">
+              <h2 className="font-inter text-2xl lg:text-3xl font-semibold text-primary leading-[1.2]">
                 Engineering roots.
                 <br />
                 Business impact.
