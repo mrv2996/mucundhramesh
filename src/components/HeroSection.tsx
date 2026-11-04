@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ExternalLink, Mail, Trophy } from "lucide-react";
+import { ArrowDown, ArrowUp, Mail, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
-import { CV_URL, EMAIL, HACKATHON_URL, LINKEDIN } from "@/lib/site";
+import { CV_URL, EMAIL, HACKATHON_URL } from "@/lib/site";
 
 const metrics = [
   { value: "7-8 hrs/week", label: "manual work removed" },
@@ -42,7 +42,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
-              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-primary px-3 text-sm font-semibold font-inter text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
             >
               <Trophy className="h-4 w-4 text-tertiary" />
               Hackathon winner
@@ -79,9 +79,6 @@ const HeroSection = () => {
               <Button variant="outline" className="font-semibold border-secondary text-primary hover:bg-secondary hover:text-secondary-foreground" asChild>
                 <a href={EMAIL}><Mail className="mr-1 h-4 w-4" />Get in Touch</a>
               </Button>
-              <Button variant="ghost" className="font-semibold text-primary" asChild>
-                <a href={LINKEDIN} target="_blank" rel="noopener noreferrer"><ExternalLink className="mr-1 h-4 w-4" />LinkedIn Profile</a>
-              </Button>
             </div>
           </div>
 
@@ -97,16 +94,18 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Impact metrics */}
-        <ul aria-label="Impact highlights" className="mt-6 lg:mt-8 grid grid-cols-3 border-y divide-x divide-border">
+        {/* Impact blocks */}
+        <ul aria-label="Impact highlights" className="mt-6 lg:mt-8 grid grid-cols-3 gap-3 lg:gap-[var(--space-lg)]">
           {metrics.map((m) => (
-            <li key={m.label} className="py-3 px-3 md:px-4 first:pl-0">
-              <div className="text-xl lg:text-2xl font-bold text-primary font-inter"><CountUp value={m.value} /></div>
-              <div className="text-sm text-muted-foreground">{m.label}</div>
+            <li key={m.label} className="rounded-xl border bg-card p-3 md:p-5 shadow-soft">
+              <div className="flex items-center gap-1 text-xl lg:text-3xl font-bold text-primary font-inter">
+                <CountUp value={m.value} />
+                <ArrowUp aria-hidden className="h-4 w-4 lg:h-5 lg:w-5 text-secondary shrink-0" />
+              </div>
+              <div className="mt-1 text-sm text-muted-foreground">{m.label}</div>
             </li>
           ))}
-        </ul>
-      </div>
+        </ul>      </div>
     </section>
   );
 };

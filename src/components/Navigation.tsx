@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Linkedin } from "lucide-react";
+import { LINKEDIN } from "@/lib/site";
 import { useEffect, useState } from "react";
 
 const items = [
@@ -31,6 +33,10 @@ export const Navigation = () => {
             {label}
           </Link>
         ))}
+        <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-primary hover:text-secondary hover:bg-secondary/10 transition-colors">
+          <Linkedin className="h-5 w-5" />
+        </a>
       </div>
     </div>
   </nav>;
