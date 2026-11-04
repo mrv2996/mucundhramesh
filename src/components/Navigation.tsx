@@ -22,7 +22,7 @@ export const Navigation = () => {
     to === "/" ? location.pathname === "/"
     : location.pathname === "/work" || location.pathname.startsWith("/case-studies") || location.pathname.startsWith("/projects");
   return <nav aria-label="Main navigation" className={cn("fixed top-0 inset-x-0 z-[100] border-b transition-colors duration-300 font-inter", isScrolled ? "bg-background/90 backdrop-blur-xl shadow-soft" : "bg-background/95 backdrop-blur-sm border-transparent")}>
-    <div className="mx-auto max-w-content px-4 md:px-8 flex h-16 items-center justify-between gap-2">
+    <div className="mx-auto max-w-chrome px-4 md:px-8 flex h-16 items-center justify-between gap-2">
       <Link to="/" className="font-inter font-semibold text-base md:text-lg text-primary shrink-0 py-3">Mucundh Ramesh</Link>
       <div className="flex items-center gap-1 md:gap-4">
         {items.map(([label, to]) => (

@@ -98,6 +98,9 @@ All colors MUST be HSL.
     --section-heading-gap: var(--space-lg);
     --content-max-width: 960px;
 
+    /* Header/footer chrome width - slightly wider than the reading column */
+    --chrome-max-width: 1024px;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
