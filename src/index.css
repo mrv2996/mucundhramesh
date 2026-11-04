@@ -96,7 +96,10 @@ All colors MUST be HSL.
     /* Content and section sizing */
     --section-padding: 2.5rem;
     --section-heading-gap: var(--space-lg);
-    --content-max-width: 1024px;
+    --content-max-width: 960px;
+
+    /* Companies band fill - lightest tint of the Sky Blue brand colour */
+    --band-bg: 201 72% 95%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -179,13 +182,13 @@ All colors MUST be HSL.
   .metric-arrow { color: hsl(var(--metric) / 0.6); }
   .metric-label { color: hsl(var(--metric-label)); }
 
-  /* Companies band - white fades into the grey strip and back out again */
+  /* Companies band - white fades into the pale blue strip and back out again */
   .companies-band {
     background-image: linear-gradient(
       to bottom,
       hsl(var(--background)) 0%,
-      hsl(var(--muted)) 32%,
-      hsl(var(--muted)) 68%,
+      hsl(var(--band-bg)) 32%,
+      hsl(var(--band-bg)) 68%,
       hsl(var(--background)) 100%
     );
   }
