@@ -72,8 +72,8 @@ const HeroSection = () => {
   return (
     <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
       <div className="max-w-content mx-auto">
-        <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-start lg:items-center">
-          <div className="space-y-3 min-w-0">
+        <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
+          <div className="flex min-w-0 flex-col justify-between gap-6 py-1 lg:gap-8">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -82,14 +82,18 @@ const HeroSection = () => {
                 {badge}
               </div>
             </div>
-            <h2 className="text-xl lg:text-2xl font-semibold text-primary leading-tight">
-              Building and Scaling GTM with a people, process and technology-first approach
-            </h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Passionate about designing scalable infrastructures with technical precision to build relationships that
-              drive measurable business outcomes. Software Systems Engineer turned go-to-market strategy and operations
-              specialist with proven commercial experience.
-            </p>
+            <div className="space-y-3 lg:space-y-4">
+              {focus}
+              <h2 className="font-playfair text-2xl lg:text-3xl font-semibold text-primary leading-[1.2]">
+                Engineering roots.
+                <br />
+                Business impact.
+              </h2>
+              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                Experience across operations, partnerships and commercial analysis. An engineering background that
+                connects the work.
+              </p>
+            </div>
 
             <div className="flex flex-wrap gap-3 pt-0">
               <Button className="font-semibold" asChild>
@@ -106,7 +110,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="hidden sm:flex flex-col items-center gap-2 lg:justify-self-end">
+          <div className="hidden sm:flex flex-col items-center justify-center gap-2 lg:justify-self-end">
             {status}
             <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-56 lg:h-[18rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
               <img
