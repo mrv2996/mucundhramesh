@@ -7,7 +7,7 @@ import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { ToolLogos, Tool } from "@/components/ToolLogos";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-export type ExecutionStep = { title: string; summary: string; content: ReactNode };
+export type ExecutionStep = { title?: string; summary: string; content: ReactNode };
 
 type Props = {
   path: string;
@@ -71,12 +71,16 @@ export const CaseStudyLayout = (p: Props) => (
           <Block label="Execution">
             <Accordion type="multiple" defaultValue={["step-0"]} className="mt-2">
               {p.execution.map((s, i) => (
-                <AccordionItem key={s.title} value={`step-${i}`}>
+                <AccordionItem key={`step-${i}`} value={`step-${i}`}>
                   <AccordionTrigger className="min-h-11 text-left font-inter text-base font-semibold text-foreground">
-                    <span className="flex flex-col gap-1">
-                      <span>{i + 1}. {s.title}</span>
-                      <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
-                    </span>
+                    {s.title ? (
+                      <span className="flex flex-col gap-1">
+                        <span>{i + 1}. {s.title}</span>
+                        <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
+                      </span>
+                    ) : (
+                      <span>{s.summary}</span>
+                    )}
                   </AccordionTrigger>
                   <AccordionContent className="space-y-4 text-base leading-relaxed text-muted-foreground">{s.content}</AccordionContent>
                 </AccordionItem>
