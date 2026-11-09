@@ -32,7 +32,7 @@ const Para = ({ text }: { text: string }) => <p className="mt-3 text-base leadin
 
 const Block = ({ label, children }: { label: string; children: ReactNode }) => (
   <section className="border-t pt-6">
-    <h2 className="font-inter text-sm font-semibold uppercase tracking-wider text-secondary">{label}</h2>
+    <h2 className="flex items-center gap-3 font-inter text-xl lg:text-2xl font-semibold text-primary"><span aria-hidden className="h-6 w-1 rounded-full bg-secondary" />{label}</h2>
     {children}
   </section>
 );
@@ -76,14 +76,17 @@ export const CaseStudyLayout = (p: Props) => (
                   const numbered = s.title ? `${++n}. ${s.title}` : null;
                   return (
                 <AccordionItem key={`step-${i}`} value={`step-${i}`}>
-                  <AccordionTrigger className="min-h-11 text-left font-inter text-base font-semibold text-foreground">
+                  <AccordionTrigger className="min-h-11 gap-3 text-left font-source text-base font-normal text-foreground hover:no-underline">
                     {numbered ? (
                       <span className="flex flex-col gap-1">
                         <span>{numbered}</span>
                         <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
                       </span>
                     ) : (
-                      <span>{s.summary}</span>
+                      <span className="flex items-start gap-3">
+                        <span aria-hidden className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary/10 font-inter text-xs font-semibold text-secondary">{i + 1}</span>
+                        <span>{s.summary}</span>
+                      </span>
                     )}
                   </AccordionTrigger>
                   <AccordionContent className="space-y-4 text-base leading-relaxed text-muted-foreground">{s.content}</AccordionContent>
