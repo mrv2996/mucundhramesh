@@ -2,7 +2,7 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { partnerIntelligence } from "@/lib/work";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import crossbeamInterface from "@/assets/crossbeam-interface.png";
-import agentOutputExample from "@/assets/agent-output-example.png";
+import agentOutputExample from "@/assets/agent-output-cropped.png";
 
 const instructions = `<Role> Partner overlap identifier for customer accounts
 <Input> Customer name only (e.g., "coca-cola")
