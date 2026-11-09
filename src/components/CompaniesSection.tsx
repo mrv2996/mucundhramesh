@@ -37,7 +37,7 @@ const companies: Company[] = [
 ];
 
 const logoUrl = ({ domain, theme }: Pick<Company, "domain" | "theme">) =>
-  `https://img.logo.dev/${domain}?token=${token}&size=160&format=png&greyscale=true&retina=true${
+  `https://img.logo.dev/${domain}?token=${token}&size=160&format=png&retina=true${
     theme ? `&theme=${theme}` : ""
   }`;
 
@@ -54,7 +54,7 @@ const CompaniesSection = () => (
             height={56}
             loading="lazy"
             className={[
-              "h-12 md:h-14 rounded-lg grayscale opacity-60 hover:opacity-100 transition-opacity duration-300",
+              "h-12 md:h-14 rounded-lg ",
               wide ? "w-[88px] md:w-[106px] object-cover" : "w-12 md:w-14 object-contain",
               liftTile ? "brightness-[1.12]" : "",
             ].join(" ")}
