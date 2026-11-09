@@ -21,7 +21,6 @@ const SecFilingsCaseStudy = () => {
       strategy="Map the full journey: fetch, match, validate. Put matching and data-quality checks in one Python script, and give colleagues a simple interface to run it."
       execution={[
         {
-          title: "Workflow walkthrough",
           summary: "Recorded the end-to-end fetch → match → validate workflow.",
           content: (
             <>

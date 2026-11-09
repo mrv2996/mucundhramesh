@@ -7,7 +7,7 @@ import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { ToolLogos, Tool } from "@/components/ToolLogos";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-export type ExecutionStep = { title: string; summary: string; content: ReactNode };
+export type ExecutionStep = { title?: string; summary: string; content: ReactNode };
 
 type Props = {
   path: string;
@@ -70,17 +70,27 @@ export const CaseStudyLayout = (p: Props) => (
           <Block label="Strategy"><Para text={p.strategy} /></Block>
           <Block label="Execution">
             <Accordion type="multiple" defaultValue={["step-0"]} className="mt-2">
-              {p.execution.map((s, i) => (
-                <AccordionItem key={s.title} value={`step-${i}`}>
+              {(() => {
+                let n = 0;
+                return p.execution.map((s, i) => {
+                  const numbered = s.title ? `${++n}. ${s.title}` : null;
+                  return (
+                <AccordionItem key={`step-${i}`} value={`step-${i}`}>
                   <AccordionTrigger className="min-h-11 text-left font-inter text-base font-semibold text-foreground">
-                    <span className="flex flex-col gap-1">
-                      <span>{i + 1}. {s.title}</span>
-                      <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
-                    </span>
+                    {numbered ? (
+                      <span className="flex flex-col gap-1">
+                        <span>{numbered}</span>
+                        <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
+                      </span>
+                    ) : (
+                      <span>{s.summary}</span>
+                    )}
                   </AccordionTrigger>
                   <AccordionContent className="space-y-4 text-base leading-relaxed text-muted-foreground">{s.content}</AccordionContent>
                 </AccordionItem>
-              ))}
+                  );
+                });
+              })()}
             </Accordion>
           </Block>
           <Block label="Result"><Bullets items={p.result} /></Block>
