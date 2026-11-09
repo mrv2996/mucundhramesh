@@ -69,7 +69,7 @@ export const CaseStudyLayout = (p: Props) => (
           <Block label="Context"><Para text={p.context} /></Block>
           <Block label="Strategy"><Para text={p.strategy} /></Block>
           <Block label="Execution">
-            <Accordion type="multiple" defaultValue={["step-0"]} className="mt-2">
+            <Accordion type="multiple" className="mt-2">
               {(() => {
                 let n = 0;
                 return p.execution.map((s, i) => {
