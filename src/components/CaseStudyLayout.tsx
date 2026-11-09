@@ -45,8 +45,8 @@ export const CaseStudyLayout = (p: Props) => (
         <ArrowLeft className="h-4 w-4" />Back to work
       </Link>
       <header className="mt-4 max-w-3xl">
-        <p className="text-sm text-muted-foreground">{p.company}</p>
-        <h1 className="mt-1 font-inter text-2xl lg:text-3xl font-semibold leading-tight text-primary">{p.title}</h1>
+        <p className="inline-flex min-h-8 w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary">{p.company}</p>
+        <h1 className="mt-3 font-inter text-2xl lg:text-3xl font-semibold leading-tight text-primary">{p.title}</h1>
         <p className="mt-3 text-lg leading-relaxed text-muted-foreground">{p.tldr}</p>
       </header>
 
@@ -54,7 +54,7 @@ export const CaseStudyLayout = (p: Props) => (
         <aside className="order-first lg:order-last">
           <div className="lg:sticky lg:top-24 rounded-xl border bg-card p-5 shadow-soft space-y-5">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-secondary">Impact</p>
+              <p className="text-sm font-semibold uppercase tracking-wider text-secondary">Key impact metric</p>
               <p className="mt-1 font-inter text-2xl font-semibold text-primary">{p.metric.value}</p>
               <p className="text-sm text-muted-foreground">{p.metric.label}</p>
             </div>
