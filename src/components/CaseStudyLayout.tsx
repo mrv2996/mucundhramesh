@@ -70,12 +70,16 @@ export const CaseStudyLayout = (p: Props) => (
           <Block label="Strategy"><Para text={p.strategy} /></Block>
           <Block label="Execution">
             <Accordion type="multiple" defaultValue={["step-0"]} className="mt-2">
-              {p.execution.map((s, i) => (
+              {(() => {
+                let n = 0;
+                return p.execution.map((s, i) => {
+                  const numbered = s.title ? `${++n}. ${s.title}` : null;
+                  return (
                 <AccordionItem key={`step-${i}`} value={`step-${i}`}>
                   <AccordionTrigger className="min-h-11 text-left font-inter text-base font-semibold text-foreground">
-                    {s.title ? (
+                    {numbered ? (
                       <span className="flex flex-col gap-1">
-                        <span>{i + 1}. {s.title}</span>
+                        <span>{numbered}</span>
                         <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
                       </span>
                     ) : (
