@@ -22,7 +22,7 @@ const metric = (value: string, label: string) => (
 export const partnerActivation: WorkItem = {
   context: "SWEEP",
   title: "Partner Activation Automation",
-  summary: "Automated partner activation with an Excel → SQL → Zapier pipeline to cut manual CRM work, saving 7-8 hours every week.",
+  summary: "Automated partner activation to cut manual CRM work, saving hours every week and streamlining the data foundation.",
   to: "/case-studies/partner-activation-automation",
   cta: "Read case study",
   visual: metric("7-8 hrs/week", "Time saved"),
@@ -31,7 +31,7 @@ export const partnerActivation: WorkItem = {
 export const secFilings: WorkItem = {
   context: "Proxymity",
   title: "Scaling SEC Filings Onboarding",
-  summary: "Built a Python fetch → match → validate workflow to get daily SEC filings to the right securities and investors, making onboarding repeatable for each new client.",
+  summary: "Built a repeatable workflow to route daily SEC filings to the right securities and investors, making client onboarding faster and more efficient.",
   to: "/case-studies/sec-filings-onboarding",
   cta: "Read case study",
   visual: <div className="flex flex-wrap items-center gap-1 text-sm font-medium text-primary">Fetch <ChevronRight className="h-4 w-4" /> Match <ChevronRight className="h-4 w-4" /> Validate</div>,
@@ -40,7 +40,7 @@ export const secFilings: WorkItem = {
 export const partnerIntelligence: WorkItem = {
   context: "SWEEP",
   title: "AI-Powered Partner Intelligence",
-  summary: "Replaced a low-adoption $14K/year partner-mapping tool with a GenAI agent over existing Drive and Notion data, keeping partner insight at a fraction of the cost.",
+  summary: "Replaced a low-adoption partner-mapping tool with an in-house AI agent, keeping partner insight while cutting significant cost.",
   to: "/case-studies/crossbeam-ai-agent",
   cta: "Read case study",
   visual: metric("$14K/year", "Licenses replaced"),
