@@ -7,13 +7,12 @@ export const WorkCard = ({ item, headingLevel = "h3" }: { item: WorkItem; headin
   const linked = item.to || item.href;
   const inner = (
     <>
-      <div className="bg-muted/40 px-5 py-3 h-[64px] flex items-center">{item.visual}</div>
-      <div className="px-5 pt-3 pb-5 flex flex-col flex-1 gap-2">
-        <div className="text-xs font-semibold uppercase tracking-wide text-secondary">{item.context}</div>
+      <div className="px-5 pt-5 pb-5 flex flex-col flex-1 gap-2">
+        <div className="inline-flex w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1 text-xs font-medium font-inter text-primary">{item.context}</div>
         <H className="font-inter text-lg font-semibold text-foreground">{item.title}</H>
         <p className="flex-1 text-base text-muted-foreground leading-snug">{item.summary}</p>
         {item.impact && (
-          <div className="metric-card w-fit px-3 py-2">
+          <div className="metric-card w-full px-3 py-2">
             <div className="metric-value font-inter text-lg font-bold leading-tight">{item.impact.value}</div>
             <div className="metric-label text-xs">{item.impact.label}</div>
           </div>
