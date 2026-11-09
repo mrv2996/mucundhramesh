@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
 import type { WorkItem } from "@/lib/work";
 
 export const WorkCard = ({ item, headingLevel = "h3" }: { item: WorkItem; headingLevel?: "h2" | "h3" }) => {
@@ -12,8 +12,8 @@ export const WorkCard = ({ item, headingLevel = "h3" }: { item: WorkItem; headin
         <H className="font-inter text-lg font-semibold text-foreground">{item.title}</H>
         <p className="flex-1 text-base text-muted-foreground leading-snug">{item.summary}</p>
         {item.impact && (
-          <div className="metric-card w-full px-3 py-2">
-            <div className="metric-value font-inter text-lg font-bold leading-tight">{item.impact.value}</div>
+          <div className="metric-card mt-3 w-full px-3 py-2">
+            <div className="metric-value flex items-baseline gap-1 font-inter text-lg font-bold leading-tight">{item.impact.value}<ArrowUp aria-hidden className="metric-arrow h-3 w-3 shrink-0" /></div>
             <div className="metric-label text-xs">{item.impact.label}</div>
           </div>
         )}
