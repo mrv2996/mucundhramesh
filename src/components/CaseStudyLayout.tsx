@@ -88,7 +88,9 @@ export const CaseStudyLayout = (p: Props) => (
                   </AccordionTrigger>
                   <AccordionContent className="space-y-4 text-base leading-relaxed text-muted-foreground">{s.content}</AccordionContent>
                 </AccordionItem>
-              ))}
+                  );
+                });
+              })()}
             </Accordion>
           </Block>
           <Block label="Result"><Bullets items={p.result} /></Block>
