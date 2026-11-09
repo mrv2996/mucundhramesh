@@ -10,6 +10,7 @@ export type WorkItem = {
   href?: string;
   cta: string;
   visual: ReactNode;
+  impact?: { value: string; label: string };
 };
 
 const metric = (value: string, label: string) => (
@@ -26,6 +27,7 @@ export const partnerActivation: WorkItem = {
   to: "/case-studies/partner-activation-automation",
   cta: "Read case study",
   visual: metric("7-8 hrs/week", "Time saved"),
+  impact: { value: "7-8 hrs/week", label: "Time saved" },
 };
 
 export const secFilings: WorkItem = {
@@ -44,12 +46,13 @@ export const partnerIntelligence: WorkItem = {
   to: "/case-studies/crossbeam-ai-agent",
   cta: "Read case study",
   visual: metric("$14K/year", "Licenses replaced"),
+  impact: { value: "$14K/year", label: "Licenses replaced" },
 };
 
 export const biometrio: WorkItem = {
   context: "ESCP · biometrio.earth",
   title: "Biometrio.earth Growth Strategy",
-  summary: "Developed a revenue growth and scaling strategy to help a German green-tech startup scale its sustainable technology solutions.",
+  summary: "Developed a revenue growth and scaling strategy to help a German green-tech startup scale its sustainable technology solutions, as an ESCP student project.",
   href: BIOMETRIO_URL,
   cta: "View project",
   visual: <div className="font-inter text-2xl text-primary leading-tight">Strategy</div>,
@@ -58,7 +61,7 @@ export const biometrio: WorkItem = {
 export const tradingUi: WorkItem = {
   context: "SRM · Fidelity Investments",
   title: "Trading Platform UI Testing",
-  summary: "Developed UI test scenarios and analysis for new features on Fidelity's online trading platform to support feature development.",
+  summary: "Developed UI test scenarios and analysis for new features on Fidelity's online trading platform to support feature development, as an SRM student project.",
   href: "https://docs.google.com/spreadsheets/d/1K_9GWb0-JDUaYN9VBhi5mFJundZaV20s/edit?usp=sharing&ouid=109264352810466052364&rtpof=true&sd=true",
   cta: "View project",
   visual: <div className="font-inter text-2xl text-primary leading-tight">Analytics</div>,

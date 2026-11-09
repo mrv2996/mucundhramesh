@@ -9,9 +9,15 @@ export const WorkCard = ({ item, headingLevel = "h3" }: { item: WorkItem; headin
     <>
       <div className="bg-muted/40 px-5 py-3 h-[64px] flex items-center">{item.visual}</div>
       <div className="px-5 pt-3 pb-5 flex flex-col flex-1 gap-2">
-        <div className="text-sm text-muted-foreground">{item.context}</div>
+        <div className="text-xs font-semibold uppercase tracking-wide text-secondary">{item.context}</div>
         <H className="font-inter text-lg font-semibold text-foreground">{item.title}</H>
         <p className="flex-1 text-base text-muted-foreground leading-snug">{item.summary}</p>
+        {item.impact && (
+          <div className="metric-card w-fit px-3 py-2">
+            <div className="metric-value font-inter text-lg font-bold leading-tight">{item.impact.value}</div>
+            <div className="metric-label text-xs">{item.impact.label}</div>
+          </div>
+        )}
         <div className={`flex items-center justify-between pt-2 text-base font-medium ${linked ? "text-primary" : "text-muted-foreground"}`}>
           {item.cta}
           {linked && <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none" />}
