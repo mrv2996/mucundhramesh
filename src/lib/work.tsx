@@ -76,4 +76,4 @@ export const apAgent: WorkItem = {
 };
 
 export const allWork = [partnerActivation, secFilings, partnerIntelligence, biometrio, tradingUi, apAgent];
-export const selectedWork = [partnerActivation, secFilings, biometrio];
+export const selectedWork = [partnerActivation, secFilings, partnerIntelligence];
