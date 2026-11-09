@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, PlayCircle } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
@@ -14,6 +14,7 @@ type Props = {
   company: string;
   title: string;
   tldr: string;
+  demoUrl?: string;
   metric: { value: string; label: string };
   tools: Tool[];
   context: string;
@@ -48,6 +49,9 @@ export const CaseStudyLayout = (p: Props) => (
         <p className="inline-flex min-h-8 w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary">{p.company}</p>
         <h1 className="mt-3 font-inter text-2xl lg:text-3xl font-semibold leading-tight text-primary">{p.title}</h1>
         <p className="mt-3 text-lg leading-relaxed text-muted-foreground">{p.tldr}</p>
+        {p.demoUrl && (
+          <a href={p.demoUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg border border-secondary/30 bg-secondary/10 px-4 font-inter text-sm font-medium text-primary transition-colors hover:bg-secondary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><PlayCircle className="h-4 w-4" aria-hidden />Watch demo</a>
+        )}
       </header>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_240px]">
