@@ -26,7 +26,6 @@ const CaseStudy1 = () => {
       strategy="Clean the CRM first with one parent-child account hierarchy. Then pull data with simple SQL lookups instead of manual exports, and automate Excel → Salesforce record creation with Zapier."
       execution={[
         {
-          title: "CRM hygiene: parent-child accounts",
           summary: "Rebuilt partner accounts into one parent with regional children.",
           content: (
             <>
@@ -36,7 +35,6 @@ const CaseStudy1 = () => {
           ),
         },
         {
-          title: "SQL solution logic",
           summary: "Replaced manual exports with one query that pulls every parent account.",
           content: (
             <>
@@ -46,7 +44,6 @@ const CaseStudy1 = () => {
           ),
         },
         {
-          title: "Zapier workflow",
           summary: "Connected Excel to Salesforce so new rows create records automatically.",
           content: (
             <>

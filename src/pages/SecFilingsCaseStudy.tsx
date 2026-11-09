@@ -30,12 +30,10 @@ const SecFilingsCaseStudy = () => {
           ),
         },
         {
-          title: "Edge case: ambiguous tickers",
           summary: "Caught name matches that select the wrong filing.",
           content: <p>TCW Strategic Fund's ticker is <strong className="text-foreground">TSI</strong>. Name matching can wrongly read <strong className="text-foreground">TCW</strong> as the ticker — a false positive that selects the wrong filing.</p>,
         },
         {
-          title: "Codex-assisted skill file",
           summary: "Used Codex to add explicit validation for matching edge cases.",
           content: <p>Used Codex to build a skill file for matching edge cases, adding explicit validation instead of trusting the first text match.</p>,
         },

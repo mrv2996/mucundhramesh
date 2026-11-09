@@ -41,7 +41,6 @@ const CaseStudy2 = () => {
       strategy="Match the tool to real usage: customer-name lookups on static data. Reuse data already in Google Drive and the Notion priority matrix, and return short, ranked answers people will actually read."
       execution={[
         {
-          title: "Benchmark what Crossbeam offered",
           summary: "Reviewed Crossbeam Copilot to see what the team actually used.",
           content: (
             <>
@@ -52,7 +51,6 @@ const CaseStudy2 = () => {
           ),
         },
         {
-          title: "Build the agent",
           summary: "Built a Dust agent that ranks partner overlap from a customer name.",
           content: (
             <>
@@ -62,7 +60,6 @@ const CaseStudy2 = () => {
           ),
         },
         {
-          title: "Structured output",
           summary: "Capped answers at three scored partners with a 5-7 word reason.",
           content: (
             <>
