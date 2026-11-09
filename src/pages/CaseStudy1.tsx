@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { partnerActivation } from "@/lib/work";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import salesforceHierarchy from "@/assets/salesforce-hierarchy-new.png";
 import zapierWorkflow from "@/assets/zapier-workflow.png";
@@ -13,7 +14,7 @@ const CaseStudy1 = () => {
       path="/case-studies/partner-activation-automation"
       company="SWEEP"
       title="Partner Activation Automation"
-      tldr="A simple rule-based Excel → SQL → Zapier pipeline that saved 7-8 hours of manual partner work every week."
+      tldr={partnerActivation.summary}
       metric={{ value: "7-8 hrs/week", label: "Time saved" }}
       tools={[
         { name: "Salesforce", domain: "salesforce.com" },
@@ -21,19 +22,12 @@ const CaseStudy1 = () => {
         { name: "Excel", domain: "microsoft.com" },
         { name: "SQL" },
       ]}
-      context={[
-        "Partner activation ran on manual Excel updates, Salesforce data entry and tracking spreadsheets.",
-        "7-8 hours a week of repetitive, error-prone processing.",
-        "Result: poor KPI visibility and delayed partner readiness reporting.",
-      ]}
-      strategy={[
-        "Clean the CRM first: one parent-child account hierarchy.",
-        "Pull data with simple SQL lookups instead of manual exports.",
-        "Automate Excel → Salesforce record creation with Zapier.",
-      ]}
+      context="Partner activation ran on manual Excel updates, Salesforce data entry and tracking spreadsheets. That meant 7-8 hours a week of repetitive, error-prone processing, poor KPI visibility and delayed partner readiness reporting."
+      strategy="Clean the CRM first with one parent-child account hierarchy. Then pull data with simple SQL lookups instead of manual exports, and automate Excel → Salesforce record creation with Zapier."
       execution={[
         {
           title: "CRM hygiene: parent-child accounts",
+          summary: "Rebuilt partner accounts into one parent with regional children.",
           content: (
             <>
               <p>Parent accounts named "{`{Consulting Partner}`}-Parent" with regional child accounts. All contacts sit under the parent — no duplicates, no double counting.</p>
@@ -43,6 +37,7 @@ const CaseStudy1 = () => {
         },
         {
           title: "SQL solution logic",
+          summary: "Replaced manual exports with one query that pulls every parent account.",
           content: (
             <>
               <pre className="overflow-x-auto rounded-md border bg-muted/50 p-4 text-sm font-mono text-foreground"><code>{`SELECT Name, Id FROM Account WHERE Name LIKE '%Parent'`}</code></pre>
@@ -52,6 +47,7 @@ const CaseStudy1 = () => {
         },
         {
           title: "Zapier workflow",
+          summary: "Connected Excel to Salesforce so new rows create records automatically.",
           content: (
             <>
               <p>Two steps: Microsoft Excel — New Row in Table → Salesforce Essentials — Create Record. No manual data entry.</p>

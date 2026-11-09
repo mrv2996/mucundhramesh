@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { partnerIntelligence } from "@/lib/work";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import crossbeamInterface from "@/assets/crossbeam-interface.png";
 import agentOutputExample from "@/assets/agent-output-example.png";
@@ -28,7 +29,7 @@ const CaseStudy2 = () => {
       path="/case-studies/crossbeam-ai-agent"
       company="SWEEP"
       title="AI-Powered Partner Intelligence"
-      tldr="Replaced a $14K/year partner-mapping tool with a GenAI agent over existing Drive and Notion data."
+      tldr={partnerIntelligence.summary}
       metric={{ value: "$14K/year", label: "Licenses replaced" }}
       tools={[
         { name: "Dust", domain: "dust.tt" },
@@ -36,19 +37,12 @@ const CaseStudy2 = () => {
         { name: "Notion", domain: "notion.so" },
         { name: "Google Drive", domain: "drive.google.com" },
       ]}
-      context={[
-        "Crossbeam cost $14K a year with seat-based pricing.",
-        "Usage showed critically low adoption across sales and partnerships.",
-        "Consulting partners shared static, offline files — live tracking was over-engineered.",
-      ]}
-      strategy={[
-        "Match the tool to real usage: customer-name lookups on static data.",
-        "Reuse data already in Google Drive and the Notion priority matrix.",
-        "Return short, ranked answers people will actually read.",
-      ]}
+      context="Crossbeam cost $14K a year with seat-based pricing, yet usage showed critically low adoption across sales and partnerships. Consulting partners shared static, offline files, so live tracking was over-engineered."
+      strategy="Match the tool to real usage: customer-name lookups on static data. Reuse data already in Google Drive and the Notion priority matrix, and return short, ranked answers people will actually read."
       execution={[
         {
           title: "Benchmark what Crossbeam offered",
+          summary: "Reviewed Crossbeam Copilot to see what the team actually used.",
           content: (
             <>
               <p>Copilot surfaced partner overlaps and co-selling next steps — useful, but mostly used for static lookups.</p>
@@ -59,6 +53,7 @@ const CaseStudy2 = () => {
         },
         {
           title: "Build the agent",
+          summary: "Built a Dust agent that ranks partner overlap from a customer name.",
           content: (
             <>
               <p>Input a customer name; the agent searches Drive, checks Notion and the web, and ranks partners 1-5.</p>
@@ -68,6 +63,7 @@ const CaseStudy2 = () => {
         },
         {
           title: "Structured output",
+          summary: "Capped answers at three scored partners with a 5-7 word reason.",
           content: (
             <>
               <p>Max three partners, each with a score and a 5-7 word reason.</p>
