@@ -44,8 +44,16 @@ const CaseStudy2 = () => {
           summary: "Reviewed Crossbeam Copilot to see what the team actually used.",
           content: (
             <>
-              <p>Copilot surfaced partner overlaps and co-selling next steps — useful, but mostly used for static lookups.</p>
-              <img src={crossbeamInterface} alt="Crossbeam Copilot interface showing co-selling opportunities" loading="lazy" className="w-full rounded-lg border" />
+              <p>
+                Copilot surfaced partner overlaps and co-selling next steps — useful, but mostly used for dynamic
+                lookups.
+              </p>
+              <img
+                src={crossbeamInterface}
+                alt="Crossbeam Copilot interface showing co-selling opportunities"
+                loading="lazy"
+                className="w-full rounded-lg border"
+              />
               <p className="text-sm">* Image for reference purposes only. Source: Crossbeam</p>
             </>
           ),
@@ -55,7 +63,9 @@ const CaseStudy2 = () => {
           content: (
             <>
               <p>Input a customer name; the agent searches Drive, checks Notion and the web, and ranks partners 1-5.</p>
-              <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg border bg-muted/50 p-4 text-sm font-mono text-foreground">{instructions}</pre>
+              <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg border bg-muted/50 p-4 text-sm font-mono text-foreground">
+                {instructions}
+              </pre>
             </>
           ),
         },
@@ -64,7 +74,12 @@ const CaseStudy2 = () => {
           content: (
             <>
               <p>Max three partners, each with a score and a 5-7 word reason.</p>
-              <img src={agentOutputExample} alt="Agent output listing partner overlaps with scores and short reasons" loading="lazy" className="w-full rounded-lg border" />
+              <img
+                src={agentOutputExample}
+                alt="Agent output listing partner overlaps with scores and short reasons"
+                loading="lazy"
+                className="w-full rounded-lg border"
+              />
             </>
           ),
         },
