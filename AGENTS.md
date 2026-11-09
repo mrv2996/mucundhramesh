@@ -6,3 +6,4 @@
 - Set navigation bar link type scale explicitly on every item (small size below the md breakpoint, one step larger above) instead of relying on Button or NavigationMenu defaults, so no single item renders larger than its neighbours.
 - The full case-study/project collection lives on /work; the homepage shows only three selected previews, and RouteScroll redirects old homepage anchors (#case-studies, #projects, #skills) there so existing links keep working.
 - Shared contact/CV/award URLs live in src/lib/site.ts; CV actions render only when CV_URL is set, so no dead CV links ship.
+- Case studies render through CaseStudyLayout (Context/Strategy/Execution accordion/Result + Impact/Tools sidebar) and all work cards through WorkCard with Problem/Action/Result data in src/lib/work.tsx, so every case and card share one format.
