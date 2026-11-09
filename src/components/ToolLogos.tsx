@@ -14,7 +14,7 @@ const ToolTile = ({ name, domain }: Tool) => {
         </span>
       ) : (
         <img
-          src={`https://img.logo.dev/${domain}?token=${token}&size=80&format=png&greyscale=true&retina=true`}
+          src={`https://img.logo.dev/${domain}?token=${token}&size=80&format=png&retina=true`}
           alt=""
           loading="lazy"
           onError={() => setFailed(true)}

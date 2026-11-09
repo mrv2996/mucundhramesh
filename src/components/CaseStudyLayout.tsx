@@ -7,7 +7,7 @@ import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { ToolLogos, Tool } from "@/components/ToolLogos";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-export type ExecutionStep = { title: string; content: ReactNode };
+export type ExecutionStep = { title: string; summary: string; content: ReactNode };
 
 type Props = {
   path: string;
@@ -16,8 +16,8 @@ type Props = {
   tldr: string;
   metric: { value: string; label: string };
   tools: Tool[];
-  context: string[];
-  strategy: string[];
+  context: string;
+  strategy: string;
   execution: ExecutionStep[];
   result: string[];
 };
@@ -27,6 +27,8 @@ const Bullets = ({ items }: { items: string[] }) => (
     {items.map((i) => <li key={i}>{i}</li>)}
   </ul>
 );
+
+const Para = ({ text }: { text: string }) => <p className="mt-3 text-base leading-relaxed text-muted-foreground">{text}</p>;
 
 const Block = ({ label, children }: { label: string; children: ReactNode }) => (
   <section className="border-t pt-6">
@@ -64,14 +66,17 @@ export const CaseStudyLayout = (p: Props) => (
         </aside>
 
         <div className="min-w-0 space-y-8">
-          <Block label="Context"><Bullets items={p.context} /></Block>
-          <Block label="Strategy"><Bullets items={p.strategy} /></Block>
+          <Block label="Context"><Para text={p.context} /></Block>
+          <Block label="Strategy"><Para text={p.strategy} /></Block>
           <Block label="Execution">
             <Accordion type="multiple" defaultValue={["step-0"]} className="mt-2">
               {p.execution.map((s, i) => (
                 <AccordionItem key={s.title} value={`step-${i}`}>
                   <AccordionTrigger className="min-h-11 text-left font-inter text-base font-semibold text-foreground">
-                    {i + 1}. {s.title}
+                    <span className="flex flex-col gap-1">
+                      <span>{i + 1}. {s.title}</span>
+                      <span className="font-source text-base font-normal text-muted-foreground">{s.summary}</span>
+                    </span>
                   </AccordionTrigger>
                   <AccordionContent className="space-y-4 text-base leading-relaxed text-muted-foreground">{s.content}</AccordionContent>
                 </AccordionItem>
