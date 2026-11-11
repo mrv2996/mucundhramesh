@@ -18,7 +18,7 @@ export const WorkCard = ({ item, headingLevel = "h3" }: { item: WorkItem; headin
       </div>
     </>
   );
-  const cls = "group flex flex-col overflow-hidden rounded-xl border bg-card shadow-soft hover:shadow-medium transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+  const cls = "group flex flex-col overflow-hidden rounded-xl border bg-card shadow-soft transition-all hover:border-secondary/40 hover:bg-gradient-card-hover hover:shadow-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
   if (item.to) return <Link to={item.to} className={cls}>{inner}</Link>;
   if (item.href) return <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>;
   return <div className={cls}>{inner}</div>;
