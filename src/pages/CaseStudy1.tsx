@@ -29,7 +29,7 @@ const CaseStudy1 = () => {
           summary: "Rebuilt partner accounts into one parent with regional children.",
           content: (
             <>
-              <p>Parent accounts named "{`{Consulting Partner}`}-Parent" with regional child accounts. All contacts sit under the parent — no duplicates, no double counting.</p>
+              <p>Parent accounts named "{`{Consulting Partner}`}-Parent" with regional child accounts. All contacts sit under the parent: no duplicates, no double counting.</p>
               <img src={salesforceHierarchy} alt="Salesforce account hierarchy with a parent account and Asia, Europe and US child accounts" loading="lazy" className="w-full rounded-lg border" />
             </>
           ),
@@ -47,14 +47,14 @@ const CaseStudy1 = () => {
           summary: "Connected Excel to Salesforce so new rows create records automatically.",
           content: (
             <>
-              <p>Two steps: Microsoft Excel — New Row in Table → Salesforce Essentials — Create Record. No manual data entry.</p>
+              <p>Two steps: Microsoft Excel (New Row in Table) → Salesforce Essentials (Create Record). No manual data entry.</p>
               <img src={zapierWorkflow} alt="Zapier workflow: Excel trigger followed by Salesforce record creation" loading="lazy" className="w-full max-w-md rounded-lg border" />
             </>
           ),
         },
       ]}
       result={[
-        "7-8 hours saved weekly — 2 full days every two weeks.",
+        "7-8 hours saved weekly, 2 full days every two weeks.",
         "85% faster process, 95% fewer errors.",
         "Real-time partner readiness tracking for leadership.",
       ]}

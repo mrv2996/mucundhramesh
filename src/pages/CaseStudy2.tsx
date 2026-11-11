@@ -45,7 +45,7 @@ const CaseStudy2 = () => {
           content: (
             <>
               <p>
-                Copilot surfaced partner overlaps and co-selling next steps — useful, but mostly used for dynamic
+                Copilot surfaced partner overlaps and co-selling next steps. Useful, but mostly used for dynamic
                 lookups.
               </p>
               <img

@@ -8,7 +8,7 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 
 const dashboardUrl = "https://brazil-fx.lovable.app/";
 const MarketCompass = () => {
-  usePageMeta("Market Compass — Brazil Market Entry | Mucundh Ramesh", "Explore a Brazil market-entry scenario model with editable launch assumptions, profit, payback and public USD/BRL exchange-rate data.");
+  usePageMeta("Market Compass: Brazil Market Entry | Mucundh Ramesh", "Explore a Brazil market-entry scenario model with editable launch assumptions, profit, payback and public USD/BRL exchange-rate data.");
   return <div className="min-h-screen bg-background pt-16 font-source">
     <Navigation />
     <main>
@@ -26,7 +26,7 @@ const MarketCompass = () => {
       </section>
       <section aria-label="Market Compass public dashboard" className="border-y border-border bg-muted/30">
         <div className="hidden md:block">
-          <iframe src={dashboardUrl} title="Market Compass — Brazil market-entry dashboard" className="w-full h-[820px] border-0" loading="lazy" />
+          <iframe src={dashboardUrl} title="Market Compass: Brazil market-entry dashboard" className="w-full h-[820px] border-0" loading="lazy" />
         </div>
         <div className="container max-w-content py-section md:hidden">
           <h2 className="font-inter text-2xl font-semibold text-primary">Brazil launch economics</h2>

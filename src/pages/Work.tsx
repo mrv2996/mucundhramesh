@@ -15,7 +15,7 @@ const Work = () => {
             <div className="mb-[var(--section-heading-gap)]">
               <h1 className="font-inter text-2xl lg:text-3xl font-semibold text-primary">Work</h1>
               <p className="mt-2 max-w-2xl text-base lg:text-lg text-muted-foreground leading-relaxed">
-                Case studies and projects across operations, automation and strategy — real-world stories of operational
+                Case studies and projects across operations, automation and strategy: real-world stories of operational
                 improvements, automation wins, and strategic implementations that drive measurable business impact.
               </p>
             </div>

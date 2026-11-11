@@ -48,7 +48,7 @@ const SecFilingsCaseStudy = () => {
           content: (
             <p>
               TCW Strategic Fund's ticker is <strong className="text-foreground">TSI</strong>. The system can wrongly
-              read <strong className="text-foreground">TCW</strong> as the ticker — a false positive that sends the
+              read <strong className="text-foreground">TCW</strong> as the ticker, a false positive that sends the
               wrong filing.
             </p>
           ),

@@ -80,7 +80,7 @@ const JourneySection = () => {
                       {item.researchPaper && (
                         <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
                           <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
-                          <span className="break-words">{item.researchPaper.title} — {item.researchPaper.journal}</span>
+                          <span className="break-words">{item.researchPaper.title}, {item.researchPaper.journal}</span>
                         </a>
                       )}
                     </div>

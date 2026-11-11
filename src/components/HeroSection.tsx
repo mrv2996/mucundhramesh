@@ -69,7 +69,7 @@ const HeroSection = () => {
       href={HACKATHON_URL}
       target="_blank"
       rel="noopener noreferrer"
-      title="Company Brain Buildathon — Finance & Ops track, judged by Round Treasury"
+      title="Company Brain Buildathon: Finance & Ops track, judged by Round Treasury"
       className="inline-flex min-h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
     >
       <Trophy className="h-4 w-4 text-tertiary" />
