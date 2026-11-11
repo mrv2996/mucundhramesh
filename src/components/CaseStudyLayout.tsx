@@ -57,7 +57,7 @@ export const CaseStudyLayout = (p: Props) => (
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_240px]">
         <aside className="order-first lg:order-last">
-          <div className="lg:sticky lg:top-24 rounded-xl border bg-card p-5 shadow-soft space-y-5">
+          <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto rounded-xl border bg-card p-5 shadow-soft space-y-5">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-secondary">Key impact metric</p>
               <p className="mt-1 font-inter text-2xl font-semibold text-primary">{p.metric.value}</p>
