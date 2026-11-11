@@ -33,8 +33,6 @@ export const journeyItems: any[] = [
     type: "education",
     status: "completed",
     color: "tertiary",
-    specializations: ["Scale-up Strategy", "Finance", "Sustainability"],
-    caseStudy: { label: "Biometrio.earth growth strategy, view the project", url: BIOMETRIO_URL },
   },
   {
     title: "Strategy Analyst Intern",
@@ -77,10 +75,5 @@ export const journeyItems: any[] = [
     type: "education",
     status: "completed",
     color: "secondary",
-    researchPaper: {
-      title: "SECURE DATA RETRIEVAL IN CLOUD USING MULTIPLE KEYS: A SURVEY",
-      journal: "International Journal of Pure and Applied Mathematics",
-      url: "https://www.researchgate.net/publication/325878411_SECURE_DATA_RETRIEVAL_IN_CLOUD_USING_MULTIPLE_KEYS_A_SURVEY",
-    },
   },
 ];
