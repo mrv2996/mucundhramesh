@@ -33,7 +33,7 @@ export const partnerActivation: WorkItem = {
 
 export const secFilings: WorkItem = {
   context: "Proxymity",
-  title: "Trading Operations Workflow Automation",
+  title: "Trading Operations Workflow",
   summary:
     "Built a scalable filings-routing workflow to deliver every SEC filing to the right investors on time, with automated edge-case checks.",
   to: "/case-studies/sec-filings-onboarding",
