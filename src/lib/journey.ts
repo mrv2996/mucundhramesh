@@ -1,5 +1,4 @@
 // Existing journey entries, wording kept verbatim.
-import { BIOMETRIO_URL } from "@/lib/site";
 
 export const journeyItems: any[] = [
   {
