@@ -1,6 +1,7 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { secFilings } from "@/lib/work";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import tcwTickerExample from "@/assets/tcw-ticker-example.png.asset.json";
 
 const SecFilingsCaseStudy = () => {
   usePageMeta(
