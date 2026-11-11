@@ -60,38 +60,33 @@ const JourneySection = () => {
 
           <aside className="rounded-xl bg-muted/40 border p-6 min-w-0">
             <h3 className="font-inter text-lg font-semibold text-foreground mb-2">Education</h3>
-            <Accordion type="single" collapsible>
+            <div className="divide-y">
               {education.map((item) => (
-                <AccordionItem key={item.company} value={item.company} className="last:border-b-0">
-                  <AccordionTrigger className="gap-3 py-4 text-left hover:no-underline [&>svg]:hidden group">
-                    <div className="flex-1 min-w-0">
-                      <div className="font-inter text-base font-semibold text-foreground">{item.company}</div>
-                      <div className="text-sm text-muted-foreground mt-1">{item.title}</div>
-                    </div>
+                <div key={item.company} className="py-4 first:pt-0 last:pb-0">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <div className="font-inter text-base font-semibold text-foreground">{item.company}</div>
                     <span className="text-sm text-muted-foreground whitespace-nowrap">{item.period}</span>
-                    <PlusMinus />
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-4">
-                    <div className="space-y-2">
-                      <div className="text-sm text-muted-foreground">{item.location}</div>
-                      {item.specializations && <div className="text-sm text-muted-foreground">{item.specializations.join(", ")}</div>}
-                      {item.caseStudy && (
-                        <a href={item.caseStudy.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
-                          <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
-                          <span className="break-words">{item.caseStudy.label}</span>
-                        </a>
-                      )}
-                      {item.researchPaper && (
-                        <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
-                          <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
-                          <span className="break-words">{item.researchPaper.title}, {item.researchPaper.journal}</span>
-                        </a>
-                      )}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1">{item.title}</div>
+                  <div className="space-y-1 mt-2">
+                    <div className="text-sm text-muted-foreground">{item.location}</div>
+                    {item.specializations && <div className="text-sm text-muted-foreground">{item.specializations.join(", ")}</div>}
+                    {item.caseStudy && (
+                      <a href={item.caseStudy.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
+                        <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
+                        <span className="break-words">{item.caseStudy.label}</span>
+                      </a>
+                    )}
+                    {item.researchPaper && (
+                      <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
+                        <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
+                        <span className="break-words">{item.researchPaper.title}, {item.researchPaper.journal}</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
               ))}
-            </Accordion>
+            </div>
           </aside>
         </div>
       </div>
