@@ -11,7 +11,7 @@ const Work = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-16">
-        <section className="px-6 pt-10 lg:pt-14 pb-section">
+        <section className="px-6 pt-20 lg:pt-28 pb-24 lg:pb-36">
           <div className="max-w-content mx-auto">
             <div className="mb-[var(--section-heading-gap)]">
               <h1 className="font-inter text-2xl lg:text-3xl font-semibold text-primary">Work</h1>
