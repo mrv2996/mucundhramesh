@@ -68,22 +68,6 @@ const JourneySection = () => {
                     <span className="text-sm text-muted-foreground whitespace-nowrap">{item.period}</span>
                   </div>
                   <div className="text-sm text-muted-foreground mt-1">{item.title}</div>
-                  <div className="space-y-1 mt-2">
-                    <div className="text-sm text-muted-foreground">{item.location}</div>
-                    {item.specializations && <div className="text-sm text-muted-foreground">{item.specializations.join(", ")}</div>}
-                    {item.caseStudy && (
-                      <a href={item.caseStudy.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
-                        <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
-                        <span className="break-words">{item.caseStudy.label}</span>
-                      </a>
-                    )}
-                    {item.researchPaper && (
-                      <a href={item.researchPaper.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-1 text-sm text-secondary hover:underline">
-                        <ExternalLink className="h-3 w-3 mt-1 shrink-0" />
-                        <span className="break-words">{item.researchPaper.title}, {item.researchPaper.journal}</span>
-                      </a>
-                    )}
-                  </div>
                 </div>
               ))}
             </div>
