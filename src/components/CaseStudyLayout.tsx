@@ -53,7 +53,7 @@ export const CaseStudyLayout = (p: Props) => (
         <h1 className="mt-3 font-inter text-2xl lg:text-3xl font-semibold leading-tight text-primary">{p.title}</h1>
         <p className="mt-3 text-lg leading-relaxed text-muted-foreground">{p.tldr}</p>
         {p.demoUrl && (
-          <a href={p.demoUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg border border-secondary/30 bg-secondary/10 px-4 font-inter text-sm font-medium text-primary transition-colors hover:bg-secondary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><PlayCircle className="h-4 w-4" aria-hidden />Watch demo</a>
+          <a href={p.demoUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg bg-action px-4 font-inter text-sm font-semibold text-action-foreground shadow-soft transition-colors hover:bg-action-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><PlayCircle className="h-4 w-4" aria-hidden />Watch demo</a>
         )}
       </header>
 

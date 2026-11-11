@@ -24,6 +24,8 @@ export default {
 				'source': ['Source Sans Pro', 'sans-serif'],
 			},
 			colors: {
+				action: { DEFAULT: 'hsl(var(--action))', foreground: 'hsl(var(--action-foreground))', hover: 'hsl(var(--action-hover))' },
+				surface: 'hsl(var(--surface))',
 				'surface-deep': { DEFAULT: 'hsl(var(--surface-deep))', foreground: 'hsl(var(--surface-deep-foreground))', muted: 'hsl(var(--surface-deep-muted))' },
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
