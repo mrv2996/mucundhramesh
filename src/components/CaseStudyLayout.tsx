@@ -67,6 +67,7 @@ export const CaseStudyLayout = (p: Props) => (
               <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-secondary">Tools used</p>
               <ToolLogos tools={p.tools} />
             </div>
+            <RelatedCaseStudies currentPath={p.path} />
           </div>
         </aside>
 
