@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowUp, Mail, Trophy } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUp, Mail, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
 import { CV_URL, EMAIL, HACKATHON_URL } from "@/lib/site";
@@ -70,10 +70,14 @@ const HeroSection = () => {
       target="_blank"
       rel="noopener noreferrer"
       title="Company Brain Buildathon: Finance & Ops track, judged by Round Treasury"
-      className="inline-flex min-h-11 items-center gap-1.5 rounded-md px-3 text-sm font-semibold font-inter text-primary hover:bg-secondary/10 hover:text-secondary transition-colors"
+      className="group inline-flex min-h-11 items-center rounded-md px-3 text-sm font-semibold font-inter text-primary transition-colors hover:bg-secondary/10 hover:text-secondary"
     >
-      <Trophy className="h-4 w-4 text-tertiary" />
-      Hackathon winner
+      <Trophy className="h-4 w-4 shrink-0 text-tertiary" />
+      <span className="ml-1.5">Hackathon winner</span>
+      <span className="inline-flex max-w-0 items-center overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-out group-hover:max-w-[11rem] group-hover:opacity-100 group-focus-visible:max-w-[11rem] group-focus-visible:opacity-100 motion-reduce:transition-none motion-reduce:group-hover:max-w-0">
+        <ArrowRight className="ml-1.5 h-4 w-4 shrink-0" aria-hidden />
+        <span className="pl-1">Watch live demo</span>
+      </span>
     </a>
   );
   return (
