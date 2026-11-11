@@ -5,6 +5,7 @@ export const journeyItems: any[] = [
   {
     title: "Operations Associate",
     company: "PROXYMITY",
+    domain: "proxymity.io",
     summary: "Fintech operations and customer-onboarding workflows.",
     relatedCaseStudy: { label: "Related case study", url: "/case-studies/sec-filings-onboarding" },
     period: "Oct 2025 - Present",
@@ -16,6 +17,7 @@ export const journeyItems: any[] = [
   {
     title: "Strategic Operations - Partnerships",
     company: "SWEEP",
+    domain: "sweep.net",
     summary: "Partner enablement, CRM workflows and operational delivery.",
     relatedCaseStudy: { label: "Related case study", url: "/case-studies/partner-activation-automation" },
     period: "Jan 2025 - Aug 2025",
@@ -38,6 +40,7 @@ export const journeyItems: any[] = [
   {
     title: "Strategy Analyst Intern",
     company: "TRANSDEV",
+    domain: "transdev.de",
     summary: "Commercial strategy and mobility advisory",
     period: "Jan 2023 - Jul 2023",
     location: "Paris, France",
@@ -48,6 +51,7 @@ export const journeyItems: any[] = [
   {
     title: "Financial Analyst Intern",
     company: "L'ORÉAL",
+    domain: "loreal.com",
     summary: "Financial analysis in global beauty Tech",
     period: "Jul 2022 - Dec 2022",
     location: "Paris, France",
@@ -58,6 +62,7 @@ export const journeyItems: any[] = [
   {
     title: "Software Engineer",
     company: "GENERAL ELECTRIC (GE)",
+    domain: "ge.com",
     summary: "An engineering foundation I now apply to business analysis, enablement and solution design.",
     period: "Jul 2018 - Jun 2021",
     location: "Bengaluru, India",

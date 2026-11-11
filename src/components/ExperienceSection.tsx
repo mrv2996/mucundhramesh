@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { journeyItems } from "@/lib/journey";
 import { CV_URL } from "@/lib/site";
+import { logoUrl } from "@/lib/logos";
 
 const PlusMinus = () => (
   <>
@@ -34,6 +35,9 @@ const JourneySection = () => {
               {work.map((item) => (
                 <AccordionItem key={item.company} value={item.company}>
                   <AccordionTrigger className="gap-4 py-4 text-left hover:no-underline [&>svg]:hidden group">
+                    {item.domain && (
+                      <img src={logoUrl(item.domain)} alt={`${item.company} logo`} width={40} height={40} loading="lazy" className="h-10 w-10 shrink-0 rounded-md object-contain" />
+                    )}
                     <div className="flex-1 min-w-0">
                       <div className="font-inter text-base lg:text-lg font-semibold text-foreground">{item.title}</div>
                       <div className="text-sm text-muted-foreground mt-1">{item.company} / {item.location}</div>
