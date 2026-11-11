@@ -59,15 +59,15 @@ const HomeRecommendation = () => {
   const [api, setApi] = useState<CarouselApi>();
 
   return (
-    <section className="px-6 py-6 lg:py-8 border-t">
+    <section className="px-6 py-8 lg:py-10 bg-surface-deep text-surface-deep-foreground">
       <div className="max-w-content mx-auto">
         <div className="flex items-center justify-between gap-4">
-          <h2 className="font-inter text-2xl font-semibold text-primary">Working with me</h2>
+          <h2 className="font-inter text-2xl font-semibold text-surface-deep-foreground">Working with me</h2>
           <div className="flex gap-2">
-            <Button variant="outline" size="icon" aria-label="Previous recommendation" onClick={() => api?.scrollPrev()}>
+            <Button variant="outline" size="icon" className="border-surface-deep-foreground/30 bg-transparent text-surface-deep-foreground hover:bg-surface-deep-foreground/10 hover:text-surface-deep-foreground" aria-label="Previous recommendation" onClick={() => api?.scrollPrev()}>
               <ArrowLeft className="h-4 w-4" />
             </Button>
-            <Button variant="outline" size="icon" aria-label="Next recommendation" onClick={() => api?.scrollNext()}>
+            <Button variant="outline" size="icon" className="border-surface-deep-foreground/30 bg-transparent text-surface-deep-foreground hover:bg-surface-deep-foreground/10 hover:text-surface-deep-foreground" aria-label="Next recommendation" onClick={() => api?.scrollNext()}>
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
@@ -77,12 +77,13 @@ const HomeRecommendation = () => {
           <CarouselContent className="-ml-3">
             {highlights.map((rec) => (
               <CarouselItem key={rec.id} className="pl-3 basis-[85%] sm:basis-[60%] lg:basis-1/3">
-                <figure className="h-full rounded-lg border bg-card p-5 sm:p-6 flex flex-col">
-                  <blockquote className="text-base leading-snug text-foreground flex-1">“{rec.line}”</blockquote>
-                  <figcaption className="mt-4 flex items-center gap-3 text-sm text-muted-foreground">
-                    <img src={logoUrl(rec.domain)} alt={`${rec.company} logo`} width={36} height={36} loading="lazy" className="h-9 w-9 shrink-0 rounded-md object-contain" />
+                <figure className="h-full rounded-lg border border-surface-deep-foreground/15 bg-surface-deep-foreground/5 p-5 sm:p-6 flex flex-col">
+                  <span aria-hidden className="mb-2 font-inter text-4xl leading-none text-tertiary">“</span>
+                  <blockquote className="text-base leading-snug text-surface-deep-foreground flex-1">{rec.line}</blockquote>
+                  <figcaption className="mt-4 flex items-center gap-3 text-sm text-surface-deep-muted">
+                    <img src={logoUrl(rec.domain)} alt={`${rec.company} logo`} width={36} height={36} loading="lazy" className="h-9 w-9 shrink-0 rounded-md bg-background object-contain p-0.5" />
                     <div className="min-w-0">
-                      <span className="font-semibold text-foreground">{rec.name}</span>
+                      <span className="font-semibold text-surface-deep-foreground">{rec.name}</span>
                       <div>{rec.company ? `${rec.title}, ${rec.company}` : rec.title}</div>
                     </div>
                   </figcaption>

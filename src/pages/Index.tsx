@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import SelectedWorkSection from "@/components/SelectedWorkSection";
 import JourneySection from "@/components/ExperienceSection";
 import HomeRecommendation from "@/components/HomeRecommendation";
+import { Reveal } from "@/components/Reveal";
 
 const Index = () => {
   return (
@@ -12,11 +13,11 @@ const Index = () => {
       <Navigation />
       <main className="pt-16">
         <HeroSection />
-        <HomeRecommendation />
+        <Reveal><HomeRecommendation /></Reveal>
         <SelectedWorkSection />
-        <JourneySection />
+        <Reveal><JourneySection /></Reveal>
       </main>
-      <ContactCTA />
+      <Reveal><ContactCTA /></Reveal>
       <Footer />
     </div>
   );

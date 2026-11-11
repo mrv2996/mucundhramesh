@@ -99,7 +99,7 @@ const HeroSection = () => {
                 {badge}
               </div>
             </div>
-            <div className="space-y-3 lg:space-y-4">
+            <div className="space-y-3 lg:space-y-4 motion-safe:animate-fade-up">
               {focus}
               <h2 className="font-inter text-2xl lg:text-3xl font-semibold text-primary leading-[1.2]">
                 Engineering roots.
@@ -112,11 +112,11 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-0">
+            <div className="flex flex-wrap gap-3 pt-0 motion-safe:animate-fade-up [animation-delay:120ms]">
               <Button className="font-semibold" asChild>
                 <Link to="/#work">
                   Explore my work
-                  <ArrowDown className="ml-1 h-4 w-4" />
+                  <ArrowDown className="ml-1 h-4 w-4 motion-safe:animate-nudge" />
                 </Link>
               </Button>
               {CV_URL && (
@@ -139,7 +139,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="hidden sm:flex flex-col items-center justify-center gap-2 lg:justify-self-end">
+          <div className="hidden sm:flex flex-col items-center justify-center gap-2 lg:justify-self-end motion-safe:animate-fade-up [animation-delay:80ms]">
             {status}
             <div className="w-24 h-[7.75rem] sm:w-40 sm:h-[13rem] lg:w-48 lg:h-[15rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
               <img
@@ -152,7 +152,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
+        <ul aria-label="Impact highlights" className="motion-safe:animate-fade-up [animation-delay:240ms] mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
             <li key={m.label} className="metric-card px-3 py-2.5 md:px-3.5 md:py-3">
               <div className="metric-value flex items-baseline gap-1 text-lg md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
