@@ -1,3 +1,4 @@
+import ContactCTA from "@/components/ContactCTA";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
@@ -36,6 +37,7 @@ const MarketCompass = () => {
       </section>
       <div className="container max-w-content py-8"><p className="text-base leading-relaxed text-muted-foreground">Commercial inputs are illustrative assumptions. Tax treatment is simplified, not tax advice. FX source: Banco Central do Brasil PTAX.</p></div>
     </main>
+    <ContactCTA />
     <Footer />
   </div>;
 };

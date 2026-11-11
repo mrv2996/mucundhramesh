@@ -1,3 +1,4 @@
+import ContactCTA from "@/components/ContactCTA";
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, PlayCircle } from "lucide-react";
@@ -105,6 +106,7 @@ export const CaseStudyLayout = (p: Props) => (
       </div>
     </main>
     <RelatedCaseStudies currentPath={p.path} />
+    <ContactCTA />
     <Footer />
   </div>
 );

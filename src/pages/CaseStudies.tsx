@@ -1,3 +1,4 @@
+import ContactCTA from "@/components/ContactCTA";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -163,6 +164,8 @@ const CaseStudies = () => {
 
         </section>
       </main>
+      
+      <ContactCTA />
       
       <Footer />
     </div>

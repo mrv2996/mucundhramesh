@@ -84,7 +84,6 @@ const HomeRecommendation = () => {
                     <div className="min-w-0">
                       <span className="font-semibold text-foreground">{rec.name}</span>
                       <div>{rec.company ? `${rec.title}, ${rec.company}` : rec.title}</div>
-                      <div className="text-xs italic">{rec.relationship}</div>
                     </div>
                   </figcaption>
                 </figure>

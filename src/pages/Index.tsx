@@ -1,3 +1,4 @@
+import ContactCTA from "@/components/ContactCTA";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -15,6 +16,7 @@ const Index = () => {
         <SelectedWorkSection />
         <JourneySection />
       </main>
+      <ContactCTA />
       <Footer />
     </div>
   );
