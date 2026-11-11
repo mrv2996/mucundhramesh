@@ -1,3 +1,4 @@
+import ContactCTA from "@/components/ContactCTA";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { WorkCard } from "@/components/WorkCard";
@@ -27,6 +28,7 @@ const Work = () => {
           </div>
         </section>
       </main>
+      <ContactCTA />
       <Footer />
     </div>
   );
