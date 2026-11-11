@@ -67,7 +67,9 @@ export const CaseStudyLayout = (p: Props) => (
               <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-secondary">Tools used</p>
               <ToolLogos tools={p.tools} />
             </div>
-            <RelatedCaseStudies currentPath={p.path} />
+            <div className="hidden lg:block">
+              <RelatedCaseStudies currentPath={p.path} />
+            </div>
           </div>
         </aside>
 
@@ -103,6 +105,9 @@ export const CaseStudyLayout = (p: Props) => (
             </Accordion>
           </Block>
           <Block label="Result"><Bullets items={p.result} /></Block>
+          <div className="lg:hidden">
+            <RelatedCaseStudies currentPath={p.path} />
+          </div>
         </div>
       </div>
     </main>
