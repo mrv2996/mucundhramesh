@@ -106,7 +106,6 @@ export const CaseStudyLayout = (p: Props) => (
         </div>
       </div>
     </main>
-    <RelatedCaseStudies currentPath={p.path} />
     <ContactCTA />
     <Footer />
   </div>
