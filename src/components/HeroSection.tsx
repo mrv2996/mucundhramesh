@@ -35,8 +35,9 @@ const CountUp = ({ value }: { value: string }) => {
   return (
     <span ref={ref} aria-label={value}>
       <span aria-hidden>
+        {match[1]}
         {n}
-        {match[2]}
+        {match[3]}
       </span>
     </span>
   );
