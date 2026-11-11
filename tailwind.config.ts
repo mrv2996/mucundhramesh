@@ -90,7 +90,8 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-tertiary': 'var(--gradient-tertiary)',
-				'gradient-mixed': 'var(--gradient-mixed)'
+				'gradient-mixed': 'var(--gradient-mixed)',
+				'gradient-card-hover': 'var(--gradient-card-hover)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
