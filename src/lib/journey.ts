@@ -38,7 +38,7 @@ export const journeyItems: any[] = [
   {
     title: "Strategy Analyst Intern",
     company: "TRANSDEV",
-    summary: "Commercial strategy and mobility advisory, Paris.",
+    summary: "Commercial strategy and mobility advisory",
     period: "Jan 2023 - Jul 2023",
     location: "Paris, France",
     type: "work",
@@ -48,7 +48,7 @@ export const journeyItems: any[] = [
   {
     title: "Financial Analyst Intern",
     company: "L'ORÉAL",
-    summary: "Financial analysis in a global beauty business, Paris.",
+    summary: "Financial analysis in global beauty Tech",
     period: "Jul 2022 - Dec 2022",
     location: "Paris, France",
     type: "work",
