@@ -8,13 +8,13 @@ import { CV_URL, EMAIL, HACKATHON_URL } from "@/lib/site";
 const metrics = [
   { value: "7-8 hrs/week", label: "manual work removed" },
   { value: "85% faster", label: "partner activation" },
-  { value: "95% fewer", label: "data errors" },
+  { value: "$14K/year", label: "licenses replaced" },
 ];
 
 /** Counts the leading number up once; the full value is always in the DOM text for readers. */
 const CountUp = ({ value }: { value: string }) => {
-  const match = value.match(/^(\d+)(.*)$/);
-  const target = match ? Number(match[1]) : 0;
+  const match = value.match(/^(\D*)(\d+)(.*)$/);
+  const target = match ? Number(match[2]) : 0;
   const [n, setN] = useState(target);
   const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
