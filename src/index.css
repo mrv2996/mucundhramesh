@@ -33,6 +33,13 @@ All colors MUST be HSL.
     --tertiary: 49 84% 46%;
     --tertiary-foreground: 213 16% 15%;
 
+    /* 60-30-10: 60% base = background/card/muted, 30% structure = primary (Prussian Blue),
+       10% action = --action (Gold Leaf + Ivory Black text, ~8:1). Use action only on main CTAs. */
+    --surface: 0 0% 98%;
+    --action: 49 84% 46%;
+    --action-foreground: 213 16% 15%;
+    --action-hover: 49 84% 40%;
+
     /* Impact metric green - hero impact blocks only */
     --metric: 161 94% 30%;
     --metric-foreground: 0 0% 100%;
@@ -45,7 +52,7 @@ All colors MUST be HSL.
     --muted-foreground: 220 10% 46%;
 
     /* Accent uses secondary for consistency */
-    --accent: 201 59% 47%;
+    --accent: 201 70% 38%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;

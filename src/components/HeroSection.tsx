@@ -113,7 +113,7 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-3 pt-0 motion-safe:animate-fade-up [animation-delay:120ms]">
-              <Button className="font-semibold" asChild>
+              <Button variant="action" asChild>
                 <Link to="/#work">
                   Explore my work
                   <ArrowDown className="ml-1 h-4 w-4 motion-safe:animate-nudge" />

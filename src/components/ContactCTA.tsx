@@ -17,7 +17,7 @@ const ContactCTA = () => {
         </div>
         <div className="relative flex flex-col gap-3 sm:flex-row">
           {CV_URL && (
-            <Button asChild className="min-h-11 bg-background text-primary hover:bg-tertiary hover:text-tertiary-foreground">
+            <Button asChild variant="action" className="min-h-11">
               <a href={CV_URL} target="_blank" rel="noopener noreferrer"><FileText className="h-4 w-4" /> View CV</a>
             </Button>
           )}
