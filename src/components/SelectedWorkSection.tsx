@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { WorkCard } from "@/components/WorkCard";
 import { selectedWork } from "@/lib/work";
+import { Reveal } from "@/components/Reveal";
 
 const SelectedWorkSection = () => (
   <section id="work" className="px-6 pt-10 lg:pt-14 pb-section">
@@ -11,7 +12,7 @@ const SelectedWorkSection = () => (
         <Link to="/work" className="inline-flex min-h-11 items-center gap-1 text-base font-medium text-secondary hover:underline">All work <ArrowUpRight className="h-4 w-4" /></Link>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
-        {selectedWork.map((item) => <WorkCard key={item.title} item={item} />)}
+        {selectedWork.map((item, i) => <Reveal key={item.title} delay={i * 90} className="flex"><WorkCard item={item} /></Reveal>)}
       </div>
     </div>
   </section>

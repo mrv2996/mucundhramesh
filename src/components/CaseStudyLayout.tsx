@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, PlayCircle } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
+import { ReadingProgress } from "@/components/ReadingProgress";
 import { Footer } from "@/components/Footer";
 import { RelatedCaseStudies } from "@/components/RelatedCaseStudies";
 import { ToolLogos, Tool } from "@/components/ToolLogos";
@@ -42,6 +43,7 @@ const Block = ({ label, children }: { label: string; children: ReactNode }) => (
 export const CaseStudyLayout = (p: Props) => (
   <div className="min-h-screen bg-background pt-16 font-source">
     <Navigation />
+    <ReadingProgress />
     <main className="container max-w-content py-section">
       <Link to="/work" className="inline-flex min-h-11 items-center gap-2 text-base font-medium text-primary hover:underline">
         <ArrowLeft className="h-4 w-4" />Back to work

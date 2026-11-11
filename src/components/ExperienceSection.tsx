@@ -17,7 +17,7 @@ const JourneySection = () => {
   const education = journeyItems.filter((i) => i.type === "education");
 
   return (
-    <section id="journey" className="px-6 py-section border-t">
+    <section id="journey" className="px-6 py-section bg-gradient-journey">
       <div className="max-w-content mx-auto">
         <div className="flex items-baseline justify-between gap-4 mb-6">
           <h2 className="font-inter text-2xl font-semibold text-primary">Journey</h2>
