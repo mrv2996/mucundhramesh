@@ -1,4 +1,4 @@
-// Existing journey entries — wording kept verbatim.
+// Existing journey entries, wording kept verbatim.
 import { BIOMETRIO_URL } from "@/lib/site";
 
 export const journeyItems: any[] = [
@@ -33,7 +33,7 @@ export const journeyItems: any[] = [
     status: "completed",
     color: "tertiary",
     specializations: ["Scale-up Strategy", "Finance", "Sustainability"],
-    caseStudy: { label: "Biometrio.earth growth strategy — view the project", url: BIOMETRIO_URL },
+    caseStudy: { label: "Biometrio.earth growth strategy, view the project", url: BIOMETRIO_URL },
   },
   {
     title: "Strategy Analyst Intern",

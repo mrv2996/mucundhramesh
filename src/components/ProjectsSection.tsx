@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Market Compass — Brazil Market Entry",
+      title: "Market Compass: Brazil Market Entry",
       description: "Model Brazil launch economics with editable cost, revenue and tax assumptions, profit and payback forecasts, and public USD/BRL exchange-rate data.",
       link: "/projects/market-compass",
       type: "dashboard",
