@@ -1,6 +1,7 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { secFilings } from "@/lib/work";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import tcwTickerExample from "@/assets/tcw-ticker-example.png.asset.json";
 
 const SecFilingsCaseStudy = () => {
   usePageMeta(
@@ -46,11 +47,19 @@ const SecFilingsCaseStudy = () => {
         {
           summary: "Caught name matches that select the wrong filing.",
           content: (
-            <p>
-              TCW Strategic Fund's ticker is <strong className="text-foreground">TSI</strong>. The system can wrongly
-              read <strong className="text-foreground">TCW</strong> as the ticker, a false positive that sends the
-              wrong filing.
-            </p>
+            <>
+              <p>
+                For example, TCW Strategic Fund's ticker is <strong className="text-foreground">TSI</strong>. The
+                system can wrongly read <strong className="text-foreground">TCW</strong> as the ticker, a false
+                positive that sends the wrong filing.
+              </p>
+              <img
+                src={tcwTickerExample.url}
+                alt="TCW Strategic Income Fund semi-annual report showing the fund name and its ticker TSI highlighted"
+                loading="lazy"
+                className="w-full rounded-lg border"
+              />
+            </>
           ),
         },
         {
