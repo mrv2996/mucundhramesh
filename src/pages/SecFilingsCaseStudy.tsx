@@ -28,9 +28,9 @@ const SecFilingsCaseStudy = () => {
           summary: "Mapped the end-to-end workflow: fetch the filing, map the fields, run data-quality checks.",
           content: (
             <p>
-              Every ISIN has a security ticker attached, and 500 to 1,000 investors may trade a single security — each
-              needs the right filing at the right time. The map covered how to fetch the file, how to map fields between
-              sources, and which data-quality checks must pass before anything is sent.
+              Every ISIN has a security ticker attached, and 500 to 1,000 investors may trade a single security every
+              day where each trader needs the right within a stipulated time. The map covered how to fetch the file, how
+              to map fields between sources, and which data-quality checks must pass before anything is sent.
             </p>
           ),
         },
