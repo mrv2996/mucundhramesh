@@ -22,12 +22,6 @@ export const RelatedCaseStudies = ({ currentPath }: { currentPath: string }) => 
           </li>
         ))}
       </ul>
-      <Link
-        to="/work"
-        className="mt-2 inline-flex min-h-8 items-center font-inter text-xs font-medium text-secondary hover:underline"
-      >
-        All case studies
-      </Link>
     </div>
   );
 };
