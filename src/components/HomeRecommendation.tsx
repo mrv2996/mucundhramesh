@@ -59,8 +59,8 @@ const HomeRecommendation = () => {
   const [api, setApi] = useState<CarouselApi>();
 
   return (
-    <section className="px-6 pt-10 pb-6 lg:pt-12 lg:pb-8 border-t">
-      <div className="max-w-content mx-auto px-2 sm:px-4">
+    <section className="px-6 py-6 lg:py-8 border-t">
+      <div className="max-w-content mx-auto">
         <div className="flex items-center justify-between gap-4">
           <h2 className="font-inter text-2xl font-semibold text-primary">Working with me</h2>
           <div className="flex gap-2">
