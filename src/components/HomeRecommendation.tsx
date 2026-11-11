@@ -77,9 +77,9 @@ const HomeRecommendation = () => {
           <CarouselContent className="-ml-3">
             {highlights.map((rec) => (
               <CarouselItem key={rec.id} className="pl-3 basis-[85%] sm:basis-[60%] lg:basis-1/3">
-                <figure className="h-full rounded-lg border bg-card p-3.5 flex flex-col">
+                <figure className="h-full rounded-lg border bg-card p-5 sm:p-6 flex flex-col">
                   <blockquote className="text-base leading-snug text-foreground flex-1">“{rec.line}”</blockquote>
-                  <figcaption className="mt-3 flex items-center gap-3 text-sm text-muted-foreground">
+                  <figcaption className="mt-4 flex items-center gap-3 text-sm text-muted-foreground">
                     <img src={logoUrl(rec.domain)} alt={`${rec.company} logo`} width={36} height={36} loading="lazy" className="h-9 w-9 shrink-0 rounded-md object-contain" />
                     <div className="min-w-0">
                       <span className="font-semibold text-foreground">{rec.name}</span>
