@@ -7,5 +7,5 @@
 - The full case-study/project collection lives on /work; the homepage shows only three selected previews, and RouteScroll redirects old homepage anchors (#case-studies, #projects, #skills) there so existing links keep working.
 - Shared contact/CV/award URLs live in src/lib/site.ts; CV actions render only when CV_URL is set, so no dead CV links ship.
 - Case studies render through CaseStudyLayout (Context/Strategy paragraphs, Execution accordion with one-line step summaries, Result bullets + Impact/Tools sidebar) and work cards through WorkCard; each item’s single CAR summary in src/lib/work.tsx doubles as the case TL;DR, so every case and card share one format.
-- Related case studies render as a compact list at the foot of the case-study sidebar (visible on large screens) or directly after the Result block (small screens), so readers reach other cases just before the contact block.
+- Related case studies render only as a compact title list at the foot of the case-study sidebar on large screens (no "All case studies" link, no internal sidebar scroll, nothing on small screens), so readers reach other cases just before the contact block.
 - Every content page ends with ContactCTA directly above the Footer, so each page closes with a clear contact action.
