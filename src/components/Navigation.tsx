@@ -32,11 +32,11 @@ export const Navigation = () => {
           </Link>
         ))}
         <a href={EMAIL} aria-label="Email Mucundh" title="Email Mucundh"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-primary hover:text-secondary hover:bg-secondary/10 transition-colors">
+          className="inline-flex h-11 w-10 min-[360px]:w-11 items-center justify-center rounded-md text-primary hover:text-secondary hover:bg-secondary/10 transition-colors">
           <Mail className="h-5 w-5" />
         </a>
         <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-primary hover:text-secondary hover:bg-secondary/10 transition-colors">
+          className="inline-flex h-11 w-10 min-[360px]:w-11 items-center justify-center rounded-md text-primary hover:text-secondary hover:bg-secondary/10 transition-colors">
           <Linkedin className="h-5 w-5" />
         </a>
       </div>
