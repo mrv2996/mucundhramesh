@@ -7,7 +7,7 @@ export const Footer = () => (
       <div className="flex items-center gap-4">
         <a href={EMAIL} className="inline-flex min-h-11 items-center hover:text-secondary">Email</a>
         <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center hover:text-secondary">LinkedIn</a>
-        {CV_URL && <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center hover:text-secondary">CV</a>}
+        {CV_URL && <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 min-w-11 items-center justify-center hover:text-secondary">CV</a>}
       </div>
     </div>
   </footer>
