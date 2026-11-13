@@ -49,7 +49,7 @@ export const CaseStudyLayout = (p: Props) => (
         <ArrowLeft className="h-4 w-4" />Back to work
       </Link>
       <header className="mt-4 max-w-3xl">
-        <p className="inline-flex min-h-8 w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary">{p.company}</p>
+        <p className="inline-flex min-h-8 w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-sm font-medium font-inter text-primary">{p.company}</p>
         <h1 className="mt-3 font-inter text-2xl lg:text-3xl font-semibold leading-tight text-primary">{p.title}</h1>
         <p className="mt-3 text-lg leading-relaxed text-muted-foreground">{p.tldr}</p>
         {p.demoUrl && (
@@ -94,7 +94,7 @@ export const CaseStudyLayout = (p: Props) => (
                       </span>
                     ) : (
                       <span className="flex items-start gap-3">
-                        <span aria-hidden className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary/10 font-inter text-xs font-semibold text-secondary">{i + 1}</span>
+                        <span aria-hidden className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary/10 font-inter text-sm font-semibold text-secondary">{i + 1}</span>
                         <span>{s.summary}</span>
                       </span>
                     )}

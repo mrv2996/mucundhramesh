@@ -49,7 +49,7 @@ const HeroSection = () => {
       role="status"
       tabIndex={0}
       aria-label="Open to opportunities"
-      className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-metric-border bg-metric-bg px-2.5 py-1 text-xs font-medium font-inter text-metric-label animate-status-fade focus-within:animate-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metric focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-metric-border bg-metric-bg px-2.5 py-1 text-sm font-medium font-inter text-metric-label animate-status-fade focus-within:animate-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metric focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-metric opacity-50 motion-reduce:animate-none" />
@@ -154,12 +154,12 @@ const HeroSection = () => {
         {/* Impact blocks */}
         <ul aria-label="Impact highlights" className="motion-safe:animate-fade-up [animation-delay:240ms] mt-4 lg:mt-6 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
-            <li key={m.label} className="metric-card px-3 py-2.5 md:px-3.5 md:py-3">
-              <div className="metric-value flex items-baseline gap-1 text-lg md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
+            <li key={m.label} className="metric-card min-w-0 px-2 py-2.5 sm:px-3 md:px-3.5 md:py-3">
+              <div className="metric-value flex min-w-0 flex-wrap items-baseline gap-x-1 text-[clamp(0.875rem,4.2vw,1.125rem)] md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
                 <CountUp value={m.value} />
                 <ArrowUp aria-hidden className="metric-arrow h-3 w-3 md:h-3.5 md:w-3.5 shrink-0" />
               </div>
-              <div className="metric-label mt-0.5 text-xs md:text-[0.8125rem] leading-snug">{m.label}</div>
+              <div className="metric-label mt-0.5 break-words text-sm md:text-[0.8125rem] leading-snug">{m.label}</div>
             </li>
           ))}
         </ul>{" "}
