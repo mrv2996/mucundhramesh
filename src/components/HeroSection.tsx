@@ -93,10 +93,10 @@ const HeroSection = () => {
     </a>
   );
   return (
-    <section className="px-6 pt-6 pb-5 lg:pt-8 lg:pb-7">
+    <section className="px-6 pt-10 pb-8 lg:pt-12 lg:pb-10">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
-          <div className="flex min-w-0 flex-col justify-center gap-5 py-0 lg:gap-6">
+          <div className="flex min-w-0 flex-col justify-center gap-6 py-0 lg:gap-7">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -110,12 +110,12 @@ const HeroSection = () => {
                 {badge}
               </div>
             </div>
-            <div className="space-y-3 lg:space-y-4 motion-safe:animate-fade-up">
+            <div className="space-y-4 motion-safe:animate-fade-up">
               <div className="flex flex-wrap items-center gap-2">
                 {focus}
                 <span className="hidden sm:inline-flex">{badge}</span>
               </div>
-              <h2 className="font-inter text-2xl lg:text-[2.125rem] font-semibold text-primary leading-[1.2]">
+              <h2 className="font-inter text-2xl lg:text-[2.375rem] font-semibold text-primary leading-[1.2]">
                 Engineering roots.
                 <br />
                 <span className="relative inline-block">
@@ -148,7 +148,7 @@ const HeroSection = () => {
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-1.5 lg:justify-self-end motion-safe:animate-fade-up [animation-delay:80ms]">
             {status}
-            <div className="w-24 h-[7.75rem] sm:w-36 sm:h-[11rem] lg:w-44 lg:h-[13.5rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
+            <div className="w-24 h-[7.75rem] sm:w-36 sm:h-[11rem] lg:w-48 lg:h-[15rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
               <img
                 src={headshotImage}
                 alt="Mucundh Ramesh - Strategic operations professional in high-growth tech scale-ups"
@@ -158,9 +158,9 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="motion-safe:animate-fade-up [animation-delay:240ms] mt-4 lg:mt-5 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
+        <ul aria-label="Impact highlights" className="motion-safe:animate-fade-up [animation-delay:240ms] mt-6 lg:mt-7 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
-            <li key={m.label} className="metric-card min-w-0 px-2 py-2 sm:px-3 md:px-3.5 md:py-3">
+            <li key={m.label} className="metric-card min-w-0 px-2 py-2.5 sm:px-3 md:px-3.5 md:py-3.5">
               <div className="metric-value flex min-w-0 flex-wrap items-baseline gap-x-1 text-[clamp(0.875rem,4.2vw,1.125rem)] md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
                 <CountUp value={m.value} />
                 <ArrowUp aria-hidden className="metric-arrow h-3 w-3 md:h-3.5 md:w-3.5 shrink-0" />
@@ -169,13 +169,13 @@ const HeroSection = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-6">
+        <div className="mt-8 lg:mt-10">
           <div className="flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
             <span className="text-xs font-semibold uppercase tracking-[0.14em] font-inter text-muted-foreground">Worked with</span>
             <span className="h-px flex-1 bg-border" />
           </div>
-          <ul className="mt-3 grid grid-cols-3 gap-x-4 gap-y-2 sm:flex sm:items-center sm:justify-between">
+          <ul className="mt-4 grid grid-cols-3 gap-x-4 gap-y-2 sm:flex sm:items-center sm:justify-between">
             {companies.map((c, i) => (
               <li key={c.domain} title={c.name} style={{ animationDelay: `${400 + i * 80}ms` }} className="group flex items-center justify-center gap-2 motion-safe:animate-fade-in-soft">
                 <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-[22px] w-[22px] rounded object-contain grayscale opacity-70 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100" />
