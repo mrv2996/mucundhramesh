@@ -15,3 +15,4 @@
 - [x] Mobile overflow/title fixes + back links on long case studies
 - [x] CV buttons — Google Drive CV linked
 - [ ] Round 2 content changes (positioning, claims, ownership boxes) — deferred by you
+- [x] Cleanup batch 2: delete unused pages, sections, images (F1-F3)
