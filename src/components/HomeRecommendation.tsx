@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "@/hooks/use-in-view";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { logoUrl } from "@/lib/logos";
@@ -57,6 +58,15 @@ const highlights: Highlight[] = [
 
 const HomeRecommendation = () => {
   const [api, setApi] = useState<CarouselApi>();
+  const paused = useRef(false);
+  const { ref, inView } = useInView<HTMLDivElement>();
+  useEffect(() => {
+    if (!api || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setInterval(() => { if (!paused.current && !document.hidden) api.scrollNext(); }, 6000);
+    return () => window.clearInterval(id);
+  }, [api]);
+  const pause = () => (paused.current = true);
+  const resume = () => (paused.current = false);
 
   return (
     <section className="px-6 py-8 lg:py-10 bg-surface-deep text-surface-deep-foreground">
@@ -73,11 +83,12 @@ const HomeRecommendation = () => {
           </div>
         </div>
 
+        <div ref={ref} onPointerEnter={pause} onPointerLeave={resume} onFocus={pause} onBlur={resume} onTouchStart={pause}>
         <Carousel setApi={setApi} opts={{ align: "start", loop: true }} className="mt-4">
           <CarouselContent className="-ml-3">
-            {highlights.map((rec) => (
+            {highlights.map((rec, i) => (
               <CarouselItem key={rec.id} className="pl-3 basis-[85%] sm:basis-[60%] lg:basis-1/3">
-                <figure className="h-full rounded-lg border border-surface-deep-foreground/15 bg-surface-deep-foreground/5 p-5 sm:p-6 flex flex-col">
+                <figure style={{ transitionDelay: `${i * 90}ms` }} className={`reveal ${inView ? "reveal-in" : ""} h-full rounded-lg border border-surface-deep-foreground/15 bg-surface-deep-foreground/5 p-5 sm:p-6 flex flex-col`}>
                   <span aria-hidden className="mb-2 font-inter text-4xl leading-none text-tertiary">“</span>
                   <blockquote className="text-base leading-snug text-surface-deep-foreground flex-1">{rec.line}</blockquote>
                   <figcaption className="mt-4 flex items-center gap-3 text-sm text-surface-deep-muted">
@@ -92,6 +103,7 @@ const HomeRecommendation = () => {
             ))}
           </CarouselContent>
         </Carousel>
+        </div>
       </div>
     </section>
   );
