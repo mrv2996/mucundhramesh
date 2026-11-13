@@ -16,3 +16,4 @@
 - [x] CV buttons — Google Drive CV linked
 - [ ] Round 2 content changes (positioning, claims, ownership boxes) — deferred by you
 - [x] Cleanup batch 2: delete unused pages, sections, images (F1-F3)
+- [ ] Cleanup batch 3: unused UI parts, use-mobile, unused add-ons (F4-F6)
