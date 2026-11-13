@@ -1,43 +1,21 @@
-# Landing page critique for hiring managers, and proposed fixes
+# Audit: "Worked with" row under the impact numbers
 
-## How a hiring manager reads the page today
-They spend about 10 to 30 seconds and want three answers: what role you fit, proof you deliver, and how to reach you.
+## What's wrong now
+- Logos are tiny square icons (28px). At that size, L'Oréal, Transdev and GE are hard to recognise, so the row says less than it should.
+- Square app icons, each on its own coloured tile, look uneven next to each other. It reads as a row of stickers, not a client list.
+- "Worked with" is the same grey as everything else and sits on the same line as the logos, so it reads as a leftover caption.
+- The row floats right under the tiles with only a small gap. It looks squeezed in and not like a separate trust signal.
+- There's no hover or name label, so a visitor can't tell which logo is which.
+- Forvis Mazars and Fidelity appear in your Journey but not here. That's a fine choice, just worth confirming.
 
-1. **Hero (works well):** the "Strategy & Business Operations · Generalist" pill, the headline and the three green impact numbers answer the first two questions fast. The hackathon badge is a strong proof point.
-2. **Working with me (too early):** quotes come before any work. A manager has not seen what you did yet, so praise has nothing to back it up. The deep blue band also pulls the eye away from "Explore my work".
-3. **Selected work (the real proof, but third):** strongest content on the page, but it sits below the fold, after the quotes.
-4. **Journey:** clear, but it repeats the company story the hero already hints at.
-5. **Discuss a role:** good closing step, with View CV as the main button.
-
-## What stands out
-- Impact numbers with count-up: the most scannable proof on the page.
-- Hackathon winner with "Watch live demo" on hover.
-- Consistent work cards with one-line summaries.
-
-## What is holding it back
-- Order: quotes before work breaks the "claim, proof, social proof" flow.
-- The hero's three buttons (Explore, View CV, Get in Touch) compete; the gold main button is right, but two outline buttons next to it dilute it.
-- The hackathon badge sits under the photo on desktop, far from the headline where the eye starts.
-- No hint of who you worked for above the fold (logos now only show in Journey and quotes).
-
-## Moves
-1. **New order:** Hero, Selected work, Working with me, Journey, Discuss a role.
-2. **Hero buttons:** keep "Explore my work" (gold) and "View CV" (outline); move "Get in Touch" to the closing block only (it is already in the top menu).
-3. **Small logo row in the hero**, under the impact numbers: Proxymity, Sweep, Transdev, L'Oréal, GE, small and quiet, as "Worked with".
-4. Hackathon badge stays where it is on phones; on desktop it moves next to the focus pill above the headline.
-
-## Animations that would help (all 200 to 400ms, off for reduced motion)
-1. Impact numbers count up when they come into view, not on page load.
-2. Recommendation cards slide in one after another, and the carousel moves on its own every 6 seconds, pausing on hover or touch.
-3. Work cards: the company pill and arrow shift slightly on hover, so the card reads as clickable.
-4. A soft gold underline draws under "Business impact." once after load.
-5. Logo row fades in left to right after the impact numbers.
-
-## Not included
-- No wording, numbers or claims change.
+## Proposed fixes
+1. Swap the square icons for logos that show the full company name, at a single height (about 22px), so every name can be read.
+2. Show the logos in muted grey by default and switch them to full colour on hover, so they're calm but still read clearly. Tell me if you'd rather keep them in full colour all the time.
+3. Put a thin divider line above the row, with a small uppercase "Worked with" label centred on the line.
+4. Spread the logos evenly across the full 960px width on desktop, and on phones lay them out in a tidy 3 + 2 grid instead of a ragged wrap.
+5. Add a short name tooltip (the alt text) and keep the fade-in from left to right.
 
 ## Technical details
-- Index.tsx reorder; HeroSection: remove email button, add logo row using logoUrl and journey domains, move badge on lg.
-- CountUp triggered by useInView; Embla autoplay via a small interval with pause on pointerenter/focus, disabled for reduced motion.
-- New keyframe `underline-draw` (scaleX) in tailwind.config.ts using the tertiary token.
-- Verify with Playwright at 390px and 1280px.
+- In HeroSection, use the Logo.dev wordmark or larger format if it's available; otherwise use height 22 with w-auto and object-contain.
+- Use `grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition` (note: this reverses an earlier "no greyscale" request, so it needs your OK).
+- Build the divider from flex with two `h-px bg-border` lines on either side of the label.
