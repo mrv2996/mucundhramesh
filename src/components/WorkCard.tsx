@@ -8,7 +8,7 @@ export const WorkCard = ({ item, headingLevel = "h3" }: { item: WorkItem; headin
   const inner = (
     <>
       <div className="px-5 pt-5 pb-5 flex flex-col flex-1 gap-2">
-        <div className="inline-flex min-h-8 w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary">{item.context}</div>
+        <div className="inline-flex min-h-8 w-fit items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-1 text-xs font-medium font-inter text-primary transition-colors duration-300 group-hover:border-secondary/60 group-hover:bg-secondary/20">{item.context}</div>
         <H className="font-inter text-lg font-semibold text-foreground">{item.title}</H>
         <p className="flex-1 text-base text-muted-foreground leading-snug">{item.summary}</p>
         <div className={`flex items-center justify-between pt-2 text-base font-medium ${linked ? "text-primary" : "text-muted-foreground"}`}>

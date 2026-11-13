@@ -1,9 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowRight, ArrowUp, Mail, Trophy } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUp, Trophy } from "lucide-react";
+import { useInView } from "@/hooks/use-in-view";
+import { logoUrl } from "@/lib/logos";
 import { Link } from "react-router-dom";
 import headshotImage from "@/assets/mucundh-headshot-clean.jpeg";
-import { CV_URL, EMAIL, HACKATHON_URL } from "@/lib/site";
+import { CV_URL, HACKATHON_URL } from "@/lib/site";
+
+const companies = [
+  { name: "Proxymity", domain: "proxymity.io" },
+  { name: "Sweep", domain: "sweep.net" },
+  { name: "Transdev", domain: "transdev.de" },
+  { name: "L'Oréal", domain: "loreal.com" },
+  { name: "GE", domain: "ge.com" },
+];
 
 const metrics = [
   { value: "7-8 hrs/week", label: "manual work removed" },
@@ -16,9 +26,9 @@ const CountUp = ({ value }: { value: string }) => {
   const match = value.match(/^(\D*)(\d+)(.*)$/);
   const target = match ? Number(match[2]) : 0;
   const [n, setN] = useState(target);
-  const ref = useRef<HTMLSpanElement>(null);
+  const { ref, inView } = useInView<HTMLSpanElement>();
   useEffect(() => {
-    if (!match || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!inView || !match || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setN(0);
     const start = performance.now();
     let frame = 0;
@@ -30,7 +40,7 @@ const CountUp = ({ value }: { value: string }) => {
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [inView]);
   if (!match) return <span>{value}</span>;
   return (
     <span ref={ref} aria-label={value}>
@@ -100,11 +110,17 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="space-y-3 lg:space-y-4 motion-safe:animate-fade-up">
-              {focus}
+              <div className="flex flex-wrap items-center gap-2">
+                {focus}
+                <span className="hidden sm:inline-flex">{badge}</span>
+              </div>
               <h2 className="font-inter text-2xl lg:text-3xl font-semibold text-primary leading-[1.2]">
                 Engineering roots.
                 <br />
-                Business impact.
+                <span className="relative inline-block">
+                  Business impact.
+                  <span aria-hidden className="absolute -bottom-1 left-0 h-[3px] w-full origin-left rounded-full bg-tertiary motion-safe:animate-underline-draw" />
+                </span>
               </h2>
               <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl">
                 Experience across operations, partnerships and enablement in high-growth Tech Scaleups. An engineering
@@ -126,16 +142,6 @@ const HeroSection = () => {
                   </a>
                 </Button>
               )}
-              <Button
-                variant="outline"
-                className="font-semibold border-secondary text-primary hover:bg-secondary hover:text-secondary-foreground"
-                asChild
-              >
-                <a href={EMAIL}>
-                  <Mail className="mr-1 h-4 w-4" />
-                  Get in Touch
-                </a>
-              </Button>
             </div>
           </div>
 
@@ -148,7 +154,6 @@ const HeroSection = () => {
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            {badge}
           </div>
         </div>
         {/* Impact blocks */}
@@ -162,7 +167,13 @@ const HeroSection = () => {
               <div className="metric-label mt-0.5 break-words text-sm md:text-[0.8125rem] leading-snug">{m.label}</div>
             </li>
           ))}
-        </ul>{" "}
+        </ul>
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <span className="text-sm font-medium font-inter text-muted-foreground">Worked with</span>
+          {companies.map((c, i) => (
+            <img key={c.domain} src={logoUrl(c.domain)} alt={c.name} width={28} height={28} loading="lazy" style={{ animationDelay: `${400 + i * 80}ms` }} className="h-7 w-7 rounded-md object-contain motion-safe:animate-fade-in-soft" />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -123,6 +123,8 @@ export default {
 			},
 			backgroundImage: { 'gradient-journey': 'var(--gradient-journey)' },
 			keyframes: {
+				'underline-draw': { from: { transform: 'scaleX(0)' }, to: { transform: 'scaleX(1)' } },
+				'fade-in-soft': { from: { opacity: '0' }, to: { opacity: '1' } },
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -174,6 +176,8 @@ export default {
 				},
 			},
 			animation: {
+				'underline-draw': 'underline-draw 0.4s ease-out 0.5s both',
+				'fade-in-soft': 'fade-in-soft 0.4s ease-out both',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',

@@ -13,8 +13,8 @@ const Index = () => {
       <Navigation />
       <main className="pt-16">
         <HeroSection />
-        <Reveal><HomeRecommendation /></Reveal>
         <SelectedWorkSection />
+        <Reveal><HomeRecommendation /></Reveal>
         <Reveal><JourneySection /></Reveal>
       </main>
       <Reveal><ContactCTA /></Reveal>
