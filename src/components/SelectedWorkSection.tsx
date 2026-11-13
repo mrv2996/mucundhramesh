@@ -12,7 +12,7 @@ const SelectedWorkSection = () => (
         <Link to="/work" className="inline-flex min-h-11 items-center gap-1 text-base font-medium text-secondary hover:underline">All work <ArrowUpRight className="h-4 w-4" /></Link>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
-        {selectedWork.map((item, i) => <Reveal key={item.title} delay={i * 90} className="flex"><WorkCard item={item} /></Reveal>)}
+        {selectedWork.map((item, i) => <Reveal key={item.title} delay={i * 90} margin="0px 0px -8px 0px" className="flex"><WorkCard item={item} /></Reveal>)}
       </div>
     </div>
   </section>
