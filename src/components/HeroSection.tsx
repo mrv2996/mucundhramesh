@@ -84,10 +84,11 @@ const HeroSection = () => {
       className="group inline-flex min-h-11 items-center rounded-md px-3 text-sm font-semibold font-inter text-primary transition-colors hover:bg-secondary/10 hover:text-secondary"
     >
       <Trophy className="h-4 w-4 shrink-0 text-tertiary" />
-      <span className="ml-1.5">Hackathon winner</span>
-      <span className="inline-flex max-w-0 items-center overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-out group-hover:max-w-[11rem] group-hover:opacity-100 group-focus-visible:max-w-[11rem] group-focus-visible:opacity-100 motion-reduce:transition-none motion-reduce:group-hover:max-w-0">
-        <ArrowRight className="ml-1.5 h-4 w-4 shrink-0" aria-hidden />
-        <span className="pl-1">Watch live demo</span>
+      <span className="relative ml-1.5 inline-grid">
+        <span className="col-start-1 row-start-1 transition-all duration-200 ease-out group-hover:-translate-y-1 group-hover:opacity-0 group-focus-visible:opacity-0 motion-reduce:transition-none">Hackathon winner</span>
+        <span aria-hidden className="col-start-1 row-start-1 inline-flex translate-y-1 items-center whitespace-nowrap opacity-0 transition-all duration-200 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none">
+          Watch live demo<ArrowRight className="ml-1 h-4 w-4 shrink-0" />
+        </span>
       </span>
     </a>
   );
