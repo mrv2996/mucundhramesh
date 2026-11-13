@@ -169,11 +169,20 @@ const HeroSection = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-          <span className="text-sm font-medium font-inter text-muted-foreground">Worked with</span>
-          {companies.map((c, i) => (
-            <img key={c.domain} src={logoUrl(c.domain)} alt={c.name} width={28} height={28} loading="lazy" style={{ animationDelay: `${400 + i * 80}ms` }} className="h-7 w-7 rounded-md object-contain motion-safe:animate-fade-in-soft" />
-          ))}
+        <div className="mt-8">
+          <div className="flex items-center gap-3">
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] font-inter text-muted-foreground">Worked with</span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
+          <ul className="mt-4 grid grid-cols-3 gap-x-4 gap-y-3 sm:flex sm:items-center sm:justify-between">
+            {companies.map((c, i) => (
+              <li key={c.domain} title={c.name} style={{ animationDelay: `${400 + i * 80}ms` }} className="group flex items-center justify-center gap-2 motion-safe:animate-fade-in-soft">
+                <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-[22px] w-[22px] rounded object-contain grayscale opacity-70 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100" />
+                <span className="text-sm font-semibold font-inter text-muted-foreground transition-colors group-hover:text-primary">{c.name}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
