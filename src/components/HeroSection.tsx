@@ -93,10 +93,10 @@ const HeroSection = () => {
     </a>
   );
   return (
-    <section className="px-6 pt-5 pb-4 lg:pt-6 lg:pb-5">
+    <section className="px-6 pt-6 pb-5 lg:pt-8 lg:pb-7">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
-          <div className="flex min-w-0 flex-col justify-center gap-4 py-0 lg:gap-5">
+          <div className="flex min-w-0 flex-col justify-center gap-5 py-0 lg:gap-6">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -110,12 +110,12 @@ const HeroSection = () => {
                 {badge}
               </div>
             </div>
-            <div className="space-y-2.5 lg:space-y-3 motion-safe:animate-fade-up">
+            <div className="space-y-3 lg:space-y-4 motion-safe:animate-fade-up">
               <div className="flex flex-wrap items-center gap-2">
                 {focus}
                 <span className="hidden sm:inline-flex">{badge}</span>
               </div>
-              <h2 className="font-inter text-2xl lg:text-[1.875rem] font-semibold text-primary leading-[1.2]">
+              <h2 className="font-inter text-2xl lg:text-[2.125rem] font-semibold text-primary leading-[1.2]">
                 Engineering roots.
                 <br />
                 <span className="relative inline-block">
@@ -148,7 +148,7 @@ const HeroSection = () => {
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-1.5 lg:justify-self-end motion-safe:animate-fade-up [animation-delay:80ms]">
             {status}
-            <div className="w-24 h-[7.75rem] sm:w-36 sm:h-[11rem] lg:w-40 lg:h-[12rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
+            <div className="w-24 h-[7.75rem] sm:w-36 sm:h-[11rem] lg:w-44 lg:h-[13.5rem] rounded-2xl overflow-hidden shadow-large bg-gradient-primary">
               <img
                 src={headshotImage}
                 alt="Mucundh Ramesh - Strategic operations professional in high-growth tech scale-ups"
