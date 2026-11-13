@@ -28,7 +28,8 @@ const CountUp = ({ value }: { value: string }) => {
   const [n, setN] = useState(target);
   const { ref, inView } = useInView<HTMLSpanElement>();
   useEffect(() => {
-    if (!inView || !match || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const isBot = navigator.webdriver || /bot|crawl|spider|slurp|preview|facebookexternalhit|linkedin|embedly|whatsapp|headless/i.test(navigator.userAgent);
+    if (!inView || !match || isBot || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setN(0);
     const start = performance.now();
     let frame = 0;

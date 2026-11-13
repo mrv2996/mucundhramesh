@@ -10,21 +10,21 @@ import { useEffect } from "react";
 const CaseStudies = () => {
   useEffect(() => {
     // Update meta tags for Case Studies page
-    document.title = "Case Studies - Mucundh Ramesh | Technical Systems and Operations Analyst";
+    document.title = "Case Studies - Mucundh Ramesh | Strategy & Business Operations Generalist";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Real-world case studies showcasing operational improvements, automation wins, and strategic implementations by Mucundh Ramesh, Technical Systems and Operations Analyst.');
+      metaDescription.setAttribute('content', 'Real-world case studies showcasing operational improvements, automation wins, and strategic implementations by Mucundh Ramesh, Strategy & Business Operations Generalist.');
     }
     
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', 'Case Studies - Mucundh Ramesh | Technical Systems and Operations Analyst');
+      ogTitle.setAttribute('content', 'Case Studies - Mucundh Ramesh | Strategy & Business Operations Generalist');
     }
     
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
-      ogDescription.setAttribute('content', 'Real-world case studies showcasing operational improvements, automation wins, and strategic implementations by Mucundh Ramesh, Technical Systems and Operations Analyst.');
+      ogDescription.setAttribute('content', 'Real-world case studies showcasing operational improvements, automation wins, and strategic implementations by Mucundh Ramesh, Strategy & Business Operations Generalist.');
     }
   }, []);
   const caseStudies = [
