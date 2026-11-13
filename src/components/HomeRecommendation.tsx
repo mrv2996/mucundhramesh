@@ -62,7 +62,7 @@ const HomeRecommendation = () => {
   const { ref, inView } = useInView<HTMLDivElement>();
   useEffect(() => {
     if (!api || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = window.setInterval(() => { if (!paused.current && !document.hidden) api.scrollNext(); }, 3000);
+    const id = window.setInterval(() => { if (!paused.current && !document.hidden) api.scrollNext(); }, 5000);
     return () => window.clearInterval(id);
   }, [api]);
   const pause = () => (paused.current = true);
