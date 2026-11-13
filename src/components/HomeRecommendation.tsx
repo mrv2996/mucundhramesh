@@ -6,7 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/com
 import { logoUrl } from "@/lib/logos";
 
 // One impactful line per recommendation, quoted verbatim from the full text
-// in RecommendationsSection.tsx. LinkedIn profile is the source of proof.
+// of each LinkedIn recommendation, which is the source of proof.
 type Highlight = {
   id: number;
   name: string;
