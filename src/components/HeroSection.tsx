@@ -158,9 +158,9 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Impact blocks */}
-        <ul aria-label="Impact highlights" className="motion-safe:animate-fade-up [animation-delay:240ms] mt-3 lg:mt-4 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
+        <ul aria-label="Impact highlights" className="motion-safe:animate-fade-up [animation-delay:240ms] mt-4 lg:mt-5 mx-auto grid w-full grid-cols-3 gap-2 lg:gap-4">
           {metrics.map((m) => (
-            <li key={m.label} className="metric-card min-w-0 px-2 py-2 sm:px-3 md:px-3.5 md:py-2.5">
+            <li key={m.label} className="metric-card min-w-0 px-2 py-2 sm:px-3 md:px-3.5 md:py-3">
               <div className="metric-value flex min-w-0 flex-wrap items-baseline gap-x-1 text-[clamp(0.875rem,4.2vw,1.125rem)] md:text-[1.375rem] font-bold font-inter tracking-tight leading-tight">
                 <CountUp value={m.value} />
                 <ArrowUp aria-hidden className="metric-arrow h-3 w-3 md:h-3.5 md:w-3.5 shrink-0" />
@@ -169,13 +169,13 @@ const HeroSection = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-4">
+        <div className="mt-6">
           <div className="flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
             <span className="text-xs font-semibold uppercase tracking-[0.14em] font-inter text-muted-foreground">Worked with</span>
             <span className="h-px flex-1 bg-border" />
           </div>
-          <ul className="mt-2.5 grid grid-cols-3 gap-x-4 gap-y-2 sm:flex sm:items-center sm:justify-between">
+          <ul className="mt-3 grid grid-cols-3 gap-x-4 gap-y-2 sm:flex sm:items-center sm:justify-between">
             {companies.map((c, i) => (
               <li key={c.domain} title={c.name} style={{ animationDelay: `${400 + i * 80}ms` }} className="group flex items-center justify-center gap-2 motion-safe:animate-fade-in-soft">
                 <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-[22px] w-[22px] rounded object-contain grayscale opacity-70 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100" />
