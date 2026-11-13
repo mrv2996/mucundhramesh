@@ -93,10 +93,10 @@ const HeroSection = () => {
     </a>
   );
   return (
-    <section className="px-6 pt-8 pb-6 lg:pt-12 lg:pb-10">
+    <section className="px-6 pt-5 pb-4 lg:pt-6 lg:pb-5">
       <div className="max-w-content mx-auto">
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
-          <div className="flex min-w-0 flex-col justify-center gap-5 py-1 lg:gap-6">
+          <div className="flex min-w-0 flex-col justify-center gap-4 py-0 lg:gap-5">
             <h1 className="sr-only">Mucundh Ramesh</h1>
             <div className="sm:hidden space-y-2">
               {status}
@@ -110,12 +110,12 @@ const HeroSection = () => {
                 {badge}
               </div>
             </div>
-            <div className="space-y-3 lg:space-y-4 motion-safe:animate-fade-up">
+            <div className="space-y-2.5 lg:space-y-3 motion-safe:animate-fade-up">
               <div className="flex flex-wrap items-center gap-2">
                 {focus}
                 <span className="hidden sm:inline-flex">{badge}</span>
               </div>
-              <h2 className="font-inter text-2xl lg:text-3xl font-semibold text-primary leading-[1.2]">
+              <h2 className="font-inter text-2xl lg:text-[1.875rem] font-semibold text-primary leading-[1.2]">
                 Engineering roots.
                 <br />
                 <span className="relative inline-block">
@@ -123,7 +123,7 @@ const HeroSection = () => {
                   <span aria-hidden className="absolute -bottom-1 left-0 h-[3px] w-full origin-left rounded-full bg-tertiary motion-safe:animate-underline-draw" />
                 </span>
               </h2>
-              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              <p className="text-base text-muted-foreground leading-relaxed max-w-3xl">
                 Experience across operations, partnerships and enablement in high-growth Tech Scaleups. An engineering
                 background that connects the work.
               </p>
