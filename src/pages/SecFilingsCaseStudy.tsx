@@ -1,7 +1,7 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { secFilings } from "@/lib/work";
 import { usePageMeta } from "@/hooks/use-page-meta";
-import tcwTickerExample from "@/assets/tcw-ticker-example.png.asset.json";
+import tcwTickerExample from "@/assets/tcw-ticker-example.png";
 
 const SecFilingsCaseStudy = () => {
   usePageMeta(
@@ -54,7 +54,7 @@ const SecFilingsCaseStudy = () => {
                 positive that sends the wrong filing.
               </p>
               <img
-                src={tcwTickerExample.url}
+                src={tcwTickerExample}
                 alt="TCW Strategic Income Fund semi-annual report showing the fund name and its ticker TSI highlighted"
                 loading="lazy"
                 className="w-full rounded-lg border"
