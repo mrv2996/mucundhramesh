@@ -148,7 +148,6 @@ const HeroSection = () => {
                 </Button>
               )}
             </div>
-            <div className="sm:hidden -mt-3 -ml-3">{badge}</div>
           </div>
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-1.5 lg:justify-self-end motion-safe:animate-fade-up [animation-delay:80ms]">
