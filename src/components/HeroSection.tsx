@@ -106,9 +106,9 @@ const HeroSection = () => {
                 aria-hidden
                 className="w-14 h-14 rounded-full object-cover object-top shadow-medium shrink-0"
               />
-              <div className="flex min-w-0 flex-col items-start gap-1.5">
+              <div className="flex min-w-0 flex-col items-start gap-1">
                 {focus}
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium font-inter text-metric-label">
+                <span className="inline-flex min-h-8 items-center gap-1.5 pl-[11px] text-sm font-medium font-inter text-metric-label">
                   <span className="h-2 w-2 shrink-0 rounded-full bg-metric" aria-hidden />
                   Open to opportunities
                 </span>
@@ -148,7 +148,6 @@ const HeroSection = () => {
                 </Button>
               )}
             </div>
-            <div className="sm:hidden -mt-3 -ml-3">{badge}</div>
           </div>
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-1.5 lg:justify-self-end motion-safe:animate-fade-up [animation-delay:80ms]">
