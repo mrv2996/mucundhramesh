@@ -183,8 +183,8 @@ const HeroSection = () => {
           <ul className="mt-4 flex items-center justify-between gap-2">
             {companies.map((c, i) => (
               <li key={c.domain} title={c.name} aria-label={c.name} style={{ animationDelay: `${400 + i * 80}ms` }} className="group flex items-center justify-center gap-2 motion-safe:animate-fade-in-soft">
-                <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-7 w-7 sm:h-[22px] sm:w-[22px] rounded object-contain sm:grayscale sm:opacity-70 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100" />
-                <span className="hidden sm:inline text-sm font-semibold font-inter text-muted-foreground transition-colors group-hover:text-primary">{c.name}</span>
+                <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-7 w-7 sm:h-[22px] sm:w-[22px] rounded object-contain" />
+                <span className="hidden sm:inline text-sm font-semibold font-inter text-muted-foreground transition-colors duration-200 group-hover:text-primary">{c.name}</span>
               </li>
             ))}
           </ul>
