@@ -99,20 +99,23 @@ const HeroSection = () => {
         <div className="grid sm:grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[1.618fr_1fr] gap-4 lg:gap-[var(--space-lg)] items-stretch">
           <div className="flex min-w-0 flex-col justify-center gap-6 py-0 lg:gap-7">
             <h1 className="sr-only">Mucundh Ramesh</h1>
-            <div className="sm:hidden space-y-2">
-              {status}
-              <div className="flex items-center gap-3">
-                <img
-                  src={headshotImage}
-                  alt=""
-                  aria-hidden
-                  className="w-11 h-11 rounded-full object-cover object-top shadow-medium shrink-0"
-                />
-                {badge}
+            <div className="sm:hidden flex items-center gap-3">
+              <img
+                src={headshotImage}
+                alt=""
+                aria-hidden
+                className="w-14 h-14 rounded-full object-cover object-top shadow-medium shrink-0"
+              />
+              <div className="flex min-w-0 flex-col items-start gap-1.5">
+                {focus}
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium font-inter text-metric-label">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-metric" aria-hidden />
+                  Open to opportunities
+                </span>
               </div>
             </div>
             <div className="space-y-4 motion-safe:animate-fade-up">
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="hidden sm:flex flex-wrap items-center gap-2">
                 {focus}
                 <span className="hidden sm:inline-flex">{badge}</span>
               </div>
@@ -145,6 +148,7 @@ const HeroSection = () => {
                 </Button>
               )}
             </div>
+            <div className="sm:hidden -mt-3 -ml-3">{badge}</div>
           </div>
 
           <div className="hidden sm:flex flex-col items-center justify-center gap-1.5 lg:justify-self-end motion-safe:animate-fade-up [animation-delay:80ms]">
@@ -176,11 +180,11 @@ const HeroSection = () => {
             <span className="text-xs font-semibold uppercase tracking-[0.14em] font-inter text-muted-foreground">Worked with</span>
             <span className="h-px flex-1 bg-border" />
           </div>
-          <ul className="mt-4 grid grid-cols-3 gap-x-4 gap-y-2 sm:flex sm:items-center sm:justify-between">
+          <ul className="mt-4 flex items-center justify-between gap-2">
             {companies.map((c, i) => (
-              <li key={c.domain} title={c.name} style={{ animationDelay: `${400 + i * 80}ms` }} className="group flex items-center justify-center gap-2 motion-safe:animate-fade-in-soft">
-                <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-[22px] w-[22px] rounded object-contain grayscale opacity-70 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100" />
-                <span className="text-sm font-semibold font-inter text-muted-foreground transition-colors group-hover:text-primary">{c.name}</span>
+              <li key={c.domain} title={c.name} aria-label={c.name} style={{ animationDelay: `${400 + i * 80}ms` }} className="group flex items-center justify-center gap-2 motion-safe:animate-fade-in-soft">
+                <img src={logoUrl(c.domain)} alt="" width={22} height={22} loading="lazy" className="h-7 w-7 sm:h-[22px] sm:w-[22px] rounded object-contain sm:grayscale sm:opacity-70 transition duration-200 group-hover:grayscale-0 group-hover:opacity-100" />
+                <span className="hidden sm:inline text-sm font-semibold font-inter text-muted-foreground transition-colors group-hover:text-primary">{c.name}</span>
               </li>
             ))}
           </ul>
